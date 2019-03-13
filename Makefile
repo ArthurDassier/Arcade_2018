@@ -17,9 +17,9 @@ EXE	=	$(SRC_DIR)/main.cpp		\
 
 OBJS	=	$(EXE:.cpp=.o)
 
-UT 	= 	$(UT_DIR)/?				\
+UT 	= 	$(UT_DIR)/tests_SFML.cpp	\
 
-UT2	=	$(SRC_DIR)/?			\
+UT2	=	$(SRC_DIR)/libs/SFML/class_sfml.cpp	\
 
 OBJS_UT	=	$(UT:.cpp=.o)
 
@@ -29,13 +29,18 @@ RM	=	rm -rf
 
 CXXFLAGS	+=	-Wall -Wextra
 
-CXXFLAGS	+=	-I./srcs/Components -I./srcs/SpecialComponents
+CXXFLAGS	+= -I./srcs/libs/SFML
 
-INCLUDE	=	-I./srcs/Components -I./srcs/SpecialComponents
+INCLUDE	=	-I./srcs/libs/SFML
 
-INCLUDE	+=	-I./srcs/Parser -I./srcs/Circus -I./srcs/ -I./srcs/CLI
 
 LD_FLAGS	=	-lcriterion -coverage
+
+ifeq ($(shell cat /etc/*-release | grep "Fedora"), )
+LIB	=	-lsfml-audio -lsfml-window -lsfml-system -lsfml-graphics
+else
+LIB	=	-l_graph_prog
+endif
 
 all:		$(NAME)
 
@@ -44,7 +49,7 @@ $(NAME): $(OBJS)
 
 
 tests_run:	$(OBJS) 
-			g++ -std=c++11 $(INCLUDE) -o UT $(UT) $(UT2) $(LD_FLAGS)
+			g++ -std=c++11 $(INCLUDE) -o UT $(UT) $(UT2) $(LD_FLAGS) $(LIB)
 			./UT
 
 clean:
