@@ -5,12 +5,15 @@
 ** main
 */
 
+#include "class_ncurses.hpp"
 #include "class_sfml.hpp"
 #include "dlloader.hpp"
 
 int main(int ac, char **av)
 {
-    DLLoader <IDisplayModule> instance("./lib.so");
+    if (ac < 2)
+        return (84);
+    DLLoader <IDisplayModule> instance(av[1]);
     IDisplayModule *module = instance.getInstance();
 
     while (module->run());

@@ -13,6 +13,8 @@ CPPFLAGS		=	-std=c++11 -g3 -ldl
 
 INCLUDE			=	-I../lib/SFML
 
+INCLUDE			+=	-I../lib/NCURSES
+
 LDFLAGS			=	-shared -fPIC
 
 CORE			=	arcade
