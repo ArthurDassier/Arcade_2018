@@ -3,3 +3,5 @@
 report.xml
 *.gc*
 UT
+*.so
+unit_tests

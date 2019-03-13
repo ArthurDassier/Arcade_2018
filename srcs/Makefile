@@ -9,7 +9,7 @@ CP				=	cp
 
 CPP				=	g++
 
-CPPFLAGS		=	-std=c++11 -g3 -ldl
+CPPFLAGS		=	-std=c++11 -g3
 
 INCLUDE			=	-I../lib/SFML
 
@@ -24,7 +24,7 @@ CORE_FILES		=	main.cpp
 CORE_OBJS		=	$(CORE_FILES:.cpp=.o)
 
 $(CORE):
-				$(CPP) $(INCLUDE) $(CPPFLAGS) $(CORE_FILES) -o $(CORE)
+				$(CPP) $(INCLUDE) $(CPPFLAGS) $(CORE_FILES) -o $(CORE) -ldl
 				$(CP) $(CORE) ..
 
 all:			$(CORE)

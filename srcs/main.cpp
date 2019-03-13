@@ -17,5 +17,6 @@ int main(int ac, char **av)
     IDisplayModule *module = instance.getInstance();
 
     while (module->run());
+    delete module;
     return (0);
 }
