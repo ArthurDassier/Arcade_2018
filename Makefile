@@ -5,64 +5,57 @@
 ## Makefile
 ##
 
-NAME	=	arcade
+CORE			=	arcade
 
-CXX	=	g++ -std=c++11 -g3
+GAMES			=	games
 
-SRC_DIR	=	./srcs
+GRAPHICALS		=	graphicals
 
-UT_DIR	=	./tests
+TEST			=	unit_tests
 
-EXE	=	$(SRC_DIR)/main.cpp		\
+CORE_DIR		=	srcs/
 
-OBJS	=	$(EXE:.cpp=.o)
+GAMES_DIR		=	games/
 
-UT 	= 	$(UT_DIR)/tests_SFML.cpp	\
+LIB_DIR			=	lib/
 
-UT2	=	$(SRC_DIR)/libs/SFML/class_sfml.cpp	\
+TESTS_DIR		=	tests/
 
-OBJS_UT	=	$(UT:.cpp=.o)
+all:			$(CORE) $(GAMES) $(GRAPHICALS)
 
-OBJS_UT2	=	$(UT2:.cpp=.o)
+core:			$(CORE)
 
-RM	=	rm -rf
+games:			$(GAMES)
 
-CXXFLAGS	+=	-Wall -Wextra
+graphicals:		$(GRAPHICALS)
 
-CXXFLAGS	+= -I./srcs/libs/SFML
+tests_run:		
+				$(MAKE) -C $(TESTS_DIR)
+				./$(TEST)
 
-INCLUDE	=	-I./srcs/libs/SFML
+$(CORE):
+				$(MAKE) -C $(CORE_DIR)
 
+$(GAMES):
+				$(MAKE)	-C $(GAMES_DIR)
 
-LD_FLAGS	=	-lcriterion -coverage
-
-ifeq ($(shell cat /etc/*-release | grep "Fedora"), )
-LIB	=	-lsfml-audio -lsfml-window -lsfml-system -lsfml-graphics
-else
-LIB	=	-l_graph_prog
-endif
-
-all:		$(NAME)
-
-$(NAME): $(OBJS) 
-		$(CXX) $(INCLUDE) -o $(NAME) $(OBJS)
-
-
-tests_run:	$(OBJS) 
-			g++ -std=c++11 $(INCLUDE) -o UT $(UT) $(UT2) $(LD_FLAGS) $(LIB)
-			./UT
+$(GRAPHICALS):	
+				$(MAKE) -C $(LIB_DIR)
 
 clean:
-		$(RM) $(OBJS)
+				$(MAKE) -C $(CORE_DIR) clean
+				$(MAKE) -C $(GAMES_DIR) clean
+				$(MAKE) -C $(LIB_DIR) clean
+				$(MAKE) -C $(TESTS_DIR) clean
 
-ut_clean:
-		$(RM) $(OBJS_UT) $(OBJS_UT2)
-		find \( -name "*.gc*" -o -name "#*#" \) -delete
-		$(RM) UT
+fclean:			
+				$(MAKE) -C $(CORE_DIR) fclean
+				$(MAKE) -C $(GAMES_DIR) fclean
+				$(MAKE) -C $(LIB_DIR) fclean
+				$(MAKE) -C $(TESTS_DIR) fclean
+				$(RM) $(CORE)
+				$(RM) $(TEST)
 
-fclean:		clean
-		$(RM) $(NAME)
+re:			fclean all
 
-re:		fclean all
-
-.PHONY:		re all fclean clean
+.PHONY:		all clean fclean re
