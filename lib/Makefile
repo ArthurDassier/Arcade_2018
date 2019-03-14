@@ -11,6 +11,8 @@ CPPFLAGS		=	-std=c++11 -g3
 
 LDFLAGS			=	-shared -fPIC
 
+INCLUDE			=	-I.
+
 ifeq ($(shell cat /etc/*-release | grep "Fedora"), )
 LIB_SFML		=	-lsfml-audio -lsfml-window -lsfml-system -lsfml-graphics
 else
@@ -18,6 +20,8 @@ LIB_SFML		=	-lsfml-graphics -lsfml-window -lsfml-system
 endif
 
 LIB_NCURSES		=	-lncurses
+
+LIB_SDL			=	-lSDL2 -lGL -lGLU
 
 SFML			=	lib_arcade_sfml.so
 
@@ -39,21 +43,36 @@ NCURSES_SRCS	=	$(addprefix $(NCURSES_DIR), $(NCURSES_FILES))
 
 NCURSES_OBJS	=	$(NCURSES_SRCS:.cpp=.o)
 
-all:			$(SFML) $(NCURSES)
+SDL			=	lib_arcade_sdl.so
+
+SDL_DIR		=	SDL/
+
+SDL_FILES	=	class_sdl.cpp
+
+SDL_SRCS	=	$(addprefix $(SDL_DIR), $(SDL_FILES))
+
+SDL_OBJS	=	$(SDL_SRCS:.cpp=.o)
+
+all:			$(SFML) $(NCURSES) $(SDL)
 
 $(SFML):
-				$(CPP) $(CPPFLAGS) $(LDFLAGS) $(SFML_SRCS) $(LIB_SFML) -o $(SFML)
+				$(CPP) $(CPPFLAGS) $(LDFLAGS) $(SFML_SRCS) $(LIB_SFML) -o $(SFML) $(INCLUDE)
 
 $(NCURSES):
-				$(CPP) $(CPPFLAGS) $(LDFLAGS) $(NCURSES_SRCS) $(LIB_NCURSES) -o $(NCURSES)
+				$(CPP) $(CPPFLAGS) $(LDFLAGS) $(NCURSES_SRCS) $(LIB_NCURSES) -o $(NCURSES) $(INCLUDE)
+
+$(SDL):
+				$(CPP) $(CPPFLAGS) $(LDFLAGS) $(SDL_SRCS) $(LIB_SDL) -o $(SDL) $(INCLUDE)
 
 clean:
 				$(RM) $(SFML_OBJS)
 				$(RM) $(NCURSES_OBJS)
+				$(RM) $(SDL_OBJS)
 
 fclean:			clean
 				$(RM) $(SFML)
 				$(RM) $(NCURSES)
+				$(RM) $(SDL)
 
 re:				fclean all
 

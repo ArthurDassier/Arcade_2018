@@ -11,7 +11,9 @@ CPP				=	g++
 
 CPPFLAGS		=	-std=c++11 -g3
 
-INCLUDE			=	-I../lib/SFML
+INCLUDE			=	-I../lib
+
+INCLUDE			+=	-I../lib/SFML
 
 INCLUDE			+=	-I../lib/NCURSES
 
