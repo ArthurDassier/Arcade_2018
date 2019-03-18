@@ -34,12 +34,15 @@ tests_run:
 				./$(TEST)
 
 $(CORE):
+				$(info ************  BUILDING CORE ************)
 				$(MAKE) -C $(CORE_DIR)
 
 $(GAMES):
+				$(info ************  BUILDING GAMES ************)
 				$(MAKE)	-C $(GAMES_DIR)
 
 $(GRAPHICALS):	
+				$(info ************  BUILDING GRAPHICALS ************)
 				$(MAKE) -C $(LIB_DIR)
 
 clean:
