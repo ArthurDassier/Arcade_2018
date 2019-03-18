@@ -9,15 +9,7 @@
     #define CLASS_SFML_HPP_
 
 #include <SFML/Graphics.hpp>
-
-class IDisplayModule {
-        public:
-            virtual ~IDisplayModule() = default;
-            virtual void display_window() = 0;
-            virtual void clear_window() = 0;
-            virtual bool get_event() = 0;
-            virtual bool run() = 0;
-};
+#include "IDisplayModule.hpp"
 
 class class_sfml : public IDisplayModule
 {
