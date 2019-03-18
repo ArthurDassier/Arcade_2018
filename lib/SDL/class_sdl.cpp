@@ -5,55 +5,82 @@
 ** class_sdl
 */
 
-#include <iostream>
 #include "class_sdl.hpp"
 
 class_sdl::class_sdl()
 {
     SDL_Init(SDL_INIT_VIDEO);
-    _window = SDL_CreateWindow("Tutoriel de merde",
+    _win = SDL_CreateWindow("Tutoriel de merde",
     SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
     600, 600, SDL_WINDOW_OPENGL);
 }
 
 class_sdl::~class_sdl()
 {
-    SDL_DestroyWindow(_window);
+    SDL_DestroyWindow(_win);
     SDL_Quit();
 }
 
-void class_sdl::clear_window()
+bool class_sdl::runGraph()
 {
-
-}
-
-void class_sdl::display_window()
-{
-
-}
-
-bool class_sdl::get_event()
-{
-    while (SDL_PollEvent(&_event)) {
-        if (_event.type == SDL_WINDOWEVENT) {
-            if (_event.window.event == SDL_WINDOWEVENT_CLOSE) {
-                return (true);
+    while (SDL_PollEvent(&_e)) {
+        if (_e.type == SDL_WINDOWEVENT) {
+            if (_e.window.event == SDL_WINDOWEVENT_CLOSE) {
+                return (false);
             }
         }
+        if (_e.type == SDL_KEYDOWN)
+            translateKey();
     }
-    return (false);
+    return (true);
 }
 
-bool class_sdl::run()
+void class_sdl::setMap()
+{}
+
+void class_sdl::translateKey()
 {
-    if (get_event())
-        return (false);
-    return (true);
+    for(size_t i = 0; KeySdl[i].code_lib != 1000; ++i) {
+        if (_e.key.keysym.sym == KeySdl[i].code_lib) {
+            setLastKey(KeySdl[i].code_core);
+            return;
+        }
+    }
+}
+
+void class_sdl::setIsNewMap(bool NewMap)
+{
+    _isNewMap = NewMap;
+}
+
+bool class_sdl::getIsNewMap(void) const
+{
+    return (_isNewMap);
+}
+
+void class_sdl::setIsNewKey(bool NewKey)
+{
+    _isNewKey = NewKey;
+}
+
+bool class_sdl::getIsNewKey(void) const
+{
+    return (_isNewKey);
+}
+
+void class_sdl::setLastKey(int key)
+{
+    _key = key;
+}
+
+int class_sdl::getLastKey(void) const
+{
+    return (_key);
 }
 
 extern "C"
 {
-    IDisplayModule *entryPoint(void)
+    IGraphic *entryPoint(void)
     {
         class_sdl *instance = new class_sdl();
         return (instance);

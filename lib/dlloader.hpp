@@ -18,6 +18,8 @@ class DLLoader
             _handle = dlopen(lib_path.c_str(), RTLD_NOW);
             if (_handle == NULL) {
                 std::cout << "FAIL\n";
+                fprintf(stderr, "Error: %s\n", dlerror());
+                exit(EXIT_FAILURE);
             }
         }
 

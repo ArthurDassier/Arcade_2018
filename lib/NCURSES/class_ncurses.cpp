@@ -15,6 +15,7 @@ class_ncurses::class_ncurses()
     noecho();
     cbreak();
     keypad(stdscr, TRUE);
+    _key = 999;
 }
 
 class_ncurses::~class_ncurses()
@@ -22,44 +23,81 @@ class_ncurses::~class_ncurses()
     endwin();
 }
 
-void class_ncurses::clear_window()
-{
-    clear();
-    timeout(100);
-    refresh();
-
-}
-
-void class_ncurses::display_window()
-{
-    printw("%s", "COUCOU\n");
-}
-
 bool class_ncurses::get_event()
 {
-    switch (getch()) {
-        case 'q': return (true);
-                break;
+    _c = getch();
+    switch (_c) {
+        case 'Q': return (true);
+            break;
         default:
-                break;
+            translateKey();
+            break;
     }
     return (false);
 }
 
-bool class_ncurses::run()
+bool class_ncurses::runGraph()
 {
-    clear_window();
-    display_window();
-    if (get_event()) {
-        clear_window();
+    clear();
+    //printw("%s", "COUCOU\n");
+    printw("%d\n", this->getLastKey());
+    if (get_event())
         return (false);
-    }
+    timeout(100);
+    refresh();
     return (true);
+}
+
+void class_ncurses::setMap()
+{
+
+}
+
+void class_ncurses::translateKey()
+{
+    if (_c != ERR) {
+        for (size_t i = 0; KeyNcurses[i].code_lib != 1000; ++i) {
+            if (_c == KeyNcurses[i].code_lib) {
+                this->setLastKey(KeyNcurses[i].code_core);
+                break;
+            }
+        }
+    }
+}
+
+void class_ncurses::setIsNewMap(bool NewMap)
+{
+    _isNewMap = NewMap;
+}
+
+bool class_ncurses::getIsNewMap(void) const
+{
+    return (_isNewMap);
+}
+
+void class_ncurses::setIsNewKey(bool NewKey)
+{
+    _isNewKey = NewKey;
+}
+
+bool class_ncurses::getIsNewKey(void) const
+{
+    return (_isNewKey);
+}
+
+void class_ncurses::setLastKey(int key)
+{
+    _key = key;
+}
+
+int class_ncurses::getLastKey(void) const
+{
+    return (_key);
 }
 
 extern "C"
 {
-    IDisplayModule *entryPoint(void)
+    IGraphic *entryPoint(void)
     {
         class_ncurses *instance = new class_ncurses();
         return (instance);
