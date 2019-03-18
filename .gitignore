@@ -2,11 +2,7 @@
 *.o
 report.xml
 *.gc*
-<<<<<<< HEAD
-UT
-=======
 UT
 *.so
 unit_tests
 arcade
->>>>>>> b8769f166622b040eae956bce11c8a38fa229f09
