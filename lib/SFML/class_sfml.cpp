@@ -10,7 +10,7 @@
 class_sfml::class_sfml()
 {
     _wind = std::make_shared<sf::RenderWindow>();
-    _wind->create(sf::VideoMode(800, 600), "My window");
+    _wind->create(sf::VideoMode(800, 600), "Arcade");
 }
 
 class_sfml::~class_sfml()
