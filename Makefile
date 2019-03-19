@@ -11,7 +11,11 @@ GAMES			=	games
 
 GRAPHICALS		=	graphicals
 
-TEST			=	unit_tests
+TEST_SFML		=	unit_tests_SFML
+
+TEST_SDL		=	unit_tests_SDL
+
+TEST_NCURSES	=	unit_tests_NCURSES
 
 CORE_DIR		=	srcs/
 
@@ -31,7 +35,9 @@ graphicals:		$(GRAPHICALS)
 
 tests_run:		
 				$(MAKE) -C $(TESTS_DIR)
-				./$(TEST)
+				./$(TEST_SDL)
+				./$(TEST_NCURSES)
+				#./$(TEST_SFML)
 
 $(CORE):
 				$(info ************  BUILDING CORE ************)
@@ -57,7 +63,7 @@ fclean:
 				$(MAKE) -C $(LIB_DIR) fclean
 				$(MAKE) -C $(TESTS_DIR) fclean
 				$(RM) $(CORE)
-				$(RM) $(TEST)
+				$(RM) $(TEST_SFML) $(TEST_SDL) $(TEST_NCURSES)
 
 re:			fclean all
 

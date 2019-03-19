@@ -6,3 +6,6 @@ UT
 *.so
 unit_tests
 arcade
+unit_tests_NCURSES
+unit_tests_SDL
+unit_tests_SFML
