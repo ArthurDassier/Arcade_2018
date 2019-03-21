@@ -10,7 +10,7 @@
 class_sfml::class_sfml():
     _key(0)
 {
-    _wind = std::make_shared<sf::RenderWindow>();
+    _wind = std::make_unique<sf::RenderWindow>();
     _wind->create(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Arcade");
     _wind->setPosition(SCREEN_POS);
     _wind->setFramerateLimit(FRAMERATE);

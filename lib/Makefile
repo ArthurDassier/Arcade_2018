@@ -5,9 +5,9 @@
 ## Makefile
 ##
 
-CPP				=	g++
+CXX				=	g++
 
-CPPFLAGS		=	-std=c++17 -g3
+CXXFLAGS		=	-std=c++17 -g3
 
 LDFLAGS			=	-shared -fPIC
 
@@ -21,7 +21,7 @@ endif
 
 LIB_NCURSES		=	-lncurses
 
-LIB_SDL			=	-lSDL2 -lGL -lGLU
+LIB_SDL			=	-lSDL2 -lGL -lGLU -lSDL2_image
 
 SFML			=	lib_arcade_sfml.so
 
@@ -56,13 +56,13 @@ SDL_OBJS	=	$(SDL_SRCS:.cpp=.o)
 all:			$(SFML) $(NCURSES) $(SDL)
 
 $(SFML):
-				$(CPP) $(CPPFLAGS) $(LDFLAGS) $(SFML_SRCS) $(LIB_SFML) -o $(SFML) $(INCLUDE)
+				$(CXX) $(CXXFLAGS) $(LDFLAGS) $(SFML_SRCS) $(LIB_SFML) -o $(SFML) $(INCLUDE)
 
 $(NCURSES):
-				$(CPP) $(CPPFLAGS) $(LDFLAGS) $(NCURSES_SRCS) $(LIB_NCURSES) -o $(NCURSES) $(INCLUDE)
+				$(CXX) $(CXXFLAGS) $(LDFLAGS) $(NCURSES_SRCS) $(LIB_NCURSES) -o $(NCURSES) $(INCLUDE)
 
 $(SDL):
-				$(CPP) $(CPPFLAGS) $(LDFLAGS) $(SDL_SRCS) $(LIB_SDL) -o $(SDL) $(INCLUDE)
+				$(CXX) $(CXXFLAGS) $(LDFLAGS) $(SDL_SRCS) $(LIB_SDL) -o $(SDL) $(INCLUDE)
 
 clean:
 				$(RM) $(SFML_OBJS)

@@ -7,9 +7,9 @@
 
 CP				=	cp
 
-CPP				=	g++
+CXX				=	g++
 
-CPPFLAGS		=	-std=c++11 -g3
+CXXFLAGS		=	-std=c++17 -g3
 
 INCLUDE			=	-I../lib
 
@@ -26,7 +26,7 @@ CORE_FILES		=	main.cpp
 CORE_OBJS		=	$(CORE_FILES:.cpp=.o)
 
 $(CORE):
-				$(CPP) $(INCLUDE) $(CPPFLAGS) $(CORE_FILES) -o $(CORE) -ldl
+				$(CXX) $(INCLUDE) $(CPPFLAGS) $(CORE_FILES) -o $(CORE) -ldl
 				$(CP) $(CORE) ..
 
 all:			$(CORE)

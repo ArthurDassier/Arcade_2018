@@ -7,9 +7,9 @@
 
 CP				=	cp
 
-CPP				=	g++
+CXX				=	g++
 
-CPPFLAGS		=	-std=c++11
+CXXFLAGS		=	-std=c++17
 
 LDFLAGS			=	-coverage -lcriterion -lSDL2 -lGL -lGLU -lncurses
 
@@ -61,9 +61,9 @@ LIB				=	-lsfml-graphics -lsfml-window -lsfml-system
 endif
 
 all:
-				$(CPP) $(INCLUDE) $(CPPFLAGS) $(TEST_FILES_SFML) $(FILES_SFML) $(LIB) -o $(TEST_SFML) $(LDFLAGS)
-				$(CPP) $(INCLUDE) $(CPPFLAGS) $(TEST_FILES_SDL) $(FILES_SDL) $(LIB) -o $(TEST_SDL) $(LDFLAGS)
-				$(CPP) $(INCLUDE) $(CPPFLAGS) $(TEST_FILES_NCURSES) $(FILES_NCURSES) $(LIB) -o $(TEST_NCURSES) $(LDFLAGS)
+				$(CXX) $(INCLUDE) $(CXXFLAGS) $(TEST_FILES_SFML) $(FILES_SFML) $(LIB) -o $(TEST_SFML) $(LDFLAGS)
+				$(CXX) $(INCLUDE) $(CXXFLAGS) $(TEST_FILES_SDL) $(FILES_SDL) $(LIB) -o $(TEST_SDL) $(LDFLAGS)
+				$(CXX) $(INCLUDE) $(CXXFLAGS) $(TEST_FILES_NCURSES) $(FILES_NCURSES) $(LIB) -o $(TEST_NCURSES) $(LDFLAGS)
 				$(CP) $(TEST_SFML) ..
 				$(CP) $(TEST_SDL) ..
 				$(CP) $(TEST_NCURSES) ..

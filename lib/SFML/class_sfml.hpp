@@ -8,15 +8,9 @@
 #ifndef CLASS_SFML_HPP_
     #define CLASS_SFML_HPP_
 
-#include <memory>
-#include <fstream>
-#include <functional>
-#include <iostream>
 #include <SFML/Graphics.hpp>
 #include "IGraphic.hpp"
 
-#define SCREEN_HEIGHT 630
-#define SCREEN_WIDTH 570
 #define SCREEN_POS {610, 160}
 #define FRAMERATE 15
 
@@ -45,7 +39,7 @@ class class_sfml : public IGraphic
         void display_game(void);
 
     private:
-        std::shared_ptr<sf::RenderWindow> _wind;
+        std::unique_ptr<sf::RenderWindow> _wind;
         std::shared_ptr<sf::CircleShape> _shape;
         std::unique_ptr<std::vector<std::vector<std::pair<char, sf::Sprite>>>> _map;
         sf::Texture _wall_texture;

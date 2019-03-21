@@ -8,10 +8,10 @@
 #ifndef CLASS_SDL_HPP_
     #define CLASS_SDL_HPP_
 
-#include <iostream>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_opengl.h>
 #include <GLES3/gl3.h>
+#include <SDL2/SDL_image.h>
 #include "IGraphic.hpp"
 
 class class_sdl : public IGraphic
@@ -34,11 +34,13 @@ class class_sdl : public IGraphic
         void setLastKey(int);
         int getLastKey(void) const;
 
+        void load_textures();
+        void print_textures();
     private:
-        SDL_Window *_win;
-        SDL_Renderer *_ren;
+        std::unique_ptr<SDL_Window, decltype(&SDL_DestroyWindow)> _wind;
+        std::unique_ptr<SDL_Renderer, decltype(&SDL_DestroyRenderer)>_ren;
         SDL_Event _e;
-        std::shared_ptr<void> _map;
+        std::unique_ptr<std::vector<std::vector<std::pair<char, SDL_Texture *>>>> _map;
         bool _isNewMap;
         bool _isNewKey;
         int _key;

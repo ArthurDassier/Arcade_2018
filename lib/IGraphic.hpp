@@ -9,6 +9,13 @@
     #define IGRAPHIC_HPP_
 
 #include <memory>
+#include <vector>
+#include <fstream>
+#include <functional>
+#include <iostream>
+
+#define SCREEN_HEIGHT 630
+#define SCREEN_WIDTH 570
 
 class IGraphic {
     public:
