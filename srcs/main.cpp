@@ -5,8 +5,7 @@
 ** main
 */
 
-#include "../NCURSES/class_ncurses.hpp"
-#include "class_sfml.hpp"
+#include "IGraphic.hpp"
 #include "dlloader.hpp"
 
 int main(int ac, char **av)

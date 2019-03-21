@@ -22,7 +22,7 @@ INCLUDE			+=	-I../lib/NCURSES
 INCLUDE			+=	-I../lib/SFML
 
 ##### SFML #####
-FILES_SFML			=	../lib/SFML/class_sfml.cpp
+FILES_SFML			=	../lib/SFML/ClassSFML.cpp
 
 FILES_SFML_OBJS		=	$(FILES_SFML:.cpp=.o)
 
@@ -33,7 +33,7 @@ TEST_OBJS_SFML		=	$(TEST_FILES_SFML:.cpp=.o)
 TEST_SFML			=	unit_tests_SFML
 
 ##### SDL ######
-FILES_SDL			=	../lib/SDL/class_sdl.cpp
+FILES_SDL			=	../lib/SDL/ClassSDL.cpp
 
 FILES_SDL_OBJS		=	$(FILES_SDL:.cpp=.o)
 
@@ -44,7 +44,7 @@ TEST_OBJS_SDL		=	$(TEST_FILES_SDL:.cpp=.o)
 TEST_SDL			=	unit_tests_SDL
 
 ##### NCURSES ######
-FILES_NCURSES		=	../lib/NCURSES/class_ncurses.cpp
+FILES_NCURSES		=	../lib/NCURSES/ClassNcurses.cpp
 
 FILES_NCURSES_OBJS	=	$(FILES_NCURSES:.cpp=.o)
 

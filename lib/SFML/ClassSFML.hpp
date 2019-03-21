@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2019
-** class_sfml.hpp
+** ClassSFML.hpp
 ** File description:
-** class_sfml
+** ClassSFML
 */
 
 #ifndef CLASS_SFML_HPP_
@@ -14,11 +14,11 @@
 #define SCREEN_POS {610, 160}
 #define FRAMERATE 15
 
-class class_sfml : public IGraphic
+class ClassSFML : public IGraphic
 {
     public:
-        class_sfml();
-        ~class_sfml();
+        ClassSFML();
+        ~ClassSFML();
 
         //Members
         bool runGraph();
@@ -35,18 +35,20 @@ class class_sfml : public IGraphic
         void setLastKey(int);
         int getLastKey(void) const;
 
-        void set_map_texture(void);
-        void display_game(void);
+        void setMapTexture(void);
+        void displayGame(void);
 
     private:
         std::unique_ptr<sf::RenderWindow> _wind;
         std::shared_ptr<sf::CircleShape> _shape;
         std::unique_ptr<std::vector<std::vector<std::pair<char, sf::Sprite>>>> _map;
+
         sf::Texture _wall_texture;
         sf::Texture _object_texture;
         sf::Texture _super_object_texture;
         sf::Texture _character;
         sf::Event _event;
+
         bool _isNewMap;
         bool _isNewKey;
         int _key;

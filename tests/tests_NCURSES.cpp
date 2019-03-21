@@ -7,11 +7,11 @@
 
 #include <criterion/criterion.h>
 #include <criterion/redirect.h>
-#include "class_ncurses.hpp"
+#include "ClassNcurses.hpp"
 
 Test(tests_NCURSES, test_getIsNewKeyIsTrue)
 {
-    class_ncurses test;
+    ClassNcurses test;
     bool ret = 0;
 
     test.setIsNewKey(true);
@@ -21,7 +21,7 @@ Test(tests_NCURSES, test_getIsNewKeyIsTrue)
 
 Test(tests_NCURSES, test_getIsNewKeyIsFalse)
 {
-    class_ncurses test;
+    ClassNcurses test;
     bool ret = 0;
 
     test.setIsNewKey(false);
@@ -31,7 +31,7 @@ Test(tests_NCURSES, test_getIsNewKeyIsFalse)
 
 Test(tests_NCURSES, test_getIsNewMapIsTrue)
 {
-    class_ncurses test;
+    ClassNcurses test;
     bool ret = 0;
 
     test.setIsNewMap(true);
@@ -41,7 +41,7 @@ Test(tests_NCURSES, test_getIsNewMapIsTrue)
 
 Test(tests_NCURSES, test_getIsNewMapIsFalse)
 {
-    class_ncurses test;
+    ClassNcurses test;
     bool ret = 0;
 
     test.setIsNewMap(false);
@@ -51,7 +51,7 @@ Test(tests_NCURSES, test_getIsNewMapIsFalse)
 
 Test(tests_NCURSES, test_getLastKeyIsTrue)
 {
-    class_ncurses test;
+    ClassNcurses test;
     bool ret = 0;
 
     test.setLastKey(true);
@@ -61,7 +61,7 @@ Test(tests_NCURSES, test_getLastKeyIsTrue)
 
 Test(tests_NCURSES, test_getLastKeyIsFalse)
 {
-    class_ncurses test;
+    ClassNcurses test;
     bool ret = 0;
 
     test.setLastKey(false);

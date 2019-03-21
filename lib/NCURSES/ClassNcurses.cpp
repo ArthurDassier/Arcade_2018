@@ -1,34 +1,35 @@
 /*
 ** EPITECH PROJECT, 2019
-** class_ncurses.cpp
+** ClassNcurses.cpp
 ** File description:
-** class_ncurses
+** ClassNcurses
 */
 
-#include <iostream>
-#include "class_ncurses.hpp"
+#include "ClassNcurses.hpp"
 
-class_ncurses::class_ncurses()
+ClassNcurses::ClassNcurses() :
+    _key(999)
 {
     initscr();
     curs_set(FALSE);
     noecho();
     cbreak();
     keypad(stdscr, TRUE);
-    _key = 999;
     start_color();
 }
 
-class_ncurses::~class_ncurses()
+ClassNcurses::~ClassNcurses()
 {
     endwin();
 }
 
-bool class_ncurses::get_event()
+bool ClassNcurses::getEvent()
 {
     _c = getch();
+
     switch (_c) {
-        case 'Q': return (true);
+        case 'Q':
+            return (true);
             break;
         default:
             translateKey();
@@ -37,7 +38,7 @@ bool class_ncurses::get_event()
     return (false);
 }
 
-void class_ncurses::set_map_texture()
+void ClassNcurses::setMapTexture()
 {
     size_t lock_wall = 0;
 
@@ -79,27 +80,24 @@ void class_ncurses::set_map_texture()
     }
 }
 
-bool class_ncurses::runGraph()
+bool ClassNcurses::runGraph()
 {
     clear();
-    //printw("%d\n", this->getLastKey());
-    set_map_texture();
-    if (get_event())
+    setMapTexture();
+    if (getEvent())
         return (false);
     timeout(100);
     refresh();
     return (true);
 }
 
-void class_ncurses::setMap()
+void ClassNcurses::setMap()
 {
-    //while gnl sur un fichier en brute
-    //regle : 0->rien 1->mur 2->miamiam 3->miamiam2 4->perso 5->enemi
     std::string tmp;
     std::ifstream file;
 
     _map = std::make_unique<std::vector<std::string>>();
-    file.open("pacman.txt");
+    file.open("./map.txt");
     if (file.is_open() == false)
         std::cout << "FAIL" << std::endl;
     while (!file.eof()) {
@@ -109,7 +107,7 @@ void class_ncurses::setMap()
     file.close();
 }
 
-void class_ncurses::translateKey()
+void ClassNcurses::translateKey()
 {
     if (_c != ERR) {
         for (size_t i = 0; KeyNcurses[i].code_lib != 1000; ++i) {
@@ -121,32 +119,32 @@ void class_ncurses::translateKey()
     }
 }
 
-void class_ncurses::setIsNewMap(bool NewMap)
+void ClassNcurses::setIsNewMap(bool NewMap)
 {
     _isNewMap = NewMap;
 }
 
-bool class_ncurses::getIsNewMap(void) const
+bool ClassNcurses::getIsNewMap(void) const
 {
     return (_isNewMap);
 }
 
-void class_ncurses::setIsNewKey(bool NewKey)
+void ClassNcurses::setIsNewKey(bool NewKey)
 {
     _isNewKey = NewKey;
 }
 
-bool class_ncurses::getIsNewKey(void) const
+bool ClassNcurses::getIsNewKey(void) const
 {
     return (_isNewKey);
 }
 
-void class_ncurses::setLastKey(int key)
+void ClassNcurses::setLastKey(int key)
 {
     _key = key;
 }
 
-int class_ncurses::getLastKey(void) const
+int ClassNcurses::getLastKey(void) const
 {
     return (_key);
 }
@@ -155,7 +153,7 @@ extern "C"
 {
     IGraphic *entryPoint(void)
     {
-        class_ncurses *instance = new class_ncurses();
+        ClassNcurses *instance = new ClassNcurses();
         return (instance);
     }
 }

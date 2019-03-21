@@ -27,7 +27,7 @@ SFML			=	lib_arcade_sfml.so
 
 SFML_DIR		=	SFML/
 
-SFML_FILES		=	class_sfml.cpp
+SFML_FILES		=	ClassSFML.cpp
 
 SFML_SRCS		=	$(addprefix $(SFML_DIR), $(SFML_FILES))
 
@@ -37,7 +37,7 @@ NCURSES			=	lib_arcade_ncurses.so
 
 NCURSES_DIR		=	NCURSES/
 
-NCURSES_FILES	=	class_ncurses.cpp
+NCURSES_FILES	=	ClassNcurses.cpp
 
 NCURSES_SRCS	=	$(addprefix $(NCURSES_DIR), $(NCURSES_FILES))
 
@@ -47,7 +47,7 @@ SDL			=	lib_arcade_sdl.so
 
 SDL_DIR		=	SDL/
 
-SDL_FILES	=	class_sdl.cpp
+SDL_FILES	=	ClassSDL.cpp
 
 SDL_SRCS	=	$(addprefix $(SDL_DIR), $(SDL_FILES))
 

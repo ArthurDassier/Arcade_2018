@@ -1,13 +1,13 @@
 /*
 ** EPITECH PROJECT, 2019
-** class_sdl.cpp
+** ClassSDL.cpp
 ** File description:
-** class_sdl
+** ClassSDL
 */
 
-#include "class_sdl.hpp"
+#include "ClassSDL.hpp"
 
-class_sdl::class_sdl() :
+ClassSDL::ClassSDL() :
     _wind(nullptr, SDL_DestroyWindow),
     _ren(nullptr, SDL_DestroyRenderer)
 {
@@ -28,7 +28,7 @@ class_sdl::class_sdl() :
     }
 }
 
-class_sdl::~class_sdl()
+ClassSDL::~ClassSDL()
 {
     for (auto it = _map->begin(); it != _map->end(); ++it) {
         for(auto it_str = it->begin(); it_str != it->end(); ++it_str)
@@ -38,7 +38,7 @@ class_sdl::~class_sdl()
     SDL_Quit();
 }
 
-void class_sdl::print_textures()
+void ClassSDL::print_textures()
 {
     SDL_Rect dstrect;
     SDL_Rect dstrect2;
@@ -90,7 +90,7 @@ void class_sdl::print_textures()
     SDL_RenderPresent(_ren.get());
 }
 
-bool class_sdl::runGraph()
+bool ClassSDL::runGraph()
 {
     SDL_RenderClear(_ren.get());
     while (SDL_PollEvent(&_e)) {
@@ -106,7 +106,7 @@ bool class_sdl::runGraph()
     return (true);
 }
 
-void class_sdl::load_textures()
+void ClassSDL::load_textures()
 {
     SDL_Surface *wall = IMG_Load("./textures/wall.png");
     SDL_Surface *point = IMG_Load("./textures/point.png");
@@ -143,7 +143,7 @@ void class_sdl::load_textures()
     SDL_FreeSurface(gros_point);
 }
 
-void class_sdl::setMap()
+void ClassSDL::setMap()
 {
     std::string line;
     std::ifstream file;
@@ -165,7 +165,7 @@ void class_sdl::setMap()
     load_textures();
 }
 
-void class_sdl::translateKey()
+void ClassSDL::translateKey()
 {
     for(size_t i = 0; KeySdl[i].code_lib != 1000; ++i) {
         if (_e.key.keysym.sym == KeySdl[i].code_lib) {
@@ -175,32 +175,32 @@ void class_sdl::translateKey()
     }
 }
 
-void class_sdl::setIsNewMap(bool NewMap)
+void ClassSDL::setIsNewMap(bool NewMap)
 {
     _isNewMap = NewMap;
 }
 
-bool class_sdl::getIsNewMap(void) const
+bool ClassSDL::getIsNewMap(void) const
 {
     return (_isNewMap);
 }
 
-void class_sdl::setIsNewKey(bool NewKey)
+void ClassSDL::setIsNewKey(bool NewKey)
 {
     _isNewKey = NewKey;
 }
 
-bool class_sdl::getIsNewKey(void) const
+bool ClassSDL::getIsNewKey(void) const
 {
     return (_isNewKey);
 }
 
-void class_sdl::setLastKey(int key)
+void ClassSDL::setLastKey(int key)
 {
     _key = key;
 }
 
-int class_sdl::getLastKey(void) const
+int ClassSDL::getLastKey(void) const
 {
     return (_key);
 }
@@ -209,7 +209,7 @@ extern "C"
 {
     IGraphic *entryPoint(void)
     {
-        class_sdl *instance = new class_sdl();
+        ClassSDL *instance = new ClassSDL();
         return (instance);
     }
 }

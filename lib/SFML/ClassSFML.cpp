@@ -1,13 +1,13 @@
 /*
 ** EPITECH PROJECT, 2019
-** class_sfml.cpp
+** ClassSFML.cpp
 ** File description:
-** class_sfml
+** ClassSFML
 */
 
-#include "class_sfml.hpp"
+#include "ClassSFML.hpp"
 
-class_sfml::class_sfml():
+ClassSFML::ClassSFML():
     _key(0)
 {
     _wind = std::make_unique<sf::RenderWindow>();
@@ -20,12 +20,12 @@ class_sfml::class_sfml():
     _character.loadFromFile("./textures/tile000.png");
 }
 
-class_sfml::~class_sfml()
+ClassSFML::~ClassSFML()
 {
     _wind->close();
 }
 
-void class_sfml::set_map_texture()
+void ClassSFML::setMapTexture()
 {
     float x = 0;
     float y = 0;
@@ -63,7 +63,7 @@ void class_sfml::set_map_texture()
     }
 }
 
-void class_sfml::display_game()
+void ClassSFML::displayGame()
 {
     static int x = 0;
     std::vector<sf::Texture> v_tmp;
@@ -88,7 +88,7 @@ void class_sfml::display_game()
         x = 0;
 }
 
-bool class_sfml::get_event()
+bool ClassSFML::get_event()
 {
     while (_wind->pollEvent(_event)) {
         if (_event.type == sf::Event::Closed)
@@ -105,19 +105,19 @@ bool class_sfml::get_event()
     return (false);
 }
 
-bool class_sfml::runGraph() 
+bool ClassSFML::runGraph() 
 {
     if (!(_wind->isOpen()))
         return (false);
     _wind->clear();
     if (get_event())
         return (false);
-    display_game();
+    displayGame();
     _wind->display();
     return (true);
 }
 
-void class_sfml::setMap()
+void ClassSFML::setMap()
 {
     std::string line;
     std::ifstream map_file("map.txt");
@@ -134,10 +134,10 @@ void class_sfml::setMap()
         }
         map_file.close();
     }
-    set_map_texture();
+    setMapTexture();
 }
 
-void class_sfml::translateKey()
+void ClassSFML::translateKey()
 {
     for (size_t i = 0; KeySFML[i].code_lib != 1000; i++)
         if (_event.key.code == KeySFML[i].code_lib) {
@@ -146,32 +146,32 @@ void class_sfml::translateKey()
         }
 }
 
-void class_sfml::setIsNewMap(bool newMap)
+void ClassSFML::setIsNewMap(bool newMap)
 {
     _isNewMap = newMap;
 }
 
-bool class_sfml::getIsNewMap(void) const
+bool ClassSFML::getIsNewMap(void) const
 {
     return (_isNewMap);
 }
 
-void class_sfml::setIsNewKey(bool newKey)
+void ClassSFML::setIsNewKey(bool newKey)
 {
     _isNewKey = newKey;
 }
 
-bool class_sfml::getIsNewKey(void) const
+bool ClassSFML::getIsNewKey(void) const
 {
     return (_isNewKey);
 }
 
-void class_sfml::setLastKey(int key)
+void ClassSFML::setLastKey(int key)
 {
     _key = key;
 }
 
-int class_sfml::getLastKey(void) const
+int ClassSFML::getLastKey(void) const
 {
     return (_key);
 }
@@ -180,7 +180,7 @@ extern "C"
 {
     IGraphic *entryPoint(void)
     {
-        class_sfml *instance = new class_sfml();
+        ClassSFML *instance = new ClassSFML();
         return (instance);
     }
 }

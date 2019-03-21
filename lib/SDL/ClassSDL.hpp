@@ -1,27 +1,26 @@
 /*
 ** EPITECH PROJECT, 2019
-** class_sfml.hpp
+** ClassSDL.hpp
 ** File description:
-** class_sfml
+** ClassSDL
 */
 
-#ifndef CLASS_NCURSES_HPP_
-    #define CLASS_NCURSES_HPP_
+#ifndef CLASS_SDL_HPP_
+    #define CLASS_SDL_HPP_
 
-#include <ncurses.h>
-#include <memory>
-#include <vector>
-#include <fstream>
-#include "../IGraphic.hpp"
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_opengl.h>
+#include <GLES3/gl3.h>
+#include <SDL2/SDL_image.h>
+#include "IGraphic.hpp"
 
-class class_ncurses : public IGraphic
+class ClassSDL : public IGraphic
 {
     public:
-        class_ncurses();
-        ~class_ncurses();
+        ClassSDL();
+        ~ClassSDL();
 
         //Members
-        bool get_event();
         bool runGraph();
         void setMap();
         void translateKey();
@@ -35,24 +34,24 @@ class class_ncurses : public IGraphic
         void setLastKey(int);
         int getLastKey(void) const;
 
-        bool check_first_wall(std::string, size_t);
-        void set_map_texture();
-
+        void load_textures();
+        void print_textures();
     private:
-        int _c;
-        std::unique_ptr<std::vector<std::string>> _map;
-        std::vector<std::string> _map_game;
+        std::unique_ptr<SDL_Window, decltype(&SDL_DestroyWindow)> _wind;
+        std::unique_ptr<SDL_Renderer, decltype(&SDL_DestroyRenderer)>_ren;
+        SDL_Event _e;
+        std::unique_ptr<std::vector<std::vector<std::pair<char, SDL_Texture *>>>> _map;
         bool _isNewMap;
         bool _isNewKey;
         int _key;
 };
 
-struct KeyNcurses {
+struct s_KeySdl {
     int code_lib;
     int code_core;
 };
 
-static struct KeyNcurses KeyNcurses[] = {
+static struct s_KeySdl KeySdl[] = {
     {'a', 0},
     {'b', 1},
     {'c', 2},
@@ -89,15 +88,15 @@ static struct KeyNcurses KeyNcurses[] = {
     {'7', 33},
     {'8', 34},
     {'9', 35},
-    {259, 36}, // Up
-    {258, 37}, // Down
-    {261, 38}, // Right
-    {260, 39}, // Left
-    {10, 40},  // Enter
+    {1073741906, 36}, // Up
+    {1073741905, 37}, // Down
+    {1073741903, 38}, // Right
+    {1073741904, 39}, // Left
+    {271, 40},  // Enter
     {32, 41},  // Space
-    {263, 42}, // BackSpace
+    {8, 42}, // BackSpace
     {9, 43},   // Tab
     {1000, 1000}
 };
 
-#endif /* !CLASS_NCURSES_HPP_ */
+#endif /* !CLASS_SDL_HPP_ */

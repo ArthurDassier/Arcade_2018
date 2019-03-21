@@ -12,7 +12,6 @@ template <typename T>
 class DLLoader
 {
     public:
-
         DLLoader(std::string lib_path)
         {
             _handle = dlopen(lib_path.c_str(), RTLD_NOW);
@@ -28,6 +27,7 @@ class DLLoader
             dlclose(_handle);
         }
 
+        // Members
         T *getInstance() const
         {
             T *(*func_pointer)(void) = (T *(*)(void))dlsym(_handle, "entryPoint");
