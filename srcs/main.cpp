@@ -18,6 +18,7 @@ int main(int ac, char **av)
     DLLoader <IGraphic> instance(lib_path);
     IGraphic *module = instance.getInstance();
 
+    module->setMap();
     while (module->runGraph());
     delete module;
     return (0);

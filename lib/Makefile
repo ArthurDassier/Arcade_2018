@@ -7,7 +7,7 @@
 
 CPP				=	g++
 
-CPPFLAGS		=	-std=c++11 -g3
+CPPFLAGS		=	-std=c++17 -g3
 
 LDFLAGS			=	-shared -fPIC
 
