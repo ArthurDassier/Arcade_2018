@@ -9,6 +9,9 @@
     #define CLASS_NCURSES_HPP_
 
 #include <ncurses.h>
+#include <memory>
+#include <vector>
+#include <fstream>
 #include "../IGraphic.hpp"
 
 class class_ncurses : public IGraphic
@@ -32,9 +35,13 @@ class class_ncurses : public IGraphic
         void setLastKey(int);
         int getLastKey(void) const;
 
+        bool check_first_wall(std::string, size_t);
+        void set_map_texture();
+
     private:
         int _c;
-        std::shared_ptr<void> _map;
+        std::unique_ptr<std::vector<std::string>> _map;
+        std::vector<std::string> _map_game;
         bool _isNewMap;
         bool _isNewKey;
         int _key;
