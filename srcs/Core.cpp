@@ -44,6 +44,7 @@ bool Core::startCore(void)
         delete module;
         return (true);
     }
+    delete module;
     return (false);
 }
 
