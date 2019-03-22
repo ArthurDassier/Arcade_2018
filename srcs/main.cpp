@@ -5,6 +5,7 @@
 ** main
 */
 
+#include "IGame.hpp"
 #include <thread>
 #include <chrono>
 
@@ -14,61 +15,23 @@
 
 int main(int ac, char **av)
 {
+    if (ac < 2)
+        return (84);
     Core core(av[1]);
-    int i = 1;
+    std::vector<std::string> _libs;
+    size_t i = 0;
+
+    _libs.push_back("lib_arcade_ncurses.so");
+    _libs.push_back("lib_arcade_sfml.so");
+    _libs.push_back("lib_arcade_sdl.so");
+    for (; i < _libs.size(); i++)
+        if (_libs.at(i) == av[1])
+            break;            
     while (core.startCore()) {
-        if (i > 0) {
+            i = i == 2 ? 0 : i + 1;
             std::this_thread::sleep_for(std::chrono::milliseconds(10));
-            core.loadNewLibGraph("./lib/lib_arcade_sdl.so");
+            core.loadNewLibGraph(_libs[i]);
             std::this_thread::sleep_for(std::chrono::milliseconds(10));
-        } else {
-            std::this_thread::sleep_for(std::chrono::milliseconds(10));
-            core.loadNewLibGraph("./lib/lib_arcade_ncurses.so");
-            std::this_thread::sleep_for(std::chrono::milliseconds(10));
-        }
-        i *= -1;
     }
+    return (0);
 }
-
-// int main(int ac, char **av)
-// {
-//     if (ac < 2)
-//         return (84);
-//     std::string lib (av[1]);
-//     std::string lib_path ("./lib/" + lib);
-//     DLLoader <IGraphic> instance(lib_path);
-//     IGraphic *module = instance.getInstance();
-
-//     module->setMap();
-//     while (module->runGraph());
-//     delete module;
-//     return (0);
-// }
-
-// int main(int ac, char **av)
-// {
-//     if (ac < 2)
-//         return (84);
-//     Core *core = new Core(av[1]);
-//     // Core core(av[1]);
-//     std::cout << "handle game" << std::endl;
-//     core->handleGame();
-//     std::cout << "start core" << std::endl;
-//     core->startCore();
-//     // std::string lib (av[1]);
-//     // std::string lib_path ("./lib/" + lib);
-//     // DLLoader <IGraphic> instance(lib_path);
-//     // // IGraphic *module = instance.getInstance();
-//     // t_tmp tmp;
-//     // tmp._libGraph = instance.getInstance();
-    
-//     // tmp._libGraph->setMap();
-//     // while (tmp._libGraph->runGraph());
-//     // delete tmp._libGraph;
-//     // module->setMap();
-//     // while (module->runGraph());
-//     // delete module;
-//     std::cout << "delete core" << std::endl;
-//     delete core;
-//     return (0);
-// }

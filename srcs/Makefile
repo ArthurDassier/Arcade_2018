@@ -17,6 +17,8 @@ INCLUDE			+=	-I../lib/SFML
 
 INCLUDE			+=	-I../lib/NCURSES
 
+INCLUDE			+= 	-I../games
+
 LDFLAGS			=	-shared -fPIC
 
 CORE			=	arcade

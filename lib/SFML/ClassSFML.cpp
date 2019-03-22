@@ -34,25 +34,27 @@ void ClassSFML::setMapTexture()
         x = 0;
         for (auto it_str = it->begin(); it_str != it->end(); ++it_str) {
             switch (it_str->first) {
-                case '1':
+                case WALL:
                     it_str->second.setTexture(_wall_texture);
                     it_str->second.setColor(sf::Color(103, 183, 250));
                     it_str->second.setPosition({x, y});
                     break;
-                case '2':
+                case POINT:
                     it_str->second.setTexture(_object_texture);
                     it_str->second.setColor(sf::Color(255, 186, 156));
                     it_str->second.setPosition({x + 12, y + 12});
                     break;
-                case '3':
-                    it_str->second.setTexture(_super_object_texture);
-                    it_str->second.setColor(sf::Color(255, 186, 156));
-                    it_str->second.setPosition({x + 9, y + 9});
-                    break;
-                case '4':
+                case PLAYER:
                     it_str->second.setTexture(_character);
                     it_str->second.scale(sf::Vector2f(1.5f, 1.5f));
                     it_str->second.setPosition({x + 5, y + 4});
+                    break;
+                case GHOST:
+                    break;
+                case BONUS:
+                    it_str->second.setTexture(_super_object_texture);
+                    it_str->second.setColor(sf::Color(255, 186, 156));
+                    it_str->second.setPosition({x + 9, y + 9});
                     break;
                 default:
                     break;
@@ -65,27 +67,29 @@ void ClassSFML::setMapTexture()
 
 void ClassSFML::displayGame()
 {
-    static int x = 0;
-    std::vector<sf::Texture> v_tmp;
-    sf::Texture tmp0;
-    sf::Texture tmp1;
-    sf::Texture tmp2;
-    tmp0.loadFromFile("./textures/tile000.bmp");
-    tmp1.loadFromFile("./textures/tile001.bmp");
-    tmp2.loadFromFile("./textures/tile002.bmp");
-    v_tmp.push_back(tmp0);
-    v_tmp.push_back(tmp1);
-    v_tmp.push_back(tmp2);
+    // static int x = 0
+    // std::vector<sf::Texture> v_tmp;
+    // sf::Texture tmp0;
+    // sf::Texture tmp1;
+    // sf::Texture tmp2;
+    // tmp0.loadFromFile("./textures/tile000.bmp");
+    // tmp1.loadFromFile("./textures/tile001.bmp");
+    // tmp2.loadFromFile("./textures/tile002.bmp");
+    // v_tmp.push_back(tmp0);
+    // v_tmp.push_back(tmp1);
+    // v_tmp.push_back(tmp2);
     for (auto it = _map->begin(); it != _map->end(); ++it)
         for (auto it_sprite = it->begin(); it_sprite != it->end(); ++it_sprite) {
-            if (it_sprite->first == '4') {
-                it_sprite->second.setTexture(v_tmp[x]);
-            }
+            if (it_sprite->first != '0') {
+            // if (it_sprite->first == PLAYER) {
+            //     it_sprite->second.setTexture(v_tmp[x]);
+            // }
             _wind->draw(it_sprite->second);
+            }
         }
-    x++;
-    if (x == 3)
-        x = 0;
+    // x++;
+    // if (x == 3)
+    //     x = 0;
 }
 
 bool ClassSFML::get_event()
@@ -95,11 +99,8 @@ bool ClassSFML::get_event()
             return (true);
         if (_event.type == sf::Event::KeyPressed) {
             translateKey();
-            std::cout << getLastKey() << std::endl;
-            if (getLastKey() == 38 || getLastKey() == 39) {
-                std::cout << "change lib" << std::endl;
+            if (getLastKey() == 38 || getLastKey() == 39)
                 return (true);
-            }
         }
     }
     return (false);

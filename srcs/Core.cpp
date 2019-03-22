@@ -6,10 +6,14 @@
 */
 
 #include "Core.hpp"
+#include "ClassSFML.hpp"
 
 Core::Core(std::string libName)
 {
-    _libName = libName;
+    std::string libPath("./lib/" + libName);
+    _libName = libPath;
+    _graphLibs.push_back("lib_arcade_sfml.so");
+    _graphLibs.push_back("lib_arcade_ncurses.so");
 }
 
 Core::~Core()
@@ -22,7 +26,7 @@ void Core::loadNewGame(std::string name)
 
 void Core::loadNewLibGraph(std::string name)
 {
-    _libName = name;
+    _libName = "./lib/" + name;
 }
 
 void Core::handleGame(void)

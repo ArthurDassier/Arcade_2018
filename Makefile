@@ -44,12 +44,15 @@ $(CORE):
 				$(MAKE) -C $(CORE_DIR)
 
 $(GAMES):
-				$(info ************  BUILDING GAMES ************)
-				$(MAKE)	-C $(GAMES_DIR)
+				# $(info ************  BUILDING GAMES ************)
+				cd $(GAMES_DIR)
+				make
+				# $(MAKE)	-C $(GAMES_DIR)
 
 $(GRAPHICALS):	
 				$(info ************  BUILDING GRAPHICALS ************)
 				$(MAKE) -C $(LIB_DIR)
+				$(MAKE) -C $(GAMES_DIR)
 
 clean:
 				$(MAKE) -C $(CORE_DIR) clean

@@ -5,13 +5,40 @@
 ## Makefile
 ##
 
-all:			# $(SFML)
+CXX				=	g++
+
+CXXFLAGS		=	-std=c++17 -g3
+
+LDFLAGS			=	-shared -fPIC
+
+INCLUDE			=	-I.
+
+PACMAN			=	lib_arcade_pacman.so
+
+PACMAN_DIR		=	Pacman/
+
+PACMAN_FILES	=	ClassPacman.cpp
+
+PACMAN_SRCS		=	$(addprefix $(PACMAN_DIR), $(PACMAN_FILES))
+
+NIBBLER			=	lib_arcade_nibbler.so
+
+NIBBLER_DIR		=	Nibbler/
+
+NIBBLER_FILES	=
+
+NIBBLER_SRCS	=	$(addprefix $(NIBBLER_DIR), $(NIBBLER_FILES))
+
+all:			$(PACMAN)
+
+$(PACMAN):
+				$(CXX) $(CXXFLAGS) $(LDFLAGS) $(PACMAN_SRCS) -o $(PACMAN) $(INCLUDE)
 
 clean:
-				# $(RM) $(SFML_OBJS)
+				# $(RM) $(_OBJS)
 
 fclean:			clean
-				# $(RM) $(SFML)
+				$(RM) $(PACMAN)
 
 re:				fclean all
 

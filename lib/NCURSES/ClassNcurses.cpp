@@ -31,7 +31,8 @@ bool ClassNcurses::getEvent()
     _c = getch();
 
     switch (_c) {
-        case 'Q':
+        case 'a':
+            setLastKey(0);
             return (true);
         default:
             translateKey();
