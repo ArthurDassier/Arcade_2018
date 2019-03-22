@@ -21,7 +21,7 @@ endif
 
 LIB_NCURSES		=	-lncurses
 
-LIB_SDL			=	-lSDL2 -lGL -lGLU -lSDL2_image
+LIB_SDL			=	-lSDL2 -lGL -lGLU
 
 SFML			=	lib_arcade_sfml.so
 

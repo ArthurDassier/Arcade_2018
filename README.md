@@ -1,7 +1,13 @@
-## Arcade
-#Load SDL:
+# Arcade
+
+## Load SDL
+
 ./arcade lib_arcade_sdl.so
-#Load SFML:
+
+## Load SFML
+
 ./arcade lib_arcade_sfml.so
-#Load ncurses:
+
+## Load ncurses
+
 ./arcade lib_arcade_ncurses.so

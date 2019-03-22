@@ -17,6 +17,15 @@
 #define SCREEN_HEIGHT 630
 #define SCREEN_WIDTH 570
 
+enum Graphics {
+    NOTHING = '0',
+    WALL = '1',
+    POINT = '2',
+    PLAYER = '3',
+    GHOST = '4',
+    BONUS = '5'
+};
+
 class IGraphic {
     public:
         virtual ~IGraphic() = default;

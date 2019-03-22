@@ -17,13 +17,11 @@ ClassSDL::ClassSDL() :
     SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_OPENGL));
     if (_wind == nullptr) {
         std::cerr << "SDL_CreateWindow Error: " << SDL_GetError() << std::endl;
-        IMG_Quit();
         SDL_Quit();
     }
     _ren.reset(SDL_CreateRenderer(_wind.get(), -1, 0));
     if (_ren == nullptr) {
         std::cerr << "SDL_CreateRenderer Error: " << SDL_GetError() << std::endl;
-        IMG_Quit();
         SDL_Quit();
     }
 }
@@ -34,7 +32,6 @@ ClassSDL::~ClassSDL()
         for(auto it_str = it->begin(); it_str != it->end(); ++it_str)
                 SDL_DestroyTexture(it_str->second);
     }
-    IMG_Quit();
     SDL_Quit();
 }
 
@@ -61,16 +58,16 @@ void ClassSDL::print_textures()
     for (auto it = _map->begin(); it != _map->end(); ++it) {
         for(auto it_str = it->begin(); it_str != it->end(); ++it_str) {
             switch (it_str->first) {
-                case '1':
+                case WALL:
                     SDL_RenderCopy(_ren.get(), it_str->second, NULL, &dstrect);
                     break;
-                case '2':
+                case POINT:
                     SDL_RenderCopy(_ren.get(), it_str->second, NULL, &dstrect3);
                     break;
-                case '3':
+                case BONUS:
                     SDL_RenderCopy(_ren.get(), it_str->second, NULL, &dstrect2);
                     break;
-                case '4':
+                case PLAYER:
                     SDL_RenderCopy(_ren.get(), it_str->second, NULL, &dstrect);
                     break;
                 default:
@@ -108,28 +105,28 @@ bool ClassSDL::runGraph()
 
 void ClassSDL::load_textures()
 {
-    SDL_Surface *wall = IMG_Load("./textures/wall.png");
-    SDL_Surface *point = IMG_Load("./textures/point.png");
-    SDL_Surface *gros_point = IMG_Load("./textures/big_point.png");
-    SDL_Surface *pacman = IMG_Load("./textures/pacman.png");
+    SDL_Surface *wall = SDL_LoadBMP("./textures/wall.bmp");
+    SDL_Surface *point = SDL_LoadBMP("./textures/point.bmp");
+    SDL_Surface *gros_point = SDL_LoadBMP("./textures/big_point.bmp");
+    SDL_Surface *pacman = SDL_LoadBMP("./textures/pacman.bmp");
 
     if (!pacman || !wall || !gros_point || !point) {
-        std::cout << "IMG_Load: " << IMG_GetError() << std::endl;
+        std::cout << "BMP_Load: " << SDL_GetError() << std::endl;
         return;
     }
     for (auto it = _map->begin(); it != _map->end(); ++it) {
         for(auto it_str = it->begin(); it_str != it->end(); ++it_str) {
             switch (it_str->first) {
-                case '1':
+                case WALL:
                     it_str->second = SDL_CreateTextureFromSurface(_ren.get(), wall);
                     break;
-                case '2':
+                case POINT:
                     it_str->second = SDL_CreateTextureFromSurface(_ren.get(), point);
                     break;
-                case '3':
+                case BONUS:
                     it_str->second = SDL_CreateTextureFromSurface(_ren.get(), gros_point);
                     break;
-                case '4':
+                case PLAYER:
                     it_str->second = SDL_CreateTextureFromSurface(_ren.get(), pacman);
                     break;
                 default:

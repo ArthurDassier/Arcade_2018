@@ -14,10 +14,10 @@ ClassSFML::ClassSFML():
     _wind->create(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Arcade");
     _wind->setPosition(SCREEN_POS);
     _wind->setFramerateLimit(FRAMERATE);
-    _wall_texture.loadFromFile("./textures/wall.png", sf::IntRect(10, 10, 30, 30));
-    _object_texture.loadFromFile("./textures/big_point.png", sf::IntRect(0, 0, 30, 30));
-    _super_object_texture.loadFromFile("./textures/point.png", sf::IntRect(0, 0, 30, 30));
-    _character.loadFromFile("./textures/tile000.png");
+    _wall_texture.loadFromFile("./textures/wall.bmp", sf::IntRect(10, 10, 30, 30));
+    _object_texture.loadFromFile("./textures/big_point.bmp", sf::IntRect(0, 0, 30, 30));
+    _super_object_texture.loadFromFile("./textures/point.bmp", sf::IntRect(0, 0, 30, 30));
+    _character.loadFromFile("./textures/tile000.bmp");
 }
 
 ClassSFML::~ClassSFML()
@@ -70,9 +70,9 @@ void ClassSFML::displayGame()
     sf::Texture tmp0;
     sf::Texture tmp1;
     sf::Texture tmp2;
-    tmp0.loadFromFile("./textures/tile000.png");
-    tmp1.loadFromFile("./textures/tile001.png");
-    tmp2.loadFromFile("./textures/tile002.png");
+    tmp0.loadFromFile("./textures/tile000.bmp");
+    tmp1.loadFromFile("./textures/tile001.bmp");
+    tmp2.loadFromFile("./textures/tile002.bmp");
     v_tmp.push_back(tmp0);
     v_tmp.push_back(tmp1);
     v_tmp.push_back(tmp2);
