@@ -33,15 +33,19 @@ class ClassNcurses : public IGraphic
         void setLastKey(int);
         int getLastKey(void) const;
 
+        //pour le menu
+        int get_input();
+        std::string get_string();
+        char translate_for_menu(int);
 
     private:
         std::unique_ptr<std::vector<std::string>> _map;
-        std::vector<std::string> _map_game;
-
+        WINDOW *_window;
         int _c;
         bool _isNewMap;
         bool _isNewKey;
         int _key;
+        std::string _str;
 };
 
 struct KeyNcurses {
