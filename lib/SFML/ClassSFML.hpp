@@ -40,7 +40,6 @@ class ClassSFML : public IGraphic
 
     private:
         std::unique_ptr<sf::RenderWindow> _wind;
-        std::shared_ptr<sf::CircleShape> _shape;
         std::unique_ptr<std::vector<std::vector<std::pair<char, sf::Sprite>>>> _map;
 
         sf::Texture _wall_texture;

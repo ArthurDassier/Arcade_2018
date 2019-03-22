@@ -8,7 +8,9 @@
 #include "ClassNcurses.hpp"
 
 ClassNcurses::ClassNcurses() :
-    _key(999), _str(""), _isNewKey(false)
+    _key(999),
+    _str(""),
+    _isNewKey(false)
 {
     initscr();
     _window = subwin(stdscr, LINES / 2, COLS, LINES / 4, 0);
@@ -31,9 +33,10 @@ bool ClassNcurses::getEvent()
     switch (_c) {
         case 'Q':
             return (true);
-            break;
         default:
             translateKey();
+            if (getLastKey() == 38 || getLastKey() == 39)
+                return (true);
             break;
     }
     return (false);
@@ -131,12 +134,6 @@ bool ClassNcurses::runGraph()
     timeout(100);
     refresh();
     return (true);
-/*    _window = subwin(stdscr, LINES / 2, COLS, LINES/4, 0);
-    wborder(_window, '|', '|', '-', '-', '+', '+', '+', '+');
-    mvprintw(LINES/2, (COLS / 2) - (7/2), "fenetre");
-    refresh();
-    getch(); 
-    return (false);*/
 }
 
 void ClassNcurses::setMap()

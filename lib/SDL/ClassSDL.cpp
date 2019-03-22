@@ -97,6 +97,8 @@ bool ClassSDL::runGraph()
         }
         if (_e.type == SDL_KEYDOWN)
             translateKey();
+        if (getLastKey() == 38 || getLastKey() == 39)
+            return (false);
     }
     print_textures();
     SDL_Delay(2);

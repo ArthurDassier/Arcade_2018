@@ -96,10 +96,10 @@ bool ClassSFML::get_event()
         if (_event.type == sf::Event::KeyPressed) {
             translateKey();
             std::cout << getLastKey() << std::endl;
-            if (getLastKey() == 0)
-                return (true);
-            if (getLastKey() == 38)
+            if (getLastKey() == 38 || getLastKey() == 39) {
                 std::cout << "change lib" << std::endl;
+                return (true);
+            }
         }
     }
     return (false);

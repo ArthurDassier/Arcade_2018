@@ -8,6 +8,10 @@
 #include <dlfcn.h>
 #include <iostream>
 
+#ifndef DLL_HPP_
+    #define DLL_HPP_
+
+
 template <typename T>
 class DLLoader
 {
@@ -38,3 +42,5 @@ class DLLoader
     private:
         void *_handle;
 };
+
+#endif
