@@ -9,8 +9,6 @@
     #define CLASS_SDL_HPP_
 
 #include <SDL2/SDL.h>
-#include <SDL2/SDL_opengl.h>
-#include <GLES3/gl3.h>
 #include "IGraphic.hpp"
 
 class ClassSDL : public IGraphic
