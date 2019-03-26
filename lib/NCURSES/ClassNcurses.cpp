@@ -26,10 +26,6 @@ ClassNcurses::~ClassNcurses()
     endwin();
 }
 
-void ClassNcurses::displayGame()
-{
-}
-
 bool ClassNcurses::getEvent()
 {
     _c = getch();
@@ -141,23 +137,20 @@ bool ClassNcurses::runGraph()
     return (true);
 }
 
-void ClassNcurses::setMap(std::shared_ptr<std::vector<std::string>> map)
+void ClassNcurses::setMap()
 {
-    // std::string tmp;
-    // std::ifstream file;
+    std::string tmp;
+    std::ifstream file;
 
     _map = std::make_unique<std::vector<std::string>>();
-    for (auto it = map->begin(); it != map->end(); ++it) {
-        _map->push_back(*it);
+    file.open("./map.txt");
+    if (file.is_open() == false)
+        std::cout << "FAIL" << std::endl;
+    while (!file.eof()) {
+        getline(file, tmp);
+        _map->push_back(tmp);
     }
-    // file.open("./map.txt");
-    // if (file.is_open() == false)
-    //     std::cout << "FAIL" << std::endl;
-    // while (!file.eof()) {
-    //     getline(file, tmp);
-    //     _map->push_back(tmp);
-    // }
-    // file.close();
+    file.close();
 }
 
 void ClassNcurses::translateKey()
@@ -201,16 +194,6 @@ void ClassNcurses::setLastKey(int key)
 int ClassNcurses::getLastKey(void) const
 {
     return (_key);
-}
-
-void ClassNcurses::setScore(size_t score)
-{
-    _score = score;
-}
-
-size_t ClassNcurses::getScore() const
-{
-    return (_score);
 }
 
 extern "C"

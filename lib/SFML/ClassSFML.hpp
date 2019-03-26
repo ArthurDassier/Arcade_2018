@@ -9,10 +9,9 @@
     #define CLASS_SFML_HPP_
 
 #include <SFML/Graphics.hpp>
-#include "AnimatedSprite.hpp"
 #include "IGraphic.hpp"
 
-#define SCREEN_POS {675, 225}
+#define SCREEN_POS {610, 160}
 #define FRAMERATE 15
 
 class ClassSFML : public IGraphic
@@ -23,8 +22,8 @@ class ClassSFML : public IGraphic
 
         //Members
         bool runGraph();
-        bool getEvent();
-        void setMap(std::shared_ptr<std::vector<std::string>>);
+        bool get_event();
+        void setMap();
         void translateKey();
 
         void setIsNewMap(bool);
@@ -39,32 +38,18 @@ class ClassSFML : public IGraphic
         void setMapTexture(void);
         void displayGame(void);
 
-        void setScore(size_t);
-        size_t getScore() const;
-
     private:
         std::unique_ptr<sf::RenderWindow> _wind;
         std::unique_ptr<std::vector<std::vector<std::pair<char, sf::Sprite>>>> _map;
-        // std::unique_ptr<std::vector<std::vector<std::pair<char, std::pair<Animation, AnimatedSprite>>>>> _map;
-        Animation* _currentAnimation;
-        sf::Clock _frameClock;
-        // static sf::Time _frameTime;
-        Animation _MoveDownAnimation;
-        Animation _MoveLeftAnimation;
-        Animation _MoveRightAnimation;
-        Animation _MoveUpAnimation;
-        Animation _Wall;
-        AnimatedSprite _animatedSprite;
 
         sf::Texture _wall_texture;
-        sf::Texture _point_texture;
-        sf::Texture _bonus_texture;
-        sf::Texture _player_texture;
+        sf::Texture _object_texture;
+        sf::Texture _super_object_texture;
+        sf::Texture _character;
         sf::Event _event;
 
         bool _isNewMap;
         bool _isNewKey;
-        size_t _score;
         int _key;
 };
 
@@ -98,7 +83,7 @@ static struct KeySFML KeySFML[] = {
     {21, 21},
     {22, 22},
     {23, 23},
-    {24, 24},
+    {25, 24},
     {25, 25},
     {75, 26},
     {76, 27},

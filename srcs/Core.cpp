@@ -22,8 +22,6 @@ Core::~Core()
 
 void Core::loadNewGame(std::string name)
 {
-    std::string gamePath("./games/" + name);
-    _gameName = gamePath;
 }
 
 void Core::loadNewLibGraph(std::string name)
@@ -33,13 +31,6 @@ void Core::loadNewLibGraph(std::string name)
 
 void Core::handleGame(void)
 {
-    // std::this_thread::sleep_for(std::chrono::milliseconds(160));
-    // _gameModule->setIsNewKey(_libModule->getIsNewKey());
-    _gameModule->runGame();
-    _libModule->setMap(_gameModule->getMap());
-    _libModule->setScore(_gameModule->getScore());
-    _gameModule->setLastKey(_libModule->getLastKey());
-    // _libModule->setIsNewKey(_gameModule->getIsNewKey());
 }
 
 void Core::handleMenu(void)
@@ -49,25 +40,15 @@ void Core::handleMenu(void)
 bool Core::startCore(void)
 {
     DLLoader<IGraphic> instance(_libName);
-    _libModule = instance.getInstance();
-    DLLoader<IGame> game_instance(_gameName);
-    _gameModule = game_instance.getInstance();
-    _gameModule->setMap(_map);
+    IGraphic *module = instance.getInstance();
 
-    while (true) {
-        handleGame();
-        if (!_libModule->runGraph()) {
-            if (_libModule->getLastKey() == PREV_LIB || _libModule->getLastKey() == NEXT_LIB) {
-                delete _libModule;
-                delete _gameModule;
-                return (true);
-            } else
-                break;
-        }
+    module->setMap();
+    while (module->runGraph());
+    if (module->getLastKey() == 39 || module->getLastKey() == 38) {
+        delete module;
+        return (true);
     }
-    std::cout << "Score: " << _gameModule->getScore() << std::endl;
-    delete _libModule;
-    delete _gameModule;
+    delete module;
     return (false);
 }
 
@@ -109,17 +90,4 @@ void Core::setActualLib()
 int Core::getActualLib(void) const
 {
     return (_actualLib);
-}
-
-void Core::setMap(void)
-{
-    std::string line;
-    std::ifstream map_file("map.txt");
-
-    _map = std::make_shared<std::vector<std::string>>();
-    if (map_file) {
-        while (getline(map_file, line))
-            _map->push_back(line);
-        map_file.close();
-    }
 }

@@ -35,10 +35,6 @@ ClassSDL::~ClassSDL()
     SDL_Quit();
 }
 
-void ClassSDL::displayGame()
-{
-}
-
 void ClassSDL::print_textures()
 {
     SDL_Rect dstrect;
@@ -99,14 +95,10 @@ bool ClassSDL::runGraph()
             if (_e.window.event == SDL_WINDOWEVENT_CLOSE)
                 return (false);
         }
-        if (_e.type == SDL_KEYDOWN) {
+        if (_e.type == SDL_KEYDOWN)
             translateKey();
-            setIsNewKey(true);
-            if (getLastKey() == 38 || getLastKey() == 39)
-                return (false);
-        }
-        if (_e.type == SDL_KEYUP)
-            setIsNewKey(false);
+        if (getLastKey() == 38 || getLastKey() == 39)
+            return (false);
     }
     print_textures();
     SDL_Delay(2);
@@ -150,17 +142,25 @@ void ClassSDL::load_textures()
     SDL_FreeSurface(gros_point);
 }
 
-void ClassSDL::setMap(std::shared_ptr<std::vector<std::string>> map)
+void ClassSDL::setMap()
 {
+    std::string line;
+    std::ifstream file;
+
     _map = std::make_unique<std::vector<std::vector<std::pair<char, SDL_Texture *>>>>();
-    for (auto it = map->begin(); it != map->end(); ++it) {
+    file.open("./map.txt");
+    if (!file.is_open())
+        std::cout << "FAIL" << std::endl;
+    while (!file.eof()) {
+        getline(file, line);
         std::vector<std::pair<char, SDL_Texture *>> tmp;
-        for (auto it_str = it->begin(); it_str != it->end(); ++it_str) {
+        for (auto it = line.begin(); it != line.end(); ++it) {
             SDL_Texture *texture = nullptr;
-            tmp.push_back(std::make_pair(*it_str, texture));
+            tmp.push_back(std::make_pair(*it, texture));
         }
         _map->push_back(tmp);
     }
+    file.close();
     load_textures();
 }
 
@@ -202,16 +202,6 @@ void ClassSDL::setLastKey(int key)
 int ClassSDL::getLastKey(void) const
 {
     return (_key);
-}
-
-void ClassSDL::setScore(size_t score)
-{
-    _score = score;
-}
-
-size_t ClassSDL::getScore() const
-{
-    return (_score);
 }
 
 extern "C"

@@ -19,7 +19,7 @@ class ClassSDL : public IGraphic
 
         //Members
         bool runGraph();
-        void setMap(std::shared_ptr<std::vector<std::string>> map);
+        void setMap();
         void translateKey();
 
         void setIsNewMap(bool);
@@ -31,11 +31,6 @@ class ClassSDL : public IGraphic
         void setLastKey(int);
         int getLastKey(void) const;
 
-        void setScore(size_t);
-        size_t getScore() const;
-
-        void displayGame();
-
         void load_textures();
         void print_textures();
     private:
@@ -45,7 +40,6 @@ class ClassSDL : public IGraphic
         std::unique_ptr<std::vector<std::vector<std::pair<char, SDL_Texture *>>>> _map;
         bool _isNewMap;
         bool _isNewKey;
-        size_t _score;
         int _key;
 };
 
