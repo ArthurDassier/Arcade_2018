@@ -37,7 +37,7 @@ class ClassSDL : public IGraphic
         void displayGame();
 
         void load_textures();
-        void print_textures();
+        //void print_textures();
     private:
         std::unique_ptr<SDL_Window, decltype(&SDL_DestroyWindow)> _wind;
         std::unique_ptr<SDL_Renderer, decltype(&SDL_DestroyRenderer)>_ren;

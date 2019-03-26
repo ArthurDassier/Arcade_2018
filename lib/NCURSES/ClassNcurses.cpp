@@ -55,7 +55,7 @@ void ClassNcurses::setMapTexture()
     size_t lock_wall = 0;
     size_t posi = 1;
     std::ifstream ncurses("./lib/lib_arcade_ncurses.so");
-    std::ifstream sdl("./lib/lib_arcade_sdl.so");
+    std::ifstream sdl("./lib/lib_arcade_sdl2.so");
     std::ifstream sfml("./lib/lib_arcade_sfml.so");
 
     init_pair(1, COLOR_BLUE, COLOR_BLACK);

@@ -55,7 +55,7 @@ ClassSDL::~ClassSDL()
 void ClassSDL::displayGame()
 {
     std::ifstream ncurses("./lib/lib_arcade_ncurses.so");
-    std::ifstream sdl("./lib/lib_arcade_sdl.so");
+    std::ifstream sdl("./lib/lib_arcade_sdl2.so");
     std::ifstream sfml("./lib/lib_arcade_sfml.so");
     SDL_Rect dstrect = {0, 0, 30, 30};
     SDL_Rect dstrect2 = {10, 5, 8, 8};
@@ -140,7 +140,7 @@ bool ClassSDL::runGraph()
         if (_e.type == SDL_KEYUP)
             setIsNewKey(false);
     }
-    print_textures();
+    displayGame();
     SDL_Delay(4);
     return (true);
 }

@@ -23,7 +23,7 @@ int main(int ac, char **av)
 
     _libs.push_back("lib_arcade_sfml.so");
     _libs.push_back("lib_arcade_ncurses.so");
-    _libs.push_back("lib_arcade_sdl.so");
+    _libs.push_back("lib_arcade_sdl2.so");
     for (; i < _libs.size(); i++)
         if (_libs.at(i) == av[1])
             break;

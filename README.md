@@ -2,7 +2,7 @@
 
 ## Load SDL
 
-./arcade lib_arcade_sdl.so
+./arcade lib_arcade_sdl2.so
 
 ## Load SFML
 

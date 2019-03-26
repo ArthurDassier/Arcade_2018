@@ -39,7 +39,10 @@ void Core::handleGame(void)
     // std::this_thread::sleep_for(std::chrono::milliseconds(160));
     // _gameModule->setIsNewKey(_libModule->getIsNewKey());
     _gameModule->runGame();
-    _libModule->setMap(_gameModule->getMap());
+    if (_gameModule->getIsNewMap()) {
+        _libModule->setMap(_gameModule->getMap());
+        _gameModule->setIsNewMap(false);
+    }
     _libModule->setScore(_gameModule->getScore());
     _gameModule->setLastKey(_libModule->getLastKey());
     // _libModule->setIsNewKey(_gameModule->getIsNewKey());

@@ -150,6 +150,7 @@ void ClassPacman::moveLeft(void)
                 std::replace(it->begin(), it->end(), it->at(pos), (char)NOTHING);
                 *std::prev(it_c) = PLAYER;
             }
+            setIsNewMap(true);
             break;
         } else if (*std::next(it_c) == WALL)
             setIsNewKey(false);
@@ -171,6 +172,7 @@ void ClassPacman::moveRight(void)
                 *std::next(it_c) = PLAYER;
                 std::replace(it->begin(), it->end(), it->at(pos), (char)NOTHING);
             }
+            setIsNewMap(true);
             break;
         } else if (*std::next(it_c) == WALL)
             setIsNewKey(false);
@@ -189,8 +191,9 @@ void ClassPacman::moveUp(void)
                     setScore(getScore() + 10);
                 std::replace(it->begin(), it->end(), it->at(pos), (char)NOTHING);
                 std::prev(it)->at(pos) = PLAYER;
+                setIsNewMap(true);
             } else
-                setIsNewKey(false);            
+                setIsNewKey(false);
             break;
         }
     }
