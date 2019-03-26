@@ -1,21 +1,19 @@
-// /*
-// ** EPITECH PROJECT, 2019
-// ** ICore.hpp
-// ** File description:
-// ** ICore
-// */
+/*
+** EPITECH PROJECT, 2019
+** ICore.hpp
+** File description:
+** ICore
+*/
 
-// #ifndef ICORE_HPP_
-//     #define ICORE_HPP_
+#ifndef ICORE_HPP_
+    #define ICORE_HPP_
 
-// class ICore {
-// 	public:
-// 		virtual ~ICore() = default;
+class ICore {
+	public:
+		virtual ~ICore() = default;
 
-//         virtual void 
+	protected:
+	private:
+};
 
-// 	protected:
-// 	private:
-// };
-
-// #endif /* !ICORE_HPP_ */
+#endif /* !ICORE_HPP_ */

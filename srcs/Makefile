@@ -29,7 +29,7 @@ CORE_FILES		=	main.cpp	\
 CORE_OBJS		=	$(CORE_FILES:.cpp=.o)
 
 $(CORE):
-				$(CXX) $(INCLUDE) $(CPPFLAGS) $(CORE_FILES) -o $(CORE) -ldl
+				$(CXX) $(INCLUDE) $(CXXFLAGS) $(CORE_FILES) -o $(CORE) -ldl
 				$(CP) $(CORE) ..
 
 all:			$(CORE)

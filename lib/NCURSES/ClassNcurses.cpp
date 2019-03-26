@@ -14,6 +14,9 @@ ClassNcurses::ClassNcurses() :
 {
     initscr();
     _window = subwin(stdscr, LINES / 2, COLS, LINES / 4, 0);
+    _window_menu_sdl = subwin(stdscr, 3, 11, (LINES / 4) + 3 , (COLS / 2) - 30);
+    _window_menu_sfml = subwin(stdscr, 3, 11, (LINES / 4) + 6, (COLS / 2) - 30);
+    _window_menu_ncurses = subwin(stdscr, 3, 11, (LINES / 4) + 9, (COLS / 2) - 30);
     curs_set(false);
     noecho();
     cbreak();
@@ -26,6 +29,10 @@ ClassNcurses::~ClassNcurses()
     endwin();
 }
 
+void ClassNcurses::displayGame()
+{
+}
+
 bool ClassNcurses::getEvent()
 {
     _c = getch();
@@ -36,7 +43,7 @@ bool ClassNcurses::getEvent()
             return (true);
         default:
             translateKey();
-            if (getLastKey() == 38 || getLastKey() == 39)
+            if (getLastKey() == 38 || getLastKey() == 39 || getLastKey() == 40)
                 return (true);
             break;
     }
@@ -46,20 +53,21 @@ bool ClassNcurses::getEvent()
 void ClassNcurses::setMapTexture()
 {
     size_t lock_wall = 0;
-    size_t posi = 2;
-    size_t length = _map->begin()->size();
-    size_t height = _map->size();
+    size_t posi = 1;
+    std::ifstream ncurses("./lib/lib_arcade_ncurses.so");
+    std::ifstream sdl("./lib/lib_arcade_sdl.so");
+    std::ifstream sfml("./lib/lib_arcade_sfml.so");
 
     init_pair(1, COLOR_BLUE, COLOR_BLACK);
     init_pair(2, COLOR_YELLOW, COLOR_BLACK);
-    move((LINES/2) - (height/2) + 1, (COLS/2) - (length/2)); //dimensions de la map
+    move((LINES/2) - (_map->size()/2), (COLS/2) - (_map->begin()->size()/2)); //dimensions de la map
     for (auto it = _map->begin(); it != _map->end(); ++it) {
         for (auto i = it->begin(); i != it->end(); ++i) {
             switch (*i) {
                 case NOTHING: printw(" ");
                         break;
                 case WALL: attron(COLOR_PAIR(1));
-                        if (it == _map->begin() || ((it + 2) == _map->end()))
+                        if (it == _map->begin() || ((it + 1) == _map->end()))
                             printw("-");
                         else if (i == it->begin() || ((i + 1) == it->end()))
                             printw("|");
@@ -80,6 +88,21 @@ void ClassNcurses::setMapTexture()
                         break;
                 case BONUS: printw("o");
                         break;
+                case SDL: if (sdl.good()) {
+                            box(_window_menu_sdl, ACS_VLINE, ACS_HLINE);
+                            mvwprintw(_window_menu_sdl, 1, 4, "SDL");
+                        }
+                        break;
+                case SFML: if (sfml.good()) {
+                            box(_window_menu_sfml, ACS_VLINE, ACS_HLINE);
+                            mvwprintw(_window_menu_sfml, 1, 3, "SFML");
+                        }
+                        break;
+                case NCURSES: if (ncurses.good()) {
+                            box(_window_menu_ncurses, ACS_VLINE, ACS_HLINE);
+                            mvwprintw(_window_menu_ncurses, 1, 2, "NCURSES");
+                        }
+                        break;
                 default: printw(" ");
                         if (i == it->begin())
                             lock_wall++;
@@ -87,7 +110,7 @@ void ClassNcurses::setMapTexture()
             }
         }
         printw("\n");
-        move((LINES/2) - (height/2) + posi, (COLS/2) - (length/2));
+        move((LINES/2) - (_map->size()/2) + posi, (COLS/2) - (_map->begin()->size()/2));
         posi++;
     }
 }
@@ -127,9 +150,9 @@ bool ClassNcurses::runGraph()
     setMapTexture();
     wborder(_window, '|', '|', '-', '-', '+', '+', '+', '+');
     get_input();
-    attron(A_DIM);
+    /*attron(A_DIM);
     mvprintw(0, 0, "%s", _str.c_str());
-    attroff(A_DIM);
+    attroff(A_DIM);*/
     if (getEvent())
         return (false);
     timeout(100);
@@ -137,20 +160,12 @@ bool ClassNcurses::runGraph()
     return (true);
 }
 
-void ClassNcurses::setMap()
+void ClassNcurses::setMap(std::shared_ptr<std::vector<std::string>> map)
 {
-    std::string tmp;
-    std::ifstream file;
-
     _map = std::make_unique<std::vector<std::string>>();
-    file.open("./map.txt");
-    if (file.is_open() == false)
-        std::cout << "FAIL" << std::endl;
-    while (!file.eof()) {
-        getline(file, tmp);
-        _map->push_back(tmp);
+    for (auto it = map->begin(); it != map->end(); ++it) {
+        _map->push_back(*it);
     }
-    file.close();
 }
 
 void ClassNcurses::translateKey()
@@ -196,6 +211,16 @@ int ClassNcurses::getLastKey(void) const
     return (_key);
 }
 
+void ClassNcurses::setScore(size_t score)
+{
+    _score = score;
+}
+
+size_t ClassNcurses::getScore() const
+{
+    return (_score);
+}
+
 extern "C"
 {
     IGraphic *entryPoint(void)
@@ -204,3 +229,4 @@ extern "C"
         return (instance);
     }
 }
+

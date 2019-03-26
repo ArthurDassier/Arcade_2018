@@ -23,7 +23,10 @@ enum Graphics {
     POINT = '2',
     PLAYER = '3',
     GHOST = '4',
-    BONUS = '5'
+    BONUS = '5',
+    SDL = '6',
+    SFML = '7',
+    NCURSES = '8'
 };
 
 class IGraphic {
@@ -32,7 +35,7 @@ class IGraphic {
 
         //Members
         virtual bool runGraph() = 0;
-        virtual void setMap() = 0;
+        virtual void setMap(std::shared_ptr<std::vector<std::string>>) = 0;
         virtual void translateKey() = 0;
 
         virtual void setIsNewMap(bool) = 0;
@@ -43,6 +46,27 @@ class IGraphic {
 
         virtual void setLastKey(int) = 0;
         virtual int getLastKey(void) const = 0;
+
+        virtual void setScore(size_t) = 0;
+        virtual size_t getScore() const = 0;
+
+        virtual void displayGame() = 0;
+
+        enum Graphics {
+            NOTHING = '0',
+            WALL = '1',
+            POINT = '2',
+            PLAYER = '3',
+            GHOST = '4',
+            BONUS = '5'
+        };
+
+        enum Move {
+            RIGHT = 3,
+            LEFT = 16,
+            DOWN = 18,
+            UP = 25
+        };
 };
 
 #endif /* !IGRAPHIC_HPP_ */
