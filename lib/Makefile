@@ -27,7 +27,9 @@ SFML			=	lib_arcade_sfml.so
 
 SFML_DIR		=	SFML/
 
-SFML_FILES		=	ClassSFML.cpp
+SFML_FILES		=	AnimatedSprite.cpp	\
+					Animation.cpp		\
+					ClassSFML.cpp
 
 SFML_SRCS		=	$(addprefix $(SFML_DIR), $(SFML_FILES))
 

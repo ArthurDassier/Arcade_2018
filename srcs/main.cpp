@@ -26,12 +26,13 @@ int main(int ac, char **av)
     _libs.push_back("lib_arcade_sdl.so");
     for (; i < _libs.size(); i++)
         if (_libs.at(i) == av[1])
-            break;            
+            break;         
+    core.setMap();
     while (core.startCore()) {
-            i = i == 2 ? 0 : i + 1;
-            std::this_thread::sleep_for(std::chrono::milliseconds(10));
-            core.loadNewLibGraph(_libs[i]);
-            std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        i = i == 2 ? 0 : i + 1;
+        std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        core.loadNewLibGraph(_libs[i]);
+        std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
     return (0);
 }

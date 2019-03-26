@@ -20,7 +20,7 @@ class ClassNcurses : public IGraphic
         //Members
         bool getEvent();
         bool runGraph();
-        void setMap();
+        void setMap(std::shared_ptr<std::vector<std::string>>);
         void translateKey();
         void setMapTexture();
 
@@ -33,6 +33,11 @@ class ClassNcurses : public IGraphic
         void setLastKey(int);
         int getLastKey(void) const;
 
+        void setScore(size_t);
+        size_t getScore() const;
+
+        void displayGame();
+
         //pour le menu
         int get_input();
         std::string get_string();
@@ -44,6 +49,7 @@ class ClassNcurses : public IGraphic
         int _c;
         bool _isNewMap;
         bool _isNewKey;
+        size_t _score;
         int _key;
         std::string _str;
 };
