@@ -10,6 +10,13 @@
 
 #include "IGame.hpp"
 
+enum Move {
+    RIGHT = 3,
+    LEFT = 16,
+    DOWN = 18,
+    UP = 25
+};
+
 class ClassPacman : public IGame
 {
     public:
@@ -52,7 +59,7 @@ class ClassPacman : public IGame
 
         void checkNextCase(char);
 
-	private:
+    private:
         bool _isNewMap;
         std::shared_ptr<std::vector<std::string>> _map;
         Move _lastMove;

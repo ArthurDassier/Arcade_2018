@@ -45,7 +45,7 @@ NCURSES_SRCS	=	$(addprefix $(NCURSES_DIR), $(NCURSES_FILES))
 
 # NCURSES_OBJS	=	$(NCURSES_SRCS:.cpp=.o)
 
-SDL			=	lib_arcade_sdl.so
+SDL			=	lib_arcade_sdl2.so
 
 SDL_DIR		=	SDL/
 

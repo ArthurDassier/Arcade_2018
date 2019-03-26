@@ -54,10 +54,6 @@ ClassSDL::~ClassSDL()
 
 void ClassSDL::displayGame()
 {
-}
-
-void ClassSDL::print_textures()
-{
     std::ifstream ncurses("./lib/lib_arcade_ncurses.so");
     std::ifstream sdl("./lib/lib_arcade_sdl.so");
     std::ifstream sfml("./lib/lib_arcade_sfml.so");
