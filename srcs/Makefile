@@ -23,8 +23,9 @@ LDFLAGS			=	-shared -fPIC
 
 CORE			=	arcade
 
-CORE_FILES		=	main.cpp	\
-					Core.cpp
+CORE_FILES		=	main.cpp			\
+					Core.cpp			\
+					ParsingConfig.cpp
 
 CORE_OBJS		=	$(CORE_FILES:.cpp=.o)
 

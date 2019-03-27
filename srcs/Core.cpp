@@ -81,7 +81,7 @@ bool Core::startCore(void)
                 delete _libModule;
                 delete _gameModule;
                 return (true);
-            } else if (_libModule->getIsNewKey() && _libModule->getLastKey() == ENTER) {
+            } else if (_libModule->getIsNewKey() && _libModule->getLastKey() == 40) {
                 _libModule->setIsNewKey(false);
                 if (_isMenu) {
                     setMap();
@@ -92,11 +92,13 @@ bool Core::startCore(void)
                     _isMenu = false;
                 } else
                     _isMenu = true;
-            } else
+            } else {
                 break;
+            }
         }
     }
     std::cout << "Score: " << _gameModule->getScore() << std::endl;
+    std::cout << "wow" << std::endl;
     delete _libModule;
     delete _gameModule;
     return (false);

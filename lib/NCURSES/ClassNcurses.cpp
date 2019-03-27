@@ -149,8 +149,8 @@ bool ClassNcurses::runGraph()
     clear();
     setMapTexture();
     wborder(_window, '|', '|', '-', '-', '+', '+', '+', '+');
-    get_input();
-    /*attron(A_DIM);
+    /*get_input();
+    attron(A_DIM);
     mvprintw(0, 0, "%s", _str.c_str());
     attroff(A_DIM);*/
     if (getEvent())
