@@ -11,6 +11,18 @@
 #include <ncurses.h>
 #include "IGraphic.hpp"
 
+enum Graphics {
+    NOTHING = '0',
+    WALL = '1',
+    POINT = '2',
+    PLAYER = '3',
+    GHOST = '4',
+    BONUS = '5',
+    SDL = '6',
+    SFML = '7',
+    NCURSES = '8'
+};
+
 class ClassNcurses : public IGraphic
 {
     public:

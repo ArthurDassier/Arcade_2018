@@ -84,8 +84,8 @@ bool Core::startCore(void)
             } else if (_libModule->getIsNewKey() && _libModule->getLastKey() == 40) {
                 _libModule->setIsNewKey(false);
                 if (_isMenu) {
-                    setMap();
                     delete _libModule;
+                    setMap();
                     _libModule = instance.getInstance();
                     _libModule->setMap(_gameModule->getMap());
                     _gameModule->setMap(_map);

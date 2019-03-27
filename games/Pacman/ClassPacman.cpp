@@ -8,7 +8,7 @@
 #include "ClassPacman.hpp"
 
 ClassPacman::ClassPacman():
-    _isNewMap(false),
+    _isNewMap(true),
     _score(0),
     _key(0),
     _bonus(false)

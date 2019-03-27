@@ -15,6 +15,18 @@
 #define SCREEN_POS {675, 225}
 #define FRAMERATE 15
 
+enum Graphics {
+    NOTHING = '0',
+    WALL = '1',
+    POINT = '2',
+    PLAYER = '3',
+    GHOST = '4',
+    BONUS = '5',
+    SDL = '6',
+    SFML = '7',
+    NCURSES = '8'
+};
+
 class ClassSFML : public IGraphic
 {
     public:

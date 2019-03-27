@@ -38,6 +38,8 @@ bool ClassNcurses::getEvent()
     _c = getch();
 
     switch (_c) {
+        case ERR:
+            break;
         case 'a':
             setLastKey(0);
             return (true);
