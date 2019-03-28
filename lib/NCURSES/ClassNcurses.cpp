@@ -30,10 +30,6 @@ ClassNcurses::~ClassNcurses()
     endwin();
 }
 
-void ClassNcurses::displayGame()
-{
-}
-
 bool ClassNcurses::getEvent()
 {
     _c = getch();
@@ -192,7 +188,7 @@ void ClassNcurses::translateKey()
     if (_c != ERR) {
         for (size_t i = 0; KeyNcurses[i].code_lib != 1000; ++i) {
             if (_c == KeyNcurses[i].code_lib) {
-                this->setLastKey(KeyNcurses[i].code_core);
+                setLastKey(KeyNcurses[i].code_core);
                 setIsNewKey(true);
                 break;
             }
@@ -238,6 +234,26 @@ void ClassNcurses::setScore(size_t score)
 size_t ClassNcurses::getScore() const
 {
     return (_score);
+}
+
+void ClassNcurses::setPathConfig(std::string path) noexcept
+{
+    _pathConfig = path;
+}
+
+std::string ClassNcurses::getPathConfig() const noexcept
+{
+    return (_pathConfig);
+}
+
+void ClassNcurses::setIsNewPathConfig(bool isNewPath) noexcept
+{
+    _isNewPathConfig = isNewPath;   
+}
+
+bool ClassNcurses::getIsNewPathConfig() const noexcept
+{
+    return (_isNewPathConfig);
 }
 
 extern "C"

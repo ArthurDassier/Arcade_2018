@@ -48,7 +48,11 @@ class ClassNcurses : public IGraphic
         void setScore(size_t);
         size_t getScore() const;
 
-        void displayGame();
+        void setPathConfig(std::string) noexcept;
+        std::string getPathConfig() const noexcept;
+
+        void setIsNewPathConfig(bool) noexcept;
+        bool getIsNewPathConfig() const noexcept;
 
         //pour le menu
         int get_input();
@@ -68,6 +72,8 @@ class ClassNcurses : public IGraphic
         size_t _score;
         int _key;
         std::string _str;
+        std::string _pathConfig;
+        bool _isNewPathConfig;
 };
 
 struct KeyNcurses {

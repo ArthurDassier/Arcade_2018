@@ -40,6 +40,8 @@ void Core::handleGame(void)
     // _gameModule->setIsNewKey(_libModule->getIsNewKey());
     _gameModule->runGame();
     if (_gameModule->getIsNewMap()) {
+        _libModule->setIsNewPathConfig(true);
+        _libModule->setPathConfig(_gameModule->getPathConfig());
         _libModule->setMap(_gameModule->getMap());
         _gameModule->setIsNewMap(false);
     }
@@ -59,6 +61,7 @@ void Core::handleMenu(void)
             _map->push_back(line);
         map_file.close();
     }
+    _gameModule->setMap(_map);
     _libModule->setMap(_map);
 }
 
@@ -68,9 +71,12 @@ bool Core::startCore(void)
     _libModule = instance.getInstance();
     DLLoader<IGame> game_instance(_gameName);
     _gameModule = game_instance.getInstance();
-    _gameModule->setMap(_map);
-
     _libModule->setIsNewMap(true);
+    _gameModule->setMap(_map);
+    _libModule->setIsNewPathConfig(false);
+    _libModule->setPathConfig(_gameModule->getPathConfig());
+
+    _libModule->setMap(_map);
     while (true) {
         if (_isMenu)
             handleMenu();
@@ -99,7 +105,6 @@ bool Core::startCore(void)
         }
     }
     std::cout << "Score: " << _gameModule->getScore() << std::endl;
-    std::cout << "wow" << std::endl;
     delete _libModule;
     delete _gameModule;
     return (false);
@@ -159,7 +164,7 @@ int Core::getMenuLib(void) const
 void Core::setMap(void)
 {
     std::string line;
-    std::ifstream map_file("map.txt");
+    std::ifstream map_file("./games/Pacman/config/map.config");
 
     _map = std::make_shared<std::vector<std::string>>();
     if (map_file) {

@@ -38,7 +38,11 @@ class IGraphic {
         virtual void setScore(size_t) = 0;
         virtual size_t getScore() const = 0;
 
-        virtual void displayGame() = 0;
+        virtual void setPathConfig(std::string) noexcept = 0;
+        virtual std::string getPathConfig() const noexcept = 0;
+
+        virtual void setIsNewPathConfig(bool) noexcept = 0;
+        virtual bool getIsNewPathConfig() const noexcept = 0;
 };
 
 #endif /* !IGRAPHIC_HPP_ */

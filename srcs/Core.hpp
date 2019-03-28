@@ -9,6 +9,7 @@
     #define CORE_HPP_
 
 #include <chrono>
+// #include <filesystem>
 #include <iostream>
 #include <memory>
 #include <thread>
@@ -55,7 +56,15 @@ class Core {
         int getMenuLib(void) const;
 
         void setMap(void);
-        // std::shared_ptr<std::vector<std::string>> getMap(void) const;
+        // void setMap(std::shared_ptr<std::vector<std::string>>);
+        std::shared_ptr<std::vector<std::string>> getMap(void) const;
+
+        std::string getNextLib(enum Commands);
+        inline void setNumPathLib(size_t num) noexcept;
+        inline size_t getNumPathLib() const noexcept;
+
+        // void setPathLib(char *av);
+        // void setPathGames();
 
     private:
         std::string _libName;
@@ -63,6 +72,10 @@ class Core {
         
         IGraphic *_libModule;
         IGame *_gameModule;
+        // std::shared_ptr<DLLoader<IGraphic *, IGraphic *(*)(std::string)>> _libGraph;
+        // std::shared_ptr<DLLoader<IGame *, IGame *(*)(std::string)>> _libGame;
+        // std::shared_ptr<IGraphic> _libModule;
+        // std::shared_ptr<IGame> _gameModule;
         std::shared_ptr<std::vector<std::string>> _map;
 
         void *_frameTime;
@@ -77,6 +90,10 @@ class Core {
         int _actualLib;
         int _menuLib;
         bool _haveGameLoad = false;
+
+        std::vector<std::string> _pathLib;
+        std::vector<std::string> _pathGames;
+        size_t _numPathLib = 0;
 };
 
 #endif /* !CORE_HPP_ */

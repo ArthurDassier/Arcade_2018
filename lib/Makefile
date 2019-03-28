@@ -43,7 +43,7 @@ NCURSES_FILES	=	ClassNcurses.cpp
 
 NCURSES_SRCS	=	$(addprefix $(NCURSES_DIR), $(NCURSES_FILES))
 
-# NCURSES_OBJS	=	$(NCURSES_SRCS:.cpp=.o)
+#NCURSES_OBJS	=	$(NCURSES_SRCS:.cpp=.o)
 
 SDL			=	lib_arcade_sdl2.so
 
@@ -53,9 +53,9 @@ SDL_FILES	=	ClassSDL.cpp
 
 SDL_SRCS	=	$(addprefix $(SDL_DIR), $(SDL_FILES))
 
-# SDL_OBJS	=	$(SDL_SRCS:.cpp=.o)
+#SDL_OBJS	=	$(SDL_SRCS:.cpp=.o)
 
-all:			$(SFML) $(SDL) $(NCURSES)
+all:			$(SFML) $(NCURSES) #$(SDL)
 
 $(SFML):
 				$(CXX) $(CXXFLAGS) $(LDFLAGS) $(SFML_SRCS) $(LIB_SFML) -o $(SFML) $(INCLUDE)

@@ -13,6 +13,7 @@ ClassPacman::ClassPacman():
     _key(0),
     _bonus(false)
 {
+    _clock = clock();
 }
 
 ClassPacman::~ClassPacman()
@@ -21,25 +22,51 @@ ClassPacman::~ClassPacman()
 
 bool ClassPacman::runGame()
 {
+    static bool first_time = true;
+    
+    if (first_time) {
+        first_time = false;
+        readMap();
+        this->setMap(_map);
+    }
     if (_bonus && difftime(time(0), _start) >= 12)
             setBonus(false);
-    switch (getLastKey()) {
-        case UP:
-            moveUp();
-            break;
-        case LEFT:
-            moveLeft();
-            break;
-        case DOWN:
-            moveDown();
-            break;
-        case RIGHT:
-            moveRight();
-            break;
-        default:
-            break;
-    }
+    // if (static_cast<double>((clock() - _clock)) / CLOCKS_PER_SEC > 0.2) {
+        switch (getLastKey()) {
+            case UP:
+                moveUp();
+                setMove(UP);
+                break;
+            case LEFT:
+                moveLeft();
+                setMove(LEFT);
+                break;
+            case DOWN:
+                moveDown();
+                setMove(DOWN);
+                break;
+            case RIGHT:
+                moveRight();
+                setMove(RIGHT);
+                break;
+            default:
+                break;
+        }
+    // }
     return (true);
+}
+
+void ClassPacman::readMap()
+{
+    std::string line;
+    std::ifstream map_file(_pathMap);
+
+    _map = std::make_shared<std::vector<std::string>>();
+    if (map_file) {
+        while (getline(map_file, line))
+            _map->push_back(line);
+        map_file.close();
+    }
 }
 
 void ClassPacman::setMap(std::shared_ptr<std::vector<std::string>> map)
@@ -92,12 +119,22 @@ size_t ClassPacman::getScore() const
     return (_score);
 }
 
-void ClassPacman::setLastMove(Move lastMove)
+const std::string ClassPacman::getPathConfig() const noexcept
+{
+    return (_pathConfig);
+}
+
+const std::string ClassPacman::getPathMap() const noexcept
+{
+    return (_pathMap);
+}
+
+void ClassPacman::setMove(Move lastMove)
 {
     _lastMove = lastMove;
 }
 
-ClassPacman::Move ClassPacman::getLastMove() const
+Move ClassPacman::getMove() const
 {
     return (_lastMove);
 }
@@ -141,6 +178,7 @@ void ClassPacman::moveLeft(void)
         auto it_c = find(it->begin(), it->end(), PLAYER);
         if (it_c != it->end() && *std::prev(it_c) != WALL) {
             ptrdiff_t pos = std::distance(it->begin(), find(it->begin(), it->end(), *it_c));
+            checkNextCase(it->at(pos));
             if (*it->begin() != WALL && it_c == std::next(it->begin())) {
                 std::replace(it->begin(), it->end(), it->at(pos), (char)NOTHING);
                 *std::prev(it->end()) = PLAYER;
@@ -163,6 +201,7 @@ void ClassPacman::moveRight(void)
         auto it_c = find(it->begin(), it->end(), PLAYER);
         if (it_c != it->end() && *std::next(it_c) != WALL) {
             ptrdiff_t pos = std::distance(it->begin(), find(it->begin(), it->end(), *it_c));
+            checkNextCase(it->at(pos));
             if (*it->end() != WALL && it_c == std::prev(it->end())) {
                 std::replace(it->begin(), it->end(), it->at(pos), (char)NOTHING);
                 std::replace(it->begin(), it->end(), it->at(0), (char)PLAYER);
@@ -186,6 +225,7 @@ void ClassPacman::moveUp(void)
         if (it_c != it->end()) {
             ptrdiff_t pos = std::distance(it->begin(), find(it->begin(), it->end(), *it_c));
             auto next = std::prev(it)->at(pos);
+            checkNextCase(next);
             if (next != WALL) {
                 if (next == POINT)
                     setScore(getScore() + 10);

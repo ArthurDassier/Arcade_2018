@@ -8,14 +8,8 @@
 #ifndef CLASSPACMAN_HPP_
     #define CLASSPACMAN_HPP_
 
+#include "ClassEntity.hpp"
 #include "IGame.hpp"
-
-enum Move {
-    RIGHT = 3,
-    LEFT = 16,
-    DOWN = 18,
-    UP = 25
-};
 
 class ClassPacman : public IGame
 {
@@ -26,6 +20,7 @@ class ClassPacman : public IGame
         bool runGame();
         void setMap(std::shared_ptr<std::vector<std::string>>);
         std::shared_ptr<std::vector<std::string>> getMap(void) const;
+        void readMap(void);
 
         void setIsNewMap(bool);
         bool getIsNewMap(void) const;
@@ -42,15 +37,9 @@ class ClassPacman : public IGame
         void setBonus(bool);
         bool getBonus(void) const;
 
-        enum Move {
-            RIGHT = 3,
-            LEFT = 16,
-            DOWN = 18,
-            UP = 25
-        };
-
-        void setLastMove(Move);
-        Move getLastMove() const;
+        void setMove(Move);
+        Move getMove() const;
+        bool canMove() const;
 
         void moveDown(void);
         void moveLeft(void);
@@ -59,14 +48,21 @@ class ClassPacman : public IGame
 
         void checkNextCase(char);
 
+        const std::string getPathConfig() const noexcept;
+        const std::string getPathMap() const noexcept;
+
     private:
+        std::string _pathConfig = "./games/Pacman/config/sprites.config";
+        std::string _pathMap = "./games/Pacman/config/map.config";
         bool _isNewMap;
         std::shared_ptr<std::vector<std::string>> _map;
         Move _lastMove;
+        clock_t _clock;
         time_t _start;
         int _key;
         bool _isNewKey;
         size_t _score;
+        bool _canMove;
         bool _bonus;
 };
 

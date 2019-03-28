@@ -11,6 +11,7 @@
 #include <SFML/Graphics.hpp>
 #include "AnimatedSprite.hpp"
 #include "IGraphic.hpp"
+#include "../srcs/ParsingConfig.hpp"
 
 #define SCREEN_POS {675, 225}
 #define FRAMERATE 15
@@ -54,6 +55,12 @@ class ClassSFML : public IGraphic
         void setScore(size_t);
         size_t getScore() const;
 
+        void setPathConfig(std::string) noexcept;
+        std::string getPathConfig() const noexcept;
+
+        void setIsNewPathConfig(bool) noexcept;
+        bool getIsNewPathConfig() const noexcept;
+
     private:
         std::unique_ptr<sf::RenderWindow> _wind;
         std::unique_ptr<std::vector<std::vector<std::pair<char, sf::Sprite>>>> _map;
@@ -73,7 +80,12 @@ class ClassSFML : public IGraphic
         sf::Texture _bonus_texture;
         sf::Texture _player_texture;
         sf::Event _event;
+        ParsingConfig _parsing;
+        // std::vector<std::pair<std::shared_ptr<sf::Texture>>, sf::Vector2i>> _textures;
+        std::vector<std::pair<sf::Vector2i, std::shared_ptr<sf::Texture>>> _textures;
 
+        std::string _pathConfig;
+        bool _isNewPathConfig;
         bool _isNewMap;
         bool _isNewKey;
         size_t _score;
