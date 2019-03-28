@@ -1,5 +1,8 @@
 # Arcade
 
+## Other group
+charles.raimbault@epitech.eu
+
 ## Load SDL
 
 ./arcade lib_arcade_sdl2.so
