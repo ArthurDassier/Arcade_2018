@@ -10,6 +10,7 @@
 
 #include <SDL2/SDL.h>
 #include "IGraphic.hpp"
+#include "../srcs/ParsingConfig.hpp"
 
 enum Graphics {
     NOTHING = '0',
@@ -34,6 +35,7 @@ class ClassSDL : public IGraphic
         void setMap(std::shared_ptr<std::vector<std::string>> map);
         void translateKey();
 
+
         void setIsNewMap(bool);
         bool getIsNewMap(void) const;
 
@@ -46,30 +48,29 @@ class ClassSDL : public IGraphic
         void setScore(size_t);
         size_t getScore() const;
 
+        void setMapTexture();
         void displayGame();
 
-        void load_textures();
-        //void print_textures();
+        void setPathConfig(std::string) noexcept;
+        std::string getPathConfig() const noexcept;
+
+        void setIsNewPathConfig(bool) noexcept;
+        bool getIsNewPathConfig() const noexcept;
+
     private:
         std::unique_ptr<SDL_Window, decltype(&SDL_DestroyWindow)> _wind;
         std::unique_ptr<SDL_Renderer, decltype(&SDL_DestroyRenderer)>_ren;
-        SDL_Event _e;
         std::unique_ptr<std::vector<std::vector<std::pair<char, std::unique_ptr<SDL_Texture, decltype(&SDL_DestroyTexture)>>>>> _map;
+        std::vector<std::pair<SDL_Rect, std::shared_ptr<SDL_Surface>>> _textures;
+        ParsingConfig _parsing;
+        SDL_Event _e;
+
+        std::string _pathConfig;
+        bool _isNewPathConfig;
         bool _isNewMap;
         bool _isNewKey;
         size_t _score;
         int _key;
-        int _animation;
-        std::unique_ptr<SDL_Surface, decltype(&SDL_FreeSurface)> _stade1;
-        std::unique_ptr<SDL_Surface, decltype(&SDL_FreeSurface)> _stade2;
-        std::unique_ptr<SDL_Surface, decltype(&SDL_FreeSurface)> _stade3;
-        std::unique_ptr<SDL_Surface, decltype(&SDL_FreeSurface)> _wall;
-        std::unique_ptr<SDL_Surface, decltype(&SDL_FreeSurface)> _point;
-        std::unique_ptr<SDL_Surface, decltype(&SDL_FreeSurface)> _gros_point;
-        std::unique_ptr<SDL_Surface, decltype(&SDL_FreeSurface)> _pacman;
-        std::unique_ptr<SDL_Surface, decltype(&SDL_FreeSurface)> _sfml;
-        std::unique_ptr<SDL_Surface, decltype(&SDL_FreeSurface)> _sdl;
-        std::unique_ptr<SDL_Surface, decltype(&SDL_FreeSurface)> _ncurses;
 };
 
 struct s_KeySdl {
@@ -122,7 +123,7 @@ static struct s_KeySdl KeySdl[] = {
     {32, 41},  // Space
     {8, 42}, // BackSpace
     {9, 43},   // Tab
-    {1000, 1000}
+    {-1, -1}
 };
 
 #endif /* !CLASS_SDL_HPP_ */

@@ -55,7 +55,7 @@ SDL_SRCS	=	$(addprefix $(SDL_DIR), $(SDL_FILES))
 
 #SDL_OBJS	=	$(SDL_SRCS:.cpp=.o)
 
-all:			$(SFML) $(NCURSES) #$(SDL)
+all:			$(SFML) $(SDL) #$(NCURSES)
 
 $(SFML):
 				$(CXX) $(CXXFLAGS) $(LDFLAGS) $(SFML_SRCS) $(LIB_SFML) -o $(SFML) $(INCLUDE)

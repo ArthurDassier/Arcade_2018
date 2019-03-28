@@ -9,21 +9,10 @@
 
 ClassSDL::ClassSDL() :
     _wind(nullptr, SDL_DestroyWindow),
-    _ren(nullptr, SDL_DestroyRenderer),
-    _animation(0),
-    _stade1(nullptr, SDL_FreeSurface),
-    _stade2(nullptr, SDL_FreeSurface),
-    _stade3(nullptr, SDL_FreeSurface),
-    _wall(nullptr, SDL_FreeSurface),
-    _point(nullptr, SDL_FreeSurface),
-    _gros_point(nullptr, SDL_FreeSurface),
-    _pacman(nullptr, SDL_FreeSurface),
-    _sfml(nullptr, SDL_FreeSurface),
-    _sdl(nullptr, SDL_FreeSurface),
-    _ncurses(nullptr, SDL_FreeSurface)
+    _ren(nullptr, SDL_DestroyRenderer)
 {
     SDL_Init(SDL_INIT_VIDEO);
-    _wind.reset(SDL_CreateWindow("Arcade",
+    _wind.reset(SDL_CreateWindow("Arcade SDL2",
     SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
     SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_OPENGL));
     if (_wind == nullptr) {
@@ -35,16 +24,6 @@ ClassSDL::ClassSDL() :
         std::cerr << "SDL_CreateRenderer Error: " << SDL_GetError() << std::endl;
         SDL_Quit();
     }
-    _wall.reset(SDL_LoadBMP("./textures/wall.bmp"));
-    _point.reset(SDL_LoadBMP("./textures/point.bmp"));
-    _gros_point.reset(SDL_LoadBMP("./textures/big_point.bmp"));
-    _pacman.reset(SDL_LoadBMP("./textures/tile000.bmp"));
-    _sfml.reset(SDL_LoadBMP("./textures/lib_sfml.bmp"));
-    _sdl.reset(SDL_LoadBMP("./textures/lib_sdl.bmp"));
-    _ncurses.reset(SDL_LoadBMP("./textures/lib_ncurses.bmp"));
-    _stade1.reset(SDL_LoadBMP("./textures/tile000.bmp"));
-    _stade2.reset(SDL_LoadBMP("./textures/tile001.bmp"));
-    _stade3.reset(SDL_LoadBMP("./textures/tile002.bmp"));
 }
 
 ClassSDL::~ClassSDL()
@@ -58,64 +37,15 @@ void ClassSDL::displayGame()
     std::ifstream sdl("./lib/lib_arcade_sdl2.so");
     std::ifstream sfml("./lib/lib_arcade_sfml.so");
     SDL_Rect dstrect = {0, 0, 30, 30};
-    SDL_Rect dstrect2 = {10, 5, 8, 8};
-    SDL_Rect dstrect3 = {12, 8, 5, 5};
-    SDL_Rect dstrect4 = {-110, 0, 270, 270};
 
-    for (auto it = _map->begin(); it != _map->end(); ++it) {
-        for(auto it_str = it->begin(); it_str != it->end(); ++it_str) {
-            switch (it_str->first) {
-                case WALL:
-                    SDL_RenderCopy(_ren.get(), it_str->second.get(), NULL, &dstrect);
-                    break;
-                case POINT:
-                    SDL_RenderCopy(_ren.get(), it_str->second.get(), NULL, &dstrect3);
-                    break;
-                case BONUS:
-                    SDL_RenderCopy(_ren.get(), it_str->second.get(), NULL, &dstrect);
-                    break;
-                case SDL:
-                    if (sdl.good())
-                        SDL_RenderCopy(_ren.get(), it_str->second.get(), NULL, &dstrect4);
-                    break;
-                case SFML:
-                    if (sfml.good())
-                        SDL_RenderCopy(_ren.get(), it_str->second.get(), NULL, &dstrect4);
-                    break;
-                case NCURSES:
-                    if (ncurses.good())
-                        SDL_RenderCopy(_ren.get(), it_str->second.get(), NULL, &dstrect4);
-                    break;
-                case PLAYER:
-                    if (_animation == 0)
-                        it_str->second.reset(SDL_CreateTextureFromSurface(_ren.get(), _stade1.get()));
-                    else if (_animation == 1)
-                        it_str->second.reset(SDL_CreateTextureFromSurface(_ren.get(), _stade2.get()));
-                    else if (_animation == 2)
-                        it_str->second.reset(SDL_CreateTextureFromSurface(_ren.get(), _stade3.get()));
-                    else {
-                        it_str->second.reset(SDL_CreateTextureFromSurface(_ren.get(), _stade2.get()));
-                        _animation = -1;
-                    }
-                    SDL_RenderCopy(_ren.get(), it_str->second.get(), NULL, &dstrect);
-                    ++_animation;
-                    break;
-                default:
-                    break;
-            }
+    for (auto it_y = _map->begin(); it_y != _map->end(); ++it_y) {
+        for(auto it_x = it_y->begin(); it_x != it_y->end(); ++it_x) {
+            if (it_x->first != NOTHING)
+                SDL_RenderCopy(_ren.get(), it_x->second.get(), NULL, &dstrect);
             dstrect.x += 30;
-            dstrect2.x += 30;
-            dstrect3.x += 30;
-            dstrect4.x += 30;
         }
         dstrect.x = 0;
-        dstrect2.x = 10;
-        dstrect3.x = 12;
-        dstrect4.x = -110;
         dstrect.y += 30;
-        dstrect2.y += 30;
-        dstrect3.y += 30;
-        dstrect4.y += 10;
     }
     ncurses.close();
     sdl.close();
@@ -125,6 +55,12 @@ void ClassSDL::displayGame()
 
 bool ClassSDL::runGraph()
 {
+    if (getIsNewPathConfig() == true) {
+        setIsNewPathConfig(false);
+        _parsing.setFilename(getPathConfig());
+        _parsing.readFile();
+        setMapTexture();
+    }
     SDL_RenderClear(_ren.get());
     while (SDL_PollEvent(&_e)) {
         if (_e.type == SDL_WINDOWEVENT) {
@@ -145,31 +81,49 @@ bool ClassSDL::runGraph()
     return (true);
 }
 
-void ClassSDL::load_textures()
+void ClassSDL::setMapTexture()
 {
-    for (auto it = _map->begin(); it != _map->end(); ++it) {
-        for(auto it_str = it->begin(); it_str != it->end(); ++it_str) {
-            switch (it_str->first) {
+    auto parsingResult = _parsing.getResult();
+    float x = 0;
+    float y = 0;
+
+    for (auto it = parsingResult.begin(); it != parsingResult.end(); ++it) {
+        SDL_Rect size = {it->sizeX, it->sizeY, 0, 0};
+        std::shared_ptr<SDL_Surface> tmp = nullptr;
+        tmp.reset(SDL_LoadBMP(it->path.c_str()), SDL_FreeSurface);
+        _textures.push_back(std::make_pair(size, tmp));
+    }
+
+    for (auto it_y = _map->begin(); it_y != _map->end(); ++it_y) {
+        for(auto it_x = it_y->begin(); it_x != it_y->end(); ++it_x) {
+            switch (it_x->first) {
                 case WALL:
-                    it_str->second.reset(SDL_CreateTextureFromSurface(_ren.get(), _wall.get()));
+                    it_x->second.reset(SDL_CreateTextureFromSurface(_ren.get(),
+                    _textures.begin()->second.get()));
                     break;
                 case POINT:
-                    it_str->second.reset(SDL_CreateTextureFromSurface(_ren.get(), _point.get()));
-                    break;
-                case BONUS:
-                    it_str->second.reset(SDL_CreateTextureFromSurface(_ren.get(), _gros_point.get()));
+                    it_x->second.reset(SDL_CreateTextureFromSurface(_ren.get(),
+                    _textures.at(1).second.get()));
                     break;
                 case PLAYER:
-                    it_str->second.reset(SDL_CreateTextureFromSurface(_ren.get(), _pacman.get()));
+                    it_x->second.reset(SDL_CreateTextureFromSurface(_ren.get(),
+                    _textures.at(2).second.get()));
                     break;
-                case SDL:
-                    it_str->second.reset(SDL_CreateTextureFromSurface(_ren.get(), _sdl.get()));
+                case ENEMY:
+                    it_x->second.reset(SDL_CreateTextureFromSurface(_ren.get(),
+                    _textures.at(3).second.get()));
+                    break;
+                case BONUS:
+                    it_x->second.reset(SDL_CreateTextureFromSurface(_ren.get(),
+                    _textures.at(4).second.get()));
                     break;
                 case SFML:
-                    it_str->second.reset(SDL_CreateTextureFromSurface(_ren.get(), _sfml.get()));
+                    it_x->second.reset(SDL_CreateTextureFromSurface(_ren.get(),
+                    _textures.begin()->second.get()));
                     break;
                 case NCURSES:
-                    it_str->second.reset(SDL_CreateTextureFromSurface(_ren.get(), _ncurses.get()));
+                    it_x->second.reset(SDL_CreateTextureFromSurface(_ren.get(),
+                    _textures.begin()->second.get()));
                     break;
                 default:
                     break;
@@ -181,20 +135,20 @@ void ClassSDL::load_textures()
 void ClassSDL::setMap(std::shared_ptr<std::vector<std::string>> map)
 {
     _map = std::make_unique<std::vector<std::vector<std::pair<char, std::unique_ptr<SDL_Texture, decltype(&SDL_DestroyTexture)>>>>>();
-    for (auto it = map->begin(); it != map->end(); ++it) {
+
+    for (auto it_y = map->begin(); it_y != map->end(); ++it_y) {
         std::vector<std::pair<char, std::unique_ptr<SDL_Texture, decltype(&SDL_DestroyTexture)>>> tmp;
-        for (auto it_str = it->begin(); it_str != it->end(); ++it_str) {
+        for (auto it_x = it_y->begin(); it_x != it_y->end(); ++it_x) {
             std::unique_ptr<SDL_Texture, decltype(&SDL_DestroyTexture)> texture = {nullptr, SDL_DestroyTexture};
-            tmp.push_back(std::make_pair(*it_str, std::move(texture)));
+            tmp.push_back(std::make_pair(*it_x, std::move(texture)));
         }
         _map->emplace_back(std::move(tmp));
     }
-    load_textures();
 }
 
 void ClassSDL::translateKey()
 {
-    for(size_t i = 0; KeySdl[i].code_lib != 1000; ++i) {
+    for(size_t i = 0; KeySdl[i].code_lib != -1; ++i) {
         if (_e.key.keysym.sym == KeySdl[i].code_lib) {
             setLastKey(KeySdl[i].code_core);
             return;
@@ -240,6 +194,26 @@ void ClassSDL::setScore(size_t score)
 size_t ClassSDL::getScore() const
 {
     return (_score);
+}
+
+void ClassSDL::setPathConfig(std::string path) noexcept
+{
+    _pathConfig = path;
+}
+
+std::string ClassSDL::getPathConfig() const noexcept
+{
+    return (_pathConfig);
+}
+
+void ClassSDL::setIsNewPathConfig(bool isNewPath) noexcept
+{
+    _isNewPathConfig = isNewPath;
+}
+
+bool ClassSDL::getIsNewPathConfig() const noexcept
+{
+    return (_isNewPathConfig);
 }
 
 extern "C"
