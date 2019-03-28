@@ -10,6 +10,7 @@
 ClassNcurses::ClassNcurses() :
     _key(999),
     _str(""),
+    _posi_menu(0),
     _isNewKey(false)
 {
     initscr();
@@ -43,6 +44,18 @@ bool ClassNcurses::getEvent()
         case 'a':
             setLastKey(0);
             return (true);
+        case 'r':
+            if (_posi_menu == 0)
+                _posi_menu = 2;
+            else
+                _posi_menu -= 1;
+            break;
+        case 'f':
+            if (_posi_menu == 2)
+                _posi_menu = 0;
+            else
+                _posi_menu += 1;
+            break;
         default:
             translateKey();
             if (getLastKey() == 38 || getLastKey() == 39 || getLastKey() == 40)
@@ -62,6 +75,7 @@ void ClassNcurses::setMapTexture()
 
     init_pair(1, COLOR_BLUE, COLOR_BLACK);
     init_pair(2, COLOR_YELLOW, COLOR_BLACK);
+    init_pair(3, COLOR_BLUE, COLOR_WHITE);
     move((LINES/2) - (_map->size()/2), (COLS/2) - (_map->begin()->size()/2)); //dimensions de la map
     for (auto it = _map->begin(); it != _map->end(); ++it) {
         for (auto i = it->begin(); i != it->end(); ++i) {
@@ -91,18 +105,21 @@ void ClassNcurses::setMapTexture()
                 case BONUS: printw("o");
                         break;
                 case SDL: if (sdl.good()) {
-                            box(_window_menu_sdl, ACS_VLINE, ACS_HLINE);
+                            if (_posi_menu == 0)
+                                box(_window_menu_sdl, ACS_VLINE, ACS_HLINE);
                             mvwprintw(_window_menu_sdl, 1, 4, "SDL");
                         }
                         break;
                 case SFML: if (sfml.good()) {
-                            box(_window_menu_sfml, ACS_VLINE, ACS_HLINE);
+                            if (_posi_menu == 1)
+                                box(_window_menu_sfml, ACS_VLINE, ACS_HLINE);
                             mvwprintw(_window_menu_sfml, 1, 3, "SFML");
                         }
                         break;
                 case NCURSES: if (ncurses.good()) {
-                            box(_window_menu_ncurses, ACS_VLINE, ACS_HLINE);
-                            mvwprintw(_window_menu_ncurses, 1, 2, "NCURSES");
+                                if (_posi_menu == 2)
+                                    box(_window_menu_ncurses, ACS_VLINE, ACS_HLINE);
+                                mvwprintw(_window_menu_ncurses, 1, 2, "NCURSES");
                         }
                         break;
                 default: printw(" ");

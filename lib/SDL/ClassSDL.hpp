@@ -16,7 +16,7 @@ enum Graphics {
     WALL = '1',
     POINT = '2',
     PLAYER = '3',
-    GHOST = '4',
+    ENEMY = '4',
     BONUS = '5',
     SDL = '6',
     SFML = '7',

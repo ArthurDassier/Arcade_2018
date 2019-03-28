@@ -70,6 +70,7 @@ bool Core::startCore(void)
     _gameModule = game_instance.getInstance();
     _gameModule->setMap(_map);
 
+    _libModule->setIsNewMap(true);
     while (true) {
         if (_isMenu)
             handleMenu();

@@ -81,7 +81,7 @@ void ClassSFML::setMapTexture()
                     // it_str->second.first.setSpriteSheet(_player_texture);
                     // it_str->second.second.setPosition({x + 5, y + 4});
                     break;
-                case GHOST:
+                case ENEMY:
                     break;
                 case BONUS:
                     it_str->second.setTexture(_bonus_texture);
