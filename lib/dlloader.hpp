@@ -5,12 +5,10 @@
 ** dlloader
 */
 
+#pragma once
+
 #include <dlfcn.h>
 #include <iostream>
-
-#ifndef DLL_HPP_
-    #define DLL_HPP_
-
 
 template <typename T>
 class DLLoader
@@ -28,19 +26,22 @@ class DLLoader
 
         ~DLLoader()
         {
-            dlclose(_handle);
+            if (_handle != nullptr)
+                dlclose(_handle);
         }
 
         // Members
-        T *getInstance() const
+        T getInstance() const
         {
-            T *(*func_pointer)(void) = (T *(*)(void))dlsym(_handle, "entryPoint");
-            T *instance = func_pointer();
+            T (*func_pointer)(void) = (T (*)(void))dlsym(_handle, "entryPoint");
+            if (func_pointer == nullptr) {
+                std::cerr << dlerror() << " = error dlsym"<< std::endl;
+                throw "error dlsym";
+            }
+            T instance = func_pointer();
             return (instance);
         }
 
     private:
         void *_handle;
 };
-
-#endif

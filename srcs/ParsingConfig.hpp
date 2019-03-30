@@ -1,26 +1,48 @@
-#include <vector>
-#include <fstream>
+/*
+** EPITECH PROJECT, 2019
+** ParsingConfig.hpp
+** File description:
+** ParsingConfig
+*/
+
+#pragma once
+
 #include <iostream>
+#include <fstream>
+#include <vector>
 
 struct DataParsingConfig {
     std::string path;
     int sizeX;
     int sizeY;
     std::string caractere;
+    int launchKey;
+    std::string name;
 };
 
 class ParsingConfig {
     public:
         ParsingConfig() = default;
         ~ParsingConfig() = default;
-        inline void setFilename(std::string name) noexcept {
+
+        // Members
+         void setFilename(std::string name) noexcept {
             _filename = name;
+            setIfStream();
         }
-        void setIfStream();
+
+        void clearData() {
+            _sprite.clear();
+        }
+
+        std::vector<DataParsingConfig> getResult() const noexcept {
+            return _sprite;
+        }
+
         void readFile() {
+            DataParsingConfig data;
             std::fstream file;
             std::string line;
-            DataParsingConfig data;
 
             file.open(_filename, std::fstream::in);
             file.seekg(0, file.beg);
@@ -32,16 +54,23 @@ class ParsingConfig {
                 data.sizeY = std::stoi(line);
                 getline(file, line);
                 data.caractere = line;
-                _sprite.push_back(data);
                 getline(file, line);
+                data.launchKey = std::stoi(line);
+                getline(file, line);
+                data.name = line;
+                getline(file, line);
+                _sprite.push_back(data);
             }
             file.close();
         }
-        inline std::vector<DataParsingConfig> getResult() const noexcept { 
-            return (_sprite);
+
+        void setIfStream() {
+            /* 
+                _ifs = std::ifstream(_filename, std::ifstream::in);
+            */
         }
 
     private:
-        std::vector<DataParsingConfig> _sprite;
         std::string _filename;
+        std::vector<DataParsingConfig> _sprite;
 };

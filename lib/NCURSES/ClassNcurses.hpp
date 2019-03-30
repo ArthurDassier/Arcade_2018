@@ -5,8 +5,7 @@
 ** ClassNcurses
 */
 
-#ifndef CLASS_NCURSES_HPP_
-    #define CLASS_NCURSES_HPP_
+#pragma once
 
 #include <ncurses.h>
 #include "IGraphic.hpp"
@@ -27,14 +26,12 @@ class ClassNcurses : public IGraphic
 {
     public:
         ClassNcurses();
-        virtual ~ClassNcurses();
+        ~ClassNcurses();
 
         //Members
-        bool getEvent();
         bool runGraph();
         void setMap(std::shared_ptr<std::vector<std::string>>);
         void translateKey();
-        void setMapTexture();
 
         void setIsNewMap(bool);
         bool getIsNewMap(void) const;
@@ -54,6 +51,8 @@ class ClassNcurses : public IGraphic
         void setIsNewPathConfig(bool) noexcept;
         bool getIsNewPathConfig() const noexcept;
 
+        bool getEvent();
+        void setMapTexture();
         //pour le menu
         int get_input();
         std::string get_string();
@@ -129,4 +128,3 @@ static struct KeyNcurses KeyNcurses[] = {
     {1000, 1000}
 };
 
-#endif /* !CLASS_NCURSES_HPP_ */

@@ -11,7 +11,9 @@ ClassNcurses::ClassNcurses() :
     _key(999),
     _str(""),
     _posi_menu(0),
-    _isNewKey(false)
+    _isNewMap(false),
+    _isNewKey(false),
+    _isNewPathConfig(false)
 {
     initscr();
     _window = subwin(stdscr, LINES / 2, COLS, LINES / 4, 0);
@@ -54,7 +56,7 @@ bool ClassNcurses::getEvent()
             break;
         default:
             translateKey();
-            if (getLastKey() == 38 || getLastKey() == 39 || getLastKey() == 40)
+            if (getLastKey() == 38 || getLastKey() == 39)
                 return (true);
             break;
     }

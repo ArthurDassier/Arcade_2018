@@ -8,7 +8,10 @@
 #include "ClassSFML.hpp"
 
 ClassSFML::ClassSFML():
-    _key(0), _isNewPathConfig(false)
+    _key(0),
+    _isNewPathConfig(false),
+    _isNewMap(false),
+    _isNewKey(false)
 {
     _wind = std::make_unique<sf::RenderWindow>();
     _wind->create(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Arcade");
@@ -28,14 +31,14 @@ void ClassSFML::setMapTexture()
     float x = 0;
     float y = 0;
 
+    _textures.clear();
     for (auto it = parsingResult.begin(); it != parsingResult.end(); ++it) {
         sf::Vector2i size = {it->sizeX, it->sizeY};
         _textures.push_back(std::make_pair(size, std::shared_ptr<sf::Texture> (new sf::Texture)));
         _textures[i].second->loadFromFile(it->path, sf::IntRect(0, 0, size.x, size.y));
         _textures[i].second->setSmooth(true);
-        i++;
+        ++i;
     }
-
     for (auto it_y = _map->begin(); it_y != _map->end(); ++it_y) {
         x = 0;
         for (auto it_x = it_y->begin(); it_x != it_y->end(); ++it_x) {
@@ -87,7 +90,7 @@ bool ClassSFML::getEvent()
         if (_event.type == sf::Event::KeyPressed) {
             translateKey();
             setIsNewKey(true);
-            if (getLastKey() == 38 || getLastKey() == 39 || getLastKey() == 40)
+            if (getLastKey() == 38 || getLastKey() == 39)
                 return (true);
         }
     }
@@ -97,6 +100,7 @@ bool ClassSFML::getEvent()
 bool ClassSFML::runGraph()
 {
     if (getIsNewPathConfig() == true) {
+        _parsing.clearData();
         setIsNewPathConfig(false);
         _parsing.setFilename(getPathConfig());
         _parsing.readFile();

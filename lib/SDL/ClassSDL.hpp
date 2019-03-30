@@ -5,8 +5,7 @@
 ** ClassSDL
 */
 
-#ifndef CLASS_SDL_HPP_
-    #define CLASS_SDL_HPP_
+#pragma once
 
 #include <SDL2/SDL.h>
 #include "IGraphic.hpp"
@@ -28,7 +27,7 @@ class ClassSDL : public IGraphic
 {
     public:
         ClassSDL();
-        virtual ~ClassSDL();
+        ~ClassSDL();
 
         //Members
         bool runGraph();
@@ -56,6 +55,8 @@ class ClassSDL : public IGraphic
 
         void setIsNewPathConfig(bool) noexcept;
         bool getIsNewPathConfig() const noexcept;
+
+        void buildMap(std::shared_ptr<std::vector<std::string>>);
 
     private:
         std::unique_ptr<SDL_Window, decltype(&SDL_DestroyWindow)> _wind;
@@ -126,4 +127,3 @@ static struct s_KeySdl KeySdl[] = {
     {-1, -1}
 };
 
-#endif /* !CLASS_SDL_HPP_ */

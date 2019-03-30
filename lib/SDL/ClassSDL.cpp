@@ -9,7 +9,10 @@
 
 ClassSDL::ClassSDL() :
     _wind(nullptr, SDL_DestroyWindow),
-    _ren(nullptr, SDL_DestroyRenderer)
+    _ren(nullptr, SDL_DestroyRenderer),
+    _isNewPathConfig(false),
+    _isNewMap(false),
+    _isNewKey(false)
 {
     SDL_Init(SDL_INIT_VIDEO);
     _wind.reset(SDL_CreateWindow("Arcade SDL2",
@@ -56,29 +59,29 @@ void ClassSDL::displayGame()
 bool ClassSDL::runGraph()
 {
     if (getIsNewPathConfig() == true) {
+        _parsing.clearData();
         setIsNewPathConfig(false);
         _parsing.setFilename(getPathConfig());
         _parsing.readFile();
         setMapTexture();
     }
-    SDL_RenderClear(_ren.get());
     while (SDL_PollEvent(&_e)) {
         if (_e.type == SDL_WINDOWEVENT) {
             if (_e.window.event == SDL_WINDOWEVENT_CLOSE)
-                return (false);
+                return (true);
         }
         if (_e.type == SDL_KEYDOWN) {
             translateKey();
             setIsNewKey(true);
-            if (getLastKey() == 38 || getLastKey() == 39 || getLastKey() == 40)
-                return (false);
         }
-        if (_e.type == SDL_KEYUP)
-            setIsNewKey(false);
     }
-    displayGame();
+    if (_isNewMap) {
+        SDL_RenderClear(_ren.get());
+        displayGame();
+        _isNewMap = false;
+    }
     SDL_Delay(4);
-    return (true);
+    return (false);
 }
 
 void ClassSDL::setMapTexture()
@@ -87,52 +90,22 @@ void ClassSDL::setMapTexture()
     float x = 0;
     float y = 0;
 
+    _textures.clear();
     for (auto it = parsingResult.begin(); it != parsingResult.end(); ++it) {
         SDL_Rect size = {it->sizeX, it->sizeY, 0, 0};
         std::shared_ptr<SDL_Surface> tmp = nullptr;
         tmp.reset(SDL_LoadBMP(it->path.c_str()), SDL_FreeSurface);
         _textures.push_back(std::make_pair(size, tmp));
     }
-
     for (auto it_y = _map->begin(); it_y != _map->end(); ++it_y) {
         for(auto it_x = it_y->begin(); it_x != it_y->end(); ++it_x) {
-            switch (it_x->first) {
-                case WALL:
-                    it_x->second.reset(SDL_CreateTextureFromSurface(_ren.get(),
-                    _textures.begin()->second.get()));
-                    break;
-                case POINT:
-                    it_x->second.reset(SDL_CreateTextureFromSurface(_ren.get(),
-                    _textures.at(1).second.get()));
-                    break;
-                case PLAYER:
-                    it_x->second.reset(SDL_CreateTextureFromSurface(_ren.get(),
-                    _textures.at(2).second.get()));
-                    break;
-                case ENEMY:
-                    it_x->second.reset(SDL_CreateTextureFromSurface(_ren.get(),
-                    _textures.at(3).second.get()));
-                    break;
-                case BONUS:
-                    it_x->second.reset(SDL_CreateTextureFromSurface(_ren.get(),
-                    _textures.at(4).second.get()));
-                    break;
-                case SFML:
-                    it_x->second.reset(SDL_CreateTextureFromSurface(_ren.get(),
-                    _textures.begin()->second.get()));
-                    break;
-                case NCURSES:
-                    it_x->second.reset(SDL_CreateTextureFromSurface(_ren.get(),
-                    _textures.begin()->second.get()));
-                    break;
-                default:
-                    break;
-            }
+            it_x->second.reset(SDL_CreateTextureFromSurface(_ren.get(),
+            _textures.at(it_x->first - 48).second.get()));
         }
     }
 }
 
-void ClassSDL::setMap(std::shared_ptr<std::vector<std::string>> map)
+void ClassSDL::buildMap(std::shared_ptr<std::vector<std::string>> map = nullptr)
 {
     _map = std::make_unique<std::vector<std::vector<std::pair<char, std::unique_ptr<SDL_Texture, decltype(&SDL_DestroyTexture)>>>>>();
 
@@ -143,6 +116,19 @@ void ClassSDL::setMap(std::shared_ptr<std::vector<std::string>> map)
             tmp.push_back(std::make_pair(*it_x, std::move(texture)));
         }
         _map->emplace_back(std::move(tmp));
+    }
+}
+
+void ClassSDL::setMap(std::shared_ptr<std::vector<std::string>> map)
+{
+    auto it_my_map_y = _map->begin();
+
+    if (!map)
+        return;
+    for (auto it_y = map->begin(); it_y != map->end(); ++it_y, ++it_my_map_y) {
+        auto it_my_map_x = it_my_map_y->begin();
+        for (auto it_x = it_y->begin(); it_x != it_y->end(); ++it_x, ++it_my_map_x)
+            it_my_map_x->first = *it_x;
     }
 }
 

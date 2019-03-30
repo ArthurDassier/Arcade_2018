@@ -5,8 +5,7 @@
 ** Animation
 */
 
-#ifndef ANIMATION_HPP_
-    #define ANIMATION_HPP_
+#pragma once
 
 #include <SFML/Graphics.hpp>
 
@@ -27,5 +26,3 @@ class Animation
         std::vector<sf::IntRect> _frames;
         const sf::Texture* _texture;    
 };
-
-#endif /* !ANIMATION_HPP_ */

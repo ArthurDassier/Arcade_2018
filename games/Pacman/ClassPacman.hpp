@@ -5,8 +5,7 @@
 ** ClassPacman
 */
 
-#ifndef CLASSPACMAN_HPP_
-    #define CLASSPACMAN_HPP_
+#pragma once
 
 #include "ClassEntity.hpp"
 #include "IGame.hpp"
@@ -65,5 +64,3 @@ class ClassPacman : public IGame
         bool _canMove;
         bool _bonus;
 };
-
-#endif /* !CLASSPACMAN_HPP_ */

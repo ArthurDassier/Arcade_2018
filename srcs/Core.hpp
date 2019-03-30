@@ -5,15 +5,13 @@
 ** Core
 */
 
-#ifndef CORE_HPP_
-    #define CORE_HPP_
+#pragma once
 
 #include <chrono>
-// #include <filesystem>
 #include <iostream>
 #include <memory>
 #include <thread>
-
+#include "ParsingConfig.hpp"
 #include "dlloader.hpp"
 #include "IGraphic.hpp"
 #include "IGame.hpp"
@@ -33,12 +31,12 @@ class Core {
 
         //Members
         void loadNewGame(std::string);
-        void loadNewLibGraph(std::string);
+        void loadNewLib(std::string);
 
         void handleGame(void);
         void handleMenu(void);
 
-        bool startCore(void);
+        void startCore(void);
 
         void setIsNewKey(bool);
         bool getIsNewKey(void) const;
@@ -49,37 +47,37 @@ class Core {
         void setKey(int);
         int getKey(void) const;
 
-        void setActualLib(void);
-        int getActualLib(void) const;
+        void mapMenu();
 
-        void setMenuLib(int);
-        int getMenuLib(void) const;
+        void loadMenu();
 
-        void setMap(void);
-        // void setMap(std::shared_ptr<std::vector<std::string>>);
+        void setMap(std::shared_ptr<std::vector<std::string>>);
         std::shared_ptr<std::vector<std::string>> getMap(void) const;
 
         std::string getNextLib(enum Commands);
+
         inline void setNumPathLib(size_t num) noexcept;
         inline size_t getNumPathLib() const noexcept;
 
-        // void setPathLib(char *av);
-        // void setPathGames();
 
     private:
         std::string _libName;
         std::string _gameName;
-        
-        IGraphic *_libModule;
-        IGame *_gameModule;
-        // std::shared_ptr<DLLoader<IGraphic *, IGraphic *(*)(std::string)>> _libGraph;
-        // std::shared_ptr<DLLoader<IGame *, IGame *(*)(std::string)>> _libGame;
-        // std::shared_ptr<IGraphic> _libModule;
-        // std::shared_ptr<IGame> _gameModule;
-        std::shared_ptr<std::vector<std::string>> _map;
 
-        void *_frameTime;
-        void *_frameClock;
+        std::string _pathConfig;
+
+        std::shared_ptr<std::vector<std::string>> _mapMenu;
+
+        ParsingConfig _parsing;
+
+
+
+        std::shared_ptr<DLLoader<IGraphic *>> _instance;
+        std::shared_ptr<IGraphic> _libModule;
+        std::shared_ptr<DLLoader<IGame *>> _instance_game;
+        std::shared_ptr<IGame> _gameModule;
+
+        std::shared_ptr<std::vector<std::string>> _map;
 
         std::vector<std::string> _graphLibs;
         std::unique_ptr<IGraphic> _wpGraph;
@@ -87,13 +85,10 @@ class Core {
         bool _isMenu;
         bool _isNewKey;
         int _key;
-        int _actualLib;
         int _menuLib;
-        bool _haveGameLoad = false;
+        bool _haveGameLoad;
 
         std::vector<std::string> _pathLib;
         std::vector<std::string> _pathGames;
         size_t _numPathLib = 0;
 };
-
-#endif /* !CORE_HPP_ */

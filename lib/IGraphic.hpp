@@ -5,8 +5,7 @@
 ** IGraphic
 */
 
-#ifndef IGRAPHIC_HPP_
-    #define IGRAPHIC_HPP_
+#pragma once
 
 #include <memory>
 #include <vector>
@@ -43,6 +42,7 @@ class IGraphic {
 
         virtual void setIsNewPathConfig(bool) noexcept = 0;
         virtual bool getIsNewPathConfig() const noexcept = 0;
+
+        virtual void buildMap(std::shared_ptr<std::vector<std::string>> = nullptr) = 0;
 };
 
-#endif /* !IGRAPHIC_HPP_ */

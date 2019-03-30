@@ -5,15 +5,12 @@
 ** ICore
 */
 
-#ifndef ICORE_HPP_
-    #define ICORE_HPP_
+#pragma once
 
 class ICore {
-	public:
-		virtual ~ICore() = default;
+    public:
+        virtual ~ICore() = default;
 
-	protected:
-	private:
+    protected:
+    private:
 };
-
-#endif /* !ICORE_HPP_ */

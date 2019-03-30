@@ -5,8 +5,7 @@
 ** ClassEntity
 */
 
-#ifndef CLASSENTITY_HPP_
-    #define CLASSENTITY_HPP_
+#pragma once
 
 enum Move
 {
@@ -28,12 +27,10 @@ enum PacmanObjs
 
 class ClassEntity
 {
-	public:
-		ClassEntity();
-		~ClassEntity();
+    public:
+        ClassEntity();
+        ~ClassEntity();
 
-	protected:
-	private:
+    protected:
+    private:
 };
-
-#endif /* !CLASSENTITY_HPP_ */

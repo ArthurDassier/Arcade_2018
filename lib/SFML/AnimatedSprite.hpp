@@ -5,8 +5,7 @@
 ** AnimatedSprite
 */
 
-#ifndef ANIMATEDSPRITE_HPP_
-    #define ANIMATEDSPRITE_HPP_
+#pragma once
 
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/System/Time.hpp>
@@ -49,5 +48,3 @@ class AnimatedSprite : public sf::Drawable, public sf::Transformable
         sf::Vertex m_vertices[4];
         virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 };
-
-#endif /* !ANIMATEDSPRITE_HPP_ */

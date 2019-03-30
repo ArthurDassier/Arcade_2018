@@ -2,112 +2,106 @@
 ** EPITECH PROJECT, 2019
 ** Core.cpp
 ** File description:
-** Core
+** Core.cpp
 */
 
 #include "Core.hpp"
-#include "ClassSFML.hpp"
 
-Core::Core(std::string libName)
+Core::Core(std::string libName) :
+    _libName("./lib/" + libName),
+    _pathConfig("./srcs/core/path_menu.config"),
+    _isMenu(true),
+    _haveGameLoad(false)
 {
-    std::string libPath("./lib/" + libName);
-    std::string gamePath("./games/lib_arcade_pacman.so");
-    _libName = libPath;
-    _gameName = gamePath;
-    _isMenu = true;
-    _actualLib = 0;
+    auto instance = std::make_shared<DLLoader<IGraphic *>>(_libName);
+    _instance = instance;
+    std::shared_ptr<IGraphic> tmp(_instance->getInstance());
+    _libModule = tmp;
+    _libModule->setPathConfig(_pathConfig);
+    _libModule->setIsNewPathConfig(true);
+    mapMenu();
+    _libModule->buildMap(_mapMenu);
+    _libModule->setMap(_mapMenu);
+    _libModule->setIsNewMap(true);
+    _parsing.setFilename(_pathConfig);
+    _parsing.readFile();
 }
 
 Core::~Core()
 {
+    _libModule.reset();
+}
+
+void Core::mapMenu()
+{
+    std::fstream filename;
+    std::string line;
+
+    filename.open("./srcs/core/map_menu.config");
+    _mapMenu = std::make_shared<std::vector<std::string>>();
+    while(getline(filename, line))
+        _mapMenu->push_back(line);
+    filename.close();
 }
 
 void Core::loadNewGame(std::string name)
 {
-    std::string gamePath("./games/" + name);
-    _gameName = gamePath;
+    auto instance = std::make_shared<DLLoader<IGame *>>(name);
+    _instance_game = instance;
+    std::shared_ptr<IGame> tmp(_instance_game->getInstance());
+    _gameModule = tmp;
+    _libModule->setPathConfig(_gameModule->getPathConfig());
+    _libModule->setIsNewPathConfig(true);
+    setHaveGameLoad(true);
 }
 
-void Core::loadNewLibGraph(std::string name)
+void Core::loadMenu()
 {
-    std::string libPath("./lib/" + name);
-    _libName = libPath;
+    _libModule->setPathConfig(_pathConfig);
+    _libModule->setIsNewPathConfig(true);
+    mapMenu();
+    _libModule->setMap(_mapMenu);
+    _libModule->setIsNewMap(true);
+    _parsing.setFilename(_pathConfig);
+    _parsing.readFile();
 }
 
 void Core::handleGame(void)
 {
-    // std::this_thread::sleep_for(std::chrono::milliseconds(160));
-    // _gameModule->setIsNewKey(_libModule->getIsNewKey());
     _gameModule->runGame();
     if (_gameModule->getIsNewMap()) {
+        _gameModule->setIsNewMap(false);
         _libModule->setIsNewPathConfig(true);
         _libModule->setPathConfig(_gameModule->getPathConfig());
         _libModule->setMap(_gameModule->getMap());
-        _gameModule->setIsNewMap(false);
+        _libModule->setIsNewMap(true);
     }
-    _libModule->setScore(_gameModule->getScore());
+    //_libModule->setScore(_gameModule->getScore());
     _gameModule->setLastKey(_libModule->getLastKey());
-    // _libModule->setIsNewKey(_gameModule->getIsNewKey());
 }
 
-void Core::handleMenu(void)
+void Core::startCore()
 {
-    std::string line;
-    std::ifstream map_file("./srcs/core/menu.txt");
-
-    _map = std::make_shared<std::vector<std::string>>();
-    if (map_file) {
-        while (getline(map_file, line))
-            _map->push_back(line);
-        map_file.close();
-    }
-    _gameModule->setMap(_map);
-    _libModule->setMap(_map);
-}
-
-bool Core::startCore(void)
-{
-    DLLoader<IGraphic> instance(_libName);
-    _libModule = instance.getInstance();
-    DLLoader<IGame> game_instance(_gameName);
-    _gameModule = game_instance.getInstance();
-    _libModule->setIsNewMap(true);
-    _gameModule->setMap(_map);
-    _libModule->setIsNewPathConfig(false);
-    _libModule->setPathConfig(_gameModule->getPathConfig());
-
-    _libModule->setMap(_map);
-    while (true) {
-        if (_isMenu)
-            handleMenu();
-        else
-            handleGame();
-        if (!_libModule->runGraph()) {
-            if (_libModule->getIsNewKey() && (_libModule->getLastKey() == PREV_LIB || _libModule->getLastKey() == NEXT_LIB)) {
-                _libModule->setIsNewKey(false);
-                delete _libModule;
-                delete _gameModule;
-                return (true);
-            } else if (_libModule->getIsNewKey() && _libModule->getLastKey() == 40) {
-                _libModule->setIsNewKey(false);
+    while (42) {
+        if (_libModule->getIsNewKey()) {
+            _libModule->setIsNewKey(false);
+            if (_libModule->getLastKey() == 40) {
                 if (_isMenu) {
-                    delete _libModule;
-                    setMap();
-                    _libModule = instance.getInstance();
-                    _libModule->setMap(_gameModule->getMap());
-                    _gameModule->setMap(_map);
+                    loadNewGame(_parsing.getResult()[3].name);
                     _isMenu = false;
-                } else
+                } else {
+                    _haveGameLoad = false;
+                    loadMenu();
                     _isMenu = true;
-            } else {
-                break;
+                }
             }
         }
+        if (getHaveGameLoad())
+            handleGame();
+        if (_libModule->runGraph())
+            break;
     }
-    std::cout << "Score: " << _gameModule->getScore() << std::endl;
-    delete _libModule;
-    delete _gameModule;
-    return (false);
+    //std::cout << "Score: " << _gameModule->getScore() << std::endl;
 }
 
 void Core::setIsNewKey(bool isNewKey)
@@ -138,38 +132,4 @@ void Core::setKey(int key)
 int Core::getKey(void) const
 {
     return (_key);
-}
-
-void Core::setActualLib()
-{
-    _actualLib = _actualLib == 2 ? 0 : _actualLib + 1;
-}
-
-int Core::getActualLib(void) const
-{
-    return (_actualLib);
-}
-
-void Core::setMenuLib(int menuLib)
-{
-    std::cout << "Menu : " << menuLib << std::endl;
-    _menuLib = menuLib;
-}
-
-int Core::getMenuLib(void) const
-{
-    return (_menuLib);
-}
-
-void Core::setMap(void)
-{
-    std::string line;
-    std::ifstream map_file("./games/Pacman/config/map.config");
-
-    _map = std::make_shared<std::vector<std::string>>();
-    if (map_file) {
-        while (getline(map_file, line))
-            _map->push_back(line);
-        map_file.close();
-    }
 }

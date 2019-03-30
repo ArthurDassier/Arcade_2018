@@ -5,8 +5,7 @@
 ** ClassSFML
 */
 
-#ifndef CLASS_SFML_HPP_
-    #define CLASS_SFML_HPP_
+#pragma once
 
 #include <SFML/Graphics.hpp>
 #include "AnimatedSprite.hpp"
@@ -32,11 +31,10 @@ class ClassSFML : public IGraphic
 {
     public:
         ClassSFML();
-        virtual ~ClassSFML();
+        ~ClassSFML();
 
         //Members
         bool runGraph();
-        bool getEvent();
         void setMap(std::shared_ptr<std::vector<std::string>>);
         void translateKey();
 
@@ -49,9 +47,6 @@ class ClassSFML : public IGraphic
         void setLastKey(int);
         int getLastKey(void) const;
 
-        void setMapTexture(void);
-        void displayGame(void);
-
         void setScore(size_t);
         size_t getScore() const;
 
@@ -61,6 +56,9 @@ class ClassSFML : public IGraphic
         void setIsNewPathConfig(bool) noexcept;
         bool getIsNewPathConfig() const noexcept;
 
+        bool getEvent();
+        void setMapTexture(void);
+        void displayGame(void);
     private:
         std::unique_ptr<sf::RenderWindow> _wind;
         std::unique_ptr<std::vector<std::vector<std::pair<char, sf::Sprite>>>> _map;
@@ -145,4 +143,3 @@ static struct KeySFML KeySFML[] = {
     {1000, 1000},
 };
 
-#endif /* !CLASS_SFML_HPP_ */
