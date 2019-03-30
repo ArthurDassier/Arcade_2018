@@ -76,11 +76,11 @@ bool ClassSDL::runGraph()
         }
     }
     if (_isNewMap) {
+        setMapTexture();
         SDL_RenderClear(_ren.get());
         displayGame();
         _isNewMap = false;
     }
-    SDL_Delay(4);
     return (false);
 }
 
@@ -99,6 +99,8 @@ void ClassSDL::setMapTexture()
     }
     for (auto it_y = _map->begin(); it_y != _map->end(); ++it_y) {
         for(auto it_x = it_y->begin(); it_x != it_y->end(); ++it_x) {
+            if (it_x->first == 'a')
+                continue;
             it_x->second.reset(SDL_CreateTextureFromSurface(_ren.get(),
             _textures.at(it_x->first - 48).second.get()));
         }
@@ -121,10 +123,10 @@ void ClassSDL::buildMap(std::shared_ptr<std::vector<std::string>> map = nullptr)
 
 void ClassSDL::setMap(std::shared_ptr<std::vector<std::string>> map)
 {
+    if (!map || !_map)
+        return;
     auto it_my_map_y = _map->begin();
 
-    if (!map)
-        return;
     for (auto it_y = map->begin(); it_y != map->end(); ++it_y, ++it_my_map_y) {
         auto it_my_map_x = it_my_map_y->begin();
         for (auto it_x = it_y->begin(); it_x != it_y->end(); ++it_x, ++it_my_map_x)

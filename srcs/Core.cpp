@@ -14,6 +14,7 @@ Core::Core(std::string libName) :
     _haveGameLoad(false)
 {
     auto instance = std::make_shared<DLLoader<IGraphic *>>(_libName);
+
     _instance = instance;
     std::shared_ptr<IGraphic> tmp(_instance->getInstance());
     _libModule = tmp;
@@ -71,8 +72,6 @@ void Core::handleGame(void)
     _gameModule->runGame();
     if (_gameModule->getIsNewMap()) {
         _gameModule->setIsNewMap(false);
-        _libModule->setIsNewPathConfig(true);
-        _libModule->setPathConfig(_gameModule->getPathConfig());
         _libModule->setMap(_gameModule->getMap());
         _libModule->setIsNewMap(true);
     }
