@@ -14,7 +14,6 @@ Core::Core(std::string libName) :
     _haveGameLoad(false)
 {
     auto instance = std::make_shared<DLLoader<IGraphic *>>(_libName);
-
     _instance = instance;
     std::shared_ptr<IGraphic> tmp(_instance->getInstance());
     _libModule = tmp;

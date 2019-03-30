@@ -32,39 +32,37 @@ ClassNcurses::~ClassNcurses()
     endwin();
 }
 
-bool ClassNcurses::getEvent()
+void ClassNcurses::displayGame()
 {
-    _c = getch();
-
-    switch (_c) {
-        case ERR:
-            break;
-        case 'a':
-            setLastKey(0);
-            return (true);
-        case 'r':
-            if (_posi_menu == 0)
-                _posi_menu = 2;
-            else
-                _posi_menu -= 1;
-            break;
-        case 'f':
-            if (_posi_menu == 2)
-                _posi_menu = 0;
-            else
-                _posi_menu += 1;
-            break;
-        default:
-            translateKey();
-            if (getLastKey() == 38 || getLastKey() == 39)
-                return (true);
-            break;
+    std::vector<DataParsingConfig> parsingResult = _parsing.getResult();
+    std::string wall;
+    std::string miam;
+    std::string perso;
+    std::string enemy;
+    std::string super_miam;
+    int i = 0;
+    for (auto it = parsingResult.begin(); it != parsingResult.end(); ++it) {
+        switch (i) {
+            case 1:
+                wall = it->caractere;
+                break;
+            case 2:
+                miam = it->caractere;
+                break;
+            case 3:
+                perso = it->caractere;
+                break;
+            case 4:
+                enemy = it->caractere;
+                break;
+            case 5:
+                super_miam = it->caractere;
+                break;
+            default:
+                break;
+        }
+        i++;
     }
-    return (false);
-}
-
-void ClassNcurses::setMapTexture()
-{
     size_t lock_wall = 0;
     size_t posi = 1;
     std::ifstream ncurses("./lib/lib_arcade_ncurses.so");
@@ -89,20 +87,20 @@ void ClassNcurses::setMapTexture()
                             printw("|");
                             lock_wall = 0;
                         } else
-                            printw("#");
+                            printw("%s", wall.c_str());
                         attroff(COLOR_PAIR(1));
                         break;
-                case POINT: printw("*");
+                case POINT: printw("%s", miam.c_str());
                         break;
                 case PLAYER: attron(COLOR_PAIR(2));
-                        printw("<");
+                        printw("%s", perso.c_str());
                         attroff(COLOR_PAIR(2));
                         break;
-                case GHOST: printw("M");
+                case GHOST: printw("%s", enemy.c_str());
                         break;
-                case BONUS: printw("o");
+                case BONUS: printw("%s", super_miam.c_str());
                         break;
-                case SDL: if (sdl.good()) {
+                /*case SDL: if (sdl.good()) {
                             if (_posi_menu == 0)
                                 box(_window_menu_sdl, ACS_VLINE, ACS_HLINE);
                             mvwprintw(_window_menu_sdl, 1, 4, "SDL");
@@ -119,7 +117,7 @@ void ClassNcurses::setMapTexture()
                                     box(_window_menu_ncurses, ACS_VLINE, ACS_HLINE);
                                 mvwprintw(_window_menu_ncurses, 1, 2, "NCURSES");
                         }
-                        break;
+                        break;*/
                 default: printw(" ");
                         if (i == it->begin())
                             lock_wall++;
@@ -130,6 +128,42 @@ void ClassNcurses::setMapTexture()
         move((LINES/2) - (_map->size()/2) + posi, (COLS/2) - (_map->begin()->size()/2));
         posi++;
     }
+    wborder(_window, '|', '|', '-', '-', '+', '+', '+', '+');
+    ncurses.close();
+    sdl.close();
+    sfml.close();
+}
+
+bool ClassNcurses::getEvent()
+{
+    _c = getch();
+
+    switch (_c) {
+        case ERR:
+            break;
+        case 'a':
+            setLastKey(0);
+            return (true);
+        case 'r':
+            if (_posi_menu == 0)
+                _posi_menu = 2;
+            else
+                _posi_menu -= 1;
+            break;
+        case 'f':
+            if (_posi_menu == 2)
+                _posi_menu = 0;
+            else
+                _posi_menu += 1;
+            break;
+        default:
+            translateKey();
+            if (getLastKey() == 38 || getLastKey() == 39 ||
+                getLastKey() == SFML || getLastKey() == SDL)
+                return (true);
+            break;
+    }
+    return (false);
 }
 
 int ClassNcurses::get_input()
@@ -163,22 +197,138 @@ char ClassNcurses::translate_for_menu(int nb)
 
 bool ClassNcurses::runGraph()
 {
-    clear();
-    setMapTexture();
-    wborder(_window, '|', '|', '-', '-', '+', '+', '+', '+');
+    if (getIsNewPathConfig() == true) {
+        _parsing.clearData();
+        setIsNewPathConfig(false);
+        _parsing.setFilename(getPathConfig());
+        _parsing.readFile();
+        setMapTexture();
+    }
+    //setMapTexture();
+    //wborder(_window, '|', '|', '-', '-', '+', '+', '+', '+');
     /*get_input();
     attron(A_DIM);
     mvprintw(0, 0, "%s", _str.c_str());
     attroff(A_DIM);*/
     if (getEvent())
-        return (false);
+        return (true);
+    if (_isNewMap) {
+        clear();
+        displayGame();
+        _isNewMap = false;
+    }
     timeout(100);
     refresh();
-    return (true);
+    return (false);
+}
+
+void ClassNcurses::setMapTexture()
+{
+    // std::vector<DataParsingConfig> parsingResult = _parsing.getResult();
+    // std::string wall;
+    // std::string miam;
+    // std::string perso;
+    // std::string enemy;
+    // std::string super_miam;
+    // int i = 0;
+    // for (auto it = parsingResult.begin(); it != parsingResult.end(); ++it) {
+    //     switch (i) {
+    //         case 0:
+    //             wall = it->caractere;
+    //             break;
+    //         case 1:
+    //             miam = it->caractere;
+    //             break;
+    //         case 2:
+    //             perso = it->caractere;
+    //             break;
+    //         case 3:
+    //             enemy = it->caractere;
+    //             break;
+    //         case 4:
+    //             super_miam = it->caractere;
+    //             break;
+    //         default:
+    //             break;
+    //     }
+    //     i++;
+    // }
+    // size_t lock_wall = 0;
+    // size_t posi = 1;
+    // std::ifstream ncurses("./lib/lib_arcade_ncurses.so");
+    // std::ifstream sdl("./lib/lib_arcade_sdl2.so");
+    // std::ifstream sfml("./lib/lib_arcade_sfml.so");
+
+    // init_pair(1, COLOR_BLUE, COLOR_BLACK);
+    // init_pair(2, COLOR_YELLOW, COLOR_BLACK);
+    // init_pair(3, COLOR_BLUE, COLOR_WHITE);
+    // move((LINES/2) - (_map->size()/2), (COLS/2) - (_map->begin()->size()/2)); //dimensions de la map
+    // for (auto it = _map->begin(); it != _map->end(); ++it) {
+    //     for (auto i = it->begin(); i != it->end(); ++i) {
+    //         switch (*i) {
+    //             case NOTHING: printw(" ");
+    //                     break;
+    //             case WALL: attron(COLOR_PAIR(1));
+    //                     if (it == _map->begin() || ((it + 1) == _map->end()))
+    //                         printw("-");
+    //                     else if (i == it->begin() || ((i + 1) == it->end()))
+    //                         printw("|");
+    //                     else if (lock_wall != 0) {
+    //                         printw("|");
+    //                         lock_wall = 0;
+    //                     } else
+    //                         printw("%s", wall.c_str());
+    //                     attroff(COLOR_PAIR(1));
+    //                     break;
+    //             case POINT: printw("%s", miam.c_str());
+    //                     break;
+    //             case PLAYER: attron(COLOR_PAIR(2));
+    //                     printw("%s", perso.c_str());
+    //                     attroff(COLOR_PAIR(2));
+    //                     break;
+    //             case GHOST: printw("%s", enemy.c_str());
+    //                     break;
+    //             case BONUS: printw("%s", super_miam.c_str());
+    //                     break;
+    //             case SDL: if (sdl.good()) {
+    //                         if (_posi_menu == 0)
+    //                             box(_window_menu_sdl, ACS_VLINE, ACS_HLINE);
+    //                         mvwprintw(_window_menu_sdl, 1, 4, "SDL");
+    //                     }
+    //                     break;
+    //             case SFML: if (sfml.good()) {
+    //                         if (_posi_menu == 1)
+    //                             box(_window_menu_sfml, ACS_VLINE, ACS_HLINE);
+    //                         mvwprintw(_window_menu_sfml, 1, 3, "SFML");
+    //                     }
+    //                     break;
+    //             case NCURSES: if (ncurses.good()) {
+    //                             if (_posi_menu == 2)
+    //                                 box(_window_menu_ncurses, ACS_VLINE, ACS_HLINE);
+    //                             mvwprintw(_window_menu_ncurses, 1, 2, "NCURSES");
+    //                     }
+    //                     break;
+    //             default: printw(" ");
+    //                     if (i == it->begin())
+    //                         lock_wall++;
+    //                     break;
+    //         }
+    //     }
+    //     printw("\n");
+    //     move((LINES/2) - (_map->size()/2) + posi, (COLS/2) - (_map->begin()->size()/2));
+    //     posi++;
+    // }
+}
+
+void ClassNcurses::buildMap(std::shared_ptr<std::vector<std::string>> map = nullptr)
+{
+
 }
 
 void ClassNcurses::setMap(std::shared_ptr<std::vector<std::string>> map)
 {
+    if (!map)
+        return;
     _map = std::make_unique<std::vector<std::string>>();
     for (auto it = map->begin(); it != map->end(); ++it) {
         _map->push_back(*it);
@@ -250,7 +400,7 @@ std::string ClassNcurses::getPathConfig() const noexcept
 
 void ClassNcurses::setIsNewPathConfig(bool isNewPath) noexcept
 {
-    _isNewPathConfig = isNewPath;   
+    _isNewPathConfig = isNewPath;
 }
 
 bool ClassNcurses::getIsNewPathConfig() const noexcept

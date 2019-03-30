@@ -13,21 +13,21 @@ ClassPacman::ClassPacman():
     _isNewMap(true),
     _score(0),
     _key(0),
-    _bonus(false)
+    _bonus(false),
+    _lock_create_map(true)
 {
     _clock = clock();
 }
 
 ClassPacman::~ClassPacman()
 {
+    _lock_create_map = true;
 }
 
 bool ClassPacman::runGame()
 {
-    static bool first_time = true;
-    
-    if (first_time) {
-        first_time = false;
+    if (_lock_create_map) {
+        _lock_create_map = false;
         readMap();
         this->setMap(_map);
     }

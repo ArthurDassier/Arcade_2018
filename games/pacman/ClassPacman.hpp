@@ -63,4 +63,5 @@ class ClassPacman : public IGame
         size_t _score;
         bool _canMove;
         bool _bonus;
+        bool _lock_create_map;
 };

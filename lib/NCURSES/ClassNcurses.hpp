@@ -9,6 +9,7 @@
 
 #include <ncurses.h>
 #include "IGraphic.hpp"
+#include "../srcs/ParsingConfig.hpp"
 
 enum Graphics {
     NOTHING = '0',
@@ -45,14 +46,18 @@ class ClassNcurses : public IGraphic
         void setScore(size_t);
         size_t getScore() const;
 
+        void setMapTexture();
+        void displayGame();
+
         void setPathConfig(std::string) noexcept;
         std::string getPathConfig() const noexcept;
 
         void setIsNewPathConfig(bool) noexcept;
         bool getIsNewPathConfig() const noexcept;
 
+        void buildMap(std::shared_ptr<std::vector<std::string>>);
         bool getEvent();
-        void setMapTexture();
+
         //pour le menu
         int get_input();
         std::string get_string();
@@ -73,6 +78,7 @@ class ClassNcurses : public IGraphic
         std::string _str;
         std::string _pathConfig;
         bool _isNewPathConfig;
+        ParsingConfig _parsing;
 };
 
 struct KeyNcurses {
