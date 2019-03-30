@@ -76,8 +76,8 @@ void Core::loadNewLib(std::string lib)
     std::shared_ptr<IGraphic> tmp(_instance->getInstance());
     _libModule = tmp;
     _libModule->setPathConfig(_pathConfig);
+    _libModule->setIsNewPathConfig(true);
     if (!_haveGameLoad) {
-        _libModule->setIsNewPathConfig(true);
         _libModule->buildMap(_mapMenu);
         _libModule->setMap(_mapMenu);
         _libModule->setIsNewMap(true);
