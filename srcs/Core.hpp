@@ -17,10 +17,9 @@
 #include "IGame.hpp"
 
 enum Commands {
-    NEXT_GAME = 36,
-    PREV_GAME = 37,
-    NEXT_LIB = 38,
-    PREV_LIB = 39,
+    NCURSES = 9,
+    SFML = 10,
+    SDL = 11,
     ENTER = 40
 };
 
@@ -58,7 +57,6 @@ class Core {
 
         inline void setNumPathLib(size_t num) noexcept;
         inline size_t getNumPathLib() const noexcept;
-
 
     private:
         std::string _libName;

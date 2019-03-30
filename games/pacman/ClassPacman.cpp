@@ -8,6 +8,8 @@
 #include "ClassPacman.hpp"
 
 ClassPacman::ClassPacman():
+    _pathConfig("./games/pacman/config/sprites.config"),
+    _pathMap("./games/pacman/config/map.config"),
     _isNewMap(true),
     _score(0),
     _key(0),
@@ -119,12 +121,12 @@ size_t ClassPacman::getScore() const
     return (_score);
 }
 
-const std::string ClassPacman::getPathConfig() const noexcept
+std::string ClassPacman::getPathConfig() const noexcept
 {
     return (_pathConfig);
 }
 
-const std::string ClassPacman::getPathMap() const noexcept
+std::string ClassPacman::getPathMap() const noexcept
 {
     return (_pathMap);
 }

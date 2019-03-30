@@ -70,7 +70,7 @@ class ParsingConfig {
             */
         }
 
+        std::vector<DataParsingConfig> _sprite;
     private:
         std::string _filename;
-        std::vector<DataParsingConfig> _sprite;
 };

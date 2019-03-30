@@ -67,6 +67,24 @@ void Core::loadMenu()
     _parsing.readFile();
 }
 
+void Core::loadNewLib(std::string lib)
+{
+    auto instance = std::make_shared<DLLoader<IGraphic *>>(lib);
+
+    _libModule.reset();
+    _instance = instance;
+    std::shared_ptr<IGraphic> tmp(_instance->getInstance());
+    _libModule = tmp;
+    _libModule->setPathConfig(_pathConfig);
+    if (!_haveGameLoad) {
+        _libModule->setIsNewPathConfig(true);
+        _libModule->buildMap(_mapMenu);
+        _libModule->setMap(_mapMenu);
+        _libModule->setIsNewMap(true);
+    } else
+        _libModule->setPathConfig(_gameModule->getPathConfig());
+}
+
 void Core::handleGame(void)
 {
     _gameModule->runGame();
@@ -81,10 +99,14 @@ void Core::handleGame(void)
 
 void Core::startCore()
 {
+    std::ifstream ncurses("./lib/lib_arcade_ncurses.so");
+    std::ifstream sdl("./lib/lib_arcade_sdl2.so");
+    std::ifstream sfml("./lib/lib_arcade_sfml.so");
+
     while (42) {
         if (_libModule->getIsNewKey()) {
             _libModule->setIsNewKey(false);
-            if (_libModule->getLastKey() == 40) {
+            if (_libModule->getLastKey() == ENTER) {
                 if (_isMenu) {
                     loadNewGame(_parsing.getResult()[3].name);
                     _isMenu = false;
@@ -93,6 +115,15 @@ void Core::startCore()
                     loadMenu();
                     _isMenu = true;
                 }
+            } else if (_libModule->getLastKey() == NCURSES) {
+                if (ncurses.good())
+                    loadNewLib("./lib/lib_arcade_ncurses.so");
+            } else if (_libModule->getLastKey() == SFML) {
+                if (sfml.good())
+                    loadNewLib("./lib/lib_arcade_sfml.so");
+            } else if (_libModule->getLastKey() == SDL) {
+                if (sdl.good())
+                    loadNewLib("./lib/lib_arcade_sdl2.so");
             }
         }
         if (getHaveGameLoad())
@@ -100,7 +131,9 @@ void Core::startCore()
         if (_libModule->runGraph())
             break;
     }
-    //std::cout << "Score: " << _gameModule->getScore() << std::endl;
+    ncurses.close();
+    sdl.close();
+    sfml.close();
 }
 
 void Core::setIsNewKey(bool isNewKey)

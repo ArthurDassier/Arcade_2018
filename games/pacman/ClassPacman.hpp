@@ -47,12 +47,12 @@ class ClassPacman : public IGame
 
         void checkNextCase(char);
 
-        const std::string getPathConfig() const noexcept;
-        const std::string getPathMap() const noexcept;
+        std::string getPathConfig() const noexcept;
+        std::string getPathMap() const noexcept;
 
     private:
-        std::string _pathConfig = "./games/Pacman/config/sprites.config";
-        std::string _pathMap = "./games/Pacman/config/map.config";
+        std::string _pathConfig;
+        std::string _pathMap;
         bool _isNewMap;
         std::shared_ptr<std::vector<std::string>> _map;
         Move _lastMove;

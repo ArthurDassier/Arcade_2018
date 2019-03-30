@@ -15,7 +15,7 @@ INCLUDE			=	-I.
 
 PACMAN			=	lib_arcade_pacman.so
 
-PACMAN_DIR		=	Pacman/
+PACMAN_DIR		=	pacman/
 
 PACMAN_FILES	=	ClassPacman.cpp
 

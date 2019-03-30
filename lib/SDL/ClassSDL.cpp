@@ -39,16 +39,18 @@ void ClassSDL::displayGame()
     std::ifstream ncurses("./lib/lib_arcade_ncurses.so");
     std::ifstream sdl("./lib/lib_arcade_sdl2.so");
     std::ifstream sfml("./lib/lib_arcade_sfml.so");
-    SDL_Rect dstrect = {0, 0, 30, 30};
+    SDL_Rect dstrect = {0, 0, 0, 0};
+    int x, y = 0;
 
     for (auto it_y = _map->begin(); it_y != _map->end(); ++it_y) {
         for(auto it_x = it_y->begin(); it_x != it_y->end(); ++it_x) {
+            dstrect = {x, y, _parsing._sprite.at(it_x->first - 48).sizeX, _parsing._sprite.at(it_x->first - 48).sizeY};
             if (it_x->first != NOTHING)
                 SDL_RenderCopy(_ren.get(), it_x->second.get(), NULL, &dstrect);
-            dstrect.x += 30;
+            x += _parsing._sprite.at(it_x->first - 48).sizeX;
         }
-        dstrect.x = 0;
-        dstrect.y += 30;
+        x = 0;
+        y += _parsing._sprite.at(it_y->begin()->first - 48).sizeY;
     }
     ncurses.close();
     sdl.close();

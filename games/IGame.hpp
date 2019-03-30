@@ -35,8 +35,8 @@ class IGame {
         virtual void setScore(size_t score) = 0;
         virtual size_t getScore(void) const = 0;
 
-        virtual const std::string getPathConfig() const noexcept = 0;
-        virtual const std::string getPathMap() const noexcept = 0;
+        virtual std::string getPathConfig() const noexcept = 0;
+        virtual std::string getPathMap() const noexcept = 0;
 
         enum Graphics {
             NOTHING = '0',
