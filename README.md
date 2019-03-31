@@ -61,7 +61,19 @@ The second one must represent the 'map' that your lib will print, with code repr
 
 You must implement a runGraph fonction that will return return true if you want to exit the program, otherwise return false.
 
+```c
+
+bool YourClassName::runGraph();
+
+```
+
 You must implement a translateKey fonction translating the key returned by the events of your lib to a key that will be understood by the core
+
+```c
+
+void YourClassName::translateKey()
+
+```
 
 ### Here is the translation
 
@@ -408,3 +420,121 @@ extern "C"
 }
 
 ```
+
+# How to implement a new game library
+
+## Configuration files
+
+They must be implemented the same way as graphic libraries
+
+## Class implementation
+
+In your class must be implemented two private attribute
+
+```c
+
+std::string _pathConfig = "./path/to/your/file.config";
+std::string _pathMap = "./path/to/your/map.config";
+
+```
+
+## Functions to implement
+
+You must implement a runGame fonction that will handle the logic of your game, plus the clock
+
+```c
+bool Pacman::runGame();
+```
+
+You must implement a readMap fonction that will read the map
+
+```c
+void Pacman::readMap();
+```
+
+You must implement all these functions that you can copy / paste from below
+
+```c
+
+void YourClassName::setMap(std::shared_ptr<std::vector<std::string>> map)
+{
+    _map = map;
+}
+
+std::shared_ptr<std::vector<std::string>> YourClassName::getMap(void) const
+{
+    return (_map);
+}
+
+void YourClassName::setIsNewMap(bool map)
+{
+    _isNewMap = map;
+}
+
+bool YourClassName::getIsNewMap(void) const
+{
+    return (_isNewMap);
+}
+
+void YourClassName::setIsNewKey(bool isNewKey)
+{
+    _isNewKey = isNewKey;
+}
+
+bool YourClassName::getIsNewKey(void) const
+{
+    return (_isNewKey);
+}
+
+void YourClassName::setLastKey(int key)
+{
+    _key = key;
+}
+
+int YourClassName::getLastKey(void) const
+{
+    return (_key);
+}
+
+void YourClassName::setScore(size_t score)
+{
+    _score = score;
+}
+
+size_t YourClassName::getScore() const
+{
+    return (_score);
+}
+
+const std::string YourClassName::getPathConfig() const noexcept
+{
+    return (_pathConfig);
+}
+
+const std::string YourClassName::getPathMap() const noexcept
+{
+    return (_pathMap);
+}
+
+void YourClassName::setMove(Move lastMove)
+{
+    _lastMove = lastMove;
+}
+
+Move YourClassName::getMove() const
+{
+    return (_lastMove);
+}
+
+extern "C"
+{
+    IGame *entryPoint(void)
+    {
+        YourClassName *instance = new YourClassName();
+        return (instance);
+    }
+}
+
+```
+
+Have fun !
