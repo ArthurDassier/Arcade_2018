@@ -520,6 +520,10 @@
     <member refid="tests___n_c_u_r_s_e_s_8cpp_1a1b631394a19809c76acd35531043a080" kind="function"><name>Test</name></member>
     <member refid="tests___n_c_u_r_s_e_s_8cpp_1a3ca18fd75b8b1313741c3542d28ab08f" kind="function"><name>Test</name></member>
     <member refid="tests___n_c_u_r_s_e_s_8cpp_1a8a3545ae5a232add1cdc1f0ba6e44eae" kind="function"><name>Test</name></member>
+    <member refid="tests___n_c_u_r_s_e_s_8cpp_1a2c7a53a5e366f04577c5e19e0fc5138c" kind="function"><name>Test</name></member>
+    <member refid="tests___n_c_u_r_s_e_s_8cpp_1a351fb5a5f8beb5adaf8b966a7192ce68" kind="function"><name>Test</name></member>
+    <member refid="tests___n_c_u_r_s_e_s_8cpp_1aa9d99db5ca4b057cc31e49c89c1b9a38" kind="function"><name>Test</name></member>
+    <member refid="tests___n_c_u_r_s_e_s_8cpp_1af4045c42e838e98820045e84d3463e35" kind="function"><name>Test</name></member>
   </compound>
   <compound refid="tests___s_d_l_8cpp" kind="file"><name>tests_SDL.cpp</name>
     <member refid="tests___s_d_l_8cpp_1ad5b9bba9140e5eae747b366b153fb8e4" kind="function"><name>Test</name></member>
@@ -528,6 +532,10 @@
     <member refid="tests___s_d_l_8cpp_1a1ec6e1bc941ffc6fb51d1646533c6ea3" kind="function"><name>Test</name></member>
     <member refid="tests___s_d_l_8cpp_1aa7b84740abf5173441e7acc6245d97c2" kind="function"><name>Test</name></member>
     <member refid="tests___s_d_l_8cpp_1a13a33878c7661cd7bb59d9d53c70d9e5" kind="function"><name>Test</name></member>
+    <member refid="tests___s_d_l_8cpp_1a83b657fad0e6552178ff430e56f92b7d" kind="function"><name>Test</name></member>
+    <member refid="tests___s_d_l_8cpp_1ae6a973775c8607d3aa1ad2aacc329a0b" kind="function"><name>Test</name></member>
+    <member refid="tests___s_d_l_8cpp_1a7de6225a70bb73d251ad8c8416c5d1f8" kind="function"><name>Test</name></member>
+    <member refid="tests___s_d_l_8cpp_1afaed732d7d2ba133325f25b68edab7a0" kind="function"><name>Test</name></member>
   </compound>
   <compound refid="tests___s_f_m_l_8cpp" kind="file"><name>tests_SFML.cpp</name>
     <member refid="tests___s_f_m_l_8cpp_1a8789d4d6a448183edc6af15b359e2594" kind="function"><name>Test</name></member>
@@ -536,6 +544,10 @@
     <member refid="tests___s_f_m_l_8cpp_1a3b115731159c34ace3a0fe023cda9af5" kind="function"><name>Test</name></member>
     <member refid="tests___s_f_m_l_8cpp_1ab36d37a099ff957041d09ebf99e0517e" kind="function"><name>Test</name></member>
     <member refid="tests___s_f_m_l_8cpp_1a425839e6f462571c221a65244ecb308d" kind="function"><name>Test</name></member>
+    <member refid="tests___s_f_m_l_8cpp_1a8e8ab3df15504d7b83a312c7900e3a62" kind="function"><name>Test</name></member>
+    <member refid="tests___s_f_m_l_8cpp_1a61d9437f6406edbedebbdbf6e4936894" kind="function"><name>Test</name></member>
+    <member refid="tests___s_f_m_l_8cpp_1af913e923e2214c9387651752d1fa1127" kind="function"><name>Test</name></member>
+    <member refid="tests___s_f_m_l_8cpp_1a74f6e404b0e38af46df70ee3a2e11f37" kind="function"><name>Test</name></member>
   </compound>
   <compound refid="md__r_e_a_d_m_e" kind="page"><name>md_README</name>
   </compound>

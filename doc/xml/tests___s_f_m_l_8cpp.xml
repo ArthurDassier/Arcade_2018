@@ -222,6 +222,82 @@
         </inbodydescription>
         <location file="tests/tests_SFML.cpp" line="51" column="1" bodyfile="tests/tests_SFML.cpp" bodystart="51" bodyend="57"/>
       </memberdef>
+      <memberdef kind="function" id="tests___s_f_m_l_8cpp_1a8e8ab3df15504d7b83a312c7900e3a62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test</definition>
+        <argsstring>(tests_SFML, test_getScore)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>tests_SFML</type>
+        </param>
+        <param>
+          <type>test_getScore</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/tests_SFML.cpp" line="59" column="1" bodyfile="tests/tests_SFML.cpp" bodystart="59" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="tests___s_f_m_l_8cpp_1a61d9437f6406edbedebbdbf6e4936894" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test</definition>
+        <argsstring>(tests_SFML, test_getPathConfig)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>tests_SFML</type>
+        </param>
+        <param>
+          <type>test_getPathConfig</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/tests_SFML.cpp" line="71" column="1" bodyfile="tests/tests_SFML.cpp" bodystart="71" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="tests___s_f_m_l_8cpp_1af913e923e2214c9387651752d1fa1127" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test</definition>
+        <argsstring>(tests_SFML, test_getIsNewPathConfigIsTrue)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>tests_SFML</type>
+        </param>
+        <param>
+          <type>test_getIsNewPathConfigIsTrue</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/tests_SFML.cpp" line="83" column="1" bodyfile="tests/tests_SFML.cpp" bodystart="83" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="tests___s_f_m_l_8cpp_1a74f6e404b0e38af46df70ee3a2e11f37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test</definition>
+        <argsstring>(tests_SFML, test_getIsNewPathConfigIsFalse)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>tests_SFML</type>
+        </param>
+        <param>
+          <type>test_getIsNewPathConfigIsFalse</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/tests_SFML.cpp" line="91" column="1" bodyfile="tests/tests_SFML.cpp" bodystart="91" bodyend="97"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
@@ -285,6 +361,46 @@
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_f_m_l_1aeb353a7928b673ceb10f12c4d5710305" kindref="member">setLastKey</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_f_m_l_1a7ebdd83fe2ab4c1feb3788f27a3a1b6e" kindref="member">getLastKey</ref>(),<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="tests___s_f_m_l_8cpp_1a8e8ab3df15504d7b83a312c7900e3a62" refkind="member"><highlight class="normal"><ref refid="tests___s_f_m_l_8cpp_1a8789d4d6a448183edc6af15b359e2594" kindref="member">Test</ref>(tests_SFML,<sp/>test_getScore)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_class_s_f_m_l" kindref="compound">ClassSFML</ref><sp/>test;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_f_m_l_1a42df0bacc5fa82cfc451722332304b50" kindref="member">setScore</ref>(0);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_f_m_l_1a525c4cf493dfd9d68ea2bba3bd15b7e7" kindref="member">getScore</ref>(),<sp/>0);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_f_m_l_1a42df0bacc5fa82cfc451722332304b50" kindref="member">setScore</ref>(10);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_f_m_l_1a525c4cf493dfd9d68ea2bba3bd15b7e7" kindref="member">getScore</ref>(),<sp/>10);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_f_m_l_1a42df0bacc5fa82cfc451722332304b50" kindref="member">setScore</ref>(900);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_f_m_l_1a525c4cf493dfd9d68ea2bba3bd15b7e7" kindref="member">getScore</ref>(),<sp/>900);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="tests___s_f_m_l_8cpp_1a61d9437f6406edbedebbdbf6e4936894" refkind="member"><highlight class="normal"><ref refid="tests___s_f_m_l_8cpp_1a8789d4d6a448183edc6af15b359e2594" kindref="member">Test</ref>(tests_SFML,<sp/>test_getPathConfig)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_class_s_f_m_l" kindref="compound">ClassSFML</ref><sp/>test;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_f_m_l_1ac37b544f6179f33994e9fa189e15eea8" kindref="member">setPathConfig</ref>(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_f_m_l_1aa83937866ca263758733952543eb8282" kindref="member">getPathConfig</ref>(),<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_f_m_l_1ac37b544f6179f33994e9fa189e15eea8" kindref="member">setPathConfig</ref>(</highlight><highlight class="stringliteral">&quot;coucou&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_f_m_l_1aa83937866ca263758733952543eb8282" kindref="member">getPathConfig</ref>(),<sp/></highlight><highlight class="stringliteral">&quot;coucou&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_f_m_l_1ac37b544f6179f33994e9fa189e15eea8" kindref="member">setPathConfig</ref>(</highlight><highlight class="stringliteral">&quot;./srcs/core/path_menu.config&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_f_m_l_1aa83937866ca263758733952543eb8282" kindref="member">getPathConfig</ref>(),<sp/></highlight><highlight class="stringliteral">&quot;./srcs/core/path_menu.config&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="tests___s_f_m_l_8cpp_1af913e923e2214c9387651752d1fa1127" refkind="member"><highlight class="normal"><ref refid="tests___s_f_m_l_8cpp_1a8789d4d6a448183edc6af15b359e2594" kindref="member">Test</ref>(tests_SFML,<sp/>test_getIsNewPathConfigIsTrue)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_class_s_f_m_l" kindref="compound">ClassSFML</ref><sp/>test;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_f_m_l_1ab47a3c8fb83d5db1640105bd6771c3da" kindref="member">setIsNewPathConfig</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_f_m_l_1a9f308ab330e1a85913cd17c8ef901d71" kindref="member">getIsNewPathConfig</ref>(),<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="tests___s_f_m_l_8cpp_1a74f6e404b0e38af46df70ee3a2e11f37" refkind="member"><highlight class="normal"><ref refid="tests___s_f_m_l_8cpp_1a8789d4d6a448183edc6af15b359e2594" kindref="member">Test</ref>(tests_SFML,<sp/>test_getIsNewPathConfigIsFalse)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_class_s_f_m_l" kindref="compound">ClassSFML</ref><sp/>test;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_f_m_l_1ab47a3c8fb83d5db1640105bd6771c3da" kindref="member">setIsNewPathConfig</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_f_m_l_1a9f308ab330e1a85913cd17c8ef901d71" kindref="member">getIsNewPathConfig</ref>(),<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="tests/tests_SFML.cpp"/>
   </compounddef>
