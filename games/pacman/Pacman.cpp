@@ -80,15 +80,7 @@ bool Pacman::runGame()
             _ghosts.at(0)->move(UP, _map);
             _ghost_start = false;
         } else {
-            enum my_type {
-                RIGHT = 3, 
-                LEFT = 16, 
-                DOWN = 18, 
-                UP = 25,
-                last
-            };
             my_type type = static_cast<my_type>(rand() % last);
-            std::cout << type << std::endl;
             Move move = static_cast<Move>(type);
             _ghosts.at(0)->move(move, _map);
         }

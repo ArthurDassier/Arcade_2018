@@ -74,4 +74,12 @@ class Pacman : public IGame
         bool _ghost_start;
         std::shared_ptr<Entity> _pacman;
         std::vector<std::shared_ptr<Entity>> _ghosts;
+
+        enum my_type {
+            right = 3, 
+            left = 16, 
+            down = 18, 
+            up = 25,
+            last
+        };
 };
