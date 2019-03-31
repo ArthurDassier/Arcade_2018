@@ -250,7 +250,7 @@ bool ClassNcurses::runGraph()
         displayGame();
         _isNewMap = false;
     }
-    timeout(100);
+    //timeout(100);
     refresh();
     return (false);
 }

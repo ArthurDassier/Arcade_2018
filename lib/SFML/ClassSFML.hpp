@@ -133,6 +133,6 @@ static struct KeySFML KeySFML[] = {
     {57, 41}, // Space
     {59, 42}, // BackSpace
     {60, 43}, // Tab
-    {1000, 1000},
+    {-1, -1},
 };
 

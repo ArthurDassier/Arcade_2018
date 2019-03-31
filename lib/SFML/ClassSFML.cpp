@@ -8,6 +8,7 @@
 #include "ClassSFML.hpp"
 
 ClassSFML::ClassSFML():
+    _wind(nullptr),
     _key(0),
     _isNewPathConfig(false),
     _isNewMap(false),
@@ -62,9 +63,10 @@ bool ClassSFML::runGraph()
     if (getIsNewMap()) {
         setMapTexture();
         _wind->clear();
-        displayGame();
         setIsNewMap(false);
     }
+    _wind->clear();
+    displayGame();
     _wind->display();
     return (false);
 }
@@ -98,6 +100,7 @@ void ClassSFML::setMapTexture()
 void ClassSFML::buildMap(std::shared_ptr<std::vector<std::string>> map = nullptr)
 {
     _map = std::make_unique<std::vector<std::vector<std::pair<char, sf::Sprite>>>>();
+
     for (auto it = map->begin(); it != map->end(); ++it) {
         std::vector<std::pair<char, sf::Sprite>> tmp;
         for (auto it_str = it->begin(); it_str != it->end(); ++it_str) {
@@ -110,10 +113,10 @@ void ClassSFML::buildMap(std::shared_ptr<std::vector<std::string>> map = nullptr
 
 void ClassSFML::setMap(std::shared_ptr<std::vector<std::string>> map)
 {
+    if (!map || !_map)
+        return;
     auto it_my_map_y = _map->begin();
 
-    if (!map)
-        return;
     for (auto it_y = map->begin(); it_y != map->end(); ++it_y, ++it_my_map_y) {
         auto it_my_map_x = it_my_map_y->begin();
         for (auto it_x = it_y->begin(); it_x != it_y->end(); ++it_x, ++it_my_map_x)
@@ -123,7 +126,7 @@ void ClassSFML::setMap(std::shared_ptr<std::vector<std::string>> map)
 
 void ClassSFML::translateKey()
 {
-    for (size_t i = 0; KeySFML[i].code_lib != 1000; i++)
+    for (size_t i = 0; KeySFML[i].code_lib != -1; ++i)
         if (_event.key.code == KeySFML[i].code_lib) {
             setLastKey(KeySFML[i].code_core);
             setIsNewKey(true);
