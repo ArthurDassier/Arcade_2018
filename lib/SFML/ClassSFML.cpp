@@ -14,7 +14,7 @@ ClassSFML::ClassSFML():
     _isNewKey(false)
 {
     _wind = std::make_unique<sf::RenderWindow>();
-    _wind->create(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Arcade");
+    _wind->create(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Arcade SFML");
     _wind->setPosition(SCREEN_POS);
 }
 
