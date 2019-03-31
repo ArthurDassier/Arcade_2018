@@ -31,7 +31,7 @@ LIB_DIR			=	lib/
 
 TESTS_DIR		=	tests/
 
-SRCS			=	$(CORE_DIR)main.cpp	\
+SRCS			=	$(CORE_DIR)main.cpp				\
 					$(CORE_DIR)Core.cpp
 
 OBJ				=	$(SRCS:.cpp=.o)

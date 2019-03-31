@@ -19,8 +19,6 @@ LDFLAGS		=	-lsfml-graphics -lsfml-window -lsfml-system
 
 CPPFLAGS	=	-I$(INCLUDE)
 
-LDFLAGS		=	 -lsfml-graphics -lsfml-window -lsfml-system
-
 NAME		=	lib_arcade_sfml.so
 
 all: 		$(NAME)

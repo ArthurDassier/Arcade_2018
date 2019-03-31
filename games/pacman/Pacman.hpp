@@ -10,6 +10,11 @@
 #include "Entity.hpp"
 #include "IGame.hpp"
 
+/*! \class Pacman
+* \brief Class representing Pacman logic
+*
+*  This class contains the fonctions that handle the pacman
+*/
 class Pacman : public IGame
 {
     public:
@@ -65,8 +70,6 @@ class Pacman : public IGame
         bool _canMove;
         bool _bonus;
         bool _lock_create_map;
-        // std::unique_ptr<Entity> _pacman;
         Entity *_pacman;
-        // std::vector<std::unique_ptr<Entity>> _ghosts;
         std::vector<Entity *> _ghosts;
 };

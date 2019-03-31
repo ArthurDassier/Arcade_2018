@@ -7,6 +7,12 @@
 
 #include "Pacman.hpp"
 
+/*!
+ * \fn Pacman::Pacman()
+ * \brief Create Pacman, set the getters and intialize entities
+ *
+ * \param void
+ */
 Pacman::Pacman():
     _pathConfig("./games/pacman/config/sprites.config"),
     _pathMap("./games/pacman/config/map.config"),
@@ -26,6 +32,12 @@ Pacman::Pacman():
     _ghosts.push_back(ghost);
 }
 
+/*!
+ * \fn Pacman::~Pacman()
+ * \brief Pacman Class destructor, free vector of entity
+ *
+ * \param void
+ */
 Pacman::~Pacman()
 {
     delete _pacman;
@@ -34,6 +46,12 @@ Pacman::~Pacman()
     _lock_create_map = true;
 }
 
+/*!
+ * \fn Pacman::runGame()
+ * \brief Handle the events of the Pacman
+ *
+ * \param void
+ */
 bool Pacman::runGame()
 {
     setIsNewMap(false);
@@ -67,6 +85,12 @@ bool Pacman::runGame()
     return (true);
 }
 
+/*!
+ * \fn Pacman::readMap()
+ * \brief Read map.config and set game map
+ *
+ * \param void
+ */
 void Pacman::readMap()
 {
     std::string line;
