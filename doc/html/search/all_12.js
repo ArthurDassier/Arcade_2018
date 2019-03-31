@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['up',['UP',['../_class_entity_8hpp.html#a19b869a01ca1a58f4164b4f75c2df388aba595d8bca8bc5e67c37c0a9d89becfa',1,'ClassEntity.hpp']]],
-  ['update',['update',['../class_animated_sprite.html#a17a41ff812631a9d8947d272933d6696',1,'AnimatedSprite']]]
+  ['wall',['WALL',['../_entity_8hpp.html#a35cb4584225a2ee3ef554a9f5fe0e473afca2faad41310c7e71ec303ef789c53a',1,'WALL():&#160;Entity.hpp'],['../_class_ncurses_8hpp.html#a821fa6bcae46bbf01e1bdaf5a86a585dafca2faad41310c7e71ec303ef789c53a',1,'WALL():&#160;ClassNcurses.hpp'],['../_class_s_d_l_8hpp.html#a821fa6bcae46bbf01e1bdaf5a86a585dafca2faad41310c7e71ec303ef789c53a',1,'WALL():&#160;ClassSDL.hpp'],['../_class_s_f_m_l_8hpp.html#a821fa6bcae46bbf01e1bdaf5a86a585dafca2faad41310c7e71ec303ef789c53a',1,'WALL():&#160;ClassSFML.hpp']]]
 ];

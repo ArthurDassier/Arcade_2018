@@ -9,6 +9,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -23,7 +30,9 @@
   <td id="projectlogo"><img alt="Logo" src="220px-Pacman.svg.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Arcade
+   &#160;<span id="projectnumber">1.0</span>
    </div>
+   <div id="projectbrief">Arcade by Arthur, Theo and Camille</div>
   </td>
  </tr>
  </tbody>
@@ -44,6 +53,20 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('functions_func.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -78,6 +101,7 @@ $(function() {
 <li>buildMap()
 : <a class="el" href="class_class_ncurses.html#ab5e8c02788b76706a77b12de03f75f6d">ClassNcurses</a>
 , <a class="el" href="class_class_s_d_l.html#a5b4b518f4934b41fd57630c3006d9d03">ClassSDL</a>
+, <a class="el" href="class_class_s_f_m_l.html#a1770ece2b45a9b9b7e6c153076b2daa8">ClassSFML</a>
 , <a class="el" href="class_i_graphic.html#ad6ff7f8cf232daec6f9d5a4a468eba2c">IGraphic</a>
 </li>
 </ul>
@@ -85,19 +109,13 @@ $(function() {
 
 <h3><a id="index_c"></a>- c -</h3><ul>
 <li>canMove()
-: <a class="el" href="class_class_pacman.html#add80eaea34a9a8aa32018f27dd76e8a3">ClassPacman</a>
+: <a class="el" href="class_pacman.html#a5685f13b2be47a4d19c2cf984651f236">Pacman</a>
 </li>
 <li>checkNextCase()
-: <a class="el" href="class_class_pacman.html#ae79c98ca092556332493ea8cb05d6f6f">ClassPacman</a>
-</li>
-<li>ClassEntity()
-: <a class="el" href="class_class_entity.html#ac818ce990258aca66f0e78e6deab9847">ClassEntity</a>
+: <a class="el" href="class_pacman.html#a3127f3e766b7829c51606b8924f08e4e">Pacman</a>
 </li>
 <li>ClassNcurses()
 : <a class="el" href="class_class_ncurses.html#a334f21e7d6fae191228601dbaa32d3f6">ClassNcurses</a>
-</li>
-<li>ClassPacman()
-: <a class="el" href="class_class_pacman.html#a0ba473ba022d97896cfeec04a4707aa1">ClassPacman</a>
 </li>
 <li>ClassSDL()
 : <a class="el" href="class_class_s_d_l.html#a1d2bc3c0b566af34b105d2e05b76d85c">ClassSDL</a>
@@ -120,8 +138,21 @@ $(function() {
 , <a class="el" href="class_class_s_d_l.html#a8ec9795eb836f73cd7254406f2510625">ClassSDL</a>
 , <a class="el" href="class_class_s_f_m_l.html#ac7c2384bbf9f13169db316f20745f9d5">ClassSFML</a>
 </li>
+<li>displayLetters()
+: <a class="el" href="class_class_ncurses.html#a77a0f1531a53705a81e77288b1531383">ClassNcurses</a>
+</li>
+<li>displayMenu()
+: <a class="el" href="class_class_ncurses.html#a2d1733200957118376adf08a7ac9b046">ClassNcurses</a>
+</li>
 <li>DLLoader()
 : <a class="el" href="class_d_l_loader.html#a377c57f8a547e3eb4f23a4ad37276639">DLLoader&lt; T &gt;</a>
+</li>
+</ul>
+
+
+<h3><a id="index_e"></a>- e -</h3><ul>
+<li>Entity()
+: <a class="el" href="class_entity.html#aed8a9f358cd8071ac65514597a686e8e">Entity</a>
 </li>
 </ul>
 
@@ -137,7 +168,11 @@ $(function() {
 : <a class="el" href="class_animated_sprite.html#a03bacdbaf638cb6f7987e342980206c2">AnimatedSprite</a>
 </li>
 <li>getBonus()
-: <a class="el" href="class_class_pacman.html#a749d450393c5fadb80de3b1a2ad7f174">ClassPacman</a>
+: <a class="el" href="class_entity.html#a420fa54213e0debc86956197ffffa45e">Entity</a>
+, <a class="el" href="class_pacman.html#a35ea0e9dfac9ee2b060bb819e3f316ad">Pacman</a>
+</li>
+<li>getEntity()
+: <a class="el" href="class_entity.html#aeb78147bb879a3661ba336f07f641508">Entity</a>
 </li>
 <li>getEvent()
 : <a class="el" href="class_class_ncurses.html#a769fdb666e2f8dbc5998208f09216c04">ClassNcurses</a>
@@ -160,20 +195,22 @@ $(function() {
 </li>
 <li>getIsNewKey()
 : <a class="el" href="class_class_ncurses.html#aced384c156be423906474afce8ff16d4">ClassNcurses</a>
-, <a class="el" href="class_class_pacman.html#a1a53dcd3e0ee3014c221d7b19971fb0c">ClassPacman</a>
 , <a class="el" href="class_class_s_d_l.html#ab25f9468d56aa225994484ec6e14dab7">ClassSDL</a>
 , <a class="el" href="class_class_s_f_m_l.html#a0858bffedeb0ccd39ee911c08ede455d">ClassSFML</a>
 , <a class="el" href="class_core.html#ac3c24a7a509e199d0b70896cb93171da">Core</a>
+, <a class="el" href="class_entity.html#a02009ce889fc4040dadd70fbf0b36ad8">Entity</a>
 , <a class="el" href="class_i_game.html#a6aab1a0cab3a49ab2b64a10c64c142ac">IGame</a>
 , <a class="el" href="class_i_graphic.html#a923ea671c162a94978c0f361084dd1a5">IGraphic</a>
+, <a class="el" href="class_pacman.html#a1498e5471531676f4e0862fb294af1a9">Pacman</a>
 </li>
 <li>getIsNewMap()
 : <a class="el" href="class_class_ncurses.html#aa8bfa58151282f8132678bb01a7c0cbb">ClassNcurses</a>
-, <a class="el" href="class_class_pacman.html#a6d1b83066e7077d209e880751bb6a56c">ClassPacman</a>
 , <a class="el" href="class_class_s_d_l.html#aaec40afee3905c9de7e1317db6226a7b">ClassSDL</a>
 , <a class="el" href="class_class_s_f_m_l.html#ab74066896f56b41f0d644c31048bf764">ClassSFML</a>
+, <a class="el" href="class_entity.html#a6dcb18f807581c362fa2294edc718978">Entity</a>
 , <a class="el" href="class_i_game.html#a3fd351624a3995e7ac9217f78b145776">IGame</a>
 , <a class="el" href="class_i_graphic.html#ae10de43a122b5e1f35a3d2d55cf08e59">IGraphic</a>
+, <a class="el" href="class_pacman.html#a5faccc1e94f9d50052ca98a730ddd3b9">Pacman</a>
 </li>
 <li>getIsNewPathConfig()
 : <a class="el" href="class_class_ncurses.html#a084f08b26e87cd4457620a6723eefb0a">ClassNcurses</a>
@@ -186,22 +223,27 @@ $(function() {
 </li>
 <li>getLastKey()
 : <a class="el" href="class_class_ncurses.html#aac74db17b17b13da42df3d2aacc450d8">ClassNcurses</a>
-, <a class="el" href="class_class_pacman.html#a06446a72b6d565a175d7d6bd206e0bd0">ClassPacman</a>
 , <a class="el" href="class_class_s_d_l.html#a776e24b732c1118ca38f715c5371e785">ClassSDL</a>
 , <a class="el" href="class_class_s_f_m_l.html#a7ebdd83fe2ab4c1feb3788f27a3a1b6e">ClassSFML</a>
+, <a class="el" href="class_entity.html#a8938f57c391437f19ab8d9efc0170664">Entity</a>
 , <a class="el" href="class_i_game.html#a0d5eaacd905629f020013f620ed8becd">IGame</a>
 , <a class="el" href="class_i_graphic.html#a50b9159724eb7f07b597ebc65041e545">IGraphic</a>
+, <a class="el" href="class_pacman.html#a2e742e2ec861a207fbcc028cfd21f691">Pacman</a>
+</li>
+<li>getLastMove()
+: <a class="el" href="class_entity.html#a7c72b2524a4ab05577f7a5586391ce23">Entity</a>
 </li>
 <li>getLocalBounds()
 : <a class="el" href="class_animated_sprite.html#ac4c88435c8698f452629c5cd78bfb3c9">AnimatedSprite</a>
 </li>
 <li>getMap()
-: <a class="el" href="class_class_pacman.html#ae25e563247a87ab4f4c19590fdb59b6f">ClassPacman</a>
-, <a class="el" href="class_core.html#a433556da94f75cfd81bc60ff89c8e675">Core</a>
+: <a class="el" href="class_core.html#a433556da94f75cfd81bc60ff89c8e675">Core</a>
+, <a class="el" href="class_entity.html#a174596f619570407af51da9a514ec779">Entity</a>
 , <a class="el" href="class_i_game.html#aed19c19107a3ae7cda42a4aa93c6d88a">IGame</a>
+, <a class="el" href="class_pacman.html#ad3a8b6def88dae5f23731a22221630c1">Pacman</a>
 </li>
 <li>getMove()
-: <a class="el" href="class_class_pacman.html#a1afa6745e5f1273c98b28a3d5b1ad9e6">ClassPacman</a>
+: <a class="el" href="class_pacman.html#aba1c6e1720eb116cf2563b5fa6b2a19a">Pacman</a>
 </li>
 <li>getNextLib()
 : <a class="el" href="class_core.html#a8867a8f6ab8ceade2100272d95c831c4">Core</a>
@@ -211,29 +253,36 @@ $(function() {
 </li>
 <li>getPathConfig()
 : <a class="el" href="class_class_ncurses.html#a2dc8f00718d91b26e7458965ee42edc4">ClassNcurses</a>
-, <a class="el" href="class_class_pacman.html#a66688f3a145b803889890458bb1f0bb9">ClassPacman</a>
 , <a class="el" href="class_class_s_d_l.html#aceda62b43788f26e34c7d37ed1fd9459">ClassSDL</a>
 , <a class="el" href="class_class_s_f_m_l.html#aa83937866ca263758733952543eb8282">ClassSFML</a>
-, <a class="el" href="class_i_game.html#aedc921f9afd799f4fe9dcaf3f5e6506f">IGame</a>
+, <a class="el" href="class_i_game.html#a21b9d7003aa2cec51448afef66b00789">IGame</a>
 , <a class="el" href="class_i_graphic.html#aa3d891972e5633a3163ed82e16ff9c98">IGraphic</a>
+, <a class="el" href="class_pacman.html#aa65615b902ba7bdf0c3b3c9696158aba">Pacman</a>
 </li>
 <li>getPathMap()
-: <a class="el" href="class_class_pacman.html#a84076e80ab0afdfba74769718630c721">ClassPacman</a>
-, <a class="el" href="class_i_game.html#a2bc2a96092631e513f45efe9af669833">IGame</a>
+: <a class="el" href="class_i_game.html#aabcc0d0dae71c42469433ffeebf9e9f0">IGame</a>
+, <a class="el" href="class_pacman.html#a115a106d08e512b15e2b55bf70f800ee">Pacman</a>
+</li>
+<li>getPosition()
+: <a class="el" href="class_entity.html#a4b5de8b50eaac42d7af1d75c6aa3fd50">Entity</a>
 </li>
 <li>getResult()
 : <a class="el" href="class_parsing_config.html#a5c8ec078b6559d591e4b0b9db489696d">ParsingConfig</a>
 </li>
 <li>getScore()
 : <a class="el" href="class_class_ncurses.html#a3f7462f5774558326103d382a284c5e3">ClassNcurses</a>
-, <a class="el" href="class_class_pacman.html#adcfe9d3d0986fd57ff4065aec66c489e">ClassPacman</a>
 , <a class="el" href="class_class_s_d_l.html#a24c2230a4a7c75e9d6124d2d106ab2b3">ClassSDL</a>
 , <a class="el" href="class_class_s_f_m_l.html#a525c4cf493dfd9d68ea2bba3bd15b7e7">ClassSFML</a>
+, <a class="el" href="class_entity.html#a8c8b914c547b5d26855d885bebbef750">Entity</a>
 , <a class="el" href="class_i_game.html#aedff9507276384fb437596fcd8c5d9f3">IGame</a>
 , <a class="el" href="class_i_graphic.html#a4ab82acdbf8c33174612d42a375a7c77">IGraphic</a>
+, <a class="el" href="class_pacman.html#aa60024d15315b294867c8a9e6b93c9e9">Pacman</a>
 </li>
 <li>getSize()
 : <a class="el" href="class_animation.html#ac6854dc96e9fc8ffd97feba43547c869">Animation</a>
+</li>
+<li>getSpeed()
+: <a class="el" href="class_entity.html#ad577b2c5aeea6d34d6c4e3c28b3cfc47">Entity</a>
 </li>
 <li>getSpriteSheet()
 : <a class="el" href="class_animation.html#abf4f00f8b1657829583d7d92e71b93d1">Animation</a>
@@ -278,22 +327,28 @@ $(function() {
 <li>mapMenu()
 : <a class="el" href="class_core.html#a667e34a3ad5288fc11db6d21b462a265">Core</a>
 </li>
+<li>move()
+: <a class="el" href="class_entity.html#ae3e67f022530fdb7640a41bd9f625c05">Entity</a>
+</li>
 <li>moveDown()
-: <a class="el" href="class_class_pacman.html#ad88951cc82e9d8103afc325ab9ce6490">ClassPacman</a>
+: <a class="el" href="class_pacman.html#a0a64f9f3c861923080299797a9c1f695">Pacman</a>
 </li>
 <li>moveLeft()
-: <a class="el" href="class_class_pacman.html#ac72f5ba843f8626a9376231d9ca7064d">ClassPacman</a>
+: <a class="el" href="class_pacman.html#a560b34fd0d107127133b63b2125a9664">Pacman</a>
 </li>
 <li>moveRight()
-: <a class="el" href="class_class_pacman.html#a169595fc09946f8a2af83a9a28146f00">ClassPacman</a>
+: <a class="el" href="class_pacman.html#afe2c202bf893edeeecdd1876d1274196">Pacman</a>
 </li>
 <li>moveUp()
-: <a class="el" href="class_class_pacman.html#a7e65a7d2bdfe34d001917c26084ab732">ClassPacman</a>
+: <a class="el" href="class_pacman.html#af87001266c5808eb8f47e03b74c4022c">Pacman</a>
 </li>
 </ul>
 
 
 <h3><a id="index_p"></a>- p -</h3><ul>
+<li>Pacman()
+: <a class="el" href="class_pacman.html#a499408baab38f119ebd4f41e90fbe3fe">Pacman</a>
+</li>
 <li>ParsingConfig()
 : <a class="el" href="class_parsing_config.html#a229ed410b2a12d6a986b66c0690e4252">ParsingConfig</a>
 </li>
@@ -311,11 +366,11 @@ $(function() {
 : <a class="el" href="class_parsing_config.html#a33e51177fef58d737983a45af84bcd9f">ParsingConfig</a>
 </li>
 <li>readMap()
-: <a class="el" href="class_class_pacman.html#a1a8b726ff466c94d1ad02b15c6a39d8b">ClassPacman</a>
+: <a class="el" href="class_pacman.html#acf9fff61dc94c5b28ea90b29d1fc9d6a">Pacman</a>
 </li>
 <li>runGame()
-: <a class="el" href="class_class_pacman.html#a95b741f02b4b1a876b7cd2a855ac48dd">ClassPacman</a>
-, <a class="el" href="class_i_game.html#a1bc3c6caaf66b62692f86e64227c3dbf">IGame</a>
+: <a class="el" href="class_i_game.html#a1bc3c6caaf66b62692f86e64227c3dbf">IGame</a>
+, <a class="el" href="class_pacman.html#abc01d8c1e91d1dea3f6181e35ba7879b">Pacman</a>
 </li>
 <li>runGraph()
 : <a class="el" href="class_class_ncurses.html#aac4288eb28653abcda975fcb5e56f5d7">ClassNcurses</a>
@@ -331,7 +386,8 @@ $(function() {
 : <a class="el" href="class_animated_sprite.html#ab1afc57d90d57a0c4bc4f5b090f2dacf">AnimatedSprite</a>
 </li>
 <li>setBonus()
-: <a class="el" href="class_class_pacman.html#a13782d80f3db244c6a14a81d04f4eabb">ClassPacman</a>
+: <a class="el" href="class_entity.html#a77c8bb43adf29c689249b058410d746f">Entity</a>
+, <a class="el" href="class_pacman.html#aa4d0a2bba50ece6656c202e75ba5d3dc">Pacman</a>
 </li>
 <li>setColor()
 : <a class="el" href="class_animated_sprite.html#a1a96a0f6570efddd2eb26f89bc5b6f50">AnimatedSprite</a>
@@ -353,20 +409,22 @@ $(function() {
 </li>
 <li>setIsNewKey()
 : <a class="el" href="class_class_ncurses.html#a29f52a5e975ed67051043a09df8761b8">ClassNcurses</a>
-, <a class="el" href="class_class_pacman.html#aea41a2f11c0bd29bec1c85c1aacdb5fe">ClassPacman</a>
 , <a class="el" href="class_class_s_d_l.html#a609cd1b245abb3b30962dc09aa7802c0">ClassSDL</a>
 , <a class="el" href="class_class_s_f_m_l.html#afa4dc363da11512994f5964f53792990">ClassSFML</a>
 , <a class="el" href="class_core.html#a3446c73ebfd578665f4a64d16c90ad36">Core</a>
+, <a class="el" href="class_entity.html#a0433c81e49ce270452e6def8030fecc5">Entity</a>
 , <a class="el" href="class_i_game.html#a3ed5252b3f1a852082ec812f6cba75fe">IGame</a>
 , <a class="el" href="class_i_graphic.html#a8be0cc1ebd85fc184a9890f5ad372a1e">IGraphic</a>
+, <a class="el" href="class_pacman.html#a7d2d053d9f51e2142d73310bdecd153d">Pacman</a>
 </li>
 <li>setIsNewMap()
 : <a class="el" href="class_class_ncurses.html#ac4af91a37eb4c9f90eb395584478393c">ClassNcurses</a>
-, <a class="el" href="class_class_pacman.html#aef568079f56783daacecea41680b04a6">ClassPacman</a>
 , <a class="el" href="class_class_s_d_l.html#a3f07f3aeaf6e80d6e13cf4bfd0ed194b">ClassSDL</a>
 , <a class="el" href="class_class_s_f_m_l.html#aeadd6368ac5b5d185a09cd1e7c1f9dcc">ClassSFML</a>
+, <a class="el" href="class_entity.html#a9c38ba019db3c947b31e116ceb8ec8b6">Entity</a>
 , <a class="el" href="class_i_game.html#a350a8546b27ad147e2924f07b5f9e62f">IGame</a>
 , <a class="el" href="class_i_graphic.html#a6037174816d5cab7c115eb1a69bbb0ff">IGraphic</a>
+, <a class="el" href="class_pacman.html#a7330ea2a00143ac820a5a11ee4443a2a">Pacman</a>
 </li>
 <li>setIsNewPathConfig()
 : <a class="el" href="class_class_ncurses.html#aa3c183b964ce7de954199067b464fdb1">ClassNcurses</a>
@@ -379,23 +437,27 @@ $(function() {
 </li>
 <li>setLastKey()
 : <a class="el" href="class_class_ncurses.html#abf219cf4107d65ca0ebd27746bdf2f08">ClassNcurses</a>
-, <a class="el" href="class_class_pacman.html#a39ea74fcbd75179f08558db4395e2e53">ClassPacman</a>
 , <a class="el" href="class_class_s_d_l.html#a2b14b2085d76430344f74227e33be9fb">ClassSDL</a>
 , <a class="el" href="class_class_s_f_m_l.html#aeb353a7928b673ceb10f12c4d5710305">ClassSFML</a>
+, <a class="el" href="class_entity.html#a0606a0152f66081e3bf30bdc87a7b0d9">Entity</a>
 , <a class="el" href="class_i_game.html#aca867f57cec68759c6da26a3a80ef961">IGame</a>
 , <a class="el" href="class_i_graphic.html#ac3f35a4649c75449f270e3f3f9c12034">IGraphic</a>
+, <a class="el" href="class_pacman.html#a24122f7bbfc0f7f7074a7605fb6cc5b4">Pacman</a>
+</li>
+<li>setLastMove()
+: <a class="el" href="class_entity.html#ab1fac477232fe5436b90bf432d5ba64d">Entity</a>
 </li>
 <li>setLooped()
 : <a class="el" href="class_animated_sprite.html#a855a5a48ea2e1c51c7c9304857dd2f8c">AnimatedSprite</a>
 </li>
 <li>setMap()
 : <a class="el" href="class_class_ncurses.html#a74af301cf3439ef2e507406751ce51af">ClassNcurses</a>
-, <a class="el" href="class_class_pacman.html#a6623c8b3ce921c3c0801914b0954129f">ClassPacman</a>
 , <a class="el" href="class_class_s_d_l.html#a91b9a455ff5dd21e2db022aaa911985d">ClassSDL</a>
 , <a class="el" href="class_class_s_f_m_l.html#a9b143e495bdd43f42993cf5b0d492926">ClassSFML</a>
 , <a class="el" href="class_core.html#a5562dd977aa0e9550df8a9ecbe5d14bc">Core</a>
 , <a class="el" href="class_i_game.html#a77f638e00a935757489b72a9b6cd76cd">IGame</a>
 , <a class="el" href="class_i_graphic.html#a6e3191fe2663c34608ff8a2b2549c398">IGraphic</a>
+, <a class="el" href="class_pacman.html#aad0a182f2ccb32642935f3f6cca57acb">Pacman</a>
 </li>
 <li>setMapTexture()
 : <a class="el" href="class_class_ncurses.html#a71d6e2ca109814227bf0cefa72b75bf3">ClassNcurses</a>
@@ -403,7 +465,7 @@ $(function() {
 , <a class="el" href="class_class_s_f_m_l.html#abaed7464c895762705a6803857f3ba60">ClassSFML</a>
 </li>
 <li>setMove()
-: <a class="el" href="class_class_pacman.html#a71462e8124315df50198c917ff061656">ClassPacman</a>
+: <a class="el" href="class_pacman.html#a57e12856953dccfdac2b265eb5e9618c">Pacman</a>
 </li>
 <li>setNumPathLib()
 : <a class="el" href="class_core.html#ae5130cd2bc55547f61c58b25ce66e10e">Core</a>
@@ -414,13 +476,20 @@ $(function() {
 , <a class="el" href="class_class_s_f_m_l.html#ac37b544f6179f33994e9fa189e15eea8">ClassSFML</a>
 , <a class="el" href="class_i_graphic.html#a68eb38735e805083420a000fffd973f7">IGraphic</a>
 </li>
+<li>setPosition()
+: <a class="el" href="class_entity.html#abce9b59d8f4fe99fdd3aa9237be1216f">Entity</a>
+</li>
 <li>setScore()
 : <a class="el" href="class_class_ncurses.html#ac3f7d8e8d5a1ce75be1a1e25947e2dd0">ClassNcurses</a>
-, <a class="el" href="class_class_pacman.html#a423dfa55328b63d8f1ce1d7a81c0b11c">ClassPacman</a>
 , <a class="el" href="class_class_s_d_l.html#a4edcb6ae345daf64f3022d6b16ff255d">ClassSDL</a>
 , <a class="el" href="class_class_s_f_m_l.html#a42df0bacc5fa82cfc451722332304b50">ClassSFML</a>
+, <a class="el" href="class_entity.html#a04b8a5496669cc90202d5d2e3b798592">Entity</a>
 , <a class="el" href="class_i_game.html#a5a5359d4ad01653b25d5a703bede16f4">IGame</a>
 , <a class="el" href="class_i_graphic.html#a2380c2fa5c0d95b6d8b7267bf0c82142">IGraphic</a>
+, <a class="el" href="class_pacman.html#a226192579c1ee73023f5c2e6fbb51b23">Pacman</a>
+</li>
+<li>setSpeed()
+: <a class="el" href="class_entity.html#a0fb99bb43805b75c1bf7edc7af15ac6d">Entity</a>
 </li>
 <li>setSpriteSheet()
 : <a class="el" href="class_animation.html#a2da43578722139dfe4b4375b7fe99aba">Animation</a>
@@ -458,14 +527,8 @@ $(function() {
 <li>~Animation()
 : <a class="el" href="class_animation.html#a401b68793d4fbf48d481c030ee4b2a16">Animation</a>
 </li>
-<li>~ClassEntity()
-: <a class="el" href="class_class_entity.html#af03e0d02880e352364c8c911772f7f2c">ClassEntity</a>
-</li>
 <li>~ClassNcurses()
 : <a class="el" href="class_class_ncurses.html#ab172cc227fea41b4f5ae5591712522ca">ClassNcurses</a>
-</li>
-<li>~ClassPacman()
-: <a class="el" href="class_class_pacman.html#a9c68ef51f615062cf79b4b6254b90961">ClassPacman</a>
 </li>
 <li>~ClassSDL()
 : <a class="el" href="class_class_s_d_l.html#abe9bf97fa167822381a7ff37f593973a">ClassSDL</a>
@@ -479,6 +542,9 @@ $(function() {
 <li>~DLLoader()
 : <a class="el" href="class_d_l_loader.html#aea867b497cf92c50f85ad7e1d37962ae">DLLoader&lt; T &gt;</a>
 </li>
+<li>~Entity()
+: <a class="el" href="class_entity.html#adf6d3f7cb1b2ba029b6b048a395cc8ae">Entity</a>
+</li>
 <li>~ICore()
 : <a class="el" href="class_i_core.html#ae6843234576cb6ab293673c9b2b8383a">ICore</a>
 </li>
@@ -488,16 +554,22 @@ $(function() {
 <li>~IGraphic()
 : <a class="el" href="class_i_graphic.html#aca238e622e55e4c3a61e1c7344902271">IGraphic</a>
 </li>
+<li>~Pacman()
+: <a class="el" href="class_pacman.html#aeeb4fea54918576dbdf20a1f325410bf">Pacman</a>
+</li>
 <li>~ParsingConfig()
 : <a class="el" href="class_parsing_config.html#a4c873e996638183fa642a3dd04e825f3">ParsingConfig</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

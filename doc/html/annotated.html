@@ -9,6 +9,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -23,7 +30,9 @@
   <td id="projectlogo"><img alt="Logo" src="220px-Pacman.svg.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Arcade
+   &#160;<span id="projectnumber">1.0</span>
    </div>
+   <div id="projectbrief">Arcade by Arthur, Theo and Camille</div>
   </td>
  </tr>
  </tbody>
@@ -44,6 +53,20 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('annotated.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,29 +90,33 @@ $(function() {
 <table class="directory">
 <tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_animated_sprite.html" target="_self">AnimatedSprite</a></td><td class="desc"></td></tr>
 <tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_animation.html" target="_self">Animation</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_class_entity.html" target="_self">ClassEntity</a></td><td class="desc"></td></tr>
-<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_class_ncurses.html" target="_self">ClassNcurses</a></td><td class="desc">Class representing <a class="el" href="class_class_ncurses.html" title="Class representing ClassNcurses logic. ">ClassNcurses</a> logic </td></tr>
-<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_class_pacman.html" target="_self">ClassPacman</a></td><td class="desc">Class representing <a class="el" href="class_class_pacman.html" title="Class representing ClassPacman logic. ">ClassPacman</a> logic </td></tr>
-<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_class_s_d_l.html" target="_self">ClassSDL</a></td><td class="desc">Class representing <a class="el" href="class_class_s_d_l.html" title="Class representing ClassSDL logic. ">ClassSDL</a> logic </td></tr>
-<tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_class_s_f_m_l.html" target="_self">ClassSFML</a></td><td class="desc">Class representing <a class="el" href="class_class_s_f_m_l.html" title="Class representing ClassSFML logic. ">ClassSFML</a> logic </td></tr>
-<tr id="row_7_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_core.html" target="_self">Core</a></td><td class="desc">Class representing the core </td></tr>
-<tr id="row_8_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_data_parsing_config.html" target="_self">DataParsingConfig</a></td><td class="desc">This Structure contains all the informations about our sprites, the path to the .bmp, it size in x and y, the ncurses character, the key in the eventuallity it's interactive and the name of the sprite </td></tr>
-<tr id="row_9_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_d_l_loader.html" target="_self">DLLoader</a></td><td class="desc">Class representing <a class="el" href="class_d_l_loader.html" title="Class representing DLLoader&#39;s logic. ">DLLoader</a>'s logic </td></tr>
-<tr id="row_10_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_i_core.html" target="_self">ICore</a></td><td class="desc"></td></tr>
-<tr id="row_11_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_i_game.html" target="_self">IGame</a></td><td class="desc"></td></tr>
-<tr id="row_12_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_i_graphic.html" target="_self">IGraphic</a></td><td class="desc"></td></tr>
-<tr id="row_13_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_key_ncurses.html" target="_self">KeyNcurses</a></td><td class="desc">This Structure contains Keys input translation </td></tr>
-<tr id="row_14_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_key_s_f_m_l.html" target="_self">KeySFML</a></td><td class="desc"></td></tr>
+<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_class_ncurses.html" target="_self">ClassNcurses</a></td><td class="desc">Class representing <a class="el" href="class_class_ncurses.html" title="Class representing ClassNcurses logic. ">ClassNcurses</a> logic </td></tr>
+<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_class_s_d_l.html" target="_self">ClassSDL</a></td><td class="desc">Class representing <a class="el" href="class_class_s_d_l.html" title="Class representing ClassSDL logic. ">ClassSDL</a> logic </td></tr>
+<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_class_s_f_m_l.html" target="_self">ClassSFML</a></td><td class="desc">Class representing <a class="el" href="class_class_s_f_m_l.html" title="Class representing ClassSFML logic. ">ClassSFML</a> logic </td></tr>
+<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_core.html" target="_self">Core</a></td><td class="desc">Class representing the core </td></tr>
+<tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_data_parsing_config.html" target="_self">DataParsingConfig</a></td><td class="desc">This Structure contains all the informations about our sprites, the path to the .bmp, it size in x and y, the ncurses character, the key in the eventuallity it's interactive and the name of the sprite </td></tr>
+<tr id="row_7_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_d_l_loader.html" target="_self">DLLoader</a></td><td class="desc">Class representing <a class="el" href="class_d_l_loader.html" title="Class representing DLLoader&#39;s logic. ">DLLoader</a>'s logic </td></tr>
+<tr id="row_8_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_entity.html" target="_self">Entity</a></td><td class="desc"></td></tr>
+<tr id="row_9_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_i_core.html" target="_self">ICore</a></td><td class="desc"></td></tr>
+<tr id="row_10_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_i_game.html" target="_self">IGame</a></td><td class="desc"></td></tr>
+<tr id="row_11_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_i_graphic.html" target="_self">IGraphic</a></td><td class="desc"></td></tr>
+<tr id="row_12_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_key_ncurses.html" target="_self">KeyNcurses</a></td><td class="desc">This Structure contains Keys input translation </td></tr>
+<tr id="row_13_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_key_s_f_m_l.html" target="_self">KeySFML</a></td><td class="desc"></td></tr>
+<tr id="row_14_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_pacman.html" target="_self">Pacman</a></td><td class="desc"></td></tr>
 <tr id="row_15_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_parsing_config.html" target="_self">ParsingConfig</a></td><td class="desc">Class representing parsing logic </td></tr>
 <tr id="row_16_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structs___key_sdl.html" target="_self">s_KeySdl</a></td><td class="desc">This Structure contains Keys input translation </td></tr>
+<tr id="row_17_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structs__pos.html" target="_self">s_pos</a></td><td class="desc"></td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

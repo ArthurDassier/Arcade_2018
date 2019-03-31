@@ -9,6 +9,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -23,7 +30,9 @@
   <td id="projectlogo"><img alt="Logo" src="220px-Pacman.svg.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Arcade
+   &#160;<span id="projectnumber">1.0</span>
    </div>
+   <div id="projectbrief">Arcade by Arthur, Theo and Camille</div>
   </td>
  </tr>
  </tbody>
@@ -43,6 +52,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_i_game.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,7 +81,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">IGame Member List</div>  </div>
@@ -66,33 +89,29 @@ $(function() {
 
 <p>This is the complete list of members for <a class="el" href="class_i_game.html">IGame</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_i_game.html#acd588f2910bc31dcf50da421439c47a6a726db662c4ce4c6d4b194e0eaf576097">BONUS</a> enum value</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_i_game.html#acd588f2910bc31dcf50da421439c47a6ac35276c8543f3557e4473462de04cb0a">ENEMY</a> enum value</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_i_game.html#a6aab1a0cab3a49ab2b64a10c64c142ac">getIsNewKey</a>(void) const =0</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_i_game.html#a3fd351624a3995e7ac9217f78b145776">getIsNewMap</a>(void) const =0</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_i_game.html#a0d5eaacd905629f020013f620ed8becd">getLastKey</a>(void) const =0</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_i_game.html#aed19c19107a3ae7cda42a4aa93c6d88a">getMap</a>(void) const =0</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_i_game.html#aedc921f9afd799f4fe9dcaf3f5e6506f">getPathConfig</a>() const noexcept=0</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_i_game.html#a2bc2a96092631e513f45efe9af669833">getPathMap</a>() const noexcept=0</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_game.html#a21b9d7003aa2cec51448afef66b00789">getPathConfig</a>() const noexcept=0</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_i_game.html#aabcc0d0dae71c42469433ffeebf9e9f0">getPathMap</a>() const noexcept=0</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_i_game.html#aedff9507276384fb437596fcd8c5d9f3">getScore</a>(void) const =0</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_i_game.html#acd588f2910bc31dcf50da421439c47a6">Graphics</a> enum name</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_i_game.html#acd588f2910bc31dcf50da421439c47a6ad2307d4fa4d21e2d33ca6691df57e522">NOTHING</a> enum value</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_i_game.html#acd588f2910bc31dcf50da421439c47a6ad391f7744b5729fc592776a605cb08b8">PLAYER</a> enum value</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_i_game.html#acd588f2910bc31dcf50da421439c47a6a44dfb7e6f8dd6c7e8cbc32401e9aabf6">POINT</a> enum value</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_i_game.html#a1bc3c6caaf66b62692f86e64227c3dbf">runGame</a>()=0</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_i_game.html#a3ed5252b3f1a852082ec812f6cba75fe">setIsNewKey</a>(bool isNewKey)=0</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_i_game.html#a350a8546b27ad147e2924f07b5f9e62f">setIsNewMap</a>(bool isNewMap)=0</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_i_game.html#aca867f57cec68759c6da26a3a80ef961">setLastKey</a>(int key)=0</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_i_game.html#a77f638e00a935757489b72a9b6cd76cd">setMap</a>(std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt; map)=0</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_i_game.html#a5a5359d4ad01653b25d5a703bede16f4">setScore</a>(size_t score)=0</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_i_game.html#acd588f2910bc31dcf50da421439c47a6add1915bca017fb5dbc8c2dda7f69c540">WALL</a> enum value</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_i_game.html#a91b14c1b6019364120d5c5e4d4c64414">~IGame</a>()=default</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_i_game.html#a91b14c1b6019364120d5c5e4d4c64414">~IGame</a>()=default</td><td class="entry"><a class="el" href="class_i_game.html">IGame</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

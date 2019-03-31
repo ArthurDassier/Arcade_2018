@@ -3,5 +3,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="Core",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_core.html",tooltip="Class representing the core. "];
+  Node0 [label="DataParsingConfig",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_data_parsing_config.html",tooltip="This Structure contains all the informations about our sprites, the path to the .bmp, it size in x and y, the ncurses character, the key in the eventuallity it&#39;s interactive and the name of the sprite. "];
 }

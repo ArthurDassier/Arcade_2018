@@ -1,0 +1,146 @@
+.TH "AnimatedSprite" 3 "Sun Mar 31 2019" "Version 1.0" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnimatedSprite
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <AnimatedSprite\&.hpp>\fP
+.PP
+Inherits Drawable, and Transformable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAnimatedSprite\fP (sf::Time frameTime=sf::seconds(0\&.2f), bool paused=false, bool looped=true)"
+.br
+.ti -1c
+.RI "void \fBupdate\fP (sf::Time deltaTime)"
+.br
+.ti -1c
+.RI "void \fBsetAnimation\fP (const \fBAnimation\fP &animation)"
+.br
+.ti -1c
+.RI "void \fBsetFrameTime\fP (sf::Time time)"
+.br
+.ti -1c
+.RI "void \fBplay\fP ()"
+.br
+.ti -1c
+.RI "void \fBplay\fP (const \fBAnimation\fP &animation)"
+.br
+.ti -1c
+.RI "void \fBpause\fP ()"
+.br
+.ti -1c
+.RI "void \fBstop\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetLooped\fP (bool looped)"
+.br
+.ti -1c
+.RI "void \fBsetColor\fP (const sf::Color &color)"
+.br
+.ti -1c
+.RI "const \fBAnimation\fP * \fBgetAnimation\fP () const"
+.br
+.ti -1c
+.RI "sf::FloatRect \fBgetLocalBounds\fP () const"
+.br
+.ti -1c
+.RI "sf::FloatRect \fBgetGlobalBounds\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisLooped\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisPlaying\fP () const"
+.br
+.ti -1c
+.RI "sf::Time \fBgetFrameTime\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetFrame\fP (std::size_t newFrame, bool resetTime=true)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 18 of file AnimatedSprite\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AnimatedSprite::AnimatedSprite (sf::Time frameTime = \fCsf::seconds(0\&.2f)\fP, bool paused = \fCfalse\fP, bool looped = \fCtrue\fP)\fC [explicit]\fP"
+
+.PP
+Definition at line 10 of file AnimatedSprite\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "const \fBAnimation\fP * AnimatedSprite::getAnimation () const"
+
+.PP
+Definition at line 67 of file AnimatedSprite\&.cpp\&.
+.SS "sf::Time AnimatedSprite::getFrameTime () const"
+
+.PP
+Definition at line 97 of file AnimatedSprite\&.cpp\&.
+.SS "sf::FloatRect AnimatedSprite::getGlobalBounds () const"
+
+.PP
+Definition at line 82 of file AnimatedSprite\&.cpp\&.
+.SS "sf::FloatRect AnimatedSprite::getLocalBounds () const"
+
+.PP
+Definition at line 72 of file AnimatedSprite\&.cpp\&.
+.SS "bool AnimatedSprite::isLooped () const"
+
+.PP
+Definition at line 87 of file AnimatedSprite\&.cpp\&.
+.SS "bool AnimatedSprite::isPlaying () const"
+
+.PP
+Definition at line 92 of file AnimatedSprite\&.cpp\&.
+.SS "void AnimatedSprite::pause ()"
+
+.PP
+Definition at line 41 of file AnimatedSprite\&.cpp\&.
+.SS "void AnimatedSprite::play ()"
+
+.PP
+Definition at line 29 of file AnimatedSprite\&.cpp\&.
+.SS "void AnimatedSprite::play (const \fBAnimation\fP & animation)"
+
+.PP
+Definition at line 34 of file AnimatedSprite\&.cpp\&.
+.SS "void AnimatedSprite::setAnimation (const \fBAnimation\fP & animation)"
+
+.PP
+Definition at line 16 of file AnimatedSprite\&.cpp\&.
+.SS "void AnimatedSprite::setColor (const sf::Color & color)"
+
+.PP
+Definition at line 58 of file AnimatedSprite\&.cpp\&.
+.SS "void AnimatedSprite::setFrame (std::size_t newFrame, bool resetTime = \fCtrue\fP)"
+
+.PP
+Definition at line 102 of file AnimatedSprite\&.cpp\&.
+.SS "void AnimatedSprite::setFrameTime (sf::Time time)"
+
+.PP
+Definition at line 24 of file AnimatedSprite\&.cpp\&.
+.SS "void AnimatedSprite::setLooped (bool looped)"
+
+.PP
+Definition at line 53 of file AnimatedSprite\&.cpp\&.
+.SS "void AnimatedSprite::stop ()"
+
+.PP
+Definition at line 46 of file AnimatedSprite\&.cpp\&.
+.SS "void AnimatedSprite::update (sf::Time deltaTime)"
+
+.PP
+Definition at line 127 of file AnimatedSprite\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Arcade from the source code\&.

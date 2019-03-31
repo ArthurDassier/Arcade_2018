@@ -1,16 +1,11 @@
 var searchData=
 [
-  ['canmove',['canMove',['../class_class_pacman.html#add80eaea34a9a8aa32018f27dd76e8a3',1,'ClassPacman']]],
+  ['canmove',['canMove',['../class_pacman.html#a5685f13b2be47a4d19c2cf984651f236',1,'Pacman']]],
   ['caractere',['caractere',['../struct_data_parsing_config.html#a4045954414dddfd81d284a10c05169ad',1,'DataParsingConfig']]],
-  ['checknextcase',['checkNextCase',['../class_class_pacman.html#ae79c98ca092556332493ea8cb05d6f6f',1,'ClassPacman']]],
-  ['classentity',['ClassEntity',['../class_class_entity.html',1,'ClassEntity'],['../class_class_entity.html#ac818ce990258aca66f0e78e6deab9847',1,'ClassEntity::ClassEntity()']]],
-  ['classentity_2ehpp',['ClassEntity.hpp',['../_class_entity_8hpp.html',1,'']]],
+  ['checknextcase',['checkNextCase',['../class_pacman.html#a3127f3e766b7829c51606b8924f08e4e',1,'Pacman']]],
   ['classncurses',['ClassNcurses',['../class_class_ncurses.html',1,'ClassNcurses'],['../class_class_ncurses.html#a334f21e7d6fae191228601dbaa32d3f6',1,'ClassNcurses::ClassNcurses()']]],
   ['classncurses_2ecpp',['ClassNcurses.cpp',['../_class_ncurses_8cpp.html',1,'']]],
   ['classncurses_2ehpp',['ClassNcurses.hpp',['../_class_ncurses_8hpp.html',1,'']]],
-  ['classpacman',['ClassPacman',['../class_class_pacman.html',1,'ClassPacman'],['../class_class_pacman.html#a0ba473ba022d97896cfeec04a4707aa1',1,'ClassPacman::ClassPacman()']]],
-  ['classpacman_2ecpp',['ClassPacman.cpp',['../_class_pacman_8cpp.html',1,'']]],
-  ['classpacman_2ehpp',['ClassPacman.hpp',['../_class_pacman_8hpp.html',1,'']]],
   ['classsdl',['ClassSDL',['../class_class_s_d_l.html',1,'ClassSDL'],['../class_class_s_d_l.html#a1d2bc3c0b566af34b105d2e05b76d85c',1,'ClassSDL::ClassSDL()']]],
   ['classsdl_2ecpp',['ClassSDL.cpp',['../_class_s_d_l_8cpp.html',1,'']]],
   ['classsdl_2ehpp',['ClassSDL.hpp',['../_class_s_d_l_8hpp.html',1,'']]],

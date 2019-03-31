@@ -1,0 +1,238 @@
+.TH "Core" 3 "Sun Mar 31 2019" "Version 1.0" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Core \- Class representing the core\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Core\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCore\fP (std::string)"
+.br
+.RI "Construct the core, load the library given as argument\&. "
+.ti -1c
+.RI "\fB~Core\fP ()"
+.br
+.RI "Destroy the core by reseting the shared pointers\&. "
+.ti -1c
+.RI "void \fBloadNewGame\fP (std::string)"
+.br
+.RI "Load the game given in parameter\&. "
+.ti -1c
+.RI "void \fBloadNewLib\fP (std::string)"
+.br
+.RI "Load the lib by reseting _libmodule pointers to the new lib, acts like the class constructor\&. "
+.ti -1c
+.RI "void \fBhandleGame\fP (void)"
+.br
+.RI "Actualize the map in the lib module in order to print it for the user\&. "
+.ti -1c
+.RI "void \fBhandleMenu\fP (void)"
+.br
+.ti -1c
+.RI "void \fBstartCore\fP (void)"
+.br
+.RI "Infinite loop that handle everything the program needs\&. "
+.ti -1c
+.RI "void \fBsetIsNewKey\fP (bool)"
+.br
+.ti -1c
+.RI "bool \fBgetIsNewKey\fP (void) const"
+.br
+.ti -1c
+.RI "void \fBsetHaveGameLoad\fP (bool)"
+.br
+.ti -1c
+.RI "bool \fBgetHaveGameLoad\fP (void) const"
+.br
+.ti -1c
+.RI "void \fBsetKey\fP (int)"
+.br
+.ti -1c
+.RI "int \fBgetKey\fP (void) const"
+.br
+.ti -1c
+.RI "void \fBmapMenu\fP ()"
+.br
+.RI "Open the map file representing the menu\&. "
+.ti -1c
+.RI "void \fBloadMenu\fP ()"
+.br
+.RI "Load the menu by reseting the map representing the menu in the graphical libraries\&. "
+.ti -1c
+.RI "void \fBsetMap\fP (std::shared_ptr< std::vector< std::string >>)"
+.br
+.ti -1c
+.RI "std::shared_ptr< std::vector< std::string > > \fBgetMap\fP (void) const"
+.br
+.ti -1c
+.RI "std::string \fBgetNextLib\fP (enum \fBCommands\fP)"
+.br
+.ti -1c
+.RI "void \fBsetNumPathLib\fP (size_t num) noexcept"
+.br
+.ti -1c
+.RI "size_t \fBgetNumPathLib\fP () const noexcept"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class representing the core\&. 
+
+This class handle of the logic of the program, it loads the libraires and the games it can switch from libraries and games at any moments 
+.PP
+Definition at line 33 of file Core\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Core::Core (std::string libName)"
+
+.PP
+Construct the core, load the library given as argument\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstd::string\fP representing the libname 
+.RE
+.PP
+
+.PP
+Definition at line 18 of file Core\&.cpp\&.
+.SS "Core::~Core ()"
+
+.PP
+Destroy the core by reseting the shared pointers\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 45 of file Core\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Core::getHaveGameLoad (void) const"
+
+.PP
+Definition at line 221 of file Core\&.cpp\&.
+.SS "bool Core::getIsNewKey (void) const"
+
+.PP
+Definition at line 211 of file Core\&.cpp\&.
+.SS "int Core::getKey (void) const"
+
+.PP
+Definition at line 231 of file Core\&.cpp\&.
+.SS "std::shared_ptr<std::vector<std::string> > Core::getMap (void) const"
+
+.SS "std::string Core::getNextLib (enum Commands)"
+
+.SS "size_t Core::getNumPathLib () const\fC [inline]\fP, \fC [noexcept]\fP"
+
+.SS "void Core::handleGame (void)"
+
+.PP
+Actualize the map in the lib module in order to print it for the user\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 148 of file Core\&.cpp\&.
+.SS "void Core::handleMenu (void)"
+
+.SS "void Core::loadMenu ()"
+
+.PP
+Load the menu by reseting the map representing the menu in the graphical libraries\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 97 of file Core\&.cpp\&.
+.SS "void Core::loadNewGame (std::string name)"
+
+.PP
+Load the game given in parameter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstd::string\fP representing the game's name 
+.RE
+.PP
+
+.PP
+Definition at line 77 of file Core\&.cpp\&.
+.SS "void Core::loadNewLib (std::string lib)"
+
+.PP
+Load the lib by reseting _libmodule pointers to the new lib, acts like the class constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstd::string\fP representing the lib's name 
+.RE
+.PP
+
+.PP
+Definition at line 116 of file Core\&.cpp\&.
+.SS "void Core::mapMenu ()"
+
+.PP
+Open the map file representing the menu\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 58 of file Core\&.cpp\&.
+.SS "void Core::setHaveGameLoad (bool haveGameLoad)"
+
+.PP
+Definition at line 216 of file Core\&.cpp\&.
+.SS "void Core::setIsNewKey (bool isNewKey)"
+
+.PP
+Definition at line 206 of file Core\&.cpp\&.
+.SS "void Core::setKey (int key)"
+
+.PP
+Definition at line 226 of file Core\&.cpp\&.
+.SS "void Core::setMap (std::shared_ptr< std::vector< std::string >>)"
+
+.SS "void Core::setNumPathLib (size_t num)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.SS "void Core::startCore (void)"
+
+.PP
+Infinite loop that handle everything the program needs\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 167 of file Core\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Arcade from the source code\&.

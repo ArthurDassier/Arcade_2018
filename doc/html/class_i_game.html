@@ -9,6 +9,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -23,7 +30,9 @@
   <td id="projectlogo"><img alt="Logo" src="220px-Pacman.svg.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Arcade
+   &#160;<span id="projectnumber">1.0</span>
    </div>
+   <div id="projectbrief">Arcade by Arthur, Theo and Camille</div>
   </td>
  </tr>
  </tbody>
@@ -43,6 +52,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_i_game.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,10 +81,8 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_i_game-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -75,22 +97,8 @@ Inheritance diagram for IGame:</div>
 <div class="center"><img src="class_i_game__inherit__graph.png" border="0" usemap="#_i_game_inherit__map" alt="Inheritance graph"/></div>
 <map name="_i_game_inherit__map" id="_i_game_inherit__map">
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:acd588f2910bc31dcf50da421439c47a6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#acd588f2910bc31dcf50da421439c47a6">Graphics</a> { <br />
-&#160;&#160;<a class="el" href="class_i_game.html#acd588f2910bc31dcf50da421439c47a6ad2307d4fa4d21e2d33ca6691df57e522">NOTHING</a> = '0', 
-<a class="el" href="class_i_game.html#acd588f2910bc31dcf50da421439c47a6add1915bca017fb5dbc8c2dda7f69c540">WALL</a> = '1', 
-<a class="el" href="class_i_game.html#acd588f2910bc31dcf50da421439c47a6a44dfb7e6f8dd6c7e8cbc32401e9aabf6">POINT</a> = '2', 
-<a class="el" href="class_i_game.html#acd588f2910bc31dcf50da421439c47a6ad391f7744b5729fc592776a605cb08b8">PLAYER</a> = '3', 
-<br />
-&#160;&#160;<a class="el" href="class_i_game.html#acd588f2910bc31dcf50da421439c47a6ac35276c8543f3557e4473462de04cb0a">ENEMY</a> = '4', 
-<a class="el" href="class_i_game.html#acd588f2910bc31dcf50da421439c47a6a726db662c4ce4c6d4b194e0eaf576097">BONUS</a> = '5'
-<br />
- }</td></tr>
-<tr class="separator:acd588f2910bc31dcf50da421439c47a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a91b14c1b6019364120d5c5e4d4c64414"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a91b14c1b6019364120d5c5e4d4c64414">~IGame</a> ()=default</td></tr>
@@ -117,35 +125,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5a5359d4ad01653b25d5a703bede16f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedff9507276384fb437596fcd8c5d9f3"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#aedff9507276384fb437596fcd8c5d9f3">getScore</a> (void) const =0</td></tr>
 <tr class="separator:aedff9507276384fb437596fcd8c5d9f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedc921f9afd799f4fe9dcaf3f5e6506f"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#aedc921f9afd799f4fe9dcaf3f5e6506f">getPathConfig</a> () const noexcept=0</td></tr>
-<tr class="separator:aedc921f9afd799f4fe9dcaf3f5e6506f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bc2a96092631e513f45efe9af669833"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a2bc2a96092631e513f45efe9af669833">getPathMap</a> () const noexcept=0</td></tr>
-<tr class="separator:a2bc2a96092631e513f45efe9af669833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21b9d7003aa2cec51448afef66b00789"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a21b9d7003aa2cec51448afef66b00789">getPathConfig</a> () const noexcept=0</td></tr>
+<tr class="separator:a21b9d7003aa2cec51448afef66b00789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabcc0d0dae71c42469433ffeebf9e9f0"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#aabcc0d0dae71c42469433ffeebf9e9f0">getPathMap</a> () const noexcept=0</td></tr>
+<tr class="separator:aabcc0d0dae71c42469433ffeebf9e9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="acd588f2910bc31dcf50da421439c47a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd588f2910bc31dcf50da421439c47a6">&#9670;&nbsp;</a></span>Graphics</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="class_i_game.html#acd588f2910bc31dcf50da421439c47a6">IGame::Graphics</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="acd588f2910bc31dcf50da421439c47a6ad2307d4fa4d21e2d33ca6691df57e522"></a>NOTHING&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="acd588f2910bc31dcf50da421439c47a6add1915bca017fb5dbc8c2dda7f69c540"></a>WALL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="acd588f2910bc31dcf50da421439c47a6a44dfb7e6f8dd6c7e8cbc32401e9aabf6"></a>POINT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="acd588f2910bc31dcf50da421439c47a6ad391f7744b5729fc592776a605cb08b8"></a>PLAYER&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="acd588f2910bc31dcf50da421439c47a6ac35276c8543f3557e4473462de04cb0a"></a>ENEMY&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="acd588f2910bc31dcf50da421439c47a6a726db662c4ce4c6d4b194e0eaf576097"></a>BONUS&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="_i_game_8hpp_source.html#l00018">18</a> of file <a class="el" href="_i_game_8hpp_source.html">IGame.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a91b14c1b6019364120d5c5e4d4c64414"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a91b14c1b6019364120d5c5e4d4c64414">&#9670;&nbsp;</a></span>~IGame()</h2>
 
@@ -196,7 +184,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_class_pacman.html#a1a53dcd3e0ee3014c221d7b19971fb0c">ClassPacman</a>.</p>
+<p>Implemented in <a class="el" href="class_pacman.html#a1498e5471531676f4e0862fb294af1a9">Pacman</a>.</p>
 
 </div>
 </div>
@@ -224,7 +212,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_class_pacman.html#a6d1b83066e7077d209e880751bb6a56c">ClassPacman</a>.</p>
+<p>Implemented in <a class="el" href="class_pacman.html#a5faccc1e94f9d50052ca98a730ddd3b9">Pacman</a>.</p>
 
 </div>
 </div>
@@ -252,7 +240,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_class_pacman.html#a06446a72b6d565a175d7d6bd206e0bd0">ClassPacman</a>.</p>
+<p>Implemented in <a class="el" href="class_pacman.html#a2e742e2ec861a207fbcc028cfd21f691">Pacman</a>.</p>
 
 </div>
 </div>
@@ -280,12 +268,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_class_pacman.html#ae25e563247a87ab4f4c19590fdb59b6f">ClassPacman</a>.</p>
+<p>Implemented in <a class="el" href="class_pacman.html#ad3a8b6def88dae5f23731a22221630c1">Pacman</a>.</p>
 
 </div>
 </div>
-<a id="aedc921f9afd799f4fe9dcaf3f5e6506f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aedc921f9afd799f4fe9dcaf3f5e6506f">&#9670;&nbsp;</a></span>getPathConfig()</h2>
+<a id="a21b9d7003aa2cec51448afef66b00789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21b9d7003aa2cec51448afef66b00789">&#9670;&nbsp;</a></span>getPathConfig()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -294,7 +282,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::string IGame::getPathConfig </td>
+          <td class="memname">virtual const std::string IGame::getPathConfig </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -307,12 +295,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_class_pacman.html#a66688f3a145b803889890458bb1f0bb9">ClassPacman</a>.</p>
+<p>Implemented in <a class="el" href="class_pacman.html#aa65615b902ba7bdf0c3b3c9696158aba">Pacman</a>.</p>
 
 </div>
 </div>
-<a id="a2bc2a96092631e513f45efe9af669833"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bc2a96092631e513f45efe9af669833">&#9670;&nbsp;</a></span>getPathMap()</h2>
+<a id="aabcc0d0dae71c42469433ffeebf9e9f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabcc0d0dae71c42469433ffeebf9e9f0">&#9670;&nbsp;</a></span>getPathMap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -321,7 +309,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::string IGame::getPathMap </td>
+          <td class="memname">virtual const std::string IGame::getPathMap </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -334,7 +322,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_class_pacman.html#a84076e80ab0afdfba74769718630c721">ClassPacman</a>.</p>
+<p>Implemented in <a class="el" href="class_pacman.html#a115a106d08e512b15e2b55bf70f800ee">Pacman</a>.</p>
 
 </div>
 </div>
@@ -362,7 +350,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_class_pacman.html#adcfe9d3d0986fd57ff4065aec66c489e">ClassPacman</a>.</p>
+<p>Implemented in <a class="el" href="class_pacman.html#aa60024d15315b294867c8a9e6b93c9e9">Pacman</a>.</p>
 
 </div>
 </div>
@@ -389,7 +377,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_class_pacman.html#a95b741f02b4b1a876b7cd2a855ac48dd">ClassPacman</a>.</p>
+<p>Implemented in <a class="el" href="class_pacman.html#abc01d8c1e91d1dea3f6181e35ba7879b">Pacman</a>.</p>
 
 </div>
 </div>
@@ -417,7 +405,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_class_pacman.html#aea41a2f11c0bd29bec1c85c1aacdb5fe">ClassPacman</a>.</p>
+<p>Implemented in <a class="el" href="class_pacman.html#a7d2d053d9f51e2142d73310bdecd153d">Pacman</a>.</p>
 
 </div>
 </div>
@@ -445,7 +433,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_class_pacman.html#aef568079f56783daacecea41680b04a6">ClassPacman</a>.</p>
+<p>Implemented in <a class="el" href="class_pacman.html#a7330ea2a00143ac820a5a11ee4443a2a">Pacman</a>.</p>
 
 </div>
 </div>
@@ -473,7 +461,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_class_pacman.html#a39ea74fcbd75179f08558db4395e2e53">ClassPacman</a>.</p>
+<p>Implemented in <a class="el" href="class_pacman.html#a24122f7bbfc0f7f7074a7605fb6cc5b4">Pacman</a>.</p>
 
 </div>
 </div>
@@ -501,7 +489,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_class_pacman.html#a6623c8b3ce921c3c0801914b0954129f">ClassPacman</a>.</p>
+<p>Implemented in <a class="el" href="class_pacman.html#aad0a182f2ccb32642935f3f6cca57acb">Pacman</a>.</p>
 
 </div>
 </div>
@@ -529,7 +517,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_class_pacman.html#a423dfa55328b63d8f1ce1d7a81c0b11c">ClassPacman</a>.</p>
+<p>Implemented in <a class="el" href="class_pacman.html#a226192579c1ee73023f5c2e6fbb51b23">Pacman</a>.</p>
 
 </div>
 </div>
@@ -537,11 +525,15 @@ Public Member Functions</h2></td></tr>
 <li>games/<a class="el" href="_i_game_8hpp_source.html">IGame.hpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_i_game.html">IGame</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

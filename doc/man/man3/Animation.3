@@ -1,0 +1,74 @@
+.TH "Animation" 3 "Sun Mar 31 2019" "Version 1.0" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Animation
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Animation\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAnimation\fP ()"
+.br
+.ti -1c
+.RI "\fB~Animation\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddFrame\fP (sf::IntRect)"
+.br
+.ti -1c
+.RI "void \fBsetSpriteSheet\fP (const sf::Texture &)"
+.br
+.ti -1c
+.RI "const sf::Texture * \fBgetSpriteSheet\fP () const"
+.br
+.ti -1c
+.RI "std::size_t \fBgetSize\fP () const"
+.br
+.ti -1c
+.RI "const sf::IntRect & \fBgetFrame\fP (std::size_t) const"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 12 of file Animation\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Animation::Animation ()"
+
+.PP
+Definition at line 10 of file Animation\&.cpp\&.
+.SS "Animation::~Animation ()"
+
+.PP
+Definition at line 15 of file Animation\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Animation::addFrame (sf::IntRect rect)"
+
+.PP
+Definition at line 19 of file Animation\&.cpp\&.
+.SS "const sf::IntRect & Animation::getFrame (std::size_t n) const"
+
+.PP
+Definition at line 39 of file Animation\&.cpp\&.
+.SS "std::size_t Animation::getSize () const"
+
+.PP
+Definition at line 34 of file Animation\&.cpp\&.
+.SS "const sf::Texture * Animation::getSpriteSheet () const"
+
+.PP
+Definition at line 29 of file Animation\&.cpp\&.
+.SS "void Animation::setSpriteSheet (const sf::Texture & texture)"
+
+.PP
+Definition at line 24 of file Animation\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Arcade from the source code\&.

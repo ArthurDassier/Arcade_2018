@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['keyncurses',['KeyNcurses',['../struct_key_ncurses.html',1,'']]],
-  ['keysfml',['KeySFML',['../struct_key_s_f_m_l.html',1,'']]]
+  ['icore',['ICore',['../class_i_core.html',1,'']]],
+  ['igame',['IGame',['../class_i_game.html',1,'']]],
+  ['igraphic',['IGraphic',['../class_i_graphic.html',1,'']]]
 ];

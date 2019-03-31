@@ -9,6 +9,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -23,7 +30,9 @@
   <td id="projectlogo"><img alt="Logo" src="220px-Pacman.svg.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Arcade
+   &#160;<span id="projectnumber">1.0</span>
    </div>
+   <div id="projectbrief">Arcade by Arthur, Theo and Camille</div>
   </td>
  </tr>
  </tbody>
@@ -43,6 +52,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_animation.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,7 +81,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -86,7 +109,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aaf7943420f26f46b744f49837bb65f51"><td class="memItemLeft" align="right" valign="top">const sf::IntRect &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#aaf7943420f26f46b744f49837bb65f51">getFrame</a> (std::size_t) const</td></tr>
 <tr class="separator:aaf7943420f26f46b744f49837bb65f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="_animation_8hpp_source.html#l00012">12</a> of file <a class="el" href="_animation_8hpp_source.html">Animation.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a83f0a16cef7117f187ad596de38dd9d6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a83f0a16cef7117f187ad596de38dd9d6">&#9670;&nbsp;</a></span>Animation()</h2>
 
@@ -101,6 +127,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_animation_8cpp_source.html#l00010">10</a> of file <a class="el" href="_animation_8cpp_source.html">Animation.cpp</a>.</p>
 
 </div>
 </div>
@@ -118,6 +146,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_animation_8cpp_source.html#l00015">15</a> of file <a class="el" href="_animation_8cpp_source.html">Animation.cpp</a>.</p>
 
 </div>
 </div>
@@ -138,6 +168,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_animation_8cpp_source.html#l00019">19</a> of file <a class="el" href="_animation_8cpp_source.html">Animation.cpp</a>.</p>
+
 </div>
 </div>
 <a id="aaf7943420f26f46b744f49837bb65f51"></a>
@@ -156,6 +188,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_animation_8cpp_source.html#l00039">39</a> of file <a class="el" href="_animation_8cpp_source.html">Animation.cpp</a>.</p>
+
 </div>
 </div>
 <a id="ac6854dc96e9fc8ffd97feba43547c869"></a>
@@ -173,6 +207,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_animation_8cpp_source.html#l00034">34</a> of file <a class="el" href="_animation_8cpp_source.html">Animation.cpp</a>.</p>
+
 </div>
 </div>
 <a id="abf4f00f8b1657829583d7d92e71b93d1"></a>
@@ -189,6 +225,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_animation_8cpp_source.html#l00029">29</a> of file <a class="el" href="_animation_8cpp_source.html">Animation.cpp</a>.</p>
 
 </div>
 </div>
@@ -208,18 +246,24 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_animation_8cpp_source.html#l00024">24</a> of file <a class="el" href="_animation_8cpp_source.html">Animation.cpp</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>lib/SFML/<a class="el" href="_animation_8hpp_source.html">Animation.hpp</a></li>
-<li>lib/SFML/<a class="el" href="_animation_8cpp.html">Animation.cpp</a></li>
+<li>lib/SFML/<a class="el" href="_animation_8cpp_source.html">Animation.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_animation.html">Animation</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

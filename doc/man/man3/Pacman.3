@@ -1,0 +1,219 @@
+.TH "Pacman" 3 "Sun Mar 31 2019" "Version 1.0" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Pacman
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Pacman\&.hpp>\fP
+.PP
+Inherits \fBIGame\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPacman\fP ()"
+.br
+.ti -1c
+.RI "\fB~Pacman\fP ()"
+.br
+.ti -1c
+.RI "bool \fBrunGame\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMap\fP (std::shared_ptr< std::vector< std::string >>)"
+.br
+.ti -1c
+.RI "std::shared_ptr< std::vector< std::string > > \fBgetMap\fP (void) const"
+.br
+.ti -1c
+.RI "void \fBreadMap\fP (void)"
+.br
+.ti -1c
+.RI "void \fBsetIsNewMap\fP (bool)"
+.br
+.ti -1c
+.RI "bool \fBgetIsNewMap\fP (void) const"
+.br
+.ti -1c
+.RI "void \fBsetIsNewKey\fP (bool)"
+.br
+.ti -1c
+.RI "bool \fBgetIsNewKey\fP (void) const"
+.br
+.ti -1c
+.RI "void \fBsetLastKey\fP (int)"
+.br
+.ti -1c
+.RI "int \fBgetLastKey\fP (void) const"
+.br
+.ti -1c
+.RI "void \fBsetScore\fP (size_t)"
+.br
+.ti -1c
+.RI "size_t \fBgetScore\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetBonus\fP (bool)"
+.br
+.ti -1c
+.RI "bool \fBgetBonus\fP (void) const"
+.br
+.ti -1c
+.RI "void \fBsetMove\fP (\fBMove\fP)"
+.br
+.ti -1c
+.RI "\fBMove\fP \fBgetMove\fP () const"
+.br
+.ti -1c
+.RI "bool \fBcanMove\fP () const"
+.br
+.ti -1c
+.RI "void \fBmoveDown\fP (void)"
+.br
+.ti -1c
+.RI "void \fBmoveLeft\fP (void)"
+.br
+.ti -1c
+.RI "void \fBmoveRight\fP (void)"
+.br
+.ti -1c
+.RI "void \fBmoveUp\fP (void)"
+.br
+.ti -1c
+.RI "void \fBcheckNextCase\fP (char)"
+.br
+.ti -1c
+.RI "const std::string \fBgetPathConfig\fP () const noexcept"
+.br
+.ti -1c
+.RI "const std::string \fBgetPathMap\fP () const noexcept"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 13 of file Pacman\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Pacman::Pacman ()"
+
+.PP
+Definition at line 10 of file Pacman\&.cpp\&.
+.SS "Pacman::~Pacman ()"
+
+.PP
+Definition at line 29 of file Pacman\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Pacman::canMove () const"
+
+.SS "void Pacman::checkNextCase (char)"
+
+.SS "bool Pacman::getBonus (void) const"
+
+.SS "bool Pacman::getIsNewKey (void) const\fC [virtual]\fP"
+
+.PP
+Implements \fBIGame\fP\&.
+.PP
+Definition at line 132 of file Pacman\&.cpp\&.
+.SS "bool Pacman::getIsNewMap (void) const\fC [virtual]\fP"
+
+.PP
+Implements \fBIGame\fP\&.
+.PP
+Definition at line 122 of file Pacman\&.cpp\&.
+.SS "int Pacman::getLastKey (void) const\fC [virtual]\fP"
+
+.PP
+Implements \fBIGame\fP\&.
+.PP
+Definition at line 142 of file Pacman\&.cpp\&.
+.SS "std::shared_ptr< std::vector< std::string > > Pacman::getMap (void) const\fC [virtual]\fP"
+
+.PP
+Implements \fBIGame\fP\&.
+.PP
+Definition at line 112 of file Pacman\&.cpp\&.
+.SS "\fBMove\fP Pacman::getMove () const"
+
+.PP
+Definition at line 173 of file Pacman\&.cpp\&.
+.SS "const std::string Pacman::getPathConfig () const\fC [virtual]\fP, \fC [noexcept]\fP"
+
+.PP
+Implements \fBIGame\fP\&.
+.PP
+Definition at line 157 of file Pacman\&.cpp\&.
+.SS "const std::string Pacman::getPathMap () const\fC [virtual]\fP, \fC [noexcept]\fP"
+
+.PP
+Implements \fBIGame\fP\&.
+.PP
+Definition at line 162 of file Pacman\&.cpp\&.
+.SS "size_t Pacman::getScore (void) const\fC [virtual]\fP"
+
+.PP
+Implements \fBIGame\fP\&.
+.PP
+Definition at line 152 of file Pacman\&.cpp\&.
+.SS "void Pacman::moveDown (void)"
+
+.SS "void Pacman::moveLeft (void)"
+
+.SS "void Pacman::moveRight (void)"
+
+.SS "void Pacman::moveUp (void)"
+
+.SS "void Pacman::readMap (void)"
+
+.PP
+Definition at line 77 of file Pacman\&.cpp\&.
+.SS "bool Pacman::runGame ()\fC [virtual]\fP"
+
+.PP
+Implements \fBIGame\fP\&.
+.PP
+Definition at line 37 of file Pacman\&.cpp\&.
+.SS "void Pacman::setBonus (bool)"
+
+.SS "void Pacman::setIsNewKey (bool isNewKey)\fC [virtual]\fP"
+
+.PP
+Implements \fBIGame\fP\&.
+.PP
+Definition at line 127 of file Pacman\&.cpp\&.
+.SS "void Pacman::setIsNewMap (bool map)\fC [virtual]\fP"
+
+.PP
+Implements \fBIGame\fP\&.
+.PP
+Definition at line 117 of file Pacman\&.cpp\&.
+.SS "void Pacman::setLastKey (int key)\fC [virtual]\fP"
+
+.PP
+Implements \fBIGame\fP\&.
+.PP
+Definition at line 137 of file Pacman\&.cpp\&.
+.SS "void Pacman::setMap (std::shared_ptr< std::vector< std::string >> map)\fC [virtual]\fP"
+
+.PP
+Implements \fBIGame\fP\&.
+.PP
+Definition at line 107 of file Pacman\&.cpp\&.
+.SS "void Pacman::setMove (\fBMove\fP lastMove)"
+
+.PP
+Definition at line 167 of file Pacman\&.cpp\&.
+.SS "void Pacman::setScore (size_t score)\fC [virtual]\fP"
+
+.PP
+Implements \fBIGame\fP\&.
+.PP
+Definition at line 147 of file Pacman\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Arcade from the source code\&.

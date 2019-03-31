@@ -1,0 +1,144 @@
+.TH "IGraphic" 3 "Sun Mar 31 2019" "Version 1.0" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IGraphic
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <IGraphic\&.hpp>\fP
+.PP
+Inherited by \fBClassNcurses\fP, \fBClassSDL\fP, and \fBClassSFML\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~IGraphic\fP ()=default"
+.br
+.ti -1c
+.RI "virtual bool \fBrunGraph\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetMap\fP (std::shared_ptr< std::vector< std::string >>)=0"
+.br
+.ti -1c
+.RI "virtual void \fBtranslateKey\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetIsNewMap\fP (bool)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBgetIsNewMap\fP (void) const =0"
+.br
+.ti -1c
+.RI "virtual void \fBsetIsNewKey\fP (bool)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBgetIsNewKey\fP (void) const =0"
+.br
+.ti -1c
+.RI "virtual void \fBsetLastKey\fP (int)=0"
+.br
+.ti -1c
+.RI "virtual int \fBgetLastKey\fP (void) const =0"
+.br
+.ti -1c
+.RI "virtual void \fBsetScore\fP (size_t)=0"
+.br
+.ti -1c
+.RI "virtual size_t \fBgetScore\fP () const =0"
+.br
+.ti -1c
+.RI "virtual void \fBsetPathConfig\fP (std::string) noexcept=0"
+.br
+.ti -1c
+.RI "virtual std::string \fBgetPathConfig\fP () const noexcept=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetIsNewPathConfig\fP (bool) noexcept=0"
+.br
+.ti -1c
+.RI "virtual bool \fBgetIsNewPathConfig\fP () const noexcept=0"
+.br
+.ti -1c
+.RI "virtual void \fBbuildMap\fP (std::shared_ptr< std::vector< std::string >>=nullptr)=0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 19 of file IGraphic\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "virtual IGraphic::~IGraphic ()\fC [virtual]\fP, \fC [default]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void IGraphic::buildMap (std::shared_ptr< std::vector< std::string >> = \fCnullptr\fP)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBClassSFML\fP, \fBClassSDL\fP, and \fBClassNcurses\fP\&.
+.SS "virtual bool IGraphic::getIsNewKey (void) const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBClassSFML\fP, \fBClassSDL\fP, and \fBClassNcurses\fP\&.
+.SS "virtual bool IGraphic::getIsNewMap (void) const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBClassSFML\fP, \fBClassSDL\fP, and \fBClassNcurses\fP\&.
+.SS "virtual bool IGraphic::getIsNewPathConfig () const\fC [pure virtual]\fP, \fC [noexcept]\fP"
+
+.PP
+Implemented in \fBClassSDL\fP, \fBClassNcurses\fP, and \fBClassSFML\fP\&.
+.SS "virtual int IGraphic::getLastKey (void) const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBClassSFML\fP, \fBClassSDL\fP, and \fBClassNcurses\fP\&.
+.SS "virtual std::string IGraphic::getPathConfig () const\fC [pure virtual]\fP, \fC [noexcept]\fP"
+
+.PP
+Implemented in \fBClassSDL\fP, \fBClassNcurses\fP, and \fBClassSFML\fP\&.
+.SS "virtual size_t IGraphic::getScore () const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBClassSFML\fP, \fBClassSDL\fP, and \fBClassNcurses\fP\&.
+.SS "virtual bool IGraphic::runGraph ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBClassSFML\fP, \fBClassNcurses\fP, and \fBClassSDL\fP\&.
+.SS "virtual void IGraphic::setIsNewKey (bool)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBClassSFML\fP, \fBClassSDL\fP, and \fBClassNcurses\fP\&.
+.SS "virtual void IGraphic::setIsNewMap (bool)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBClassSFML\fP, \fBClassSDL\fP, and \fBClassNcurses\fP\&.
+.SS "virtual void IGraphic::setIsNewPathConfig (bool)\fC [pure virtual]\fP, \fC [noexcept]\fP"
+
+.PP
+Implemented in \fBClassSDL\fP, \fBClassNcurses\fP, and \fBClassSFML\fP\&.
+.SS "virtual void IGraphic::setLastKey (int)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBClassSFML\fP, \fBClassSDL\fP, and \fBClassNcurses\fP\&.
+.SS "virtual void IGraphic::setMap (std::shared_ptr< std::vector< std::string >>)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBClassSFML\fP, \fBClassNcurses\fP, and \fBClassSDL\fP\&.
+.SS "virtual void IGraphic::setPathConfig (std::string)\fC [pure virtual]\fP, \fC [noexcept]\fP"
+
+.PP
+Implemented in \fBClassSDL\fP, \fBClassNcurses\fP, and \fBClassSFML\fP\&.
+.SS "virtual void IGraphic::setScore (size_t)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBClassSFML\fP, \fBClassSDL\fP, and \fBClassNcurses\fP\&.
+.SS "virtual void IGraphic::translateKey ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBClassSFML\fP, \fBClassNcurses\fP, and \fBClassSDL\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Arcade from the source code\&.

@@ -9,6 +9,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -23,7 +30,9 @@
   <td id="projectlogo"><img alt="Logo" src="220px-Pacman.svg.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Arcade
+   &#160;<span id="projectnumber">1.0</span>
    </div>
+   <div id="projectbrief">Arcade by Arthur, Theo and Camille</div>
   </td>
  </tr>
  </tbody>
@@ -43,6 +52,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_class_s_d_l.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,7 +81,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -77,14 +100,14 @@ Inheritance diagram for ClassSDL:</div>
 <div class="center"><img src="class_class_s_d_l__inherit__graph.png" border="0" usemap="#_class_s_d_l_inherit__map" alt="Inheritance graph"/></div>
 <map name="_class_s_d_l_inherit__map" id="_class_s_d_l_inherit__map">
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for ClassSDL:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_class_s_d_l__coll__graph.png" border="0" usemap="#_class_s_d_l_coll__map" alt="Collaboration graph"/></div>
 <map name="_class_s_d_l_coll__map" id="_class_s_d_l_coll__map">
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -143,6 +166,8 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class representing <a class="el" href="class_class_s_d_l.html" title="Class representing ClassSDL logic. ">ClassSDL</a> logic. </p>
 <p>This class contains the fonctions that handle the SDL </p>
+
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8hpp_source.html#l00032">32</a> of file <a class="el" href="_class_s_d_l_8hpp_source.html">ClassSDL.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1d2bc3c0b566af34b105d2e05b76d85c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d2bc3c0b566af34b105d2e05b76d85c">&#9670;&nbsp;</a></span>ClassSDL()</h2>
@@ -166,6 +191,8 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8cpp_source.html#l00017">17</a> of file <a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a>.</p>
 
 </div>
 </div>
@@ -191,6 +218,8 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8cpp_source.html#l00046">46</a> of file <a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a>.</p>
 
 </div>
 </div>
@@ -229,6 +258,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphic.html#ad6ff7f8cf232daec6f9d5a4a468eba2c">IGraphic</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8cpp_source.html#l00154">154</a> of file <a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a8ec9795eb836f73cd7254406f2510625"></a>
@@ -253,6 +284,8 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8cpp_source.html#l00058">58</a> of file <a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a>.</p>
 
 </div>
 </div>
@@ -282,6 +315,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphic.html#a923ea671c162a94978c0f361084dd1a5">IGraphic</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8cpp_source.html#l00220">220</a> of file <a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a>.</p>
+
 </div>
 </div>
 <a id="aaec40afee3905c9de7e1317db6226a7b"></a>
@@ -310,6 +345,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphic.html#ae10de43a122b5e1f35a3d2d55cf08e59">IGraphic</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8cpp_source.html#l00210">210</a> of file <a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a0f8788a8dfd703a7c80d54399ec745ca"></a>
@@ -336,6 +373,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="class_i_graphic.html#abde51d0606da0a538435c8dc4f66a5d2">IGraphic</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8cpp_source.html#l00260">260</a> of file <a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a>.</p>
 
 </div>
 </div>
@@ -365,6 +404,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphic.html#a50b9159724eb7f07b597ebc65041e545">IGraphic</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8cpp_source.html#l00230">230</a> of file <a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a>.</p>
+
 </div>
 </div>
 <a id="aceda62b43788f26e34c7d37ed1fd9459"></a>
@@ -391,6 +432,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="class_i_graphic.html#aa3d891972e5633a3163ed82e16ff9c98">IGraphic</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8cpp_source.html#l00250">250</a> of file <a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a>.</p>
 
 </div>
 </div>
@@ -419,6 +462,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="class_i_graphic.html#a4ab82acdbf8c33174612d42a375a7c77">IGraphic</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8cpp_source.html#l00240">240</a> of file <a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a>.</p>
 
 </div>
 </div>
@@ -455,6 +500,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphic.html#a7baecac5b5b85b538622c47f12b39cd9">IGraphic</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8cpp_source.html#l00089">89</a> of file <a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a609cd1b245abb3b30962dc09aa7802c0"></a>
@@ -482,6 +529,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="class_i_graphic.html#a8be0cc1ebd85fc184a9890f5ad372a1e">IGraphic</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8cpp_source.html#l00215">215</a> of file <a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a>.</p>
 
 </div>
 </div>
@@ -511,6 +560,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphic.html#a6037174816d5cab7c115eb1a69bbb0ff">IGraphic</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8cpp_source.html#l00205">205</a> of file <a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a83e018aac96b358b8c68be6821f9bacf"></a>
@@ -539,6 +590,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphic.html#ad8a1f76efc7b6c1e8b1387653dc9cb72">IGraphic</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8cpp_source.html#l00255">255</a> of file <a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a2b14b2085d76430344f74227e33be9fb"></a>
@@ -566,6 +619,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="class_i_graphic.html#ac3f35a4649c75449f270e3f3f9c12034">IGraphic</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8cpp_source.html#l00225">225</a> of file <a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a>.</p>
 
 </div>
 </div>
@@ -603,6 +658,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphic.html#a6e3191fe2663c34608ff8a2b2549c398">IGraphic</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8cpp_source.html#l00175">175</a> of file <a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a0dfdb37558b6dadebeada6e91dacb9f3"></a>
@@ -627,6 +684,8 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8cpp_source.html#l00124">124</a> of file <a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a>.</p>
 
 </div>
 </div>
@@ -656,6 +715,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphic.html#a68eb38735e805083420a000fffd973f7">IGraphic</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8cpp_source.html#l00245">245</a> of file <a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a4edcb6ae345daf64f3022d6b16ff255d"></a>
@@ -683,6 +744,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="class_i_graphic.html#a2380c2fa5c0d95b6d8b7267bf0c82142">IGraphic</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8cpp_source.html#l00235">235</a> of file <a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a>.</p>
 
 </div>
 </div>
@@ -719,18 +782,24 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphic.html#a05d1ed2e0bcc2ddef923f4ab1df38ef1">IGraphic</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="_class_s_d_l_8cpp_source.html#l00195">195</a> of file <a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>lib/SDL/<a class="el" href="_class_s_d_l_8hpp_source.html">ClassSDL.hpp</a></li>
-<li>lib/SDL/<a class="el" href="_class_s_d_l_8cpp.html">ClassSDL.cpp</a></li>
+<li>lib/SDL/<a class="el" href="_class_s_d_l_8cpp_source.html">ClassSDL.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_class_s_d_l.html">ClassSDL</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

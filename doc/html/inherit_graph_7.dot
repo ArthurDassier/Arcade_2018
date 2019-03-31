@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   rankdir="LR";
   Node0 [label="IGame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_i_game.html"];
   Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="ClassPacman",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_class_pacman.html",tooltip="Class representing ClassPacman logic. "];
+  Node1 [label="Pacman",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_pacman.html"];
 }

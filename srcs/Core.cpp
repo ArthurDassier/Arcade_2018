@@ -117,6 +117,7 @@ void Core::loadNewLib(std::string lib)
 {
     auto instance = std::make_shared<DLLoader<IGraphic *>>(lib);
 
+    std::this_thread::sleep_for(std::chrono::milliseconds(10));
     _libModule.reset();
     _instance = instance;
     std::shared_ptr<IGraphic> tmp(_instance->getInstance());
@@ -133,6 +134,7 @@ void Core::loadNewLib(std::string lib)
         _libModule->setIsNewMap(true);
         _libModule->setPathConfig(_gameModule->getPathConfig());
     }
+    std::this_thread::sleep_for(std::chrono::milliseconds(10));
 }
 
 
