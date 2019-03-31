@@ -20,20 +20,25 @@ ClassNcurses::ClassNcurses() :
     _posi_menu(0),
     _isNewMap(false),
     _isNewKey(false),
-    _isNewPathConfig(false)
+    _isNewPathConfig(false),
+    _window(nullptr, [](WINDOW *){}),
+    _window_menu_sdl(nullptr, [](WINDOW *){}),
+    _window_menu_sfml(nullptr, [](WINDOW *){}),
+    _window_menu_ncurses(nullptr, [](WINDOW *){}),
+    _window_pacman(nullptr, [](WINDOW *){})
 {
     initscr();
-    _window = subwin(stdscr, LINES / 2, COLS, LINES / 4, 0);
-    _window_menu_sdl = subwin(stdscr, 3, 11, (LINES / 4) + 3 , (COLS / 2) - 30);
-    _window_menu_sfml = subwin(stdscr, 3, 11, (LINES / 4) + 9, (COLS / 2) - 30);
-    _window_menu_ncurses = subwin(stdscr, 3, 11, (LINES / 4) + 15, (COLS / 2) - 30);
-    _window_pacman = subwin(stdscr, 3, 11, (LINES / 4) + 9, (COLS / 2) + 10);
+    _window.reset(subwin(stdscr, LINES / 2, COLS, LINES / 4, 0), [](WINDOW *){});
+    _window_menu_sdl.reset(subwin(stdscr, 3, 11, (LINES / 4) + 3 , (COLS / 2) - 30), [](WINDOW *){});
+    _window_menu_sfml.reset(subwin(stdscr, 3, 11, (LINES / 4) + 9, (COLS / 2) - 30), [](WINDOW *){});
+    _window_menu_ncurses.reset(subwin(stdscr, 3, 11, (LINES / 4) + 15, (COLS / 2) - 30), [](WINDOW *){});
+    _window_pacman.reset(subwin(stdscr, 3, 11, (LINES / 4) + 9, (COLS / 2) + 10), [](WINDOW *){});
     curs_set(false);
     noecho();
     cbreak();
     keypad(stdscr, true);
     start_color();
-    wborder(_window, '|', '|', '-', '-', '+', '+', '+', '+');
+    wborder(_window.get(), '|', '|', '-', '-', '+', '+', '+', '+');
     displayMenu();
     displayLetters();
 }
@@ -61,27 +66,27 @@ void ClassNcurses::displayMenu()
     attron(A_DIM);
     if (sdl.good()) {
         //if (_posi_menu == 0)
-        box(_window_menu_sdl, ACS_VLINE, ACS_HLINE);
-        mvwprintw(_window_menu_sdl, 1, 4, "SDL");
+        box(_window_menu_sdl.get(), ACS_VLINE, ACS_HLINE);
+        mvwprintw(_window_menu_sdl.get(), 1, 4, "SDL");
         move((LINES / 4) + 4, (COLS / 2) - 18);
         printw("Press Key : l");
     }
     if (sfml.good()) {
         //if (_posi_menu == 1)
-        box(_window_menu_sfml, ACS_VLINE, ACS_HLINE);
-        mvwprintw(_window_menu_sfml, 1, 3, "SFML");
+        box(_window_menu_sfml.get(), ACS_VLINE, ACS_HLINE);
+        mvwprintw(_window_menu_sfml.get(), 1, 3, "SFML");
         move((LINES / 4) + 10, (COLS / 2) - 18);
         printw("Press Key : k");
     }
     if (ncurses.good()) {
         //if (_posi_menu == 2)
-        box(_window_menu_ncurses, ACS_VLINE, ACS_HLINE);
-        mvwprintw(_window_menu_ncurses, 1, 2, "NCURSES");
+        box(_window_menu_ncurses.get(), ACS_VLINE, ACS_HLINE);
+        mvwprintw(_window_menu_ncurses.get(), 1, 2, "NCURSES");
         move((LINES / 4) + 16, (COLS / 2) - 18);
         printw("Press Key : j");
     }
-    box(_window_pacman, ACS_VLINE, ACS_HLINE);
-    mvwprintw(_window_pacman, 1, 2, "PACMAN");
+    box(_window_pacman.get(), ACS_VLINE, ACS_HLINE);
+    mvwprintw(_window_pacman.get(), 1, 2, "PACMAN");
     move((LINES / 4) + 10, (COLS / 2) + 22);
     printw("Press Key : ENTER");
     attroff(A_DIM);
@@ -293,7 +298,7 @@ bool ClassNcurses::runGraph()
     if (_isNewMap) {
         clear();
         displayGame();
-        wborder(_window, '|', '|', '-', '-', '+', '+', '+', '+');
+        wborder(_window.get(), '|', '|', '-', '-', '+', '+', '+', '+');
         _isNewMap = false;
     }
     timeout(100);

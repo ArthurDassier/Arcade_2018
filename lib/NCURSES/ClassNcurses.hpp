@@ -74,11 +74,13 @@ class ClassNcurses : public IGraphic
 
     private:
         std::unique_ptr<std::vector<std::string>> _map;
-        WINDOW *_window;
-        WINDOW *_window_menu_sdl;
-        WINDOW *_window_menu_sfml;
-        WINDOW *_window_menu_ncurses;
-        WINDOW *_window_pacman;
+
+        std::shared_ptr<WINDOW> _window;
+        std::shared_ptr<WINDOW> _window_menu_sdl;
+        std::shared_ptr<WINDOW> _window_menu_sfml;
+        std::shared_ptr<WINDOW> _window_menu_ncurses;
+        std::shared_ptr<WINDOW> _window_pacman;
+
         size_t _posi_menu;
         int _c;
         bool _isNewMap;
