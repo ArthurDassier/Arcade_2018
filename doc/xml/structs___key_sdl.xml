@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structs___key_sdl" kind="struct" language="C++" prot="public">
+    <compoundname>s_KeySdl</compoundname>
+    <includes refid="_class_s_d_l_8hpp" local="no">ClassSDL.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structs___key_sdl_1aac452749c30071b46d3ec59e4c3f9666" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int s_KeySdl::code_lib</definition>
+        <argsstring></argsstring>
+        <name>code_lib</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="88" column="1" bodyfile="lib/SDL/ClassSDL.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structs___key_sdl_1a689f17237af284320c48e727d8410415" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int s_KeySdl::code_core</definition>
+        <argsstring></argsstring>
+        <name>code_core</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="89" column="1" bodyfile="lib/SDL/ClassSDL.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This Structure contains Keys input translation. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/SDL/ClassSDL.hpp" line="87" column="1" bodyfile="lib/SDL/ClassSDL.hpp" bodystart="87" bodyend="90"/>
+    <listofallmembers>
+      <member refid="structs___key_sdl_1a689f17237af284320c48e727d8410415" prot="public" virt="non-virtual"><scope>s_KeySdl</scope><name>code_core</name></member>
+      <member refid="structs___key_sdl_1aac452749c30071b46d3ec59e4c3f9666" prot="public" virt="non-virtual"><scope>s_KeySdl</scope><name>code_lib</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

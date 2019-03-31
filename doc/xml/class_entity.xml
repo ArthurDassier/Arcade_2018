@@ -1,0 +1,587 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_entity" kind="class" language="C++" prot="public">
+    <compoundname>Entity</compoundname>
+    <includes refid="_entity_8hpp" local="no">Entity.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_entity_1ab33a70726458ac80b9fd1a51fe543d0d" prot="private" static="no" mutable="no">
+        <type>const <ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473" kindref="member">PacmanObjs</ref></type>
+        <definition>const PacmanObjs Entity::_entity</definition>
+        <argsstring></argsstring>
+        <name>_entity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="83" column="1" bodyfile="games/pacman/Entity.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_1adc4e0ac539dad2fef775ec709a74ca2d" prot="private" static="no" mutable="no">
+        <type>std::map&lt; size_t, std::map&lt; size_t, char &gt; &gt;</type>
+        <definition>std::map&lt;size_t, std::map&lt;size_t, char&gt; &gt; Entity::_map</definition>
+        <argsstring></argsstring>
+        <name>_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="84" column="1" bodyfile="games/pacman/Entity.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_1aa671cdd75da5350c83622fefa071ea79" prot="private" static="no" mutable="no">
+        <type>std::pair&lt; std::vector&lt; std::string &gt;::iterator, ptrdiff_t &gt;</type>
+        <definition>std::pair&lt;std::vector&lt;std::string&gt;::iterator, ptrdiff_t&gt; Entity::_pos</definition>
+        <argsstring></argsstring>
+        <name>_pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="85" column="1" bodyfile="games/pacman/Entity.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_1a66f4629671613ca1b2c49f78c3cb34d2" prot="private" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t Entity::_start</definition>
+        <argsstring></argsstring>
+        <name>_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="86" column="1" bodyfile="games/pacman/Entity.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_1a9b268eca915e2ae7fc232fcaf35206f3" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Entity::_score</definition>
+        <argsstring></argsstring>
+        <name>_score</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="87" column="1" bodyfile="games/pacman/Entity.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_1affa34087931fd08b03afa12c0bd3554a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Entity::_speed</definition>
+        <argsstring></argsstring>
+        <name>_speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="88" column="1" bodyfile="games/pacman/Entity.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_1ab9f58dbc9b80ce6744dd95b601a6d2ec" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Entity::_bonus</definition>
+        <argsstring></argsstring>
+        <name>_bonus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="89" column="1" bodyfile="games/pacman/Entity.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_1ab3d9f14f6e1aed6aa97436e47d9c41c0" prot="private" static="no" mutable="no">
+        <type><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388" kindref="member">Move</ref></type>
+        <definition>Move Entity::_move</definition>
+        <argsstring></argsstring>
+        <name>_move</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="90" column="1" bodyfile="games/pacman/Entity.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_1a07cdd0783a27ea8964087b6efd59243f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Entity::_isNewMap</definition>
+        <argsstring></argsstring>
+        <name>_isNewMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="92" column="1" bodyfile="games/pacman/Entity.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_1a366a68a55cae7395e0e0b0b2e71c1323" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Entity::_isNewKey</definition>
+        <argsstring></argsstring>
+        <name>_isNewKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="93" column="1" bodyfile="games/pacman/Entity.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_entity_1aed8a9f358cd8071ac65514597a686e8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Entity::Entity</definition>
+        <argsstring>(PacmanObjs)</argsstring>
+        <name>Entity</name>
+        <param>
+          <type><ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473" kindref="member">PacmanObjs</ref></type>
+          <defname>entity</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="49" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="10" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1adf6d3f7cb1b2ba029b6b048a395cc8ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Entity::~Entity</definition>
+        <argsstring>()</argsstring>
+        <name>~Entity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="50" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1ae3e67f022530fdb7640a41bd9f625c05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::move</definition>
+        <argsstring>(Move, std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;)</argsstring>
+        <name>move</name>
+        <param>
+          <type><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388" kindref="member">Move</ref></type>
+          <defname>direction</defname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;</type>
+          <defname>map</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="52" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="22" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a174596f619570407af51da9a514ec779" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; size_t, std::map&lt; size_t, char &gt; &gt;</type>
+        <definition>std::map&lt;size_t, std::map&lt;size_t, char&gt; &gt; Entity::getMap</definition>
+        <argsstring>() const</argsstring>
+        <name>getMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1aeb78147bb879a3661ba336f07f641508" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473" kindref="member">PacmanObjs</ref></type>
+        <definition>const PacmanObjs Entity::getEntity</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>getEntity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="56" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="184" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a0fb99bb43805b75c1bf7edc7af15ac6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::setSpeed</definition>
+        <argsstring>(float)</argsstring>
+        <name>setSpeed</name>
+        <param>
+          <type>float</type>
+          <defname>speed</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="58" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="189" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1ad577b2c5aeea6d34d6c4e3c28b3cfc47" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Entity::getSpeed</definition>
+        <argsstring>() const</argsstring>
+        <name>getSpeed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="59" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="194" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1abce9b59d8f4fe99fdd3aa9237be1216f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::setPosition</definition>
+        <argsstring>(std::pair&lt; std::vector&lt; std::string &gt;::iterator, ptrdiff_t &gt;)</argsstring>
+        <name>setPosition</name>
+        <param>
+          <type>std::pair&lt; std::vector&lt; std::string &gt;::iterator, ptrdiff_t &gt;</type>
+          <defname>pos</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="61" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="199" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a4b5de8b50eaac42d7af1d75c6aa3fd50" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; std::vector&lt; std::string &gt;::iterator, ptrdiff_t &gt;</type>
+        <definition>std::pair&lt; std::vector&lt; std::string &gt;::iterator, ptrdiff_t &gt; Entity::getPosition</definition>
+        <argsstring>() const</argsstring>
+        <name>getPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="62" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="204" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a9c38ba019db3c947b31e116ceb8ec8b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::setIsNewMap</definition>
+        <argsstring>(bool)</argsstring>
+        <name>setIsNewMap</name>
+        <param>
+          <type>bool</type>
+          <defname>isNewMap</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="64" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="209" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a6dcb18f807581c362fa2294edc718978" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Entity::getIsNewMap</definition>
+        <argsstring>() const</argsstring>
+        <name>getIsNewMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="65" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="214" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a0433c81e49ce270452e6def8030fecc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::setIsNewKey</definition>
+        <argsstring>(bool)</argsstring>
+        <name>setIsNewKey</name>
+        <param>
+          <type>bool</type>
+          <defname>isNewKey</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="67" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="219" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a02009ce889fc4040dadd70fbf0b36ad8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Entity::getIsNewKey</definition>
+        <argsstring>() const</argsstring>
+        <name>getIsNewKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="68" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="224" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a0606a0152f66081e3bf30bdc87a7b0d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::setLastKey</definition>
+        <argsstring>(int)</argsstring>
+        <name>setLastKey</name>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a8938f57c391437f19ab8d9efc0170664" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Entity::getLastKey</definition>
+        <argsstring>() const</argsstring>
+        <name>getLastKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1ab1fac477232fe5436b90bf432d5ba64d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::setLastMove</definition>
+        <argsstring>(Move)</argsstring>
+        <name>setLastMove</name>
+        <param>
+          <type><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388" kindref="member">Move</ref></type>
+          <defname>move</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="73" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="229" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a7c72b2524a4ab05577f7a5586391ce23" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388" kindref="member">Move</ref></type>
+        <definition>Move Entity::getLastMove</definition>
+        <argsstring>() const</argsstring>
+        <name>getLastMove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="74" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="234" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a04b8a5496669cc90202d5d2e3b798592" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::setScore</definition>
+        <argsstring>(size_t)</argsstring>
+        <name>setScore</name>
+        <param>
+          <type>size_t</type>
+          <defname>score</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="76" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="239" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a8c8b914c547b5d26855d885bebbef750" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Entity::getScore</definition>
+        <argsstring>() const</argsstring>
+        <name>getScore</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="77" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="244" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a77c8bb43adf29c689249b058410d746f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::setBonus</definition>
+        <argsstring>(bool)</argsstring>
+        <name>setBonus</name>
+        <param>
+          <type>bool</type>
+          <defname>bonus</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="79" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="249" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a420fa54213e0debc86956197ffffa45e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Entity::getBonus</definition>
+        <argsstring>() const</argsstring>
+        <name>getBonus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="80" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_entity_1a50f653dce99f2d224083bdf92c733510" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::moveDown</definition>
+        <argsstring>(std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;)</argsstring>
+        <name>moveDown</name>
+        <param>
+          <type>std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;</type>
+          <defname>map</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="95" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="47" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a5a41d56148eedf9b9dd60cc1e0befdf6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::moveLeft</definition>
+        <argsstring>(std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;)</argsstring>
+        <name>moveLeft</name>
+        <param>
+          <type>std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;</type>
+          <defname>map</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="97" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="75" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1aaac429d894307362f6ff053fa22a80e5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::moveRight</definition>
+        <argsstring>(std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;)</argsstring>
+        <name>moveRight</name>
+        <param>
+          <type>std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;</type>
+          <defname>map</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="99" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="105" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a88fe7089ae31bbfdaf6f7886106463d0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::moveUp</definition>
+        <argsstring>(std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;)</argsstring>
+        <name>moveUp</name>
+        <param>
+          <type>std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;</type>
+          <defname>map</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="101" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="135" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1aa1cd03fab150b7e62a746fcf78d55d97" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Entity::checkNextCase</definition>
+        <argsstring>(char)</argsstring>
+        <name>checkNextCase</name>
+        <param>
+          <type>char</type>
+          <defname>nextPos</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Entity.hpp" line="103" column="1" bodyfile="games/pacman/Entity.cpp" bodystart="164" bodyend="182"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class representing <ref refid="class_entity" kindref="compound">Entity</ref> logic. </para>    </briefdescription>
+    <detaileddescription>
+<para>This class contains the fonctions that handle the <ref refid="class_entity" kindref="compound">Entity</ref> </para>    </detaileddescription>
+    <location file="games/pacman/Entity.hpp" line="47" column="1" bodyfile="games/pacman/Entity.hpp" bodystart="46" bodyend="104"/>
+    <listofallmembers>
+      <member refid="class_entity_1ab9f58dbc9b80ce6744dd95b601a6d2ec" prot="private" virt="non-virtual"><scope>Entity</scope><name>_bonus</name></member>
+      <member refid="class_entity_1ab33a70726458ac80b9fd1a51fe543d0d" prot="private" virt="non-virtual"><scope>Entity</scope><name>_entity</name></member>
+      <member refid="class_entity_1a366a68a55cae7395e0e0b0b2e71c1323" prot="private" virt="non-virtual"><scope>Entity</scope><name>_isNewKey</name></member>
+      <member refid="class_entity_1a07cdd0783a27ea8964087b6efd59243f" prot="private" virt="non-virtual"><scope>Entity</scope><name>_isNewMap</name></member>
+      <member refid="class_entity_1adc4e0ac539dad2fef775ec709a74ca2d" prot="private" virt="non-virtual"><scope>Entity</scope><name>_map</name></member>
+      <member refid="class_entity_1ab3d9f14f6e1aed6aa97436e47d9c41c0" prot="private" virt="non-virtual"><scope>Entity</scope><name>_move</name></member>
+      <member refid="class_entity_1aa671cdd75da5350c83622fefa071ea79" prot="private" virt="non-virtual"><scope>Entity</scope><name>_pos</name></member>
+      <member refid="class_entity_1a9b268eca915e2ae7fc232fcaf35206f3" prot="private" virt="non-virtual"><scope>Entity</scope><name>_score</name></member>
+      <member refid="class_entity_1affa34087931fd08b03afa12c0bd3554a" prot="private" virt="non-virtual"><scope>Entity</scope><name>_speed</name></member>
+      <member refid="class_entity_1a66f4629671613ca1b2c49f78c3cb34d2" prot="private" virt="non-virtual"><scope>Entity</scope><name>_start</name></member>
+      <member refid="class_entity_1aa1cd03fab150b7e62a746fcf78d55d97" prot="private" virt="non-virtual"><scope>Entity</scope><name>checkNextCase</name></member>
+      <member refid="class_entity_1aed8a9f358cd8071ac65514597a686e8e" prot="public" virt="non-virtual"><scope>Entity</scope><name>Entity</name></member>
+      <member refid="class_entity_1a420fa54213e0debc86956197ffffa45e" prot="public" virt="non-virtual"><scope>Entity</scope><name>getBonus</name></member>
+      <member refid="class_entity_1aeb78147bb879a3661ba336f07f641508" prot="public" virt="non-virtual"><scope>Entity</scope><name>getEntity</name></member>
+      <member refid="class_entity_1a02009ce889fc4040dadd70fbf0b36ad8" prot="public" virt="non-virtual"><scope>Entity</scope><name>getIsNewKey</name></member>
+      <member refid="class_entity_1a6dcb18f807581c362fa2294edc718978" prot="public" virt="non-virtual"><scope>Entity</scope><name>getIsNewMap</name></member>
+      <member refid="class_entity_1a8938f57c391437f19ab8d9efc0170664" prot="public" virt="non-virtual"><scope>Entity</scope><name>getLastKey</name></member>
+      <member refid="class_entity_1a7c72b2524a4ab05577f7a5586391ce23" prot="public" virt="non-virtual"><scope>Entity</scope><name>getLastMove</name></member>
+      <member refid="class_entity_1a174596f619570407af51da9a514ec779" prot="public" virt="non-virtual"><scope>Entity</scope><name>getMap</name></member>
+      <member refid="class_entity_1a4b5de8b50eaac42d7af1d75c6aa3fd50" prot="public" virt="non-virtual"><scope>Entity</scope><name>getPosition</name></member>
+      <member refid="class_entity_1a8c8b914c547b5d26855d885bebbef750" prot="public" virt="non-virtual"><scope>Entity</scope><name>getScore</name></member>
+      <member refid="class_entity_1ad577b2c5aeea6d34d6c4e3c28b3cfc47" prot="public" virt="non-virtual"><scope>Entity</scope><name>getSpeed</name></member>
+      <member refid="class_entity_1ae3e67f022530fdb7640a41bd9f625c05" prot="public" virt="non-virtual"><scope>Entity</scope><name>move</name></member>
+      <member refid="class_entity_1a50f653dce99f2d224083bdf92c733510" prot="private" virt="non-virtual"><scope>Entity</scope><name>moveDown</name></member>
+      <member refid="class_entity_1a5a41d56148eedf9b9dd60cc1e0befdf6" prot="private" virt="non-virtual"><scope>Entity</scope><name>moveLeft</name></member>
+      <member refid="class_entity_1aaac429d894307362f6ff053fa22a80e5" prot="private" virt="non-virtual"><scope>Entity</scope><name>moveRight</name></member>
+      <member refid="class_entity_1a88fe7089ae31bbfdaf6f7886106463d0" prot="private" virt="non-virtual"><scope>Entity</scope><name>moveUp</name></member>
+      <member refid="class_entity_1a77c8bb43adf29c689249b058410d746f" prot="public" virt="non-virtual"><scope>Entity</scope><name>setBonus</name></member>
+      <member refid="class_entity_1a0433c81e49ce270452e6def8030fecc5" prot="public" virt="non-virtual"><scope>Entity</scope><name>setIsNewKey</name></member>
+      <member refid="class_entity_1a9c38ba019db3c947b31e116ceb8ec8b6" prot="public" virt="non-virtual"><scope>Entity</scope><name>setIsNewMap</name></member>
+      <member refid="class_entity_1a0606a0152f66081e3bf30bdc87a7b0d9" prot="public" virt="non-virtual"><scope>Entity</scope><name>setLastKey</name></member>
+      <member refid="class_entity_1ab1fac477232fe5436b90bf432d5ba64d" prot="public" virt="non-virtual"><scope>Entity</scope><name>setLastMove</name></member>
+      <member refid="class_entity_1abce9b59d8f4fe99fdd3aa9237be1216f" prot="public" virt="non-virtual"><scope>Entity</scope><name>setPosition</name></member>
+      <member refid="class_entity_1a04b8a5496669cc90202d5d2e3b798592" prot="public" virt="non-virtual"><scope>Entity</scope><name>setScore</name></member>
+      <member refid="class_entity_1a0fb99bb43805b75c1bf7edc7af15ac6d" prot="public" virt="non-virtual"><scope>Entity</scope><name>setSpeed</name></member>
+      <member refid="class_entity_1adf6d3f7cb1b2ba029b6b048a395cc8ae" prot="public" virt="non-virtual"><scope>Entity</scope><name>~Entity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

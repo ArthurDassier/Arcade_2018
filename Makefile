@@ -53,8 +53,8 @@ graphicals:		$(GRAPHICALS)
 tests_run:		
 				$(MAKE) -C $(TESTS_DIR)
 				./$(TEST_SDL)
-				./$(TEST_NCURSES)
 				./$(TEST_SFML)
+				./$(TEST_NCURSES)
 
 $(CORE):	$(OBJ)
 				$(info ************  BUILDING CORE ************) 

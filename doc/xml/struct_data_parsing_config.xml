@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct_data_parsing_config" kind="struct" language="C++" prot="public">
+    <compoundname>DataParsingConfig</compoundname>
+    <includes refid="_parsing_config_8hpp" local="no">ParsingConfig.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_data_parsing_config_1abf02d91e28ac86d29f53210a70cb7415" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string DataParsingConfig::path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/ParsingConfig.hpp" line="20" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_data_parsing_config_1a66cca705d93395a81e42c9c5a097b9ee" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DataParsingConfig::sizeX</definition>
+        <argsstring></argsstring>
+        <name>sizeX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/ParsingConfig.hpp" line="21" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_data_parsing_config_1ac230386a89c7fb0553e3fddbc385b4d8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DataParsingConfig::sizeY</definition>
+        <argsstring></argsstring>
+        <name>sizeY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/ParsingConfig.hpp" line="22" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_data_parsing_config_1a4045954414dddfd81d284a10c05169ad" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string DataParsingConfig::caractere</definition>
+        <argsstring></argsstring>
+        <name>caractere</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/ParsingConfig.hpp" line="23" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_data_parsing_config_1a40020fc791f5dde8a38018317eed0cd3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DataParsingConfig::launchKey</definition>
+        <argsstring></argsstring>
+        <name>launchKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/ParsingConfig.hpp" line="24" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_data_parsing_config_1a4588670806ea05d74332194b625953e7" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string DataParsingConfig::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/ParsingConfig.hpp" line="25" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This Structure contains all the informations about our sprites, the path to the .bmp, it size in x and y, the ncurses character, the key in the eventuallity it&apos;s interactive and the name of the sprite. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="srcs/ParsingConfig.hpp" line="19" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="19" bodyend="26"/>
+    <listofallmembers>
+      <member refid="struct_data_parsing_config_1a4045954414dddfd81d284a10c05169ad" prot="public" virt="non-virtual"><scope>DataParsingConfig</scope><name>caractere</name></member>
+      <member refid="struct_data_parsing_config_1a40020fc791f5dde8a38018317eed0cd3" prot="public" virt="non-virtual"><scope>DataParsingConfig</scope><name>launchKey</name></member>
+      <member refid="struct_data_parsing_config_1a4588670806ea05d74332194b625953e7" prot="public" virt="non-virtual"><scope>DataParsingConfig</scope><name>name</name></member>
+      <member refid="struct_data_parsing_config_1abf02d91e28ac86d29f53210a70cb7415" prot="public" virt="non-virtual"><scope>DataParsingConfig</scope><name>path</name></member>
+      <member refid="struct_data_parsing_config_1a66cca705d93395a81e42c9c5a097b9ee" prot="public" virt="non-virtual"><scope>DataParsingConfig</scope><name>sizeX</name></member>
+      <member refid="struct_data_parsing_config_1ac230386a89c7fb0553e3fddbc385b4d8" prot="public" virt="non-virtual"><scope>DataParsingConfig</scope><name>sizeY</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

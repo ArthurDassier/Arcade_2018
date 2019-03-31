@@ -1,0 +1,803 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_class_ncurses" kind="class" language="C++" prot="public">
+    <compoundname>ClassNcurses</compoundname>
+    <basecompoundref refid="class_i_graphic" prot="public" virt="non-virtual">IGraphic</basecompoundref>
+    <includes refid="_class_ncurses_8hpp" local="no">ClassNcurses.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_class_ncurses_1af65a2bf1f70227eb03d09acbe394597f" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; std::vector&lt; std::string &gt; &gt;</type>
+        <definition>std::unique_ptr&lt;std::vector&lt;std::string&gt; &gt; ClassNcurses::_map</definition>
+        <argsstring></argsstring>
+        <name>_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="71" column="1" bodyfile="lib/NCURSES/ClassNcurses.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ncurses_1ae11213809fc7e060f8605da805976d70" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; WINDOW &gt;</type>
+        <definition>std::shared_ptr&lt;WINDOW&gt; ClassNcurses::_window</definition>
+        <argsstring></argsstring>
+        <name>_window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="73" column="1" bodyfile="lib/NCURSES/ClassNcurses.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ncurses_1ad120ef311cff774862263e127387d6a3" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; WINDOW &gt;</type>
+        <definition>std::shared_ptr&lt;WINDOW&gt; ClassNcurses::_window_menu_sdl</definition>
+        <argsstring></argsstring>
+        <name>_window_menu_sdl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="74" column="1" bodyfile="lib/NCURSES/ClassNcurses.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ncurses_1a44d86c63993f9f3b52a77abe68d44ec4" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; WINDOW &gt;</type>
+        <definition>std::shared_ptr&lt;WINDOW&gt; ClassNcurses::_window_menu_sfml</definition>
+        <argsstring></argsstring>
+        <name>_window_menu_sfml</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="75" column="1" bodyfile="lib/NCURSES/ClassNcurses.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ncurses_1a8345954f0d30bd5c3e2a32f3f2eff10a" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; WINDOW &gt;</type>
+        <definition>std::shared_ptr&lt;WINDOW&gt; ClassNcurses::_window_menu_ncurses</definition>
+        <argsstring></argsstring>
+        <name>_window_menu_ncurses</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="76" column="1" bodyfile="lib/NCURSES/ClassNcurses.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ncurses_1a5bd1ad21d9026ad06f50704e7da7412c" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; WINDOW &gt;</type>
+        <definition>std::shared_ptr&lt;WINDOW&gt; ClassNcurses::_window_pacman</definition>
+        <argsstring></argsstring>
+        <name>_window_pacman</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="77" column="1" bodyfile="lib/NCURSES/ClassNcurses.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ncurses_1a03a425a8f6b698cc8256df0a1c51c56c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ClassNcurses::_c</definition>
+        <argsstring></argsstring>
+        <name>_c</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="79" column="1" bodyfile="lib/NCURSES/ClassNcurses.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ncurses_1a2ba164fa09bbd0aac546bb7584b78829" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClassNcurses::_isNewMap</definition>
+        <argsstring></argsstring>
+        <name>_isNewMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="80" column="1" bodyfile="lib/NCURSES/ClassNcurses.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ncurses_1a8edcb3551c436acc9eeeeceaff13528a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClassNcurses::_isNewKey</definition>
+        <argsstring></argsstring>
+        <name>_isNewKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="81" column="1" bodyfile="lib/NCURSES/ClassNcurses.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ncurses_1a0e2717c4b90e60f0f621e06f62efc0a2" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t ClassNcurses::_score</definition>
+        <argsstring></argsstring>
+        <name>_score</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="82" column="1" bodyfile="lib/NCURSES/ClassNcurses.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ncurses_1a122c83ca570a46de71b0bf6ef995045c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ClassNcurses::_key</definition>
+        <argsstring></argsstring>
+        <name>_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="83" column="1" bodyfile="lib/NCURSES/ClassNcurses.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ncurses_1a92c235b1f22e7fc427fdf7eef6510817" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ClassNcurses::_pathConfig</definition>
+        <argsstring></argsstring>
+        <name>_pathConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="84" column="1" bodyfile="lib/NCURSES/ClassNcurses.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ncurses_1a58a11fcee338bf7c90602203d49d5dd4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClassNcurses::_isNewPathConfig</definition>
+        <argsstring></argsstring>
+        <name>_isNewPathConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="85" column="1" bodyfile="lib/NCURSES/ClassNcurses.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_ncurses_1ace71ac82a66f0d0a586df9c902564add" prot="private" static="no" mutable="no">
+        <type><ref refid="class_parsing_config" kindref="compound">ParsingConfig</ref></type>
+        <definition>ParsingConfig ClassNcurses::_parsing</definition>
+        <argsstring></argsstring>
+        <name>_parsing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="86" column="1" bodyfile="lib/NCURSES/ClassNcurses.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_class_ncurses_1a334f21e7d6fae191228601dbaa32d3f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClassNcurses::ClassNcurses</definition>
+        <argsstring>()</argsstring>
+        <name>ClassNcurses</name>
+        <briefdescription>
+<para>Create the Ncurses window and set the getters at false it also creates subwindows for the menu. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="35" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="17" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1ab172cc227fea41b4f5ae5591712522ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClassNcurses::~ClassNcurses</definition>
+        <argsstring>()</argsstring>
+        <name>~ClassNcurses</name>
+        <briefdescription>
+<para>Ncurses Class destructor, just quit the Ncurses. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="36" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1aac4288eb28653abcda975fcb5e56f5d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ClassNcurses::runGraph</definition>
+        <argsstring>()</argsstring>
+        <name>runGraph</name>
+        <reimplements refid="class_i_graphic_1a7baecac5b5b85b538622c47f12b39cd9">runGraph</reimplements>
+        <briefdescription>
+<para>Main fct manage the events, prints and create map. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="39" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="271" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1a74af301cf3439ef2e507406751ce51af" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassNcurses::setMap</definition>
+        <argsstring>(std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;)</argsstring>
+        <name>setMap</name>
+        <reimplements refid="class_i_graphic_1a6e3191fe2663c34608ff8a2b2549c398">setMap</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;</type>
+          <defname>map</defname>
+        </param>
+        <briefdescription>
+<para>Change the char in our _map of textures corresponding to the map. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="40" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="323" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1a3ffbcd0c1f464454a70d8f99ee8e7afe" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassNcurses::translateKey</definition>
+        <argsstring>()</argsstring>
+        <name>translateKey</name>
+        <reimplements refid="class_i_graphic_1a05d1ed2e0bcc2ddef923f4ab1df38ef1">translateKey</reimplements>
+        <briefdescription>
+<para>Translate the Ncurses event key to the keycode that the core will understand. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="41" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="340" bodyend="349"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1ac4af91a37eb4c9f90eb395584478393c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassNcurses::setIsNewMap</definition>
+        <argsstring>(bool)</argsstring>
+        <name>setIsNewMap</name>
+        <reimplements refid="class_i_graphic_1a6037174816d5cab7c115eb1a69bbb0ff">setIsNewMap</reimplements>
+        <param>
+          <type>bool</type>
+          <defname>NewMap</defname>
+        </param>
+        <briefdescription>
+<para>set bool if there&apos;s a new map </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="43" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="358" bodyend="361"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1aa8bfa58151282f8132678bb01a7c0cbb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ClassNcurses::getIsNewMap</definition>
+        <argsstring>(void) const</argsstring>
+        <name>getIsNewMap</name>
+        <reimplements refid="class_i_graphic_1ae10de43a122b5e1f35a3d2d55cf08e59">getIsNewMap</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>return bool if there&apos;s a new map </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="44" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="370" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1a29f52a5e975ed67051043a09df8761b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassNcurses::setIsNewKey</definition>
+        <argsstring>(bool)</argsstring>
+        <name>setIsNewKey</name>
+        <reimplements refid="class_i_graphic_1a8be0cc1ebd85fc184a9890f5ad372a1e">setIsNewKey</reimplements>
+        <param>
+          <type>bool</type>
+          <defname>NewKey</defname>
+        </param>
+        <briefdescription>
+<para>set bool if there&apos;s a new key press </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="46" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="382" bodyend="385"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1aced384c156be423906474afce8ff16d4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ClassNcurses::getIsNewKey</definition>
+        <argsstring>(void) const</argsstring>
+        <name>getIsNewKey</name>
+        <reimplements refid="class_i_graphic_1a923ea671c162a94978c0f361084dd1a5">getIsNewKey</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>return bool if there&apos;s a new key use </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="47" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="394" bodyend="397"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1abf219cf4107d65ca0ebd27746bdf2f08" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassNcurses::setLastKey</definition>
+        <argsstring>(int)</argsstring>
+        <name>setLastKey</name>
+        <reimplements refid="class_i_graphic_1ac3f35a4649c75449f270e3f3f9c12034">setLastKey</reimplements>
+        <param>
+          <type>int</type>
+          <defname>key</defname>
+        </param>
+        <briefdescription>
+<para>set the int key when a key is press </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="49" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="406" bodyend="409"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1aac74db17b17b13da42df3d2aacc450d8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int ClassNcurses::getLastKey</definition>
+        <argsstring>(void) const</argsstring>
+        <name>getLastKey</name>
+        <reimplements refid="class_i_graphic_1a50b9159724eb7f07b597ebc65041e545">getLastKey</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>return the int key when a key is press </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="50" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="418" bodyend="421"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1ac3f7d8e8d5a1ce75be1a1e25947e2dd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassNcurses::setScore</definition>
+        <argsstring>(size_t)</argsstring>
+        <name>setScore</name>
+        <reimplements refid="class_i_graphic_1a2380c2fa5c0d95b6d8b7267bf0c82142">setScore</reimplements>
+        <param>
+          <type>size_t</type>
+          <defname>score</defname>
+        </param>
+        <briefdescription>
+<para>set the score when you&apos;re playing </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="52" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="430" bodyend="433"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1a3f7462f5774558326103d382a284c5e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t ClassNcurses::getScore</definition>
+        <argsstring>() const</argsstring>
+        <name>getScore</name>
+        <reimplements refid="class_i_graphic_1a4ab82acdbf8c33174612d42a375a7c77">getScore</reimplements>
+        <briefdescription>
+<para>return the score when you finish to play </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="53" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="442" bodyend="445"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1a71d6e2ca109814227bf0cefa72b75bf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClassNcurses::setMapTexture</definition>
+        <argsstring>()</argsstring>
+        <name>setMapTexture</name>
+        <briefdescription>
+<para>do nothing </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="55" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="311" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1a3a995db689b6ea55870b4bacaf2a5bc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClassNcurses::displayGame</definition>
+        <argsstring>()</argsstring>
+        <name>displayGame</name>
+        <briefdescription>
+<para>Translate the game&apos;s map and print it. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="56" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="156" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1a9c2a93071b172ec58bdbd5c1db729deb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassNcurses::setPathConfig</definition>
+        <argsstring>(std::string) noexcept</argsstring>
+        <name>setPathConfig</name>
+        <reimplements refid="class_i_graphic_1a68eb38735e805083420a000fffd973f7">setPathConfig</reimplements>
+        <param>
+          <type>std::string</type>
+          <defname>path</defname>
+        </param>
+        <briefdescription>
+<para>set when there&apos;s a new path config </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="58" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="454" bodyend="457"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1a2dc8f00718d91b26e7458965ee42edc4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string ClassNcurses::getPathConfig</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>getPathConfig</name>
+        <reimplements refid="class_i_graphic_1aa3d891972e5633a3163ed82e16ff9c98">getPathConfig</reimplements>
+        <briefdescription>
+<para>return the actual path config </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="59" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="466" bodyend="469"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1aa3c183b964ce7de954199067b464fdb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassNcurses::setIsNewPathConfig</definition>
+        <argsstring>(bool) noexcept</argsstring>
+        <name>setIsNewPathConfig</name>
+        <reimplements refid="class_i_graphic_1ad8a1f76efc7b6c1e8b1387653dc9cb72">setIsNewPathConfig</reimplements>
+        <param>
+          <type>bool</type>
+          <defname>isNewPath</defname>
+        </param>
+        <briefdescription>
+<para>set bool if a new path config is set </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="61" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="478" bodyend="481"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1a084f08b26e87cd4457620a6723eefb0a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ClassNcurses::getIsNewPathConfig</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>getIsNewPathConfig</name>
+        <reimplements refid="class_i_graphic_1abde51d0606da0a538435c8dc4f66a5d2">getIsNewPathConfig</reimplements>
+        <briefdescription>
+<para>return bool if a new path config is set </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="62" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="490" bodyend="493"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1ab5e8c02788b76706a77b12de03f75f6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassNcurses::buildMap</definition>
+        <argsstring>(std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;)</argsstring>
+        <name>buildMap</name>
+        <reimplements refid="class_i_graphic_1ad6ff7f8cf232daec6f9d5a4a468eba2c">buildMap</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;</type>
+          <defname>map</defname>
+        </param>
+        <briefdescription>
+<para>do nothing </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="64" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="299" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1a769fdb666e2f8dbc5998208f09216c04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ClassNcurses::getEvent</definition>
+        <argsstring>()</argsstring>
+        <name>getEvent</name>
+        <briefdescription>
+<para>Handle the events of the Ncurses. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="65" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="247" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1a2d1733200957118376adf08a7ac9b046" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClassNcurses::displayMenu</definition>
+        <argsstring>()</argsstring>
+        <name>displayMenu</name>
+        <briefdescription>
+<para>display the menu </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="67" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="61" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_ncurses_1a77a0f1531a53705a81e77288b1531383" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClassNcurses::displayLetters</definition>
+        <argsstring>()</argsstring>
+        <name>displayLetters</name>
+        <briefdescription>
+<para>Create differents words for the menu. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NCURSES/ClassNcurses.hpp" line="68" column="1" bodyfile="lib/NCURSES/ClassNcurses.cpp" bodystart="105" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class representing <ref refid="class_class_ncurses" kindref="compound">ClassNcurses</ref> logic. </para>    </briefdescription>
+    <detaileddescription>
+<para>This class contains the fonctions that handle the NCURSES </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="8">
+        <label>ClassNcurses</label>
+        <link refid="class_class_ncurses"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>IGraphic</label>
+        <link refid="class_i_graphic"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10">
+        <label>ClassNcurses</label>
+        <link refid="class_class_ncurses"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>IGraphic</label>
+        <link refid="class_i_graphic"/>
+      </node>
+    </collaborationgraph>
+    <location file="lib/NCURSES/ClassNcurses.hpp" line="33" column="1" bodyfile="lib/NCURSES/ClassNcurses.hpp" bodystart="32" bodyend="87"/>
+    <listofallmembers>
+      <member refid="class_class_ncurses_1a03a425a8f6b698cc8256df0a1c51c56c" prot="private" virt="non-virtual"><scope>ClassNcurses</scope><name>_c</name></member>
+      <member refid="class_class_ncurses_1a8edcb3551c436acc9eeeeceaff13528a" prot="private" virt="non-virtual"><scope>ClassNcurses</scope><name>_isNewKey</name></member>
+      <member refid="class_class_ncurses_1a2ba164fa09bbd0aac546bb7584b78829" prot="private" virt="non-virtual"><scope>ClassNcurses</scope><name>_isNewMap</name></member>
+      <member refid="class_class_ncurses_1a58a11fcee338bf7c90602203d49d5dd4" prot="private" virt="non-virtual"><scope>ClassNcurses</scope><name>_isNewPathConfig</name></member>
+      <member refid="class_class_ncurses_1a122c83ca570a46de71b0bf6ef995045c" prot="private" virt="non-virtual"><scope>ClassNcurses</scope><name>_key</name></member>
+      <member refid="class_class_ncurses_1af65a2bf1f70227eb03d09acbe394597f" prot="private" virt="non-virtual"><scope>ClassNcurses</scope><name>_map</name></member>
+      <member refid="class_class_ncurses_1ace71ac82a66f0d0a586df9c902564add" prot="private" virt="non-virtual"><scope>ClassNcurses</scope><name>_parsing</name></member>
+      <member refid="class_class_ncurses_1a92c235b1f22e7fc427fdf7eef6510817" prot="private" virt="non-virtual"><scope>ClassNcurses</scope><name>_pathConfig</name></member>
+      <member refid="class_class_ncurses_1a0e2717c4b90e60f0f621e06f62efc0a2" prot="private" virt="non-virtual"><scope>ClassNcurses</scope><name>_score</name></member>
+      <member refid="class_class_ncurses_1ae11213809fc7e060f8605da805976d70" prot="private" virt="non-virtual"><scope>ClassNcurses</scope><name>_window</name></member>
+      <member refid="class_class_ncurses_1a8345954f0d30bd5c3e2a32f3f2eff10a" prot="private" virt="non-virtual"><scope>ClassNcurses</scope><name>_window_menu_ncurses</name></member>
+      <member refid="class_class_ncurses_1ad120ef311cff774862263e127387d6a3" prot="private" virt="non-virtual"><scope>ClassNcurses</scope><name>_window_menu_sdl</name></member>
+      <member refid="class_class_ncurses_1a44d86c63993f9f3b52a77abe68d44ec4" prot="private" virt="non-virtual"><scope>ClassNcurses</scope><name>_window_menu_sfml</name></member>
+      <member refid="class_class_ncurses_1a5bd1ad21d9026ad06f50704e7da7412c" prot="private" virt="non-virtual"><scope>ClassNcurses</scope><name>_window_pacman</name></member>
+      <member refid="class_class_ncurses_1ab5e8c02788b76706a77b12de03f75f6d" prot="public" virt="virtual"><scope>ClassNcurses</scope><name>buildMap</name></member>
+      <member refid="class_class_ncurses_1a334f21e7d6fae191228601dbaa32d3f6" prot="public" virt="non-virtual"><scope>ClassNcurses</scope><name>ClassNcurses</name></member>
+      <member refid="class_class_ncurses_1a3a995db689b6ea55870b4bacaf2a5bc4" prot="public" virt="non-virtual"><scope>ClassNcurses</scope><name>displayGame</name></member>
+      <member refid="class_class_ncurses_1a77a0f1531a53705a81e77288b1531383" prot="public" virt="non-virtual"><scope>ClassNcurses</scope><name>displayLetters</name></member>
+      <member refid="class_class_ncurses_1a2d1733200957118376adf08a7ac9b046" prot="public" virt="non-virtual"><scope>ClassNcurses</scope><name>displayMenu</name></member>
+      <member refid="class_class_ncurses_1a769fdb666e2f8dbc5998208f09216c04" prot="public" virt="non-virtual"><scope>ClassNcurses</scope><name>getEvent</name></member>
+      <member refid="class_class_ncurses_1aced384c156be423906474afce8ff16d4" prot="public" virt="virtual"><scope>ClassNcurses</scope><name>getIsNewKey</name></member>
+      <member refid="class_class_ncurses_1aa8bfa58151282f8132678bb01a7c0cbb" prot="public" virt="virtual"><scope>ClassNcurses</scope><name>getIsNewMap</name></member>
+      <member refid="class_class_ncurses_1a084f08b26e87cd4457620a6723eefb0a" prot="public" virt="virtual"><scope>ClassNcurses</scope><name>getIsNewPathConfig</name></member>
+      <member refid="class_class_ncurses_1aac74db17b17b13da42df3d2aacc450d8" prot="public" virt="virtual"><scope>ClassNcurses</scope><name>getLastKey</name></member>
+      <member refid="class_class_ncurses_1a2dc8f00718d91b26e7458965ee42edc4" prot="public" virt="virtual"><scope>ClassNcurses</scope><name>getPathConfig</name></member>
+      <member refid="class_class_ncurses_1a3f7462f5774558326103d382a284c5e3" prot="public" virt="virtual"><scope>ClassNcurses</scope><name>getScore</name></member>
+      <member refid="class_class_ncurses_1aac4288eb28653abcda975fcb5e56f5d7" prot="public" virt="virtual"><scope>ClassNcurses</scope><name>runGraph</name></member>
+      <member refid="class_class_ncurses_1a29f52a5e975ed67051043a09df8761b8" prot="public" virt="virtual"><scope>ClassNcurses</scope><name>setIsNewKey</name></member>
+      <member refid="class_class_ncurses_1ac4af91a37eb4c9f90eb395584478393c" prot="public" virt="virtual"><scope>ClassNcurses</scope><name>setIsNewMap</name></member>
+      <member refid="class_class_ncurses_1aa3c183b964ce7de954199067b464fdb1" prot="public" virt="virtual"><scope>ClassNcurses</scope><name>setIsNewPathConfig</name></member>
+      <member refid="class_class_ncurses_1abf219cf4107d65ca0ebd27746bdf2f08" prot="public" virt="virtual"><scope>ClassNcurses</scope><name>setLastKey</name></member>
+      <member refid="class_class_ncurses_1a74af301cf3439ef2e507406751ce51af" prot="public" virt="virtual"><scope>ClassNcurses</scope><name>setMap</name></member>
+      <member refid="class_class_ncurses_1a71d6e2ca109814227bf0cefa72b75bf3" prot="public" virt="non-virtual"><scope>ClassNcurses</scope><name>setMapTexture</name></member>
+      <member refid="class_class_ncurses_1a9c2a93071b172ec58bdbd5c1db729deb" prot="public" virt="virtual"><scope>ClassNcurses</scope><name>setPathConfig</name></member>
+      <member refid="class_class_ncurses_1ac3f7d8e8d5a1ce75be1a1e25947e2dd0" prot="public" virt="virtual"><scope>ClassNcurses</scope><name>setScore</name></member>
+      <member refid="class_class_ncurses_1a3ffbcd0c1f464454a70d8f99ee8e7afe" prot="public" virt="virtual"><scope>ClassNcurses</scope><name>translateKey</name></member>
+      <member refid="class_class_ncurses_1ab172cc227fea41b4f5ae5591712522ca" prot="public" virt="non-virtual"><scope>ClassNcurses</scope><name>~ClassNcurses</name></member>
+      <member refid="class_i_graphic_1aca238e622e55e4c3a61e1c7344902271" prot="public" virt="virtual"><scope>ClassNcurses</scope><name>~IGraphic</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

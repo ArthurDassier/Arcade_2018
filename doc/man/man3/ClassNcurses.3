@@ -1,4 +1,4 @@
-.TH "ClassNcurses" 3 "Sun Mar 31 2019" "Version 1.0" "Arcade" \" -*- nroff -*-
+.TH "ClassNcurses" 3 "Sun Mar 31 2019" "Version 1.0" "OOP_arcade_2018" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -25,7 +25,7 @@ Inherits \fBIGraphic\fP\&.
 .ti -1c
 .RI "bool \fBrunGraph\fP ()"
 .br
-.RI "Handle the events of the Ncurses\&. "
+.RI "Main fct manage the events, prints and create map\&. "
 .ti -1c
 .RI "void \fBsetMap\fP (std::shared_ptr< std::vector< std::string >>)"
 .br
@@ -37,48 +37,63 @@ Inherits \fBIGraphic\fP\&.
 .ti -1c
 .RI "void \fBsetIsNewMap\fP (bool)"
 .br
+.RI "set bool if there's a new map "
 .ti -1c
 .RI "bool \fBgetIsNewMap\fP (void) const"
 .br
+.RI "return bool if there's a new map "
 .ti -1c
 .RI "void \fBsetIsNewKey\fP (bool)"
 .br
+.RI "set bool if there's a new key press "
 .ti -1c
 .RI "bool \fBgetIsNewKey\fP (void) const"
 .br
+.RI "return bool if there's a new key use "
 .ti -1c
 .RI "void \fBsetLastKey\fP (int)"
 .br
+.RI "set the int key when a key is press "
 .ti -1c
 .RI "int \fBgetLastKey\fP (void) const"
 .br
+.RI "return the int key when a key is press "
 .ti -1c
 .RI "void \fBsetScore\fP (size_t)"
 .br
+.RI "set the score when you're playing "
 .ti -1c
 .RI "size_t \fBgetScore\fP () const"
 .br
+.RI "return the score when you finish to play "
 .ti -1c
 .RI "void \fBsetMapTexture\fP ()"
 .br
+.RI "do nothing "
 .ti -1c
 .RI "void \fBdisplayGame\fP ()"
 .br
+.RI "Translate the game's map and print it\&. "
 .ti -1c
 .RI "void \fBsetPathConfig\fP (std::string) noexcept"
 .br
+.RI "set when there's a new path config "
 .ti -1c
 .RI "std::string \fBgetPathConfig\fP () const noexcept"
 .br
+.RI "return the actual path config "
 .ti -1c
 .RI "void \fBsetIsNewPathConfig\fP (bool) noexcept"
 .br
+.RI "set bool if a new path config is set "
 .ti -1c
 .RI "bool \fBgetIsNewPathConfig\fP () const noexcept"
 .br
+.RI "return bool if a new path config is set "
 .ti -1c
 .RI "void \fBbuildMap\fP (std::shared_ptr< std::vector< std::string >>)"
 .br
+.RI "do nothing "
 .ti -1c
 .RI "bool \fBgetEvent\fP ()"
 .br
@@ -86,19 +101,11 @@ Inherits \fBIGraphic\fP\&.
 .ti -1c
 .RI "void \fBdisplayMenu\fP ()"
 .br
+.RI "display the menu "
 .ti -1c
 .RI "void \fBdisplayLetters\fP ()"
 .br
-.ti -1c
-.RI "int \fBget_input\fP ()"
-.br
-.RI "Handle the inputs of the user\&. "
-.ti -1c
-.RI "std::string \fBget_string\fP ()"
-.br
-.ti -1c
-.RI "char \fBtranslate_for_menu\fP (int)"
-.br
+.RI "Create differents words for the menu\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -134,31 +141,28 @@ Ncurses Class destructor, just quit the Ncurses\&.
 .PP
 
 .PP
-Definition at line 47 of file ClassNcurses\&.cpp\&.
+Definition at line 49 of file ClassNcurses\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void ClassNcurses::buildMap (std::shared_ptr< std::vector< std::string >> map = \fCnullptr\fP)\fC [virtual]\fP"
 
 .PP
+do nothing 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstd::shared_ptr<std::vector<std::string>>\fP 
+.RE
+.PP
+
+.PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 289 of file ClassNcurses\&.cpp\&.
+Definition at line 299 of file ClassNcurses\&.cpp\&.
 .SS "void ClassNcurses::displayGame ()"
 
 .PP
-Definition at line 121 of file ClassNcurses\&.cpp\&.
-.SS "void ClassNcurses::displayLetters ()"
-
-.PP
-Definition at line 77 of file ClassNcurses\&.cpp\&.
-.SS "void ClassNcurses::displayMenu ()"
-
-.PP
-Definition at line 52 of file ClassNcurses\&.cpp\&.
-.SS "int ClassNcurses::get_input ()"
-
-.PP
-Handle the inputs of the user\&. 
+Translate the game's map and print it\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -167,11 +171,33 @@ Handle the inputs of the user\&.
 .PP
 
 .PP
-Definition at line 234 of file ClassNcurses\&.cpp\&.
-.SS "std::string ClassNcurses::get_string ()"
+Definition at line 156 of file ClassNcurses\&.cpp\&.
+.SS "void ClassNcurses::displayLetters ()"
 
 .PP
-Definition at line 250 of file ClassNcurses\&.cpp\&.
+Create differents words for the menu\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 105 of file ClassNcurses\&.cpp\&.
+.SS "void ClassNcurses::displayMenu ()"
+
+.PP
+display the menu 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file ClassNcurses\&.cpp\&.
 .SS "bool ClassNcurses::getEvent ()"
 
 .PP
@@ -184,47 +210,11 @@ Handle the events of the Ncurses\&.
 .PP
 
 .PP
-Definition at line 211 of file ClassNcurses\&.cpp\&.
+Definition at line 247 of file ClassNcurses\&.cpp\&.
 .SS "bool ClassNcurses::getIsNewKey (void) const\fC [virtual]\fP"
 
 .PP
-Implements \fBIGraphic\fP\&.
-.PP
-Definition at line 442 of file ClassNcurses\&.cpp\&.
-.SS "bool ClassNcurses::getIsNewMap (void) const\fC [virtual]\fP"
-
-.PP
-Implements \fBIGraphic\fP\&.
-.PP
-Definition at line 432 of file ClassNcurses\&.cpp\&.
-.SS "bool ClassNcurses::getIsNewPathConfig () const\fC [virtual]\fP, \fC [noexcept]\fP"
-
-.PP
-Implements \fBIGraphic\fP\&.
-.PP
-Definition at line 482 of file ClassNcurses\&.cpp\&.
-.SS "int ClassNcurses::getLastKey (void) const\fC [virtual]\fP"
-
-.PP
-Implements \fBIGraphic\fP\&.
-.PP
-Definition at line 452 of file ClassNcurses\&.cpp\&.
-.SS "std::string ClassNcurses::getPathConfig () const\fC [virtual]\fP, \fC [noexcept]\fP"
-
-.PP
-Implements \fBIGraphic\fP\&.
-.PP
-Definition at line 472 of file ClassNcurses\&.cpp\&.
-.SS "size_t ClassNcurses::getScore (void) const\fC [virtual]\fP"
-
-.PP
-Implements \fBIGraphic\fP\&.
-.PP
-Definition at line 462 of file ClassNcurses\&.cpp\&.
-.SS "bool ClassNcurses::runGraph ()\fC [virtual]\fP"
-
-.PP
-Handle the events of the Ncurses\&. 
+return bool if there's a new key use 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -235,31 +225,157 @@ Handle the events of the Ncurses\&.
 .PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 268 of file ClassNcurses\&.cpp\&.
+Definition at line 394 of file ClassNcurses\&.cpp\&.
+.SS "bool ClassNcurses::getIsNewMap (void) const\fC [virtual]\fP"
+
+.PP
+return bool if there's a new map 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 370 of file ClassNcurses\&.cpp\&.
+.SS "bool ClassNcurses::getIsNewPathConfig () const\fC [virtual]\fP, \fC [noexcept]\fP"
+
+.PP
+return bool if a new path config is set 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 490 of file ClassNcurses\&.cpp\&.
+.SS "int ClassNcurses::getLastKey (void) const\fC [virtual]\fP"
+
+.PP
+return the int key when a key is press 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 418 of file ClassNcurses\&.cpp\&.
+.SS "std::string ClassNcurses::getPathConfig () const\fC [virtual]\fP, \fC [noexcept]\fP"
+
+.PP
+return the actual path config 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 466 of file ClassNcurses\&.cpp\&.
+.SS "size_t ClassNcurses::getScore (void) const\fC [virtual]\fP"
+
+.PP
+return the score when you finish to play 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 442 of file ClassNcurses\&.cpp\&.
+.SS "bool ClassNcurses::runGraph ()\fC [virtual]\fP"
+
+.PP
+Main fct manage the events, prints and create map\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 271 of file ClassNcurses\&.cpp\&.
 .SS "void ClassNcurses::setIsNewKey (bool NewKey)\fC [virtual]\fP"
 
 .PP
+set bool if there's a new key press 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbool\fP 
+.RE
+.PP
+
+.PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 437 of file ClassNcurses\&.cpp\&.
+Definition at line 382 of file ClassNcurses\&.cpp\&.
 .SS "void ClassNcurses::setIsNewMap (bool NewMap)\fC [virtual]\fP"
 
 .PP
+set bool if there's a new map 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbool\fP 
+.RE
+.PP
+
+.PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 427 of file ClassNcurses\&.cpp\&.
+Definition at line 358 of file ClassNcurses\&.cpp\&.
 .SS "void ClassNcurses::setIsNewPathConfig (bool isNewPath)\fC [virtual]\fP, \fC [noexcept]\fP"
 
 .PP
-Implements \fBIGraphic\fP\&.
+set bool if a new path config is set 
 .PP
-Definition at line 477 of file ClassNcurses\&.cpp\&.
-.SS "void ClassNcurses::setLastKey (int key)\fC [virtual]\fP"
+\fBParameters:\fP
+.RS 4
+\fIbool\fP 
+.RE
+.PP
 
 .PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 447 of file ClassNcurses\&.cpp\&.
+Definition at line 478 of file ClassNcurses\&.cpp\&.
+.SS "void ClassNcurses::setLastKey (int key)\fC [virtual]\fP"
+
+.PP
+set the int key when a key is press 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint\fP 
+.RE
+.PP
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 406 of file ClassNcurses\&.cpp\&.
 .SS "void ClassNcurses::setMap (std::shared_ptr< std::vector< std::string >> map)\fC [virtual]\fP"
 
 .PP
@@ -267,34 +383,57 @@ Change the char in our _map of textures corresponding to the map\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIstd::shared_ptr<std::vector<std::string>>\fP map 
+\fIstd::shared_ptr<std::vector<std::string>>\fP 
 .RE
 .PP
 
 .PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 398 of file ClassNcurses\&.cpp\&.
+Definition at line 323 of file ClassNcurses\&.cpp\&.
 .SS "void ClassNcurses::setMapTexture ()"
 
 .PP
-Definition at line 294 of file ClassNcurses\&.cpp\&.
+do nothing 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 311 of file ClassNcurses\&.cpp\&.
 .SS "void ClassNcurses::setPathConfig (std::string path)\fC [virtual]\fP, \fC [noexcept]\fP"
 
 .PP
+set when there's a new path config 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstd::string\fP 
+.RE
+.PP
+
+.PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 467 of file ClassNcurses\&.cpp\&.
+Definition at line 454 of file ClassNcurses\&.cpp\&.
 .SS "void ClassNcurses::setScore (size_t score)\fC [virtual]\fP"
 
 .PP
-Implements \fBIGraphic\fP\&.
+set the score when you're playing 
 .PP
-Definition at line 457 of file ClassNcurses\&.cpp\&.
-.SS "char ClassNcurses::translate_for_menu (int nb)"
+\fBParameters:\fP
+.RS 4
+\fIsize_t\fP 
+.RE
+.PP
 
 .PP
-Definition at line 255 of file ClassNcurses\&.cpp\&.
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 430 of file ClassNcurses\&.cpp\&.
 .SS "void ClassNcurses::translateKey ()\fC [virtual]\fP"
 
 .PP
@@ -309,8 +448,8 @@ Translate the Ncurses event key to the keycode that the core will understand\&.
 .PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 414 of file ClassNcurses\&.cpp\&.
+Definition at line 340 of file ClassNcurses\&.cpp\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for Arcade from the source code\&.
+Generated automatically by Doxygen for OOP_arcade_2018 from the source code\&.

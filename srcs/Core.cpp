@@ -98,6 +98,7 @@ void Core::loadMenu()
     _libModule->setPathConfig(_pathConfig);
     _libModule->setIsNewPathConfig(true);
     mapMenu();
+    _libModule->buildMap(_mapMenu);
     _libModule->setMap(_mapMenu);
     _libModule->setIsNewMap(true);
     _parsing.setFilename(_pathConfig);

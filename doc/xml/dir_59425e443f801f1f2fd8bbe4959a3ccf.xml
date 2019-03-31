@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_59425e443f801f1f2fd8bbe4959a3ccf" kind="dir">
+    <compoundname>tests</compoundname>
+    <innerfile refid="tests___n_c_u_r_s_e_s_8cpp">tests_NCURSES.cpp</innerfile>
+    <innerfile refid="tests___s_d_l_8cpp">tests_SDL.cpp</innerfile>
+    <innerfile refid="tests___s_f_m_l_8cpp">tests_SFML.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/"/>
+  </compounddef>
+</doxygen>

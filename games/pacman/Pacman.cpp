@@ -25,9 +25,9 @@ Pacman::Pacman():
     _map = std::make_shared<std::vector<std::string>>();
     for (size_t i = 0; i < 4; i++)
         _clock[i] = clock();
-    _pacman = new Entity(PLAYER);
+    _pacman = std::make_shared<Entity>(PLAYER);
     _pacman->setSpeed(0.1);
-    auto ghost = new Entity(ENEMY);
+    std::shared_ptr<Entity> ghost = std::make_shared<Entity>(ENEMY);
     ghost->setSpeed(5);
     _ghosts.push_back(ghost);
 }
@@ -40,9 +40,6 @@ Pacman::Pacman():
  */
 Pacman::~Pacman()
 {
-    delete _pacman;
-    for (auto it = _ghosts.begin(); it != _ghosts.end(); ++it)
-        delete *it;
     _lock_create_map = true;
 }
 
@@ -72,12 +69,14 @@ bool Pacman::runGame()
         setMove((Move)getLastKey());
         _pacman->move(getMove(), _map);
         _clock[0] = clock();
+        setIsNewMap(true);
     }
     if (static_cast<double>((clock() - _clock[1])) / CLOCKS_PER_SEC > _ghosts.at(0)->getSpeed()) {
         _ghosts.at(0)->move(UP, _map);
         _ghosts.at(0)->setSpeed(0.1);
         _ghosts.at(0)->move(UP, _map);
         _clock[1] = clock();
+        setIsNewMap(true);
     }
     setScore(_pacman->getScore());
     setIsNewMap(true);

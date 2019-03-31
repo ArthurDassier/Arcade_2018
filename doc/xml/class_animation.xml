@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_animation" kind="class" language="C++" prot="public">
+    <compoundname>Animation</compoundname>
+    <includes refid="_animation_8hpp" local="no">Animation.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_animation_1a30c14ed935c467aff746e158d6182372" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; sf::IntRect &gt;</type>
+        <definition>std::vector&lt;sf::IntRect&gt; Animation::_frames</definition>
+        <argsstring></argsstring>
+        <name>_frames</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/Animation.hpp" line="26" column="1" bodyfile="lib/SFML/Animation.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_animation_1a0cff1c6c3899d7fe659412f7a35d9d33" prot="private" static="no" mutable="no">
+        <type>const sf::Texture *</type>
+        <definition>const sf::Texture* Animation::_texture</definition>
+        <argsstring></argsstring>
+        <name>_texture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/Animation.hpp" line="27" column="1" bodyfile="lib/SFML/Animation.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_animation_1a83f0a16cef7117f187ad596de38dd9d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Animation::Animation</definition>
+        <argsstring>()</argsstring>
+        <name>Animation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/Animation.hpp" line="15" column="1" bodyfile="lib/SFML/Animation.cpp" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animation_1a401b68793d4fbf48d481c030ee4b2a16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Animation::~Animation</definition>
+        <argsstring>()</argsstring>
+        <name>~Animation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/Animation.hpp" line="16" column="1" bodyfile="lib/SFML/Animation.cpp" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animation_1a18d8f46d264b0b5a8441c1114c486d0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Animation::addFrame</definition>
+        <argsstring>(sf::IntRect)</argsstring>
+        <name>addFrame</name>
+        <param>
+          <type>sf::IntRect</type>
+          <defname>rect</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/Animation.hpp" line="18" column="1" bodyfile="lib/SFML/Animation.cpp" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animation_1a2da43578722139dfe4b4375b7fe99aba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Animation::setSpriteSheet</definition>
+        <argsstring>(const sf::Texture &amp;)</argsstring>
+        <name>setSpriteSheet</name>
+        <param>
+          <type>const sf::Texture &amp;</type>
+          <defname>texture</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/Animation.hpp" line="20" column="1" bodyfile="lib/SFML/Animation.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animation_1abf4f00f8b1657829583d7d92e71b93d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const sf::Texture *</type>
+        <definition>const sf::Texture * Animation::getSpriteSheet</definition>
+        <argsstring>() const</argsstring>
+        <name>getSpriteSheet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/Animation.hpp" line="21" column="1" bodyfile="lib/SFML/Animation.cpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animation_1ac6854dc96e9fc8ffd97feba43547c869" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t Animation::getSize</definition>
+        <argsstring>() const</argsstring>
+        <name>getSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/Animation.hpp" line="22" column="1" bodyfile="lib/SFML/Animation.cpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animation_1aaf7943420f26f46b744f49837bb65f51" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const sf::IntRect &amp;</type>
+        <definition>const sf::IntRect &amp; Animation::getFrame</definition>
+        <argsstring>(std::size_t) const</argsstring>
+        <name>getFrame</name>
+        <param>
+          <type>std::size_t</type>
+          <defname>n</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/Animation.hpp" line="23" column="1" bodyfile="lib/SFML/Animation.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/SFML/Animation.hpp" line="13" column="1" bodyfile="lib/SFML/Animation.hpp" bodystart="12" bodyend="28"/>
+    <listofallmembers>
+      <member refid="class_animation_1a30c14ed935c467aff746e158d6182372" prot="private" virt="non-virtual"><scope>Animation</scope><name>_frames</name></member>
+      <member refid="class_animation_1a0cff1c6c3899d7fe659412f7a35d9d33" prot="private" virt="non-virtual"><scope>Animation</scope><name>_texture</name></member>
+      <member refid="class_animation_1a18d8f46d264b0b5a8441c1114c486d0f" prot="public" virt="non-virtual"><scope>Animation</scope><name>addFrame</name></member>
+      <member refid="class_animation_1a83f0a16cef7117f187ad596de38dd9d6" prot="public" virt="non-virtual"><scope>Animation</scope><name>Animation</name></member>
+      <member refid="class_animation_1aaf7943420f26f46b744f49837bb65f51" prot="public" virt="non-virtual"><scope>Animation</scope><name>getFrame</name></member>
+      <member refid="class_animation_1ac6854dc96e9fc8ffd97feba43547c869" prot="public" virt="non-virtual"><scope>Animation</scope><name>getSize</name></member>
+      <member refid="class_animation_1abf4f00f8b1657829583d7d92e71b93d1" prot="public" virt="non-virtual"><scope>Animation</scope><name>getSpriteSheet</name></member>
+      <member refid="class_animation_1a2da43578722139dfe4b4375b7fe99aba" prot="public" virt="non-virtual"><scope>Animation</scope><name>setSpriteSheet</name></member>
+      <member refid="class_animation_1a401b68793d4fbf48d481c030ee4b2a16" prot="public" virt="non-virtual"><scope>Animation</scope><name>~Animation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

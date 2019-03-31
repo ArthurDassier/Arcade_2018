@@ -1,0 +1,363 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_i_graphic" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>IGraphic</compoundname>
+    <derivedcompoundref refid="class_class_ncurses" prot="public" virt="non-virtual">ClassNcurses</derivedcompoundref>
+    <derivedcompoundref refid="class_class_s_d_l" prot="public" virt="non-virtual">ClassSDL</derivedcompoundref>
+    <derivedcompoundref refid="class_class_s_f_m_l" prot="public" virt="non-virtual">ClassSFML</derivedcompoundref>
+    <includes refid="_i_graphic_8hpp" local="no">IGraphic.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_i_graphic_1aca238e622e55e4c3a61e1c7344902271" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual IGraphic::~IGraphic</definition>
+        <argsstring>()=default</argsstring>
+        <name>~IGraphic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/IGraphic.hpp" line="21" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_graphic_1a7baecac5b5b85b538622c47f12b39cd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool IGraphic::runGraph</definition>
+        <argsstring>()=0</argsstring>
+        <name>runGraph</name>
+        <reimplementedby refid="class_class_s_d_l_1ac38011a48a29f5948c31ac53c409c4bc">runGraph</reimplementedby>
+        <reimplementedby refid="class_class_ncurses_1aac4288eb28653abcda975fcb5e56f5d7">runGraph</reimplementedby>
+        <reimplementedby refid="class_class_s_f_m_l_1a64c5a966c0dcf53ecc3b3aaabafd7eb9">runGraph</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/IGraphic.hpp" line="24" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_graphic_1a6e3191fe2663c34608ff8a2b2549c398" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void IGraphic::setMap</definition>
+        <argsstring>(std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;)=0</argsstring>
+        <name>setMap</name>
+        <reimplementedby refid="class_class_s_d_l_1a91b9a455ff5dd21e2db022aaa911985d">setMap</reimplementedby>
+        <reimplementedby refid="class_class_ncurses_1a74af301cf3439ef2e507406751ce51af">setMap</reimplementedby>
+        <reimplementedby refid="class_class_s_f_m_l_1a9b143e495bdd43f42993cf5b0d492926">setMap</reimplementedby>
+        <param>
+          <type>std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/IGraphic.hpp" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_graphic_1a05d1ed2e0bcc2ddef923f4ab1df38ef1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void IGraphic::translateKey</definition>
+        <argsstring>()=0</argsstring>
+        <name>translateKey</name>
+        <reimplementedby refid="class_class_s_d_l_1a9260df31ca73a59edce7688c4664f440">translateKey</reimplementedby>
+        <reimplementedby refid="class_class_ncurses_1a3ffbcd0c1f464454a70d8f99ee8e7afe">translateKey</reimplementedby>
+        <reimplementedby refid="class_class_s_f_m_l_1a4b1d53348c79ca38489f9f0f1f62653c">translateKey</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/IGraphic.hpp" line="26" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_graphic_1a6037174816d5cab7c115eb1a69bbb0ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void IGraphic::setIsNewMap</definition>
+        <argsstring>(bool)=0</argsstring>
+        <name>setIsNewMap</name>
+        <reimplementedby refid="class_class_ncurses_1ac4af91a37eb4c9f90eb395584478393c">setIsNewMap</reimplementedby>
+        <reimplementedby refid="class_class_s_d_l_1a3f07f3aeaf6e80d6e13cf4bfd0ed194b">setIsNewMap</reimplementedby>
+        <reimplementedby refid="class_class_s_f_m_l_1aeadd6368ac5b5d185a09cd1e7c1f9dcc">setIsNewMap</reimplementedby>
+        <param>
+          <type>bool</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/IGraphic.hpp" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_graphic_1ae10de43a122b5e1f35a3d2d55cf08e59" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool IGraphic::getIsNewMap</definition>
+        <argsstring>(void) const =0</argsstring>
+        <name>getIsNewMap</name>
+        <reimplementedby refid="class_class_ncurses_1aa8bfa58151282f8132678bb01a7c0cbb">getIsNewMap</reimplementedby>
+        <reimplementedby refid="class_class_s_d_l_1aaec40afee3905c9de7e1317db6226a7b">getIsNewMap</reimplementedby>
+        <reimplementedby refid="class_class_s_f_m_l_1ab74066896f56b41f0d644c31048bf764">getIsNewMap</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/IGraphic.hpp" line="29" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_graphic_1a8be0cc1ebd85fc184a9890f5ad372a1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void IGraphic::setIsNewKey</definition>
+        <argsstring>(bool)=0</argsstring>
+        <name>setIsNewKey</name>
+        <reimplementedby refid="class_class_ncurses_1a29f52a5e975ed67051043a09df8761b8">setIsNewKey</reimplementedby>
+        <reimplementedby refid="class_class_s_d_l_1a609cd1b245abb3b30962dc09aa7802c0">setIsNewKey</reimplementedby>
+        <reimplementedby refid="class_class_s_f_m_l_1afa4dc363da11512994f5964f53792990">setIsNewKey</reimplementedby>
+        <param>
+          <type>bool</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/IGraphic.hpp" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_graphic_1a923ea671c162a94978c0f361084dd1a5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool IGraphic::getIsNewKey</definition>
+        <argsstring>(void) const =0</argsstring>
+        <name>getIsNewKey</name>
+        <reimplementedby refid="class_class_ncurses_1aced384c156be423906474afce8ff16d4">getIsNewKey</reimplementedby>
+        <reimplementedby refid="class_class_s_d_l_1ab25f9468d56aa225994484ec6e14dab7">getIsNewKey</reimplementedby>
+        <reimplementedby refid="class_class_s_f_m_l_1a0858bffedeb0ccd39ee911c08ede455d">getIsNewKey</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/IGraphic.hpp" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_graphic_1ac3f35a4649c75449f270e3f3f9c12034" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void IGraphic::setLastKey</definition>
+        <argsstring>(int)=0</argsstring>
+        <name>setLastKey</name>
+        <reimplementedby refid="class_class_ncurses_1abf219cf4107d65ca0ebd27746bdf2f08">setLastKey</reimplementedby>
+        <reimplementedby refid="class_class_s_d_l_1a2b14b2085d76430344f74227e33be9fb">setLastKey</reimplementedby>
+        <reimplementedby refid="class_class_s_f_m_l_1aeb353a7928b673ceb10f12c4d5710305">setLastKey</reimplementedby>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/IGraphic.hpp" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_graphic_1a50b9159724eb7f07b597ebc65041e545" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int IGraphic::getLastKey</definition>
+        <argsstring>(void) const =0</argsstring>
+        <name>getLastKey</name>
+        <reimplementedby refid="class_class_ncurses_1aac74db17b17b13da42df3d2aacc450d8">getLastKey</reimplementedby>
+        <reimplementedby refid="class_class_s_d_l_1a776e24b732c1118ca38f715c5371e785">getLastKey</reimplementedby>
+        <reimplementedby refid="class_class_s_f_m_l_1a7ebdd83fe2ab4c1feb3788f27a3a1b6e">getLastKey</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/IGraphic.hpp" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_graphic_1a2380c2fa5c0d95b6d8b7267bf0c82142" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void IGraphic::setScore</definition>
+        <argsstring>(size_t)=0</argsstring>
+        <name>setScore</name>
+        <reimplementedby refid="class_class_ncurses_1ac3f7d8e8d5a1ce75be1a1e25947e2dd0">setScore</reimplementedby>
+        <reimplementedby refid="class_class_s_d_l_1a4edcb6ae345daf64f3022d6b16ff255d">setScore</reimplementedby>
+        <reimplementedby refid="class_class_s_f_m_l_1a42df0bacc5fa82cfc451722332304b50">setScore</reimplementedby>
+        <param>
+          <type>size_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/IGraphic.hpp" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_graphic_1a4ab82acdbf8c33174612d42a375a7c77" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>size_t</type>
+        <definition>virtual size_t IGraphic::getScore</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getScore</name>
+        <reimplementedby refid="class_class_ncurses_1a3f7462f5774558326103d382a284c5e3">getScore</reimplementedby>
+        <reimplementedby refid="class_class_s_d_l_1a24c2230a4a7c75e9d6124d2d106ab2b3">getScore</reimplementedby>
+        <reimplementedby refid="class_class_s_f_m_l_1a525c4cf493dfd9d68ea2bba3bd15b7e7">getScore</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/IGraphic.hpp" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_graphic_1a68eb38735e805083420a000fffd973f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void IGraphic::setPathConfig</definition>
+        <argsstring>(std::string) noexcept=0</argsstring>
+        <name>setPathConfig</name>
+        <reimplementedby refid="class_class_s_f_m_l_1ac37b544f6179f33994e9fa189e15eea8">setPathConfig</reimplementedby>
+        <reimplementedby refid="class_class_ncurses_1a9c2a93071b172ec58bdbd5c1db729deb">setPathConfig</reimplementedby>
+        <reimplementedby refid="class_class_s_d_l_1aab8adf1c3fb7b5b2d9a6cfb183fc9c6a">setPathConfig</reimplementedby>
+        <param>
+          <type>std::string</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/IGraphic.hpp" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_graphic_1aa3d891972e5633a3163ed82e16ff9c98" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string IGraphic::getPathConfig</definition>
+        <argsstring>() const noexcept=0</argsstring>
+        <name>getPathConfig</name>
+        <reimplementedby refid="class_class_s_f_m_l_1aa83937866ca263758733952543eb8282">getPathConfig</reimplementedby>
+        <reimplementedby refid="class_class_ncurses_1a2dc8f00718d91b26e7458965ee42edc4">getPathConfig</reimplementedby>
+        <reimplementedby refid="class_class_s_d_l_1aceda62b43788f26e34c7d37ed1fd9459">getPathConfig</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/IGraphic.hpp" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_graphic_1ad8a1f76efc7b6c1e8b1387653dc9cb72" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void IGraphic::setIsNewPathConfig</definition>
+        <argsstring>(bool) noexcept=0</argsstring>
+        <name>setIsNewPathConfig</name>
+        <reimplementedby refid="class_class_s_f_m_l_1ab47a3c8fb83d5db1640105bd6771c3da">setIsNewPathConfig</reimplementedby>
+        <reimplementedby refid="class_class_ncurses_1aa3c183b964ce7de954199067b464fdb1">setIsNewPathConfig</reimplementedby>
+        <reimplementedby refid="class_class_s_d_l_1a83e018aac96b358b8c68be6821f9bacf">setIsNewPathConfig</reimplementedby>
+        <param>
+          <type>bool</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/IGraphic.hpp" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_graphic_1abde51d0606da0a538435c8dc4f66a5d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool IGraphic::getIsNewPathConfig</definition>
+        <argsstring>() const noexcept=0</argsstring>
+        <name>getIsNewPathConfig</name>
+        <reimplementedby refid="class_class_s_f_m_l_1a9f308ab330e1a85913cd17c8ef901d71">getIsNewPathConfig</reimplementedby>
+        <reimplementedby refid="class_class_ncurses_1a084f08b26e87cd4457620a6723eefb0a">getIsNewPathConfig</reimplementedby>
+        <reimplementedby refid="class_class_s_d_l_1a0f8788a8dfd703a7c80d54399ec745ca">getIsNewPathConfig</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/IGraphic.hpp" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_graphic_1ad6ff7f8cf232daec6f9d5a4a468eba2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void IGraphic::buildMap</definition>
+        <argsstring>(std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;=nullptr)=0</argsstring>
+        <name>buildMap</name>
+        <reimplementedby refid="class_class_ncurses_1ab5e8c02788b76706a77b12de03f75f6d">buildMap</reimplementedby>
+        <reimplementedby refid="class_class_s_d_l_1a5b4b518f4934b41fd57630c3006d9d03">buildMap</reimplementedby>
+        <reimplementedby refid="class_class_s_f_m_l_1a1770ece2b45a9b9b7e6c153076b2daa8">buildMap</reimplementedby>
+        <param>
+          <type>std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;</type>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/IGraphic.hpp" line="46" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="34">
+        <label>ClassNcurses</label>
+        <link refid="class_class_ncurses"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>IGraphic</label>
+        <link refid="class_i_graphic"/>
+      </node>
+      <node id="35">
+        <label>ClassSDL</label>
+        <link refid="class_class_s_d_l"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>ClassSFML</label>
+        <link refid="class_class_s_f_m_l"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="lib/IGraphic.hpp" line="19" column="1" bodyfile="lib/IGraphic.hpp" bodystart="19" bodyend="47"/>
+    <listofallmembers>
+      <member refid="class_i_graphic_1ad6ff7f8cf232daec6f9d5a4a468eba2c" prot="public" virt="pure-virtual"><scope>IGraphic</scope><name>buildMap</name></member>
+      <member refid="class_i_graphic_1a923ea671c162a94978c0f361084dd1a5" prot="public" virt="pure-virtual"><scope>IGraphic</scope><name>getIsNewKey</name></member>
+      <member refid="class_i_graphic_1ae10de43a122b5e1f35a3d2d55cf08e59" prot="public" virt="pure-virtual"><scope>IGraphic</scope><name>getIsNewMap</name></member>
+      <member refid="class_i_graphic_1abde51d0606da0a538435c8dc4f66a5d2" prot="public" virt="pure-virtual"><scope>IGraphic</scope><name>getIsNewPathConfig</name></member>
+      <member refid="class_i_graphic_1a50b9159724eb7f07b597ebc65041e545" prot="public" virt="pure-virtual"><scope>IGraphic</scope><name>getLastKey</name></member>
+      <member refid="class_i_graphic_1aa3d891972e5633a3163ed82e16ff9c98" prot="public" virt="pure-virtual"><scope>IGraphic</scope><name>getPathConfig</name></member>
+      <member refid="class_i_graphic_1a4ab82acdbf8c33174612d42a375a7c77" prot="public" virt="pure-virtual"><scope>IGraphic</scope><name>getScore</name></member>
+      <member refid="class_i_graphic_1a7baecac5b5b85b538622c47f12b39cd9" prot="public" virt="pure-virtual"><scope>IGraphic</scope><name>runGraph</name></member>
+      <member refid="class_i_graphic_1a8be0cc1ebd85fc184a9890f5ad372a1e" prot="public" virt="pure-virtual"><scope>IGraphic</scope><name>setIsNewKey</name></member>
+      <member refid="class_i_graphic_1a6037174816d5cab7c115eb1a69bbb0ff" prot="public" virt="pure-virtual"><scope>IGraphic</scope><name>setIsNewMap</name></member>
+      <member refid="class_i_graphic_1ad8a1f76efc7b6c1e8b1387653dc9cb72" prot="public" virt="pure-virtual"><scope>IGraphic</scope><name>setIsNewPathConfig</name></member>
+      <member refid="class_i_graphic_1ac3f35a4649c75449f270e3f3f9c12034" prot="public" virt="pure-virtual"><scope>IGraphic</scope><name>setLastKey</name></member>
+      <member refid="class_i_graphic_1a6e3191fe2663c34608ff8a2b2549c398" prot="public" virt="pure-virtual"><scope>IGraphic</scope><name>setMap</name></member>
+      <member refid="class_i_graphic_1a68eb38735e805083420a000fffd973f7" prot="public" virt="pure-virtual"><scope>IGraphic</scope><name>setPathConfig</name></member>
+      <member refid="class_i_graphic_1a2380c2fa5c0d95b6d8b7267bf0c82142" prot="public" virt="pure-virtual"><scope>IGraphic</scope><name>setScore</name></member>
+      <member refid="class_i_graphic_1a05d1ed2e0bcc2ddef923f4ab1df38ef1" prot="public" virt="pure-virtual"><scope>IGraphic</scope><name>translateKey</name></member>
+      <member refid="class_i_graphic_1aca238e622e55e4c3a61e1c7344902271" prot="public" virt="virtual"><scope>IGraphic</scope><name>~IGraphic</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

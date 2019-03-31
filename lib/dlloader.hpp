@@ -23,9 +23,9 @@ class DLLoader
         DLLoader(std::string lib_path)
         {
             _handle = dlopen(lib_path.c_str(), RTLD_NOW);
-            if (_handle == NULL) {
-                fprintf(stderr, "Error: %s\n", dlerror());
-                exit(84);
+            if (_handle == nullptr) {
+                std::cerr << "Error: " << dlerror() << std::endl;
+                throw "";
             }
         }
 
@@ -38,7 +38,7 @@ class DLLoader
         // Members
         T getInstance() const
         {
-            T (*func_pointer)(void) = (T (*)(void))dlsym(_handle, "entryPoint");
+            T (*func_pointer)(void) = reinterpret_cast<T (*)(void)>(dlsym(_handle, "entryPoint"));
             if (func_pointer == nullptr) {
                 std::cerr << dlerror() << " = error dlsym"<< std::endl;
                 throw "error dlsym";

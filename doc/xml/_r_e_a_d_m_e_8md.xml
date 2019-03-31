@@ -1,0 +1,423 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Arcade</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Other<sp/>group</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">charles.raimbault@epitech.eu</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Explanatory<sp/>manual</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">An<sp/>explanatory<sp/>manual<sp/>has<sp/>been<sp/>generated<sp/>by<sp/>Doxygen<sp/>in<sp/>a<sp/>HTML<sp/>format<sp/>in<sp/>/doc</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Draw.io</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Our<sp/>architecture<sp/>have<sp/>been<sp/>fully<sp/>represented<sp/>in<sp/>a<sp/>Draw.io<sp/>:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">https://www.draw.io/?state=%7B%22ids%22:%5B%221Zq1VpeW_EqprgKpBIExYpuWdQAxUMRU4%22%5D,%22action%22:%22open%22,%22userId%22:%22107942588257674115967%22%7D#G1Zq1VpeW_EqprgKpBIExYpuWdQAxUMRU4</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>How<sp/>to<sp/>implement<sp/>a<sp/>new<sp/>graphic<sp/>library</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Configuration<sp/>files</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>must<sp/>implement<sp/>2<sp/>configurations<sp/>files,</highlight></codeline>
+<codeline><highlight class="normal">the<sp/>first<sp/>one<sp/>must<sp/>contain<sp/>the<sp/>path<sp/>of<sp/>the<sp/>sprites<sp/>you&apos;ll<sp/>be<sp/>using,<sp/>their<sp/>size,<sp/>how<sp/>the<sp/>sprite<sp/>can<sp/>be<sp/>represented<sp/>in<sp/>Ncurses<sp/>and<sp/>the<sp/>path<sp/>to<sp/>the<sp/>lib.<sp/>It<sp/>have<sp/>have<sp/>to<sp/>be<sp/>separated<sp/>by<sp/>a<sp/>line.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Configuration<sp/>example</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">./textures/lib_ncurses.bmp<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">200<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">200<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">ncurses<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">9<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">./lib/lib_arcade_ncurses.so<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_______________________________________________________________________</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>second<sp/>one<sp/>must<sp/>represent<sp/>the<sp/>&apos;map&apos;<sp/>that<sp/>your<sp/>lib<sp/>will<sp/>print,<sp/>with<sp/>code<sp/>representing<sp/>which<sp/>part<sp/>of<sp/>the<sp/>configuration<sp/>file<sp/>it<sp/>have<sp/>to<sp/>use.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Map<sp/>example</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1111111111111111111<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">1222222221222222221<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">1511211121211121151<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">1222222222222222221<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">1211212111112121121<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">1222212221222122221<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">1111211101011121111<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">0001210000000121000<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">1111210110110121111<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">0000200104010020000<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">1111210111110121111<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">0001210000000121000<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">1111210111110121111<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">1222212221222122221<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">1211211121211121121<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">1521222223222221251<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">1121212111112121211<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">1222212221222122221<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">1211111121211111121<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">1222222222222222221<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">1111111111111111111<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Functions<sp/>to<sp/>implement</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>must<sp/>implement<sp/>a<sp/>runGraph<sp/>fonction<sp/>that<sp/>will<sp/>return<sp/>return<sp/>true<sp/>if<sp/>you<sp/>want<sp/>to<sp/>exit<sp/>the<sp/>program,<sp/>otherwise<sp/>return<sp/>false.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>must<sp/>implement<sp/>a<sp/>translateKey<sp/>fonction<sp/>translating<sp/>the<sp/>key<sp/>returned<sp/>by<sp/>the<sp/>events<sp/>of<sp/>your<sp/>lib<sp/>to<sp/>a<sp/>key<sp/>that<sp/>will<sp/>be<sp/>understood<sp/>by<sp/>the<sp/>core</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Here<sp/>is<sp/>the<sp/>translation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">{&apos;a&apos;,<sp/>0},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;b&apos;,<sp/>1},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;c&apos;,<sp/>2},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;d&apos;,<sp/>3},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;e&apos;,<sp/>4},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;f&apos;,<sp/>5},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;g&apos;,<sp/>6},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;h&apos;,<sp/>7},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;i&apos;,<sp/>8},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;j&apos;,<sp/>9},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;k&apos;,<sp/>10},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;l&apos;,<sp/>11},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;m&apos;,<sp/>12},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;n&apos;,<sp/>13},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;o&apos;,<sp/>14},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;p&apos;,<sp/>15},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;q&apos;,<sp/>16},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;r&apos;,<sp/>17},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;s&apos;,<sp/>18},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;t&apos;,<sp/>19},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;u&apos;,<sp/>20},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;v&apos;,<sp/>21},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;w&apos;,<sp/>22},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;x&apos;,<sp/>23},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;y&apos;,<sp/>24},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;z&apos;,<sp/>25},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;0&apos;,<sp/>26},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;1&apos;,<sp/>27},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;2&apos;,<sp/>28},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;3&apos;,<sp/>29},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;4&apos;,<sp/>30},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;5&apos;,<sp/>31},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;6&apos;,<sp/>32},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;7&apos;,<sp/>33},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;8&apos;,<sp/>34},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;9&apos;,<sp/>35},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;Up&apos;,<sp/>36},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;Down&apos;,<sp/>37},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;Right&apos;,<sp/>38},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;Left&apos;,<sp/>39},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;Enter&apos;,<sp/>40},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;Space&apos;,<sp/>41},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;Backspace&apos;,<sp/>42},<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{&apos;Tab&apos;,<sp/>43},<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>must<sp/>implement<sp/>all<sp/>these<sp/>functions<sp/>that<sp/>you<sp/>can<sp/>copy<sp/>/<sp/>paste<sp/>from<sp/>below</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>YourClassName::setIsNewMap(bool<sp/>newMap)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewMap<sp/>=<sp/>newMap;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">bool<sp/>YourClassName::getIsNewMap(void)<sp/>const</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(_isNewMap);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>YourClassName::setIsNewKey(bool<sp/>newKey)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewKey<sp/>=<sp/>newKey;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">bool<sp/>YourClassName::getIsNewKey(void)<sp/>const</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(_isNewKey);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>YourClassName::setLastKey(int<sp/>key)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_key<sp/>=<sp/>key;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>YourClassName::getLastKey(void)<sp/>const</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(_key);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>YourClassName::setScore(size_t<sp/>score)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_score<sp/>=<sp/>score;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">size_t<sp/>YourClassName::getScore()<sp/>const</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(_score);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>YourClassName::setPathConfig(std::string<sp/>path)<sp/>noexcept</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_pathConfig<sp/>=<sp/>path;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">std::string<sp/>YourClassName::getPathConfig()<sp/>const<sp/>noexcept</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(_pathConfig);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>YourClassName::setIsNewPathConfig(bool<sp/>isNewPath)<sp/>noexcept</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewPathConfig<sp/>=<sp/>isNewPath;<sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">bool<sp/>YourClassName::getIsNewPathConfig()<sp/>const<sp/>noexcept</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(_isNewPathConfig);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>must<sp/>implement<sp/>these<sp/>two<sp/>fonctions<sp/>respectively</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>buildMap(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;<sp/>=<sp/>nullptr);</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>setMap(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">These<sp/>fonctions<sp/>will<sp/>generate<sp/>your<sp/>map<sp/>in<sp/>your<sp/>lib.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;<sp/>Keep<sp/>in<sp/>mind<sp/>that<sp/>some<sp/>lib<sp/>does&apos;nt<sp/>need<sp/>buildMap,<sp/>but<sp/>this<sp/>fonction<sp/>will<sp/>be<sp/>called<sp/>BEFORE<sp/>setMap</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>need<sp/>to<sp/>implement<sp/>in<sp/>entryPoint</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">extern<sp/>&quot;C&quot;</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IGraphic<sp/>*entryPoint(void)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>YourClassName<sp/>*instance<sp/>=<sp/>new<sp/>YourClassName();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>(instance);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>SFML<sp/>Example</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;ClassSFML.hpp&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">ClassSFML::ClassSFML():</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_wind(nullptr),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_key(0),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewPathConfig(false),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewMap(false),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewKey(false)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_wind<sp/>=<sp/>std::make_unique&lt;sf::RenderWindow&gt;();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_wind-&gt;create(sf::VideoMode(SCREEN_WIDTH,<sp/>SCREEN_HEIGHT),<sp/>&quot;Arcade<sp/>SFML&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_wind-&gt;setPosition(SCREEN_POS);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">ClassSFML::~ClassSFML()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_wind-&gt;close();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>ClassSFML::displayGame()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>it<sp/>=<sp/>_map-&gt;begin();<sp/>it<sp/>!=<sp/>_map-&gt;end();<sp/>++it)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>it_sprite<sp/>=<sp/>it-&gt;begin();<sp/>it_sprite<sp/>!=<sp/>it-&gt;end();<sp/>++it_sprite)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(it_sprite-&gt;first<sp/>!=<sp/>NOTHING)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_wind-&gt;draw(it_sprite-&gt;second);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">bool<sp/>ClassSFML::getEvent()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>while<sp/>(_wind-&gt;pollEvent(_event))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(_event.type<sp/>==<sp/>sf::Event::Closed)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_wind-&gt;close();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>(true);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(_event.type<sp/>==<sp/>sf::Event::KeyPressed)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translateKey();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setIsNewKey(true);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(false);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">bool<sp/>ClassSFML::runGraph()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(getIsNewPathConfig()<sp/>==<sp/>true)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_parsing.clearData();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setIsNewPathConfig(false);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_parsing.setFilename(getPathConfig());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_parsing.readFile();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setMapTexture();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(!_wind-&gt;isOpen())</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>(true);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(getEvent())</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>(true);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(getIsNewMap())<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setMapTexture();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_wind-&gt;clear();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setIsNewMap(false);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_wind-&gt;clear();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>displayGame();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_wind-&gt;display();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(false);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>ClassSFML::setMapTexture()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;DataParsingConfig&gt;<sp/>parsingResult<sp/>=<sp/>_parsing.getResult();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>float<sp/>x<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>float<sp/>y<sp/>=<sp/>0;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_textures.clear();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>it<sp/>=<sp/>parsingResult.begin();<sp/>it<sp/>!=<sp/>parsingResult.end();<sp/>++it)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sf::Vector2i<sp/>size<sp/>=<sp/>{it-&gt;sizeX,<sp/>it-&gt;sizeY};</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;sf::Texture&gt;<sp/>tmp<sp/>(new<sp/>sf::Texture);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp-&gt;loadFromFile(it-&gt;path,<sp/>sf::IntRect(0,<sp/>0,<sp/>size.x,<sp/>size.y));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_textures.push_back(std::make_pair(size,<sp/>tmp));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>it_y<sp/>=<sp/>_map-&gt;begin();<sp/>it_y<sp/>!=<sp/>_map-&gt;end();<sp/>++it_y)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>it_x<sp/>=<sp/>it_y-&gt;begin();<sp/>it_x<sp/>!=<sp/>it_y-&gt;end();<sp/>++it_x)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(it_x-&gt;first<sp/>!=<sp/>NOTHING)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it_x-&gt;second.setTexture(*_textures.at(it_x-&gt;first<sp/>-<sp/>48).second.get());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it_x-&gt;second.setPosition({x,<sp/>y});</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>+=<sp/>_textures.at(it_x-&gt;first<sp/>-<sp/>48).second-&gt;getSize().x;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>+=<sp/>_textures.begin()-&gt;second-&gt;getSize().y;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>ClassSFML::buildMap(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;<sp/>map<sp/>=<sp/>nullptr)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_map<sp/>=<sp/>std::make_unique&lt;std::vector&lt;std::vector&lt;std::pair&lt;char,<sp/>sf::Sprite&gt;&gt;&gt;&gt;();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>it<sp/>=<sp/>map-&gt;begin();<sp/>it<sp/>!=<sp/>map-&gt;end();<sp/>++it)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::pair&lt;char,<sp/>sf::Sprite&gt;&gt;<sp/>tmp;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>it_str<sp/>=<sp/>it-&gt;begin();<sp/>it_str<sp/>!=<sp/>it-&gt;end();<sp/>++it_str)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sf::Sprite<sp/>sprite;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp.push_back(std::make_pair(*it_str,<sp/>sprite));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_map-&gt;push_back(tmp);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>ClassSFML::setMap(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;<sp/>map)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(!map<sp/>||<sp/>!_map)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>auto<sp/>it_my_map_y<sp/>=<sp/>_map-&gt;begin();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>it_y<sp/>=<sp/>map-&gt;begin();<sp/>it_y<sp/>!=<sp/>map-&gt;end();<sp/>++it_y,<sp/>++it_my_map_y)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auto<sp/>it_my_map_x<sp/>=<sp/>it_my_map_y-&gt;begin();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>it_x<sp/>=<sp/>it_y-&gt;begin();<sp/>it_x<sp/>!=<sp/>it_y-&gt;end();<sp/>++it_x,<sp/>++it_my_map_x)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it_my_map_x-&gt;first<sp/>=<sp/>*it_x;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>ClassSFML::translateKey()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(size_t<sp/>i<sp/>=<sp/>0;<sp/>KeySFML[i].code_lib<sp/>!=<sp/>-1;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(_event.key.code<sp/>==<sp/>KeySFML[i].code_lib)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setLastKey(KeySFML[i].code_core);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setIsNewKey(true);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>ClassSFML::setIsNewMap(bool<sp/>newMap)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewMap<sp/>=<sp/>newMap;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">bool<sp/>ClassSFML::getIsNewMap(void)<sp/>const</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(_isNewMap);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>ClassSFML::setIsNewKey(bool<sp/>newKey)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewKey<sp/>=<sp/>newKey;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">bool<sp/>ClassSFML::getIsNewKey(void)<sp/>const</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(_isNewKey);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>ClassSFML::setLastKey(int<sp/>key)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_key<sp/>=<sp/>key;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>ClassSFML::getLastKey(void)<sp/>const</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(_key);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>ClassSFML::setScore(size_t<sp/>score)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_score<sp/>=<sp/>score;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">size_t<sp/>ClassSFML::getScore()<sp/>const</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(_score);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>ClassSFML::setPathConfig(std::string<sp/>path)<sp/>noexcept</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_pathConfig<sp/>=<sp/>path;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">std::string<sp/>ClassSFML::getPathConfig()<sp/>const<sp/>noexcept</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(_pathConfig);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>ClassSFML::setIsNewPathConfig(bool<sp/>isNewPath)<sp/>noexcept</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewPathConfig<sp/>=<sp/>isNewPath;<sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">bool<sp/>ClassSFML::getIsNewPathConfig()<sp/>const<sp/>noexcept</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(_isNewPathConfig);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">extern<sp/>&quot;C&quot;</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IGraphic<sp/>*entryPoint(void)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ClassSFML<sp/>*instance<sp/>=<sp/>new<sp/>ClassSFML();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>(instance);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

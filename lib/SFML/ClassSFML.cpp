@@ -116,7 +116,7 @@ bool ClassSFML::runGraph()
 
 void ClassSFML::setMapTexture()
 {
-    auto parsingResult = _parsing.getResult();
+    std::vector<DataParsingConfig> parsingResult = _parsing.getResult();
     float x = 0;
     float y = 0;
 
@@ -190,12 +190,13 @@ void ClassSFML::setMap(std::shared_ptr<std::vector<std::string>> map)
 
 void ClassSFML::translateKey()
 {
-    for (size_t i = 0; KeySFML[i].code_lib != -1; ++i)
+    for (size_t i = 0; KeySFML[i].code_lib != -1; ++i) {
         if (_event.key.code == KeySFML[i].code_lib) {
             setLastKey(KeySFML[i].code_core);
             setIsNewKey(true);
             break;
         }
+    }
 }
 
 void ClassSFML::setIsNewMap(bool newMap)

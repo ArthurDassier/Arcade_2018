@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_i_core" kind="class" language="C++" prot="public">
+    <compoundname>ICore</compoundname>
+    <includes refid="_i_core_8hpp" local="no">ICore.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_i_core_1ae6843234576cb6ab293673c9b2b8383a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ICore::~ICore</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ICore</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/ICore.hpp" line="12" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="srcs/ICore.hpp" line="10" column="1" bodyfile="srcs/ICore.hpp" bodystart="10" bodyend="16"/>
+    <listofallmembers>
+      <member refid="class_i_core_1ae6843234576cb6ab293673c9b2b8383a" prot="public" virt="virtual"><scope>ICore</scope><name>~ICore</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
