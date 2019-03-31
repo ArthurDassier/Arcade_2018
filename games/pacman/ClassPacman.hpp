@@ -10,6 +10,12 @@
 #include "ClassEntity.hpp"
 #include "IGame.hpp"
 
+/*! \class ClassPacman
+* \brief Class representing ClassPacman logic
+*
+*  This class contains the fonctions that will make our Pacman game
+*/
+
 class ClassPacman : public IGame
 {
     public:

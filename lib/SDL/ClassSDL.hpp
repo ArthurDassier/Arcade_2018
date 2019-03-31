@@ -23,6 +23,12 @@ enum Graphics {
     NCURSES = '8'
 };
 
+/*! \class ClassSDL
+* \brief Class representing ClassSDL logic
+*
+*  This class contains the fonctions that handle the SDL
+*/
+
 class ClassSDL : public IGraphic
 {
     public:
@@ -73,11 +79,19 @@ class ClassSDL : public IGraphic
         size_t _score;
         int _key;
 };
+/*!
+ * \struct s_KeySdl
+ * \brief This Structure contains Keys input translation
+ */
 
 struct s_KeySdl {
     int code_lib;
     int code_core;
 };
+/*!
+ * \struct s_KeySdl
+ * \brief This Structure contains Keys input translation
+ */
 
 static struct s_KeySdl KeySdl[] = {
     {'a', 0},

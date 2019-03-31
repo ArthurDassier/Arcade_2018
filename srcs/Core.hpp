@@ -23,6 +23,13 @@ enum Commands {
     ENTER = 40
 };
 
+/*! \class Core
+* \brief Class representing the core
+*
+*  This class handle of the logic of the program, it loads the libraires and the games
+*  it can switch from libraries and games at any moments
+*/
+
 class Core {
     public:
         Core(std::string);

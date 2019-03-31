@@ -1,0 +1,9 @@
+digraph "games/pacman" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_4b6f782e158b0b98da980a0e11a23a15 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="games" fontname="Helvetica", fontsize="10", URL="dir_4b6f782e158b0b98da980a0e11a23a15.html"]
+  dir_2b6c8e7fa44737621b455968085f1645 [shape=box, label="pacman", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_2b6c8e7fa44737621b455968085f1645.html"];
+  }
+}

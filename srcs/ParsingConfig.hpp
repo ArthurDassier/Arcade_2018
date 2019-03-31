@@ -11,6 +11,11 @@
 #include <fstream>
 #include <vector>
 
+/*!
+ * \struct DataParsingConfig
+ * \brief This Structure contains all the informations about our sprites, the path to the .bmp, it size in x and y, the ncurses character, the key in the eventuallity it's interactive and the name of the sprite
+ */
+
 struct DataParsingConfig {
     std::string path;
     int sizeX;
@@ -19,6 +24,12 @@ struct DataParsingConfig {
     int launchKey;
     std::string name;
 };
+
+/*! \class ParsingConfig
+* \brief Class representing parsing logic
+*
+*  This class contains the fonctions that will read into the configurations files and set the DataParsingConfig structure
+*/
 
 class ParsingConfig {
     public:

@@ -5,6 +5,17 @@
 ** main
 */
 
+/*!
+ * \file main.c
+ * \brief Main fonction
+ * \author Arthur.D
+ * \version 0.1
+ * \date 31 march 2019
+ *
+ * \mainpage Arcade Program
+ * \content You can navigate throught this doc
+ */
+
 #include <thread>
 #include <chrono>
 
@@ -12,6 +23,14 @@
 #include "IGame.hpp"
 #include "IGraphic.hpp"
 #include "dlloader.hpp"
+
+/*!
+ * \fn int main(int ac, char **av, char **env)
+ * \brief Briefly checks for errors and launch the core
+ *
+ * \param int ac, char **av and the char **env variables
+ * \return 0 if everything went ok or 84 is case of errors
+ */
 
 int main(int ac, char **av, char **env)
 {

@@ -7,6 +7,14 @@
 
 #include "Core.hpp"
 
+
+/*!
+ * \fn Core::Core(std::string libName)
+ * \brief Construct the core, load the library given as argument
+ *
+ * \param std::string representing the libname
+ */
+
 Core::Core(std::string libName) :
     _libName("./lib/" + libName),
     _pathConfig("./srcs/core/path_menu.config"),
@@ -27,10 +35,25 @@ Core::Core(std::string libName) :
     _parsing.readFile();
 }
 
+/*!
+ * \fn Core::~Core()
+ * \brief Destroy the core by reseting the shared pointers
+ *
+ * \param void
+ */
+
 Core::~Core()
 {
     _libModule.reset();
+    _gameModule.reset();
 }
+
+/*!
+ * \fn Core::mapMenu()
+ * \brief Open the map file representing the menu
+ *
+ * \param void
+ */
 
 void Core::mapMenu()
 {
@@ -44,9 +67,18 @@ void Core::mapMenu()
     filename.close();
 }
 
+/*!
+ * \fn Core::loadNewGame(std::string name)
+ * \brief Load the game given in parameter
+ *
+ * \param std::string representing the game's name
+ */
+
 void Core::loadNewGame(std::string name)
 {
     auto instance = std::make_shared<DLLoader<IGame *>>(name);
+
+    _gameModule.reset();
     _instance_game = instance;
     std::shared_ptr<IGame> tmp(_instance_game->getInstance());
     _gameModule = tmp;
@@ -54,6 +86,13 @@ void Core::loadNewGame(std::string name)
     _libModule->setIsNewPathConfig(true);
     setHaveGameLoad(true);
 }
+
+/*!
+ * \fn Core::loadMenu()
+ * \brief Load the menu by reseting the map representing the menu in the graphical libraries
+ *
+ * \param void
+ */
 
 void Core::loadMenu()
 {
@@ -65,6 +104,14 @@ void Core::loadMenu()
     _parsing.setFilename(_pathConfig);
     _parsing.readFile();
 }
+
+/*!
+ * \fn void Core::loadNewLib(std::string lib)
+ * \brief Load the lib by reseting _libmodule pointers to the new lib, acts like the class constructor
+ *
+ * \param std::string representing the lib's name
+ */
+
 
 void Core::loadNewLib(std::string lib)
 {
@@ -84,6 +131,14 @@ void Core::loadNewLib(std::string lib)
         _libModule->setPathConfig(_gameModule->getPathConfig());
 }
 
+
+/*!
+ * \fn void Core::handleGame(void)
+ * \brief Actualize the map in the lib module in order to print it for the user
+ *
+ * \param void
+ */
+
 void Core::handleGame(void)
 {
     _gameModule->runGame();
@@ -95,6 +150,13 @@ void Core::handleGame(void)
     //_libModule->setScore(_gameModule->getScore());
     _gameModule->setLastKey(_libModule->getLastKey());
 }
+
+/*!
+ * \fn void Core::startCore()
+ * \brief Infinite loop that handle everything the program needs
+ *
+ * \param void
+ */
 
 void Core::startCore()
 {

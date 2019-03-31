@@ -7,6 +7,13 @@
 
 #include "ClassNcurses.hpp"
 
+/*!
+ * \fn ClassNcurses::ClassNcurses()
+ * \brief Create the Ncurses window and set the getters at false
+ * it also creates subwindows for the menu
+ * \param void
+ */
+
 ClassNcurses::ClassNcurses() :
     _key(999),
     _str(""),
@@ -27,11 +34,23 @@ ClassNcurses::ClassNcurses() :
     start_color();
 }
 
+/*!
+ * \fn ClassNcurses::~ClassNcurses()
+ * \brief Ncurses Class destructor, just quit the Ncurses
+ *
+ * \param void
+ */
+
 ClassNcurses::~ClassNcurses()
 {
     endwin();
 }
-
+/*!
+ * \fn ClassNcurses::displayGame()
+ * \brief Print the game in Ncurses format
+ *
+ * \param void
+ */
 void ClassNcurses::displayGame()
 {
     std::vector<DataParsingConfig> parsingResult = _parsing.getResult();
@@ -134,6 +153,13 @@ void ClassNcurses::displayGame()
     sfml.close();
 }
 
+/*!
+ * \fn ClassNcurses::getEvent()
+ * \brief Handle the events of the Ncurses
+ *
+ * \param void
+ */
+
 bool ClassNcurses::getEvent()
 {
     _c = getch();
@@ -165,7 +191,12 @@ bool ClassNcurses::getEvent()
     }
     return (false);
 }
-
+/*!
+ * \fn ClassNcurses::get_input()
+ * \brief Handle the inputs of the user
+ *
+ * \param void
+ */
 int ClassNcurses::get_input()
 {
     std::string str = get_string();
@@ -194,7 +225,12 @@ char ClassNcurses::translate_for_menu(int nb)
                 return (KeyNcurses[i].code_lib);
         }
 }
-
+/*!
+ * \fn ClassNcurses::runGraph()
+ * \brief Handle the events of the Ncurses
+ *
+ * \param void
+ */
 bool ClassNcurses::runGraph()
 {
     if (getIsNewPathConfig() == true) {
@@ -324,7 +360,12 @@ void ClassNcurses::buildMap(std::shared_ptr<std::vector<std::string>> map = null
 {
 
 }
-
+/*!
+ * \fn ClassNcurses::setMap()
+ * \brief Change the char in our _map of textures corresponding to the map
+ *
+ * \param std::shared_ptr<std::vector<std::string>> map
+ */
 void ClassNcurses::setMap(std::shared_ptr<std::vector<std::string>> map)
 {
     if (!map)
@@ -334,6 +375,14 @@ void ClassNcurses::setMap(std::shared_ptr<std::vector<std::string>> map)
         _map->push_back(*it);
     }
 }
+
+/*!
+ * \fn ClassNcurses::translateKey()
+ * \brief Translate the Ncurses event key to the keycode that the core will understand
+ *
+ * \param void
+ */
+
 
 void ClassNcurses::translateKey()
 {

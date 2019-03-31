@@ -10,6 +10,12 @@
 #include <dlfcn.h>
 #include <iostream>
 
+/*! \class DLLoader
+* \brief Class representing DLLoader's logic
+*
+*  This class contains the fonctions that will return the entrypoints of our libraries and games
+*/
+
 template <typename T>
 class DLLoader
 {
@@ -18,9 +24,8 @@ class DLLoader
         {
             _handle = dlopen(lib_path.c_str(), RTLD_NOW);
             if (_handle == NULL) {
-                std::cout << "FAIL\n";
                 fprintf(stderr, "Error: %s\n", dlerror());
-                exit(EXIT_FAILURE);
+                exit(84);
             }
         }
 

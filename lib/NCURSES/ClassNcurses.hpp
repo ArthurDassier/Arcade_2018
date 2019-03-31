@@ -23,6 +23,12 @@ enum Graphics {
     NCURSES = '8'
 };
 
+/*! \class ClassNcurses
+* \brief Class representing ClassNcurses logic
+*
+*  This class contains the fonctions that handle the NCURSES
+*/
+
 class ClassNcurses : public IGraphic
 {
     public:
@@ -81,10 +87,20 @@ class ClassNcurses : public IGraphic
         ParsingConfig _parsing;
 };
 
+/*!
+ * \struct KeyNcurses
+ * \brief This Structure contains Keys input translation
+ */
+
 struct KeyNcurses {
     int code_lib;
     int code_core;
 };
+
+/*!
+ * \struct KeyNcurses
+ * \brief This Structure contains Keys input translation
+ */
 
 static struct KeyNcurses KeyNcurses[] = {
     {'a', 0},

@@ -7,6 +7,13 @@
 
 #include "ClassSDL.hpp"
 
+/*!
+ * \fn ClassSDL::ClassSDL()
+ * \brief Create the SDL window, set the getters at false and check for errors
+ *
+ * \param void
+ */
+
 ClassSDL::ClassSDL() :
     _wind(nullptr, SDL_DestroyWindow),
     _ren(nullptr, SDL_DestroyRenderer),
@@ -29,10 +36,24 @@ ClassSDL::ClassSDL() :
     }
 }
 
+/*!
+ * \fn ClassSDL::~ClassSDL()
+ * \brief SDL Class destructor, just quit the SDL
+ *
+ * \param void
+ */
+
 ClassSDL::~ClassSDL()
 {
     SDL_Quit();
 }
+
+/*!
+ * \fn ClassSDL::displayGame()
+ * \brief Print the _map of textures into the SDL window
+ *
+ * \param void
+ */
 
 void ClassSDL::displayGame()
 {
@@ -57,6 +78,13 @@ void ClassSDL::displayGame()
     sfml.close();
     SDL_RenderPresent(_ren.get());
 }
+
+/*!
+ * \fn ClassSDL::runGraph()
+ * \brief Handle the events of the SDL
+ *
+ * \param void
+ */
 
 bool ClassSDL::runGraph()
 {
@@ -86,6 +114,13 @@ bool ClassSDL::runGraph()
     return (false);
 }
 
+/*!
+ * \fn ClassSDL::setMapTexture()
+ * \brief Construct our map of textures
+ *
+ * \param void
+ */
+
 void ClassSDL::setMapTexture()
 {
     auto parsingResult = _parsing.getResult();
@@ -109,6 +144,13 @@ void ClassSDL::setMapTexture()
     }
 }
 
+/*!
+ * \fn ClassSDL::buildMap(std::shared_ptr<std::vector<std::string>> map)
+ * \brief Initiate our _map of textures by settings SDL_Textures pointers to nullptr
+ *
+ * \param std::shared_ptr<std::vector<std::string>> map = nullptr
+ */
+
 void ClassSDL::buildMap(std::shared_ptr<std::vector<std::string>> map = nullptr)
 {
     _map = std::make_unique<std::vector<std::vector<std::pair<char, std::unique_ptr<SDL_Texture, decltype(&SDL_DestroyTexture)>>>>>();
@@ -123,6 +165,13 @@ void ClassSDL::buildMap(std::shared_ptr<std::vector<std::string>> map = nullptr)
     }
 }
 
+/*!
+ * \fn ClassSDL::setMap(std::shared_ptr<std::vector<std::string>> map)
+ * \brief Change the char in our _map of textures corresponding to the map
+ *
+ * \param std::shared_ptr<std::vector<std::string>> map
+ */
+
 void ClassSDL::setMap(std::shared_ptr<std::vector<std::string>> map)
 {
     if (!map || !_map)
@@ -135,6 +184,13 @@ void ClassSDL::setMap(std::shared_ptr<std::vector<std::string>> map)
             it_my_map_x->first = *it_x;
     }
 }
+
+/*!
+ * \fn ClassSDL::translateKey()
+ * \brief Translate the SDL event key to the keycode that the core will understand
+ *
+ * \param void
+ */
 
 void ClassSDL::translateKey()
 {

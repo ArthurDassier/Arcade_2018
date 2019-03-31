@@ -27,6 +27,12 @@ enum Graphics {
     NCURSES = '8'
 };
 
+/*! \class ClassSFML
+* \brief Class representing ClassSFML logic
+*
+*  This class contains the fonctions that handle the SFML
+*/
+
 class ClassSFML : public IGraphic
 {
     public:
