@@ -9,17 +9,16 @@
 
 /*!
  * \fn Pacman::Pacman()
- * \brief Create the Pacman game
+ * \brief Create Pacman, set the getters and intialize entities
  *
  * \param void
  */
-
 Pacman::Pacman():
     _pathConfig("./games/pacman/config/sprites.config"),
     _pathMap("./games/pacman/config/map.config"),
     _isNewMap(true),
-    _score(0),
     _key(0),
+    _score(0),
     _bonus(false),
     _lock_create_map(true)
 {
@@ -35,11 +34,10 @@ Pacman::Pacman():
 
 /*!
  * \fn Pacman::~Pacman()
- * \brief Pacman Class destructor
+ * \brief Pacman Class destructor, free vector of entity
  *
  * \param void
  */
-
 Pacman::~Pacman()
 {
     _lock_create_map = true;
@@ -47,15 +45,12 @@ Pacman::~Pacman()
 
 /*!
  * \fn Pacman::runGame()
- * \brief Set the clock of the game and handle the logic
+ * \brief Handle the events of the Pacman
  *
  * \param void
  */
-
 bool Pacman::runGame()
 {
-    // static bool first_time = true;
-    
     setIsNewMap(false);
     if (_lock_create_map) {
         _lock_create_map = false;
@@ -80,55 +75,32 @@ bool Pacman::runGame()
         _ghosts.at(0)->move(UP, _map);
         _ghosts.at(0)->setSpeed(0.1);
         _ghosts.at(0)->move(UP, _map);
-        // std::cout << "ghost pos: " << _ghosts.at(0)->getPosition().second << std::endl;
         _clock[1] = clock();
         setIsNewMap(true);
     }
     setScore(_pacman->getScore());
-    // setIsNewMap(_pacman->getIsNewMap() || _ghosts.at(0)->getIsNewMap() ? true : false);
-    // if (_pacman->getIsNewMap() || _ghosts.at(0)->getIsNewMap())
-    // setIsNewMap(true);
-    // else
-    //     setIsNewMap(false);
+    setIsNewMap(true);
     setIsNewKey(_pacman->getIsNewKey());
     return (true);
 }
 
 /*!
  * \fn Pacman::readMap()
- * \brief Read the map
+ * \brief Read map.config and set game map
  *
  * \param void
  */
-
 void Pacman::readMap()
 {
-    // size_t i = 0;
     std::string line;
     std::ifstream map_file(_pathMap);
 
     _map = std::make_shared<std::vector<std::string>>();
-    // std::map<size_t, std::map<size_t, char>> _tmp;
-    // _tmp = std::make_shared<std::map<size_t, std::map<size_t, char>>>();
     if (map_file) {
-        while (getline(map_file, line)) {
+        while (getline(map_file, line))
             _map->push_back(line);
-            // std::map<size_t, char> tmp;
-            // for (size_t j = 0; j < line.length(); j++) {
-            // // for (auto it = line.begin(); it != line.end(); ++it) {
-            //     tmp[j] = line.at(j);
-            //     _tmp[i] = tmp;
-            // }
-            // i++;
-        }
         map_file.close();
     }
-    // for (auto it = _tmp.begin(); it != _tmp.end(); ++it) {
-    //     std::cout << it->first << std::endl;
-    //     for (auto it_c = it->second.begin(); it_c != it->second.end(); ++it_c) {
-    //         std::cout << "[" << it_c->first << "]=" << it_c->second << std::endl;
-    //     }
-    // }
 }
 
 void Pacman::setMap(std::shared_ptr<std::vector<std::string>> map)
@@ -194,7 +166,6 @@ const std::string Pacman::getPathMap() const noexcept
 void Pacman::setMove(Move lastMove)
 {
     _lastMove = lastMove;
-    // setIsNewMap(true);
 }
 
 Move Pacman::getMove() const

@@ -9,7 +9,7 @@
 
 #include <SDL2/SDL.h>
 #include "IGraphic.hpp"
-#include "../srcs/ParsingConfig.hpp"
+#include "ParsingConfig.hpp"
 
 enum Graphics {
     NOTHING = '0',
@@ -134,10 +134,10 @@ static struct s_KeySdl KeySdl[] = {
     {1073741905, 37}, // Down
     {1073741903, 38}, // Right
     {1073741904, 39}, // Left
-    {13, 40},  // Enter
-    {32, 41},  // Space
-    {8, 42}, // BackSpace
-    {9, 43},   // Tab
+    {13, 40},         // Enter
+    {32, 41},         // Space
+    {8, 42},          // BackSpace
+    {9, 43},          // Tab
     {-1, -1}
 };
 

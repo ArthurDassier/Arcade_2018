@@ -47,10 +47,9 @@ class Entity
 {
 	public:
         Entity(PacmanObjs);
-		~Entity();
+		~Entity() = default;
 
         void move(Move, std::shared_ptr<std::vector<std::string>>);
-        // void move(Move, std::map<size_t, std::map<size_t, char>>);
         std::map<size_t, std::map<size_t, char>> getMap() const;
 
         const PacmanObjs getEntity() const noexcept;
@@ -93,13 +92,9 @@ class Entity
         bool _isNewKey;
 
         void moveDown(std::shared_ptr<std::vector<std::string>>);
-        // void moveDown(std::map<size_t, std::map<size_t, char>>);
         void moveLeft(std::shared_ptr<std::vector<std::string>>);
-        // void moveLeft(std::map<size_t, std::map<size_t, char>>);
         void moveRight(std::shared_ptr<std::vector<std::string>>);
-        // void moveRight(std::map<size_t, std::map<size_t, char>>);
         void moveUp(std::shared_ptr<std::vector<std::string>>);
-        // void moveUp(std::map<size_t, std::map<size_t, char>>);
         bool checkNextCase(char);
 };
 

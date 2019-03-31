@@ -7,7 +7,6 @@
 
 #include "Core.hpp"
 
-
 /*!
  * \fn Core::Core(std::string libName)
  * \brief Construct the core, load the library given as argument
@@ -15,7 +14,7 @@
  * \param std::string representing the libname
  */
 
-Core::Core(std::string libName) :
+Core::Core(std::string libName):
     _libName("./lib/" + libName),
     _pathConfig("./srcs/core/path_menu.config"),
     _isMenu(true),

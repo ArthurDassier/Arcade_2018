@@ -9,7 +9,7 @@
 
 #include <ncurses.h>
 #include "IGraphic.hpp"
-#include "../srcs/ParsingConfig.hpp"
+#include "ParsingConfig.hpp"
 
 enum Graphics {
     NOTHING = '0',

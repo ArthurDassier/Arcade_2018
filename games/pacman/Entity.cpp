@@ -7,6 +7,13 @@
 
 #include "Entity.hpp"
 
+/*!
+ * \fn Entity::Entity(PacmanObjs entity)
+ * \brief Create an entity and initialize position of it
+ *
+ * \param PacmanObjs entity = NOTHING
+ */
+
 Entity::Entity(PacmanObjs entity = NOTHING):
     _entity(entity), _score(0), _bonus(false),
     _isNewMap(true), _isNewKey(false)
@@ -15,9 +22,12 @@ Entity::Entity(PacmanObjs entity = NOTHING):
     _pos = std::make_pair(it, 0);
 }
 
-Entity::~Entity()
-{
-}
+/*!
+ * \fn Entity::move(Move direction, std::shared_ptr<std::vector<std::string>> map)
+ * \brief Check direction given as parameter and run the matching function
+ *
+ * \param Move direction, std::shared_ptr<std::vector<std::string>> map
+ */
 
 void Entity::move(Move direction, std::shared_ptr<std::vector<std::string>> map)
 {
@@ -43,6 +53,13 @@ void Entity::move(Move direction, std::shared_ptr<std::vector<std::string>> map)
             break;
     }
 }
+
+/*!
+ * \fn Entity::moveDown(std::shared_ptr<std::vector<std::string>> map)
+ * \brief Move the entity down
+ *
+ * \param std::shared_ptr<std::vector<std::string>> map
+ */
 
 void Entity::moveDown(std::shared_ptr<std::vector<std::string>> map)
 {
@@ -71,6 +88,13 @@ void Entity::moveDown(std::shared_ptr<std::vector<std::string>> map)
     }
     setIsNewKey(found);
 }
+
+/*!
+ * \fn Entity::moveLeft(std::shared_ptr<std::vector<std::string>> map)
+ * \brief Move the entity left
+ *
+ * \param std::shared_ptr<std::vector<std::string>> map
+ */
 
 void Entity::moveLeft(std::shared_ptr<std::vector<std::string>> map)
 {
@@ -102,6 +126,13 @@ void Entity::moveLeft(std::shared_ptr<std::vector<std::string>> map)
     setIsNewKey(found);
 }
 
+/*!
+ * \fn Entity::moveRight(std::shared_ptr<std::vector<std::string>> map)
+ * \brief Move the entity right
+ *
+ * \param std::shared_ptr<std::vector<std::string>> map
+ */
+
 void Entity::moveRight(std::shared_ptr<std::vector<std::string>> map)
 {
     bool found = false;
@@ -132,6 +163,13 @@ void Entity::moveRight(std::shared_ptr<std::vector<std::string>> map)
     setIsNewKey(found);
 }
 
+/*!
+ * \fn Entity::moveUp(std::shared_ptr<std::vector<std::string>> map)
+ * \brief Move the entity up
+ *
+ * \param std::shared_ptr<std::vector<std::string>> map
+ */
+
 void Entity::moveUp(std::shared_ptr<std::vector<std::string>> map)
 {
     bool found = false;
@@ -160,6 +198,13 @@ void Entity::moveUp(std::shared_ptr<std::vector<std::string>> map)
     }
     setIsNewKey(found);
 }
+
+/*!
+ * \fn Entity::checkNextCase(char nextPos)
+ * \brief Check what is the next case and perform the appropriate action
+ *
+ * \param char nextPos
+ */
 
 bool Entity::checkNextCase(char nextPos)
 {

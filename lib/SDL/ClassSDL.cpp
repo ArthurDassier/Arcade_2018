@@ -124,8 +124,6 @@ bool ClassSDL::runGraph()
 void ClassSDL::setMapTexture()
 {
     auto parsingResult = _parsing.getResult();
-    float x = 0;
-    float y = 0;
 
     _textures.clear();
     for (auto it = parsingResult.begin(); it != parsingResult.end(); ++it) {

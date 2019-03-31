@@ -5,43 +5,15 @@
 ## Makefile
 ##
 
-CXX				=	g++
+GAMES_DIRS = pacman
 
-CXXFLAGS		=	-std=c++17 -g3
-
-LDFLAGS			=	-shared -fPIC
-
-CFLAGS			=	-I.
-
-PACMAN			=	lib_arcade_pacman.so
-
-PACMAN_DIR		=	pacman/
-
-PACMAN_FILES	=	Entity.cpp	\
-					Pacman.cpp
-
-# PACMAN_SRCS		=	$(PACMAN_FILES:.cpp=.o)
-PACMAN_SRCS		=	$(addprefix $(PACMAN_DIR), $(PACMAN_FILES))
-
-NIBBLER			=	lib_arcade_nibbler.so
-
-NIBBLER_DIR		=	Nibbler/
-
-NIBBLER_FILES	=
-
-NIBBLER_SRCS	=	$(addprefix $(NIBBLER_DIR), $(NIBBLER_FILES))
-
-all:			$(PACMAN)
-
-$(PACMAN):		#$(PACMAN_SRCS)
-				$(CXX) $(CXXFLAGS) $(LDFLAGS) $(CFLAGS) $(PACMAN_SRCS) -o $(PACMAN)
+all:
+	@for i in $(GAMES_DIRS); do $(MAKE) -C $$i all || exit 1; done
 
 clean:
-				# $(RM) $(_OBJS)
+	@for i in $(GAMES_DIRS); do $(MAKE) -C $$i clean || exit 1; done
 
-fclean:			clean
-				$(RM) $(PACMAN)
+fclean:
+	@for i in $(GAMES_DIRS); do $(MAKE) -C $$i fclean || exit 1; done
 
-re:				fclean all
-
-.PHONY:			all clean fclean re
+.PHONY:	all clean fclean

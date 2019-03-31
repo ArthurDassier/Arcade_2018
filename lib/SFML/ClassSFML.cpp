@@ -7,22 +7,43 @@
 
 #include "ClassSFML.hpp"
 
+/*!
+ * \fn ClassSFML::ClassSFML()
+ * \brief Create the SFML window, set the getters at false and check for errors
+ *
+ * \param void
+ */
+
 ClassSFML::ClassSFML():
     _wind(nullptr),
-    _key(0),
     _isNewPathConfig(false),
     _isNewMap(false),
-    _isNewKey(false)
+    _isNewKey(false),
+    _key(0)
 {
     _wind = std::make_unique<sf::RenderWindow>();
     _wind->create(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Arcade SFML");
     _wind->setPosition(SCREEN_POS);
 }
 
+/*!
+ * \fn ClassSFML::~ClassSFML()
+ * \brief SFML Class destructor, just quit the SFML
+ *
+ * \param void
+ */
+
 ClassSFML::~ClassSFML()
 {
     _wind->close();
 }
+
+/*!
+ * \fn ClassSFML::displayGame()
+ * \brief Print the _map of textures into the SFML window
+ *
+ * \param void
+ */
 
 void ClassSFML::displayGame()
 {
@@ -31,6 +52,14 @@ void ClassSFML::displayGame()
             if (it_sprite->first != NOTHING)
                 _wind->draw(it_sprite->second);
 }
+
+/*!
+ * \fn ClassSFML::getEvent()
+ * \brief Get event of the SFML window
+ *
+ * \param void
+ */
+
 
 bool ClassSFML::getEvent()
 {
@@ -46,6 +75,13 @@ bool ClassSFML::getEvent()
     }
     return (false);
 }
+
+/*!
+ * \fn ClassSFML::runGraph()
+ * \brief Handle the events of the SFML
+ *
+ * \param void
+ */
 
 bool ClassSFML::runGraph()
 {
@@ -70,6 +106,13 @@ bool ClassSFML::runGraph()
     _wind->display();
     return (false);
 }
+
+/*!
+ * \fn ClassSFML::setMapTexture()
+ * \brief Construct our map of textures
+ *
+ * \param void
+ */
 
 void ClassSFML::setMapTexture()
 {
@@ -97,6 +140,13 @@ void ClassSFML::setMapTexture()
     }
 }
 
+/*!
+ * \fn ClassSFML::buildMap(std::shared_ptr<std::vector<std::string>> map)
+ * \brief Initiate our _map of textures by settings SFML_Textures pointers to nullptr
+ *
+ * \param std::shared_ptr<std::vector<std::string>> map = nullptr
+ */
+
 void ClassSFML::buildMap(std::shared_ptr<std::vector<std::string>> map = nullptr)
 {
     _map = std::make_unique<std::vector<std::vector<std::pair<char, sf::Sprite>>>>();
@@ -111,6 +161,13 @@ void ClassSFML::buildMap(std::shared_ptr<std::vector<std::string>> map = nullptr
     }
 }
 
+/*!
+ * \fn ClassSFML::setMap(std::shared_ptr<std::vector<std::string>> map)
+ * \brief Change the char in our _map of textures corresponding to the map
+ *
+ * \param std::shared_ptr<std::vector<std::string>> map
+ */
+
 void ClassSFML::setMap(std::shared_ptr<std::vector<std::string>> map)
 {
     if (!map || !_map)
@@ -123,6 +180,13 @@ void ClassSFML::setMap(std::shared_ptr<std::vector<std::string>> map)
             it_my_map_x->first = *it_x;
     }
 }
+
+/*!
+ * \fn ClassSFML::translateKey()
+ * \brief Translate the SFML event key to the keycode that the core will understand
+ *
+ * \param void
+ */
 
 void ClassSFML::translateKey()
 {

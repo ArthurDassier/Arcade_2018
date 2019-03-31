@@ -8,9 +8,8 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
-#include "AnimatedSprite.hpp"
 #include "IGraphic.hpp"
-#include "../srcs/ParsingConfig.hpp"
+#include "ParsingConfig.hpp"
 
 #define SCREEN_POS {675, 225}
 
@@ -82,6 +81,10 @@ class ClassSFML : public IGraphic
         size_t _score;
         int _key;
 };
+/*!
+ *  \struct KeySFML
+ *  \brief This Structure contains Keys input translation
+ */
 
 /*!
  * \struct KeySFML
