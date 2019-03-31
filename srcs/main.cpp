@@ -44,7 +44,7 @@ int main(int ac, char **av, char **env)
         core.startCore();
         return (0);
     } catch (...) {
-        std::cerr << "The program stopped for an unknowed reason" << std::endl;
+        std::cerr << "The program stopped for an unknow reason" << std::endl;
         return (84);
     }
 }
