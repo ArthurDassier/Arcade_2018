@@ -1,6 +1,7 @@
 # Arcade
 
 ## Other group
+
 charles.raimbault@epitech.eu
 
 ## Documentation
