@@ -64,6 +64,9 @@ class ClassNcurses : public IGraphic
         void buildMap(std::shared_ptr<std::vector<std::string>>);
         bool getEvent();
 
+        void displayMenu();
+        void displayLetters();
+
         //pour le menu
         int get_input();
         std::string get_string();
