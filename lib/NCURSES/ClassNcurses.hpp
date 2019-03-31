@@ -67,11 +67,6 @@ class ClassNcurses : public IGraphic
         void displayMenu();
         void displayLetters();
 
-        //pour le menu
-        int get_input();
-        std::string get_string();
-        char translate_for_menu(int);
-
     private:
         std::unique_ptr<std::vector<std::string>> _map;
 
@@ -81,13 +76,11 @@ class ClassNcurses : public IGraphic
         std::shared_ptr<WINDOW> _window_menu_ncurses;
         std::shared_ptr<WINDOW> _window_pacman;
 
-        size_t _posi_menu;
         int _c;
         bool _isNewMap;
         bool _isNewKey;
         size_t _score;
         int _key;
-        std::string _str;
         std::string _pathConfig;
         bool _isNewPathConfig;
         ParsingConfig _parsing;
