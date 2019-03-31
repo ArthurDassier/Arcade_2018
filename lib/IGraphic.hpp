@@ -13,8 +13,8 @@
 #include <functional>
 #include <iostream>
 
-#define SCREEN_HEIGHT 630
-#define SCREEN_WIDTH 570
+#define SCREEN_HEIGHT 1000
+#define SCREEN_WIDTH 1000
 
 class IGraphic {
     public:

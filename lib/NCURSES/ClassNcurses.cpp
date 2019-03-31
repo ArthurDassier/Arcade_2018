@@ -167,7 +167,7 @@ bool ClassNcurses::getEvent()
     switch (_c) {
         case ERR:
             break;
-        case 'a':
+        case 'x':
             setLastKey(0);
             return (true);
         case 'r':
@@ -184,9 +184,6 @@ bool ClassNcurses::getEvent()
             break;
         default:
             translateKey();
-            if (getLastKey() == 38 || getLastKey() == 39 ||
-                getLastKey() == SFML || getLastKey() == SDL)
-                return (true);
             break;
     }
     return (false);
