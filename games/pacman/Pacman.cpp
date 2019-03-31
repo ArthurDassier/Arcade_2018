@@ -20,7 +20,8 @@ Pacman::Pacman():
     _key(0),
     _score(0),
     _bonus(false),
-    _lock_create_map(true)
+    _lock_create_map(true),
+    _ghost_start(true)
 {
     _map = std::make_shared<std::vector<std::string>>();
     for (size_t i = 0; i < 4; i++)
@@ -60,6 +61,7 @@ bool Pacman::runGame()
     }
     if (getLastKey() == 41) {
         _lock_create_map = true;
+        _ghost_start = true;
         _ghosts.at(0)->setSpeed(5);
         _score = 0;
         _bonus = false;
@@ -72,9 +74,24 @@ bool Pacman::runGame()
         setIsNewMap(true);
     }
     if (static_cast<double>((clock() - _clock[1])) / CLOCKS_PER_SEC > _ghosts.at(0)->getSpeed()) {
-        _ghosts.at(0)->move(UP, _map);
-        _ghosts.at(0)->setSpeed(0.1);
-        _ghosts.at(0)->move(UP, _map);
+        if (_ghost_start) {
+            _ghosts.at(0)->move(UP, _map);
+            _ghosts.at(0)->setSpeed(0.1);
+            _ghosts.at(0)->move(UP, _map);
+            _ghost_start = false;
+        } else {
+            enum my_type {
+                RIGHT = 3, 
+                LEFT = 16, 
+                DOWN = 18, 
+                UP = 25,
+                last
+            };
+            my_type type = static_cast<my_type>(rand() % last);
+            std::cout << type << std::endl;
+            Move move = static_cast<Move>(type);
+            _ghosts.at(0)->move(move, _map);
+        }
         _clock[1] = clock();
         setIsNewMap(true);
     }

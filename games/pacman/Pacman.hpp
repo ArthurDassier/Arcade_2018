@@ -71,8 +71,7 @@ class Pacman : public IGame
         bool _canMove;
         bool _bonus;
         bool _lock_create_map;
-        // std::unique_ptr<Entity> _pacman;
+        bool _ghost_start;
         std::shared_ptr<Entity> _pacman;
-        // std::vector<std::unique_ptr<Entity>> _ghosts;
         std::vector<std::shared_ptr<Entity>> _ghosts;
 };
