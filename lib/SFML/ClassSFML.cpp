@@ -41,8 +41,6 @@ bool ClassSFML::getEvent()
         if (_event.type == sf::Event::KeyPressed) {
             translateKey();
             setIsNewKey(true);
-            if (getLastKey() == 38 || getLastKey() == 39)
-                return (true);
         }
     }
     return (false);
