@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_i_game" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>IGame</compoundname>
+    <derivedcompoundref refid="class_pacman" prot="public" virt="non-virtual">Pacman</derivedcompoundref>
+    <includes refid="_i_game_8hpp" local="no">IGame.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_i_game_1a91b14c1b6019364120d5c5e4d4c64414" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual IGame::~IGame</definition>
+        <argsstring>()=default</argsstring>
+        <name>~IGame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/IGame.hpp" line="20" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_game_1a1bc3c6caaf66b62692f86e64227c3dbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool IGame::runGame</definition>
+        <argsstring>()=0</argsstring>
+        <name>runGame</name>
+        <reimplementedby refid="class_pacman_1abc01d8c1e91d1dea3f6181e35ba7879b">runGame</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/IGame.hpp" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_game_1aed19c19107a3ae7cda42a4aa93c6d88a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::shared_ptr&lt; std::vector&lt; std::string &gt; &gt;</type>
+        <definition>virtual std::shared_ptr&lt;std::vector&lt;std::string&gt; &gt; IGame::getMap</definition>
+        <argsstring>(void) const =0</argsstring>
+        <name>getMap</name>
+        <reimplementedby refid="class_pacman_1ad3a8b6def88dae5f23731a22221630c1">getMap</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/IGame.hpp" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_game_1a77f638e00a935757489b72a9b6cd76cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void IGame::setMap</definition>
+        <argsstring>(std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt; map)=0</argsstring>
+        <name>setMap</name>
+        <reimplementedby refid="class_pacman_1aad0a182f2ccb32642935f3f6cca57acb">setMap</reimplementedby>
+        <param>
+          <type>std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;</type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/IGame.hpp" line="24" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_game_1a3fd351624a3995e7ac9217f78b145776" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool IGame::getIsNewMap</definition>
+        <argsstring>(void) const =0</argsstring>
+        <name>getIsNewMap</name>
+        <reimplementedby refid="class_pacman_1a5faccc1e94f9d50052ca98a730ddd3b9">getIsNewMap</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/IGame.hpp" line="26" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_game_1a350a8546b27ad147e2924f07b5f9e62f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void IGame::setIsNewMap</definition>
+        <argsstring>(bool isNewMap)=0</argsstring>
+        <name>setIsNewMap</name>
+        <reimplementedby refid="class_pacman_1a7330ea2a00143ac820a5a11ee4443a2a">setIsNewMap</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>isNewMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/IGame.hpp" line="27" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_game_1a3ed5252b3f1a852082ec812f6cba75fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void IGame::setIsNewKey</definition>
+        <argsstring>(bool isNewKey)=0</argsstring>
+        <name>setIsNewKey</name>
+        <reimplementedby refid="class_pacman_1a7d2d053d9f51e2142d73310bdecd153d">setIsNewKey</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>isNewKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/IGame.hpp" line="29" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_game_1a6aab1a0cab3a49ab2b64a10c64c142ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool IGame::getIsNewKey</definition>
+        <argsstring>(void) const =0</argsstring>
+        <name>getIsNewKey</name>
+        <reimplementedby refid="class_pacman_1a1498e5471531676f4e0862fb294af1a9">getIsNewKey</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/IGame.hpp" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_game_1aca867f57cec68759c6da26a3a80ef961" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void IGame::setLastKey</definition>
+        <argsstring>(int key)=0</argsstring>
+        <name>setLastKey</name>
+        <reimplementedby refid="class_pacman_1a24122f7bbfc0f7f7074a7605fb6cc5b4">setLastKey</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/IGame.hpp" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_game_1a0d5eaacd905629f020013f620ed8becd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int IGame::getLastKey</definition>
+        <argsstring>(void) const =0</argsstring>
+        <name>getLastKey</name>
+        <reimplementedby refid="class_pacman_1a2e742e2ec861a207fbcc028cfd21f691">getLastKey</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/IGame.hpp" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_game_1a5a5359d4ad01653b25d5a703bede16f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void IGame::setScore</definition>
+        <argsstring>(size_t score)=0</argsstring>
+        <name>setScore</name>
+        <reimplementedby refid="class_pacman_1a226192579c1ee73023f5c2e6fbb51b23">setScore</reimplementedby>
+        <param>
+          <type>size_t</type>
+          <declname>score</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/IGame.hpp" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_game_1aedff9507276384fb437596fcd8c5d9f3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>size_t</type>
+        <definition>virtual size_t IGame::getScore</definition>
+        <argsstring>(void) const =0</argsstring>
+        <name>getScore</name>
+        <reimplementedby refid="class_pacman_1aa60024d15315b294867c8a9e6b93c9e9">getScore</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/IGame.hpp" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_game_1a21b9d7003aa2cec51448afef66b00789" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const std::string</type>
+        <definition>virtual const std::string IGame::getPathConfig</definition>
+        <argsstring>() const noexcept=0</argsstring>
+        <name>getPathConfig</name>
+        <reimplementedby refid="class_pacman_1aa65615b902ba7bdf0c3b3c9696158aba">getPathConfig</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/IGame.hpp" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_game_1aabcc0d0dae71c42469433ffeebf9e9f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const std::string</type>
+        <definition>virtual const std::string IGame::getPathMap</definition>
+        <argsstring>() const noexcept=0</argsstring>
+        <name>getPathMap</name>
+        <reimplementedby refid="class_pacman_1a115a106d08e512b15e2b55bf70f800ee">getPathMap</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/IGame.hpp" line="39" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="30">
+        <label>IGame</label>
+        <link refid="class_i_game"/>
+      </node>
+      <node id="31">
+        <label>Pacman</label>
+        <link refid="class_pacman"/>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="games/IGame.hpp" line="18" column="1" bodyfile="games/IGame.hpp" bodystart="18" bodyend="40"/>
+    <listofallmembers>
+      <member refid="class_i_game_1a6aab1a0cab3a49ab2b64a10c64c142ac" prot="public" virt="pure-virtual"><scope>IGame</scope><name>getIsNewKey</name></member>
+      <member refid="class_i_game_1a3fd351624a3995e7ac9217f78b145776" prot="public" virt="pure-virtual"><scope>IGame</scope><name>getIsNewMap</name></member>
+      <member refid="class_i_game_1a0d5eaacd905629f020013f620ed8becd" prot="public" virt="pure-virtual"><scope>IGame</scope><name>getLastKey</name></member>
+      <member refid="class_i_game_1aed19c19107a3ae7cda42a4aa93c6d88a" prot="public" virt="pure-virtual"><scope>IGame</scope><name>getMap</name></member>
+      <member refid="class_i_game_1a21b9d7003aa2cec51448afef66b00789" prot="public" virt="pure-virtual"><scope>IGame</scope><name>getPathConfig</name></member>
+      <member refid="class_i_game_1aabcc0d0dae71c42469433ffeebf9e9f0" prot="public" virt="pure-virtual"><scope>IGame</scope><name>getPathMap</name></member>
+      <member refid="class_i_game_1aedff9507276384fb437596fcd8c5d9f3" prot="public" virt="pure-virtual"><scope>IGame</scope><name>getScore</name></member>
+      <member refid="class_i_game_1a1bc3c6caaf66b62692f86e64227c3dbf" prot="public" virt="pure-virtual"><scope>IGame</scope><name>runGame</name></member>
+      <member refid="class_i_game_1a3ed5252b3f1a852082ec812f6cba75fe" prot="public" virt="pure-virtual"><scope>IGame</scope><name>setIsNewKey</name></member>
+      <member refid="class_i_game_1a350a8546b27ad147e2924f07b5f9e62f" prot="public" virt="pure-virtual"><scope>IGame</scope><name>setIsNewMap</name></member>
+      <member refid="class_i_game_1aca867f57cec68759c6da26a3a80ef961" prot="public" virt="pure-virtual"><scope>IGame</scope><name>setLastKey</name></member>
+      <member refid="class_i_game_1a77f638e00a935757489b72a9b6cd76cd" prot="public" virt="pure-virtual"><scope>IGame</scope><name>setMap</name></member>
+      <member refid="class_i_game_1a5a5359d4ad01653b25d5a703bede16f4" prot="public" virt="pure-virtual"><scope>IGame</scope><name>setScore</name></member>
+      <member refid="class_i_game_1a91b14c1b6019364120d5c5e4d4c64414" prot="public" virt="virtual"><scope>IGame</scope><name>~IGame</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

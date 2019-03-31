@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_i_graphic_8hpp" kind="file" language="C++">
+    <compoundname>IGraphic.hpp</compoundname>
+    <includes local="no">memory</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">iostream</includes>
+    <includedby refid="_class_ncurses_8hpp" local="yes">lib/NCURSES/ClassNcurses.hpp</includedby>
+    <includedby refid="_class_s_d_l_8hpp" local="yes">lib/SDL/ClassSDL.hpp</includedby>
+    <includedby refid="_class_s_f_m_l_8hpp" local="yes">lib/SFML/ClassSFML.hpp</includedby>
+    <includedby refid="_core_8hpp" local="yes">srcs/Core.hpp</includedby>
+    <includedby refid="main_8cpp" local="yes">srcs/main.cpp</includedby>
+    <incdepgraph>
+      <node id="66">
+        <label>functional</label>
+      </node>
+      <node id="65">
+        <label>fstream</label>
+      </node>
+      <node id="64">
+        <label>vector</label>
+      </node>
+      <node id="67">
+        <label>iostream</label>
+      </node>
+      <node id="62">
+        <label>lib/IGraphic.hpp</label>
+        <link refid="_i_graphic_8hpp"/>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="73">
+        <label>lib/SDL/ClassSDL.cpp</label>
+        <link refid="_class_s_d_l_8cpp"/>
+      </node>
+      <node id="74">
+        <label>tests/tests_SDL.cpp</label>
+        <link refid="tests___s_d_l_8cpp"/>
+      </node>
+      <node id="78">
+        <label>srcs/Core.hpp</label>
+        <link refid="_core_8hpp"/>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>lib/NCURSES/ClassNcurses.cpp</label>
+        <link refid="_class_ncurses_8cpp"/>
+      </node>
+      <node id="71">
+        <label>tests/tests_NCURSES.cpp</label>
+        <link refid="tests___n_c_u_r_s_e_s_8cpp"/>
+      </node>
+      <node id="77">
+        <label>tests/tests_SFML.cpp</label>
+        <link refid="tests___s_f_m_l_8cpp"/>
+      </node>
+      <node id="79">
+        <label>srcs/Core.cpp</label>
+        <link refid="_core_8cpp"/>
+      </node>
+      <node id="75">
+        <label>lib/SFML/ClassSFML.hpp</label>
+        <link refid="_class_s_f_m_l_8hpp"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>lib/SFML/ClassSFML.cpp</label>
+        <link refid="_class_s_f_m_l_8cpp"/>
+      </node>
+      <node id="80">
+        <label>srcs/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="68">
+        <label>lib/IGraphic.hpp</label>
+        <link refid="_i_graphic_8hpp"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>lib/SDL/ClassSDL.hpp</label>
+        <link refid="_class_s_d_l_8hpp"/>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>lib/NCURSES/ClassNcurses.hpp</label>
+        <link refid="_class_ncurses_8hpp"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_i_graphic" prot="public">IGraphic</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_i_graphic_8hpp_1a6974d08a74da681b3957b2fead2608b8" prot="public" static="no">
+        <name>SCREEN_HEIGHT</name>
+        <initializer>1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/IGraphic.hpp" line="16" column="9" bodyfile="lib/IGraphic.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_i_graphic_8hpp_1a2cd109632a6dcccaa80b43561b1ab700" prot="public" static="no">
+        <name>SCREEN_WIDTH</name>
+        <initializer>1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/IGraphic.hpp" line="17" column="9" bodyfile="lib/IGraphic.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2019</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>IGraphic.hpp</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>IGraphic</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="_i_graphic_8hpp_1a6974d08a74da681b3957b2fead2608b8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCREEN_HEIGHT<sp/>1000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="_i_graphic_8hpp_1a2cd109632a6dcccaa80b43561b1ab700" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCREEN_WIDTH<sp/>1000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="class_i_graphic" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_i_graphic" kindref="compound">IGraphic</ref><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_i_graphic_1aca238e622e55e4c3a61e1c7344902271" kindref="member">~IGraphic</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Members</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_i_graphic_1a7baecac5b5b85b538622c47f12b39cd9" kindref="member">runGraph</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_i_graphic_1a6e3191fe2663c34608ff8a2b2549c398" kindref="member">setMap</ref>(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_i_graphic_1a05d1ed2e0bcc2ddef923f4ab1df38ef1" kindref="member">translateKey</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_i_graphic_1a6037174816d5cab7c115eb1a69bbb0ff" kindref="member">setIsNewMap</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_i_graphic_1ae10de43a122b5e1f35a3d2d55cf08e59" kindref="member">getIsNewMap</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_i_graphic_1a8be0cc1ebd85fc184a9890f5ad372a1e" kindref="member">setIsNewKey</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_i_graphic_1a923ea671c162a94978c0f361084dd1a5" kindref="member">getIsNewKey</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_i_graphic_1ac3f35a4649c75449f270e3f3f9c12034" kindref="member">setLastKey</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_i_graphic_1a50b9159724eb7f07b597ebc65041e545" kindref="member">getLastKey</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_i_graphic_1a2380c2fa5c0d95b6d8b7267bf0c82142" kindref="member">setScore</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_i_graphic_1a4ab82acdbf8c33174612d42a375a7c77" kindref="member">getScore</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_i_graphic_1a68eb38735e805083420a000fffd973f7" kindref="member">setPathConfig</ref>(std::string)<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_i_graphic_1aa3d891972e5633a3163ed82e16ff9c98" kindref="member">getPathConfig</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_i_graphic_1ad8a1f76efc7b6c1e8b1387653dc9cb72" kindref="member">setIsNewPathConfig</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">)<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_i_graphic_1abde51d0606da0a538435c8dc4f66a5d2" kindref="member">getIsNewPathConfig</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_i_graphic_1ad6ff7f8cf232daec6f9d5a4a468eba2c" kindref="member">buildMap</ref>(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="lib/IGraphic.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,739 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_pacman" kind="class" language="C++" prot="public">
+    <compoundname>Pacman</compoundname>
+    <basecompoundref refid="class_i_game" prot="public" virt="non-virtual">IGame</basecompoundref>
+    <includes refid="_pacman_8hpp" local="no">Pacman.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_pacman_1ae5520ba04e35b4f7a002ab7e285e23f4" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Pacman::_pathConfig</definition>
+        <argsstring></argsstring>
+        <name>_pathConfig</name>
+        <initializer>= &quot;./games/pacman/config/sprites.config&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="60" column="1" bodyfile="games/pacman/Pacman.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_1a256a5edd1579e45474849c3ad02c98d8" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Pacman::_pathMap</definition>
+        <argsstring></argsstring>
+        <name>_pathMap</name>
+        <initializer>= &quot;./games/pacman/config/map.config&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="61" column="1" bodyfile="games/pacman/Pacman.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_1a7cdd39470a0336d8425116a1c86e8412" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Pacman::_isNewMap</definition>
+        <argsstring></argsstring>
+        <name>_isNewMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="62" column="1" bodyfile="games/pacman/Pacman.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_1abad024464c33196fa647f6ea85adca96" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; std::vector&lt; std::string &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;std::vector&lt;std::string&gt; &gt; Pacman::_map</definition>
+        <argsstring></argsstring>
+        <name>_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="63" column="1" bodyfile="games/pacman/Pacman.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_1ab46df4396f27adb8e0cee00ff8a57847" prot="private" static="no" mutable="no">
+        <type>std::map&lt; size_t, std::map&lt; size_t, char &gt; &gt;</type>
+        <definition>std::map&lt;size_t, std::map&lt;size_t, char&gt; &gt; Pacman::_tmp</definition>
+        <argsstring></argsstring>
+        <name>_tmp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="64" column="1" bodyfile="games/pacman/Pacman.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_1aaccaa113604b968ad1bc27b235b2c3f5" prot="private" static="no" mutable="no">
+        <type><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388" kindref="member">Move</ref></type>
+        <definition>Move Pacman::_lastMove</definition>
+        <argsstring></argsstring>
+        <name>_lastMove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="65" column="1" bodyfile="games/pacman/Pacman.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_1ab3a30ce6dce11308f1cc1479eff891ad" prot="private" static="no" mutable="no">
+        <type>clock_t</type>
+        <definition>clock_t Pacman::_clock[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>_clock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="66" column="1" bodyfile="games/pacman/Pacman.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_1a677e0964dfcb22d8e64c98848061383d" prot="private" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t Pacman::_start</definition>
+        <argsstring></argsstring>
+        <name>_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="67" column="1" bodyfile="games/pacman/Pacman.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_1adf33519e10b0d7f49e6ed234065ff3cb" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Pacman::_key</definition>
+        <argsstring></argsstring>
+        <name>_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="68" column="1" bodyfile="games/pacman/Pacman.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_1a0c82ff934ef94e48d91bb409648beeb6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Pacman::_isNewKey</definition>
+        <argsstring></argsstring>
+        <name>_isNewKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="69" column="1" bodyfile="games/pacman/Pacman.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_1a0a1124dca8f3dedad160776f2e6fa780" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Pacman::_score</definition>
+        <argsstring></argsstring>
+        <name>_score</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="70" column="1" bodyfile="games/pacman/Pacman.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_1ab0cf69e70eee212b3f5778f48279ae47" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Pacman::_canMove</definition>
+        <argsstring></argsstring>
+        <name>_canMove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="71" column="1" bodyfile="games/pacman/Pacman.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_1a652901c830493fcf1412348d3cf4f15d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Pacman::_bonus</definition>
+        <argsstring></argsstring>
+        <name>_bonus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="72" column="1" bodyfile="games/pacman/Pacman.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_1ae219cb1b3633ff34e630182bd857008f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Pacman::_lock_create_map</definition>
+        <argsstring></argsstring>
+        <name>_lock_create_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="73" column="1" bodyfile="games/pacman/Pacman.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_1a088ec7d300653cc603f8f8a75edecbab" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_entity" kindref="compound">Entity</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Entity&gt; Pacman::_pacman</definition>
+        <argsstring></argsstring>
+        <name>_pacman</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="75" column="1" bodyfile="games/pacman/Pacman.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_1a305bb9c92e2ec7df0885e2b029252cc2" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="class_entity" kindref="compound">Entity</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;Entity&gt; &gt; Pacman::_ghosts</definition>
+        <argsstring></argsstring>
+        <name>_ghosts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="77" column="1" bodyfile="games/pacman/Pacman.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_pacman_1a499408baab38f119ebd4f41e90fbe3fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Pacman::Pacman</definition>
+        <argsstring>()</argsstring>
+        <name>Pacman</name>
+        <briefdescription>
+<para>Create the <ref refid="class_pacman" kindref="compound">Pacman</ref> game. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="22" column="1" bodyfile="games/pacman/Pacman.cpp" bodystart="17" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1aeeb4fea54918576dbdf20a1f325410bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Pacman::~Pacman</definition>
+        <argsstring>()</argsstring>
+        <name>~Pacman</name>
+        <briefdescription>
+<para><ref refid="class_pacman" kindref="compound">Pacman</ref> Class destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="23" column="1" bodyfile="games/pacman/Pacman.cpp" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1abc01d8c1e91d1dea3f6181e35ba7879b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Pacman::runGame</definition>
+        <argsstring>()</argsstring>
+        <name>runGame</name>
+        <reimplements refid="class_i_game_1a1bc3c6caaf66b62692f86e64227c3dbf">runGame</reimplements>
+        <briefdescription>
+<para>Set the clock of the game and handle the logic. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="25" column="1" bodyfile="games/pacman/Pacman.cpp" bodystart="55" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1aad0a182f2ccb32642935f3f6cca57acb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Pacman::setMap</definition>
+        <argsstring>(std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;)</argsstring>
+        <name>setMap</name>
+        <reimplements refid="class_i_game_1a77f638e00a935757489b72a9b6cd76cd">setMap</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;</type>
+          <defname>map</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="26" column="1" bodyfile="games/pacman/Pacman.cpp" bodystart="134" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1ad3a8b6def88dae5f23731a22221630c1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::shared_ptr&lt; std::vector&lt; std::string &gt; &gt;</type>
+        <definition>std::shared_ptr&lt; std::vector&lt; std::string &gt; &gt; Pacman::getMap</definition>
+        <argsstring>(void) const</argsstring>
+        <name>getMap</name>
+        <reimplements refid="class_i_game_1aed19c19107a3ae7cda42a4aa93c6d88a">getMap</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="27" column="1" bodyfile="games/pacman/Pacman.cpp" bodystart="139" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1acf9fff61dc94c5b28ea90b29d1fc9d6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Pacman::readMap</definition>
+        <argsstring>(void)</argsstring>
+        <name>readMap</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Read the map. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="28" column="1" bodyfile="games/pacman/Pacman.cpp" bodystart="104" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1a7330ea2a00143ac820a5a11ee4443a2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Pacman::setIsNewMap</definition>
+        <argsstring>(bool)</argsstring>
+        <name>setIsNewMap</name>
+        <reimplements refid="class_i_game_1a350a8546b27ad147e2924f07b5f9e62f">setIsNewMap</reimplements>
+        <param>
+          <type>bool</type>
+          <defname>map</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="30" column="1" bodyfile="games/pacman/Pacman.cpp" bodystart="144" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1a5faccc1e94f9d50052ca98a730ddd3b9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Pacman::getIsNewMap</definition>
+        <argsstring>(void) const</argsstring>
+        <name>getIsNewMap</name>
+        <reimplements refid="class_i_game_1a3fd351624a3995e7ac9217f78b145776">getIsNewMap</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="31" column="1" bodyfile="games/pacman/Pacman.cpp" bodystart="149" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1a7d2d053d9f51e2142d73310bdecd153d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Pacman::setIsNewKey</definition>
+        <argsstring>(bool)</argsstring>
+        <name>setIsNewKey</name>
+        <reimplements refid="class_i_game_1a3ed5252b3f1a852082ec812f6cba75fe">setIsNewKey</reimplements>
+        <param>
+          <type>bool</type>
+          <defname>isNewKey</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="33" column="1" bodyfile="games/pacman/Pacman.cpp" bodystart="154" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1a1498e5471531676f4e0862fb294af1a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Pacman::getIsNewKey</definition>
+        <argsstring>(void) const</argsstring>
+        <name>getIsNewKey</name>
+        <reimplements refid="class_i_game_1a6aab1a0cab3a49ab2b64a10c64c142ac">getIsNewKey</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="34" column="1" bodyfile="games/pacman/Pacman.cpp" bodystart="159" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1a24122f7bbfc0f7f7074a7605fb6cc5b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Pacman::setLastKey</definition>
+        <argsstring>(int)</argsstring>
+        <name>setLastKey</name>
+        <reimplements refid="class_i_game_1aca867f57cec68759c6da26a3a80ef961">setLastKey</reimplements>
+        <param>
+          <type>int</type>
+          <defname>key</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="36" column="1" bodyfile="games/pacman/Pacman.cpp" bodystart="164" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1a2e742e2ec861a207fbcc028cfd21f691" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int Pacman::getLastKey</definition>
+        <argsstring>(void) const</argsstring>
+        <name>getLastKey</name>
+        <reimplements refid="class_i_game_1a0d5eaacd905629f020013f620ed8becd">getLastKey</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="37" column="1" bodyfile="games/pacman/Pacman.cpp" bodystart="169" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1a226192579c1ee73023f5c2e6fbb51b23" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Pacman::setScore</definition>
+        <argsstring>(size_t)</argsstring>
+        <name>setScore</name>
+        <reimplements refid="class_i_game_1a5a5359d4ad01653b25d5a703bede16f4">setScore</reimplements>
+        <param>
+          <type>size_t</type>
+          <defname>score</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="39" column="1" bodyfile="games/pacman/Pacman.cpp" bodystart="174" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1aa60024d15315b294867c8a9e6b93c9e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t Pacman::getScore</definition>
+        <argsstring>() const</argsstring>
+        <name>getScore</name>
+        <reimplements refid="class_i_game_1aedff9507276384fb437596fcd8c5d9f3">getScore</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="40" column="1" bodyfile="games/pacman/Pacman.cpp" bodystart="179" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1aa4d0a2bba50ece6656c202e75ba5d3dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Pacman::setBonus</definition>
+        <argsstring>(bool)</argsstring>
+        <name>setBonus</name>
+        <param>
+          <type>bool</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1a35ea0e9dfac9ee2b060bb819e3f316ad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Pacman::getBonus</definition>
+        <argsstring>(void) const</argsstring>
+        <name>getBonus</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1a57e12856953dccfdac2b265eb5e9618c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Pacman::setMove</definition>
+        <argsstring>(Move)</argsstring>
+        <name>setMove</name>
+        <param>
+          <type><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388" kindref="member">Move</ref></type>
+          <defname>lastMove</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="45" column="1" bodyfile="games/pacman/Pacman.cpp" bodystart="194" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1aba1c6e1720eb116cf2563b5fa6b2a19a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388" kindref="member">Move</ref></type>
+        <definition>Move Pacman::getMove</definition>
+        <argsstring>() const</argsstring>
+        <name>getMove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="46" column="1" bodyfile="games/pacman/Pacman.cpp" bodystart="200" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1a5685f13b2be47a4d19c2cf984651f236" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Pacman::canMove</definition>
+        <argsstring>() const</argsstring>
+        <name>canMove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1a0a64f9f3c861923080299797a9c1f695" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Pacman::moveDown</definition>
+        <argsstring>(void)</argsstring>
+        <name>moveDown</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1a560b34fd0d107127133b63b2125a9664" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Pacman::moveLeft</definition>
+        <argsstring>(void)</argsstring>
+        <name>moveLeft</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1afe2c202bf893edeeecdd1876d1274196" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Pacman::moveRight</definition>
+        <argsstring>(void)</argsstring>
+        <name>moveRight</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1af87001266c5808eb8f47e03b74c4022c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Pacman::moveUp</definition>
+        <argsstring>(void)</argsstring>
+        <name>moveUp</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1a3127f3e766b7829c51606b8924f08e4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Pacman::checkNextCase</definition>
+        <argsstring>(char)</argsstring>
+        <name>checkNextCase</name>
+        <param>
+          <type>char</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1aa65615b902ba7bdf0c3b3c9696158aba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const std::string</type>
+        <definition>const std::string Pacman::getPathConfig</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>getPathConfig</name>
+        <reimplements refid="class_i_game_1a21b9d7003aa2cec51448afef66b00789">getPathConfig</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="56" column="1" bodyfile="games/pacman/Pacman.cpp" bodystart="184" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1a115a106d08e512b15e2b55bf70f800ee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const std::string</type>
+        <definition>const std::string Pacman::getPathMap</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>getPathMap</name>
+        <reimplements refid="class_i_game_1aabcc0d0dae71c42469433ffeebf9e9f0">getPathMap</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="games/pacman/Pacman.hpp" line="57" column="1" bodyfile="games/pacman/Pacman.cpp" bodystart="189" bodyend="192"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class representing <ref refid="class_pacman" kindref="compound">Pacman</ref> logic. </para>    </briefdescription>
+    <detaileddescription>
+<para>This class contains the fonctions that handle the <ref refid="class_pacman" kindref="compound">Pacman</ref> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="43">
+        <label>IGame</label>
+        <link refid="class_i_game"/>
+      </node>
+      <node id="42">
+        <label>Pacman</label>
+        <link refid="class_pacman"/>
+        <childnode refid="43" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="45">
+        <label>IGame</label>
+        <link refid="class_i_game"/>
+      </node>
+      <node id="44">
+        <label>Pacman</label>
+        <link refid="class_pacman"/>
+        <childnode refid="45" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="games/pacman/Pacman.hpp" line="20" column="1" bodyfile="games/pacman/Pacman.hpp" bodystart="19" bodyend="78"/>
+    <listofallmembers>
+      <member refid="class_pacman_1a652901c830493fcf1412348d3cf4f15d" prot="private" virt="non-virtual"><scope>Pacman</scope><name>_bonus</name></member>
+      <member refid="class_pacman_1ab0cf69e70eee212b3f5778f48279ae47" prot="private" virt="non-virtual"><scope>Pacman</scope><name>_canMove</name></member>
+      <member refid="class_pacman_1ab3a30ce6dce11308f1cc1479eff891ad" prot="private" virt="non-virtual"><scope>Pacman</scope><name>_clock</name></member>
+      <member refid="class_pacman_1a305bb9c92e2ec7df0885e2b029252cc2" prot="private" virt="non-virtual"><scope>Pacman</scope><name>_ghosts</name></member>
+      <member refid="class_pacman_1a0c82ff934ef94e48d91bb409648beeb6" prot="private" virt="non-virtual"><scope>Pacman</scope><name>_isNewKey</name></member>
+      <member refid="class_pacman_1a7cdd39470a0336d8425116a1c86e8412" prot="private" virt="non-virtual"><scope>Pacman</scope><name>_isNewMap</name></member>
+      <member refid="class_pacman_1adf33519e10b0d7f49e6ed234065ff3cb" prot="private" virt="non-virtual"><scope>Pacman</scope><name>_key</name></member>
+      <member refid="class_pacman_1aaccaa113604b968ad1bc27b235b2c3f5" prot="private" virt="non-virtual"><scope>Pacman</scope><name>_lastMove</name></member>
+      <member refid="class_pacman_1ae219cb1b3633ff34e630182bd857008f" prot="private" virt="non-virtual"><scope>Pacman</scope><name>_lock_create_map</name></member>
+      <member refid="class_pacman_1abad024464c33196fa647f6ea85adca96" prot="private" virt="non-virtual"><scope>Pacman</scope><name>_map</name></member>
+      <member refid="class_pacman_1a088ec7d300653cc603f8f8a75edecbab" prot="private" virt="non-virtual"><scope>Pacman</scope><name>_pacman</name></member>
+      <member refid="class_pacman_1ae5520ba04e35b4f7a002ab7e285e23f4" prot="private" virt="non-virtual"><scope>Pacman</scope><name>_pathConfig</name></member>
+      <member refid="class_pacman_1a256a5edd1579e45474849c3ad02c98d8" prot="private" virt="non-virtual"><scope>Pacman</scope><name>_pathMap</name></member>
+      <member refid="class_pacman_1a0a1124dca8f3dedad160776f2e6fa780" prot="private" virt="non-virtual"><scope>Pacman</scope><name>_score</name></member>
+      <member refid="class_pacman_1a677e0964dfcb22d8e64c98848061383d" prot="private" virt="non-virtual"><scope>Pacman</scope><name>_start</name></member>
+      <member refid="class_pacman_1ab46df4396f27adb8e0cee00ff8a57847" prot="private" virt="non-virtual"><scope>Pacman</scope><name>_tmp</name></member>
+      <member refid="class_pacman_1a5685f13b2be47a4d19c2cf984651f236" prot="public" virt="non-virtual"><scope>Pacman</scope><name>canMove</name></member>
+      <member refid="class_pacman_1a3127f3e766b7829c51606b8924f08e4e" prot="public" virt="non-virtual"><scope>Pacman</scope><name>checkNextCase</name></member>
+      <member refid="class_pacman_1a35ea0e9dfac9ee2b060bb819e3f316ad" prot="public" virt="non-virtual"><scope>Pacman</scope><name>getBonus</name></member>
+      <member refid="class_pacman_1a1498e5471531676f4e0862fb294af1a9" prot="public" virt="virtual"><scope>Pacman</scope><name>getIsNewKey</name></member>
+      <member refid="class_pacman_1a5faccc1e94f9d50052ca98a730ddd3b9" prot="public" virt="virtual"><scope>Pacman</scope><name>getIsNewMap</name></member>
+      <member refid="class_pacman_1a2e742e2ec861a207fbcc028cfd21f691" prot="public" virt="virtual"><scope>Pacman</scope><name>getLastKey</name></member>
+      <member refid="class_pacman_1ad3a8b6def88dae5f23731a22221630c1" prot="public" virt="virtual"><scope>Pacman</scope><name>getMap</name></member>
+      <member refid="class_pacman_1aba1c6e1720eb116cf2563b5fa6b2a19a" prot="public" virt="non-virtual"><scope>Pacman</scope><name>getMove</name></member>
+      <member refid="class_pacman_1aa65615b902ba7bdf0c3b3c9696158aba" prot="public" virt="virtual"><scope>Pacman</scope><name>getPathConfig</name></member>
+      <member refid="class_pacman_1a115a106d08e512b15e2b55bf70f800ee" prot="public" virt="virtual"><scope>Pacman</scope><name>getPathMap</name></member>
+      <member refid="class_pacman_1aa60024d15315b294867c8a9e6b93c9e9" prot="public" virt="virtual"><scope>Pacman</scope><name>getScore</name></member>
+      <member refid="class_pacman_1a0a64f9f3c861923080299797a9c1f695" prot="public" virt="non-virtual"><scope>Pacman</scope><name>moveDown</name></member>
+      <member refid="class_pacman_1a560b34fd0d107127133b63b2125a9664" prot="public" virt="non-virtual"><scope>Pacman</scope><name>moveLeft</name></member>
+      <member refid="class_pacman_1afe2c202bf893edeeecdd1876d1274196" prot="public" virt="non-virtual"><scope>Pacman</scope><name>moveRight</name></member>
+      <member refid="class_pacman_1af87001266c5808eb8f47e03b74c4022c" prot="public" virt="non-virtual"><scope>Pacman</scope><name>moveUp</name></member>
+      <member refid="class_pacman_1a499408baab38f119ebd4f41e90fbe3fe" prot="public" virt="non-virtual"><scope>Pacman</scope><name>Pacman</name></member>
+      <member refid="class_pacman_1acf9fff61dc94c5b28ea90b29d1fc9d6a" prot="public" virt="non-virtual"><scope>Pacman</scope><name>readMap</name></member>
+      <member refid="class_pacman_1abc01d8c1e91d1dea3f6181e35ba7879b" prot="public" virt="virtual"><scope>Pacman</scope><name>runGame</name></member>
+      <member refid="class_pacman_1aa4d0a2bba50ece6656c202e75ba5d3dc" prot="public" virt="non-virtual"><scope>Pacman</scope><name>setBonus</name></member>
+      <member refid="class_pacman_1a7d2d053d9f51e2142d73310bdecd153d" prot="public" virt="virtual"><scope>Pacman</scope><name>setIsNewKey</name></member>
+      <member refid="class_pacman_1a7330ea2a00143ac820a5a11ee4443a2a" prot="public" virt="virtual"><scope>Pacman</scope><name>setIsNewMap</name></member>
+      <member refid="class_pacman_1a24122f7bbfc0f7f7074a7605fb6cc5b4" prot="public" virt="virtual"><scope>Pacman</scope><name>setLastKey</name></member>
+      <member refid="class_pacman_1aad0a182f2ccb32642935f3f6cca57acb" prot="public" virt="virtual"><scope>Pacman</scope><name>setMap</name></member>
+      <member refid="class_pacman_1a57e12856953dccfdac2b265eb5e9618c" prot="public" virt="non-virtual"><scope>Pacman</scope><name>setMove</name></member>
+      <member refid="class_pacman_1a226192579c1ee73023f5c2e6fbb51b23" prot="public" virt="virtual"><scope>Pacman</scope><name>setScore</name></member>
+      <member refid="class_i_game_1a91b14c1b6019364120d5c5e4d4c64414" prot="public" virt="virtual"><scope>Pacman</scope><name>~IGame</name></member>
+      <member refid="class_pacman_1aeeb4fea54918576dbdf20a1f325410bf" prot="public" virt="non-virtual"><scope>Pacman</scope><name>~Pacman</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

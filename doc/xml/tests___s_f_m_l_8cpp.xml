@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="tests___s_f_m_l_8cpp" kind="file" language="C++">
+    <compoundname>tests_SFML.cpp</compoundname>
+    <includes local="no">criterion/criterion.h</includes>
+    <includes local="no">criterion/redirect.h</includes>
+    <includes refid="_class_s_f_m_l_8hpp" local="yes">ClassSFML.hpp</includes>
+    <incdepgraph>
+      <node id="323">
+        <label>../srcs/ParsingConfig.hpp</label>
+      </node>
+      <node id="309">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="321">
+        <label>functional</label>
+      </node>
+      <node id="307">
+        <label>criterion/redirect.h</label>
+      </node>
+      <node id="314">
+        <label>SFML/Graphics/Transformable.hpp</label>
+      </node>
+      <node id="310">
+        <label>AnimatedSprite.hpp</label>
+        <link refid="_animated_sprite_8hpp"/>
+        <childnode refid="311" relation="include">
+        </childnode>
+        <childnode refid="312" relation="include">
+        </childnode>
+        <childnode refid="313" relation="include">
+        </childnode>
+        <childnode refid="314" relation="include">
+        </childnode>
+        <childnode refid="315" relation="include">
+        </childnode>
+        <childnode refid="316" relation="include">
+        </childnode>
+      </node>
+      <node id="315">
+        <label>SFML/System/Vector2.hpp</label>
+      </node>
+      <node id="320">
+        <label>fstream</label>
+      </node>
+      <node id="313">
+        <label>SFML/Graphics/Drawable.hpp</label>
+      </node>
+      <node id="305">
+        <label>tests/tests_SFML.cpp</label>
+        <link refid="tests___s_f_m_l_8cpp"/>
+        <childnode refid="306" relation="include">
+        </childnode>
+        <childnode refid="307" relation="include">
+        </childnode>
+        <childnode refid="308" relation="include">
+        </childnode>
+      </node>
+      <node id="306">
+        <label>criterion/criterion.h</label>
+      </node>
+      <node id="308">
+        <label>ClassSFML.hpp</label>
+        <link refid="_class_s_f_m_l_8hpp"/>
+        <childnode refid="309" relation="include">
+        </childnode>
+        <childnode refid="310" relation="include">
+        </childnode>
+        <childnode refid="317" relation="include">
+        </childnode>
+        <childnode refid="323" relation="include">
+        </childnode>
+      </node>
+      <node id="319">
+        <label>vector</label>
+      </node>
+      <node id="316">
+        <label>Animation.hpp</label>
+        <link refid="_animation_8hpp"/>
+        <childnode refid="309" relation="include">
+        </childnode>
+      </node>
+      <node id="311">
+        <label>SFML/Graphics/RenderTarget.hpp</label>
+      </node>
+      <node id="322">
+        <label>iostream</label>
+      </node>
+      <node id="317">
+        <label>IGraphic.hpp</label>
+        <link refid="_i_graphic_8hpp"/>
+        <childnode refid="318" relation="include">
+        </childnode>
+        <childnode refid="319" relation="include">
+        </childnode>
+        <childnode refid="320" relation="include">
+        </childnode>
+        <childnode refid="321" relation="include">
+        </childnode>
+        <childnode refid="322" relation="include">
+        </childnode>
+      </node>
+      <node id="312">
+        <label>SFML/System/Time.hpp</label>
+      </node>
+      <node id="318">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="tests___s_f_m_l_8cpp_1a8789d4d6a448183edc6af15b359e2594" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test</definition>
+        <argsstring>(tests_SFML, test_getIsNewKeyIsTrue)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>tests_SFML</type>
+        </param>
+        <param>
+          <type>test_getIsNewKeyIsTrue</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/tests_SFML.cpp" line="12" column="1" bodyfile="tests/tests_SFML.cpp" bodystart="12" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="tests___s_f_m_l_8cpp_1a8f3f3ebae1c9a8f62b61a76c94610b4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test</definition>
+        <argsstring>(tests_SFML, test_getIsNewKeyIsFalse)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>tests_SFML</type>
+        </param>
+        <param>
+          <type>test_getIsNewKeyIsFalse</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/tests_SFML.cpp" line="20" column="1" bodyfile="tests/tests_SFML.cpp" bodystart="20" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="tests___s_f_m_l_8cpp_1ac1758896bd72b3da2e8752254b6e2fe3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test</definition>
+        <argsstring>(tests_SFML, test_getIsNewMapIsTrue)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>tests_SFML</type>
+        </param>
+        <param>
+          <type>test_getIsNewMapIsTrue</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/tests_SFML.cpp" line="28" column="1" bodyfile="tests/tests_SFML.cpp" bodystart="28" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="tests___s_f_m_l_8cpp_1a3b115731159c34ace3a0fe023cda9af5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test</definition>
+        <argsstring>(tests_SFML, test_getIsNewMapIsFalse)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>tests_SFML</type>
+        </param>
+        <param>
+          <type>test_getIsNewMapIsFalse</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/tests_SFML.cpp" line="36" column="1" bodyfile="tests/tests_SFML.cpp" bodystart="36" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="tests___s_f_m_l_8cpp_1ab36d37a099ff957041d09ebf99e0517e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test</definition>
+        <argsstring>(tests_SFML, test_getLastKeyIsTrue)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>tests_SFML</type>
+        </param>
+        <param>
+          <type>test_getLastKeyIsTrue</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/tests_SFML.cpp" line="43" column="1" bodyfile="tests/tests_SFML.cpp" bodystart="43" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="tests___s_f_m_l_8cpp_1a425839e6f462571c221a65244ecb308d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test</definition>
+        <argsstring>(tests_SFML, test_getLastKeyIsFalse)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>tests_SFML</type>
+        </param>
+        <param>
+          <type>test_getLastKeyIsFalse</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/tests_SFML.cpp" line="51" column="1" bodyfile="tests/tests_SFML.cpp" bodystart="51" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2019</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>tests_sfml.cpp</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>tests_sfml</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;criterion/criterion.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;criterion/redirect.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_class_s_f_m_l_8hpp" kindref="compound">ClassSFML.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="tests___s_f_m_l_8cpp_1a8789d4d6a448183edc6af15b359e2594" refkind="member"><highlight class="normal"><ref refid="tests___s_f_m_l_8cpp_1a8789d4d6a448183edc6af15b359e2594" kindref="member">Test</ref>(tests_SFML,<sp/>test_getIsNewKeyIsTrue)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_class_s_f_m_l" kindref="compound">ClassSFML</ref><sp/>test;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_f_m_l_1afa4dc363da11512994f5964f53792990" kindref="member">setIsNewKey</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_f_m_l_1a0858bffedeb0ccd39ee911c08ede455d" kindref="member">getIsNewKey</ref>(),<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="tests___s_f_m_l_8cpp_1a8f3f3ebae1c9a8f62b61a76c94610b4e" refkind="member"><highlight class="normal"><ref refid="tests___s_f_m_l_8cpp_1a8789d4d6a448183edc6af15b359e2594" kindref="member">Test</ref>(tests_SFML,<sp/>test_getIsNewKeyIsFalse)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_class_s_f_m_l" kindref="compound">ClassSFML</ref><sp/>test;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_f_m_l_1afa4dc363da11512994f5964f53792990" kindref="member">setIsNewKey</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_f_m_l_1a0858bffedeb0ccd39ee911c08ede455d" kindref="member">getIsNewKey</ref>(),<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="tests___s_f_m_l_8cpp_1ac1758896bd72b3da2e8752254b6e2fe3" refkind="member"><highlight class="normal"><ref refid="tests___s_f_m_l_8cpp_1a8789d4d6a448183edc6af15b359e2594" kindref="member">Test</ref>(tests_SFML,<sp/>test_getIsNewMapIsTrue)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_class_s_f_m_l" kindref="compound">ClassSFML</ref><sp/>test;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_f_m_l_1aeadd6368ac5b5d185a09cd1e7c1f9dcc" kindref="member">setIsNewMap</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_f_m_l_1ab74066896f56b41f0d644c31048bf764" kindref="member">getIsNewMap</ref>(),<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="tests___s_f_m_l_8cpp_1a3b115731159c34ace3a0fe023cda9af5" refkind="member"><highlight class="normal"><ref refid="tests___s_f_m_l_8cpp_1a8789d4d6a448183edc6af15b359e2594" kindref="member">Test</ref>(tests_SFML,<sp/>test_getIsNewMapIsFalse)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_class_s_f_m_l" kindref="compound">ClassSFML</ref><sp/>test;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_f_m_l_1aeadd6368ac5b5d185a09cd1e7c1f9dcc" kindref="member">setIsNewMap</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_f_m_l_1ab74066896f56b41f0d644c31048bf764" kindref="member">getIsNewMap</ref>(),<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43" refid="tests___s_f_m_l_8cpp_1ab36d37a099ff957041d09ebf99e0517e" refkind="member"><highlight class="normal"><ref refid="tests___s_f_m_l_8cpp_1a8789d4d6a448183edc6af15b359e2594" kindref="member">Test</ref>(tests_SFML,<sp/>test_getLastKeyIsTrue)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_class_s_f_m_l" kindref="compound">ClassSFML</ref><sp/>test;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_f_m_l_1aeb353a7928b673ceb10f12c4d5710305" kindref="member">setLastKey</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_f_m_l_1a7ebdd83fe2ab4c1feb3788f27a3a1b6e" kindref="member">getLastKey</ref>(),<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="tests___s_f_m_l_8cpp_1a425839e6f462571c221a65244ecb308d" refkind="member"><highlight class="normal"><ref refid="tests___s_f_m_l_8cpp_1a8789d4d6a448183edc6af15b359e2594" kindref="member">Test</ref>(tests_SFML,<sp/>test_getLastKeyIsFalse)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_class_s_f_m_l" kindref="compound">ClassSFML</ref><sp/>test;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_f_m_l_1aeb353a7928b673ceb10f12c4d5710305" kindref="member">setLastKey</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_f_m_l_1a7ebdd83fe2ab4c1feb3788f27a3a1b6e" kindref="member">getLastKey</ref>(),<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tests/tests_SFML.cpp"/>
+  </compounddef>
+</doxygen>

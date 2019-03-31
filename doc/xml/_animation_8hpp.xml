@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_animation_8hpp" kind="file" language="C++">
+    <compoundname>Animation.hpp</compoundname>
+    <includes local="no">SFML/Graphics.hpp</includes>
+    <includedby refid="_animated_sprite_8hpp" local="yes">lib/SFML/AnimatedSprite.hpp</includedby>
+    <includedby refid="_animation_8cpp" local="yes">lib/SFML/Animation.cpp</includedby>
+    <incdepgraph>
+      <node id="156">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="155">
+        <label>lib/SFML/Animation.hpp</label>
+        <link refid="_animation_8hpp"/>
+        <childnode refid="156" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="159">
+        <label>lib/SFML/AnimatedSprite.cpp</label>
+        <link refid="_animated_sprite_8cpp"/>
+      </node>
+      <node id="158">
+        <label>lib/SFML/AnimatedSprite.hpp</label>
+        <link refid="_animated_sprite_8hpp"/>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="160">
+        <label>lib/SFML/AnimationTest.cpp</label>
+        <link refid="_animation_test_8cpp"/>
+      </node>
+      <node id="163">
+        <label>tests/tests_SFML.cpp</label>
+        <link refid="tests___s_f_m_l_8cpp"/>
+      </node>
+      <node id="161">
+        <label>lib/SFML/ClassSFML.hpp</label>
+        <link refid="_class_s_f_m_l_8hpp"/>
+        <childnode refid="162" relation="include">
+        </childnode>
+        <childnode refid="163" relation="include">
+        </childnode>
+      </node>
+      <node id="157">
+        <label>lib/SFML/Animation.hpp</label>
+        <link refid="_animation_8hpp"/>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="164" relation="include">
+        </childnode>
+      </node>
+      <node id="162">
+        <label>lib/SFML/ClassSFML.cpp</label>
+        <link refid="_class_s_f_m_l_8cpp"/>
+      </node>
+      <node id="164">
+        <label>lib/SFML/Animation.cpp</label>
+        <link refid="_animation_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_animation" prot="public">Animation</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2019</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Animation.hpp</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>Animation</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Graphics.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_animation" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_animation" kindref="compound">Animation</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_animation_1a83f0a16cef7117f187ad596de38dd9d6" kindref="member">Animation</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_animation_1a401b68793d4fbf48d481c030ee4b2a16" kindref="member">~Animation</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_animation_1a18d8f46d264b0b5a8441c1114c486d0f" kindref="member">addFrame</ref>(sf::IntRect);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_animation_1a2da43578722139dfe4b4375b7fe99aba" kindref="member">setSpriteSheet</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sf::Texture&amp;);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sf::Texture<sp/>*<ref refid="class_animation_1abf4f00f8b1657829583d7d92e71b93d1" kindref="member">getSpriteSheet</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="class_animation_1ac6854dc96e9fc8ffd97feba43547c869" kindref="member">getSize</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sf::IntRect&amp;<sp/><ref refid="class_animation_1aaf7943420f26f46b744f49837bb65f51" kindref="member">getFrame</ref>(std::size_t)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;sf::IntRect&gt;<sp/>_frames;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sf::Texture*<sp/>_texture;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="lib/SFML/Animation.hpp"/>
+  </compounddef>
+</doxygen>

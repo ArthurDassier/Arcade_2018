@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['get_5finput',['get_input',['../class_class_ncurses.html#a159492f68ebf7abd41fe4af38a793346',1,'ClassNcurses']]],
-  ['get_5fstring',['get_string',['../class_class_ncurses.html#a0c33f51f91d6f567168afd1c02b53c08',1,'ClassNcurses']]],
   ['getanimation',['getAnimation',['../class_animated_sprite.html#a03bacdbaf638cb6f7987e342980206c2',1,'AnimatedSprite']]],
   ['getbonus',['getBonus',['../class_entity.html#a420fa54213e0debc86956197ffffa45e',1,'Entity::getBonus()'],['../class_pacman.html#a35ea0e9dfac9ee2b060bb819e3f316ad',1,'Pacman::getBonus()']]],
   ['getentity',['getEntity',['../class_entity.html#aeb78147bb879a3661ba336f07f641508',1,'Entity']]],

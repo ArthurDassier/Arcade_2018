@@ -1,8 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"class_class_s_f_m_l.html#afa4dc363da11512994f5964f53792990":[2,0,4,12],
-"class_core.html":[2,0,5],
-"class_core.html#a1084c28e7ee26459e981002a4274b0d3":[2,0,5,19],
 "class_core.html#a15d432deabf263fa01ed532cc2789ee7":[2,0,5,16],
 "class_core.html#a1b73ef0d41c64a612d9f0e745fef20f8":[2,0,5,2],
 "class_core.html#a24e2ac35e41ec57bbcb8be92a42e4bb9":[2,0,5,4],
@@ -131,8 +128,8 @@ var NAVTREEINDEX1 =
 "dlloader_8hpp.html":[3,0,1,3],
 "dlloader_8hpp_source.html":[3,0,1,3],
 "files.html":[3,0],
-"functions.html":[2,3,0],
 "functions.html":[2,3,0,0],
+"functions.html":[2,3,0],
 "functions_0x7e.html":[2,3,0,19],
 "functions_a.html":[2,3,0,1],
 "functions_b.html":[2,3,0,2],

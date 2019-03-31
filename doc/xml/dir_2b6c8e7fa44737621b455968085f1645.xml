@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_2b6c8e7fa44737621b455968085f1645" kind="dir">
+    <compoundname>games/pacman</compoundname>
+    <innerfile refid="_entity_8cpp">Entity.cpp</innerfile>
+    <innerfile refid="_entity_8hpp">Entity.hpp</innerfile>
+    <innerfile refid="_pacman_8cpp">Pacman.cpp</innerfile>
+    <innerfile refid="_pacman_8hpp">Pacman.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="games/pacman/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_parsing_config" kind="class" language="C++" prot="public">
+    <compoundname>ParsingConfig</compoundname>
+    <includes refid="_parsing_config_8hpp" local="no">ParsingConfig.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_parsing_config_1ab6910a5840aa458d700155d29c7d47e6" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_data_parsing_config" kindref="compound">DataParsingConfig</ref> &gt;</type>
+        <definition>std::vector&lt;DataParsingConfig&gt; ParsingConfig::_sprite</definition>
+        <argsstring></argsstring>
+        <name>_sprite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/ParsingConfig.hpp" line="84" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_parsing_config_1a27be64a8d36c9818342e5709e8302747" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ParsingConfig::_filename</definition>
+        <argsstring></argsstring>
+        <name>_filename</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/ParsingConfig.hpp" line="86" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_parsing_config_1a229ed410b2a12d6a986b66c0690e4252" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ParsingConfig::ParsingConfig</definition>
+        <argsstring>()=default</argsstring>
+        <name>ParsingConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/ParsingConfig.hpp" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_parsing_config_1a4c873e996638183fa642a3dd04e825f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ParsingConfig::~ParsingConfig</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ParsingConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/ParsingConfig.hpp" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_parsing_config_1abae8ec589bfee18d8c1ac61b56860006" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParsingConfig::setFilename</definition>
+        <argsstring>(std::string name) noexcept</argsstring>
+        <name>setFilename</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/ParsingConfig.hpp" line="40" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_parsing_config_1a1f4aac7d1b61378fd7339f27408982dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParsingConfig::clearData</definition>
+        <argsstring>()</argsstring>
+        <name>clearData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/ParsingConfig.hpp" line="45" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_parsing_config_1a5c8ec078b6559d591e4b0b9db489696d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="struct_data_parsing_config" kindref="compound">DataParsingConfig</ref> &gt;</type>
+        <definition>std::vector&lt;DataParsingConfig&gt; ParsingConfig::getResult</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>getResult</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/ParsingConfig.hpp" line="49" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_parsing_config_1a33e51177fef58d737983a45af84bcd9f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParsingConfig::readFile</definition>
+        <argsstring>()</argsstring>
+        <name>readFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/ParsingConfig.hpp" line="53" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="53" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_parsing_config_1aeeff01ccc8ab3aff5cd482fca0e6149f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParsingConfig::setIfStream</definition>
+        <argsstring>()</argsstring>
+        <name>setIfStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/ParsingConfig.hpp" line="78" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="78" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class representing parsing logic. </para>    </briefdescription>
+    <detaileddescription>
+<para>This class contains the fonctions that will read into the configurations files and set the <ref refid="struct_data_parsing_config" kindref="compound">DataParsingConfig</ref> structure </para>    </detaileddescription>
+    <location file="srcs/ParsingConfig.hpp" line="34" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="34" bodyend="87"/>
+    <listofallmembers>
+      <member refid="class_parsing_config_1a27be64a8d36c9818342e5709e8302747" prot="private" virt="non-virtual"><scope>ParsingConfig</scope><name>_filename</name></member>
+      <member refid="class_parsing_config_1ab6910a5840aa458d700155d29c7d47e6" prot="public" virt="non-virtual"><scope>ParsingConfig</scope><name>_sprite</name></member>
+      <member refid="class_parsing_config_1a1f4aac7d1b61378fd7339f27408982dd" prot="public" virt="non-virtual"><scope>ParsingConfig</scope><name>clearData</name></member>
+      <member refid="class_parsing_config_1a5c8ec078b6559d591e4b0b9db489696d" prot="public" virt="non-virtual"><scope>ParsingConfig</scope><name>getResult</name></member>
+      <member refid="class_parsing_config_1a229ed410b2a12d6a986b66c0690e4252" prot="public" virt="non-virtual"><scope>ParsingConfig</scope><name>ParsingConfig</name></member>
+      <member refid="class_parsing_config_1a33e51177fef58d737983a45af84bcd9f" prot="public" virt="non-virtual"><scope>ParsingConfig</scope><name>readFile</name></member>
+      <member refid="class_parsing_config_1abae8ec589bfee18d8c1ac61b56860006" prot="public" virt="non-virtual"><scope>ParsingConfig</scope><name>setFilename</name></member>
+      <member refid="class_parsing_config_1aeeff01ccc8ab3aff5cd482fca0e6149f" prot="public" virt="non-virtual"><scope>ParsingConfig</scope><name>setIfStream</name></member>
+      <member refid="class_parsing_config_1a4c873e996638183fa642a3dd04e825f3" prot="public" virt="non-virtual"><scope>ParsingConfig</scope><name>~ParsingConfig</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

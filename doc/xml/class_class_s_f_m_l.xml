@@ -1,0 +1,555 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_class_s_f_m_l" kind="class" language="C++" prot="public">
+    <compoundname>ClassSFML</compoundname>
+    <basecompoundref refid="class_i_graphic" prot="public" virt="non-virtual">IGraphic</basecompoundref>
+    <includes refid="_class_s_f_m_l_8hpp" local="no">ClassSFML.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_class_s_f_m_l_1acd139150184a511bb30446c042f42c81" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; sf::RenderWindow &gt;</type>
+        <definition>std::unique_ptr&lt;sf::RenderWindow&gt; ClassSFML::_wind</definition>
+        <argsstring></argsstring>
+        <name>_wind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="71" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_f_m_l_1a196bce77ccac2ecd325ccd4a33523dc4" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; std::vector&lt; std::vector&lt; std::pair&lt; char, sf::Sprite &gt; &gt; &gt; &gt;</type>
+        <definition>std::unique_ptr&lt;std::vector&lt;std::vector&lt;std::pair&lt;char, sf::Sprite&gt; &gt; &gt; &gt; ClassSFML::_map</definition>
+        <argsstring></argsstring>
+        <name>_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="72" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_f_m_l_1a620e48895955f7ad1889b228644bdf8e" prot="private" static="no" mutable="no">
+        <type>sf::Event</type>
+        <definition>sf::Event ClassSFML::_event</definition>
+        <argsstring></argsstring>
+        <name>_event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="74" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_f_m_l_1a2c30ab27302b9f35deaf2bb2316bc621" prot="private" static="no" mutable="no">
+        <type><ref refid="class_parsing_config" kindref="compound">ParsingConfig</ref></type>
+        <definition>ParsingConfig ClassSFML::_parsing</definition>
+        <argsstring></argsstring>
+        <name>_parsing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="75" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_f_m_l_1aca23ea15c0347a3e84aebca244ce02c1" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; sf::Vector2i, std::shared_ptr&lt; sf::Texture &gt; &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;sf::Vector2i, std::shared_ptr&lt;sf::Texture&gt; &gt; &gt; ClassSFML::_textures</definition>
+        <argsstring></argsstring>
+        <name>_textures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="76" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_f_m_l_1ae036664483911ede24307f9ff505984f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ClassSFML::_pathConfig</definition>
+        <argsstring></argsstring>
+        <name>_pathConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="78" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_f_m_l_1adc5e51b0c18c15f01a0d62aab888754d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClassSFML::_isNewPathConfig</definition>
+        <argsstring></argsstring>
+        <name>_isNewPathConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="79" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_f_m_l_1aae651b7033cf466bcd7485d20e70da6a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClassSFML::_isNewMap</definition>
+        <argsstring></argsstring>
+        <name>_isNewMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="80" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_f_m_l_1ae17c198e8ea1549b5256111ca7e3f11b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClassSFML::_isNewKey</definition>
+        <argsstring></argsstring>
+        <name>_isNewKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="81" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_f_m_l_1a5d1402a5522c13ec0a7fe89079595b83" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t ClassSFML::_score</definition>
+        <argsstring></argsstring>
+        <name>_score</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="82" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_f_m_l_1a30b4ae3df376e6b68b08c9f536e998f5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ClassSFML::_key</definition>
+        <argsstring></argsstring>
+        <name>_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="83" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_class_s_f_m_l_1a9d31334eb3c24b7453fe988374fc6dfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClassSFML::ClassSFML</definition>
+        <argsstring>()</argsstring>
+        <name>ClassSFML</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="38" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="10" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_f_m_l_1a5eb248810461ef35802776bda0156c7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClassSFML::~ClassSFML</definition>
+        <argsstring>()</argsstring>
+        <name>~ClassSFML</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="39" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_f_m_l_1a64c5a966c0dcf53ecc3b3aaabafd7eb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ClassSFML::runGraph</definition>
+        <argsstring>()</argsstring>
+        <name>runGraph</name>
+        <reimplements refid="class_i_graphic_1a7baecac5b5b85b538622c47f12b39cd9">runGraph</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="42" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="50" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_f_m_l_1a9b143e495bdd43f42993cf5b0d492926" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassSFML::setMap</definition>
+        <argsstring>(std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;)</argsstring>
+        <name>setMap</name>
+        <reimplements refid="class_i_graphic_1a6e3191fe2663c34608ff8a2b2549c398">setMap</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;</type>
+          <defname>map</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="43" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="114" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_f_m_l_1a4b1d53348c79ca38489f9f0f1f62653c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassSFML::translateKey</definition>
+        <argsstring>()</argsstring>
+        <name>translateKey</name>
+        <reimplements refid="class_i_graphic_1a05d1ed2e0bcc2ddef923f4ab1df38ef1">translateKey</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="44" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="127" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_f_m_l_1aeadd6368ac5b5d185a09cd1e7c1f9dcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassSFML::setIsNewMap</definition>
+        <argsstring>(bool)</argsstring>
+        <name>setIsNewMap</name>
+        <reimplements refid="class_i_graphic_1a6037174816d5cab7c115eb1a69bbb0ff">setIsNewMap</reimplements>
+        <param>
+          <type>bool</type>
+          <defname>newMap</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="46" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="138" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_f_m_l_1ab74066896f56b41f0d644c31048bf764" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ClassSFML::getIsNewMap</definition>
+        <argsstring>(void) const</argsstring>
+        <name>getIsNewMap</name>
+        <reimplements refid="class_i_graphic_1ae10de43a122b5e1f35a3d2d55cf08e59">getIsNewMap</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="47" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="143" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_f_m_l_1afa4dc363da11512994f5964f53792990" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassSFML::setIsNewKey</definition>
+        <argsstring>(bool)</argsstring>
+        <name>setIsNewKey</name>
+        <reimplements refid="class_i_graphic_1a8be0cc1ebd85fc184a9890f5ad372a1e">setIsNewKey</reimplements>
+        <param>
+          <type>bool</type>
+          <defname>newKey</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="49" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="148" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_f_m_l_1a0858bffedeb0ccd39ee911c08ede455d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ClassSFML::getIsNewKey</definition>
+        <argsstring>(void) const</argsstring>
+        <name>getIsNewKey</name>
+        <reimplements refid="class_i_graphic_1a923ea671c162a94978c0f361084dd1a5">getIsNewKey</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="50" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="153" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_f_m_l_1aeb353a7928b673ceb10f12c4d5710305" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassSFML::setLastKey</definition>
+        <argsstring>(int)</argsstring>
+        <name>setLastKey</name>
+        <reimplements refid="class_i_graphic_1ac3f35a4649c75449f270e3f3f9c12034">setLastKey</reimplements>
+        <param>
+          <type>int</type>
+          <defname>key</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="52" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="158" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_f_m_l_1a7ebdd83fe2ab4c1feb3788f27a3a1b6e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int ClassSFML::getLastKey</definition>
+        <argsstring>(void) const</argsstring>
+        <name>getLastKey</name>
+        <reimplements refid="class_i_graphic_1a50b9159724eb7f07b597ebc65041e545">getLastKey</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="53" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="163" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_f_m_l_1a42df0bacc5fa82cfc451722332304b50" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassSFML::setScore</definition>
+        <argsstring>(size_t)</argsstring>
+        <name>setScore</name>
+        <reimplements refid="class_i_graphic_1a2380c2fa5c0d95b6d8b7267bf0c82142">setScore</reimplements>
+        <param>
+          <type>size_t</type>
+          <defname>score</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="55" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="168" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_f_m_l_1a525c4cf493dfd9d68ea2bba3bd15b7e7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t ClassSFML::getScore</definition>
+        <argsstring>() const</argsstring>
+        <name>getScore</name>
+        <reimplements refid="class_i_graphic_1a4ab82acdbf8c33174612d42a375a7c77">getScore</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="56" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="173" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_f_m_l_1ac37b544f6179f33994e9fa189e15eea8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassSFML::setPathConfig</definition>
+        <argsstring>(std::string) noexcept</argsstring>
+        <name>setPathConfig</name>
+        <reimplements refid="class_i_graphic_1a68eb38735e805083420a000fffd973f7">setPathConfig</reimplements>
+        <param>
+          <type>std::string</type>
+          <defname>path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="58" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="178" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_f_m_l_1aa83937866ca263758733952543eb8282" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string ClassSFML::getPathConfig</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>getPathConfig</name>
+        <reimplements refid="class_i_graphic_1aa3d891972e5633a3163ed82e16ff9c98">getPathConfig</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="59" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="183" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_f_m_l_1ab47a3c8fb83d5db1640105bd6771c3da" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassSFML::setIsNewPathConfig</definition>
+        <argsstring>(bool) noexcept</argsstring>
+        <name>setIsNewPathConfig</name>
+        <reimplements refid="class_i_graphic_1ad8a1f76efc7b6c1e8b1387653dc9cb72">setIsNewPathConfig</reimplements>
+        <param>
+          <type>bool</type>
+          <defname>isNewPath</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="61" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="188" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_f_m_l_1a9f308ab330e1a85913cd17c8ef901d71" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ClassSFML::getIsNewPathConfig</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>getIsNewPathConfig</name>
+        <reimplements refid="class_i_graphic_1abde51d0606da0a538435c8dc4f66a5d2">getIsNewPathConfig</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="62" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="193" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_f_m_l_1a172e6a454b5a35db05a5a8b3f0e7c939" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ClassSFML::getEvent</definition>
+        <argsstring>()</argsstring>
+        <name>getEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="64" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="35" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_f_m_l_1abaed7464c895762705a6803857f3ba60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClassSFML::setMapTexture</definition>
+        <argsstring>(void)</argsstring>
+        <name>setMapTexture</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="65" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="74" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_f_m_l_1ac7c2384bbf9f13169db316f20745f9d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClassSFML::displayGame</definition>
+        <argsstring>(void)</argsstring>
+        <name>displayGame</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="66" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="27" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_f_m_l_1a1770ece2b45a9b9b7e6c153076b2daa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassSFML::buildMap</definition>
+        <argsstring>(std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;)</argsstring>
+        <name>buildMap</name>
+        <reimplements refid="class_i_graphic_1ad6ff7f8cf232daec6f9d5a4a468eba2c">buildMap</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;</type>
+          <defname>map</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/ClassSFML.hpp" line="68" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="100" bodyend="112"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class representing <ref refid="class_class_s_f_m_l" kindref="compound">ClassSFML</ref> logic. </para>    </briefdescription>
+    <detaileddescription>
+<para>This class contains the fonctions that handle the SFML </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="17">
+        <label>IGraphic</label>
+        <link refid="class_i_graphic"/>
+      </node>
+      <node id="16">
+        <label>ClassSFML</label>
+        <link refid="class_class_s_f_m_l"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="19">
+        <label>IGraphic</label>
+        <link refid="class_i_graphic"/>
+      </node>
+      <node id="18">
+        <label>ClassSFML</label>
+        <link refid="class_class_s_f_m_l"/>
+        <childnode refid="19" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="lib/SFML/ClassSFML.hpp" line="36" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="35" bodyend="84"/>
+    <listofallmembers>
+      <member refid="class_class_s_f_m_l_1a620e48895955f7ad1889b228644bdf8e" prot="private" virt="non-virtual"><scope>ClassSFML</scope><name>_event</name></member>
+      <member refid="class_class_s_f_m_l_1ae17c198e8ea1549b5256111ca7e3f11b" prot="private" virt="non-virtual"><scope>ClassSFML</scope><name>_isNewKey</name></member>
+      <member refid="class_class_s_f_m_l_1aae651b7033cf466bcd7485d20e70da6a" prot="private" virt="non-virtual"><scope>ClassSFML</scope><name>_isNewMap</name></member>
+      <member refid="class_class_s_f_m_l_1adc5e51b0c18c15f01a0d62aab888754d" prot="private" virt="non-virtual"><scope>ClassSFML</scope><name>_isNewPathConfig</name></member>
+      <member refid="class_class_s_f_m_l_1a30b4ae3df376e6b68b08c9f536e998f5" prot="private" virt="non-virtual"><scope>ClassSFML</scope><name>_key</name></member>
+      <member refid="class_class_s_f_m_l_1a196bce77ccac2ecd325ccd4a33523dc4" prot="private" virt="non-virtual"><scope>ClassSFML</scope><name>_map</name></member>
+      <member refid="class_class_s_f_m_l_1a2c30ab27302b9f35deaf2bb2316bc621" prot="private" virt="non-virtual"><scope>ClassSFML</scope><name>_parsing</name></member>
+      <member refid="class_class_s_f_m_l_1ae036664483911ede24307f9ff505984f" prot="private" virt="non-virtual"><scope>ClassSFML</scope><name>_pathConfig</name></member>
+      <member refid="class_class_s_f_m_l_1a5d1402a5522c13ec0a7fe89079595b83" prot="private" virt="non-virtual"><scope>ClassSFML</scope><name>_score</name></member>
+      <member refid="class_class_s_f_m_l_1aca23ea15c0347a3e84aebca244ce02c1" prot="private" virt="non-virtual"><scope>ClassSFML</scope><name>_textures</name></member>
+      <member refid="class_class_s_f_m_l_1acd139150184a511bb30446c042f42c81" prot="private" virt="non-virtual"><scope>ClassSFML</scope><name>_wind</name></member>
+      <member refid="class_class_s_f_m_l_1a1770ece2b45a9b9b7e6c153076b2daa8" prot="public" virt="virtual"><scope>ClassSFML</scope><name>buildMap</name></member>
+      <member refid="class_class_s_f_m_l_1a9d31334eb3c24b7453fe988374fc6dfc" prot="public" virt="non-virtual"><scope>ClassSFML</scope><name>ClassSFML</name></member>
+      <member refid="class_class_s_f_m_l_1ac7c2384bbf9f13169db316f20745f9d5" prot="public" virt="non-virtual"><scope>ClassSFML</scope><name>displayGame</name></member>
+      <member refid="class_class_s_f_m_l_1a172e6a454b5a35db05a5a8b3f0e7c939" prot="public" virt="non-virtual"><scope>ClassSFML</scope><name>getEvent</name></member>
+      <member refid="class_class_s_f_m_l_1a0858bffedeb0ccd39ee911c08ede455d" prot="public" virt="virtual"><scope>ClassSFML</scope><name>getIsNewKey</name></member>
+      <member refid="class_class_s_f_m_l_1ab74066896f56b41f0d644c31048bf764" prot="public" virt="virtual"><scope>ClassSFML</scope><name>getIsNewMap</name></member>
+      <member refid="class_class_s_f_m_l_1a9f308ab330e1a85913cd17c8ef901d71" prot="public" virt="virtual"><scope>ClassSFML</scope><name>getIsNewPathConfig</name></member>
+      <member refid="class_class_s_f_m_l_1a7ebdd83fe2ab4c1feb3788f27a3a1b6e" prot="public" virt="virtual"><scope>ClassSFML</scope><name>getLastKey</name></member>
+      <member refid="class_class_s_f_m_l_1aa83937866ca263758733952543eb8282" prot="public" virt="virtual"><scope>ClassSFML</scope><name>getPathConfig</name></member>
+      <member refid="class_class_s_f_m_l_1a525c4cf493dfd9d68ea2bba3bd15b7e7" prot="public" virt="virtual"><scope>ClassSFML</scope><name>getScore</name></member>
+      <member refid="class_class_s_f_m_l_1a64c5a966c0dcf53ecc3b3aaabafd7eb9" prot="public" virt="virtual"><scope>ClassSFML</scope><name>runGraph</name></member>
+      <member refid="class_class_s_f_m_l_1afa4dc363da11512994f5964f53792990" prot="public" virt="virtual"><scope>ClassSFML</scope><name>setIsNewKey</name></member>
+      <member refid="class_class_s_f_m_l_1aeadd6368ac5b5d185a09cd1e7c1f9dcc" prot="public" virt="virtual"><scope>ClassSFML</scope><name>setIsNewMap</name></member>
+      <member refid="class_class_s_f_m_l_1ab47a3c8fb83d5db1640105bd6771c3da" prot="public" virt="virtual"><scope>ClassSFML</scope><name>setIsNewPathConfig</name></member>
+      <member refid="class_class_s_f_m_l_1aeb353a7928b673ceb10f12c4d5710305" prot="public" virt="virtual"><scope>ClassSFML</scope><name>setLastKey</name></member>
+      <member refid="class_class_s_f_m_l_1a9b143e495bdd43f42993cf5b0d492926" prot="public" virt="virtual"><scope>ClassSFML</scope><name>setMap</name></member>
+      <member refid="class_class_s_f_m_l_1abaed7464c895762705a6803857f3ba60" prot="public" virt="non-virtual"><scope>ClassSFML</scope><name>setMapTexture</name></member>
+      <member refid="class_class_s_f_m_l_1ac37b544f6179f33994e9fa189e15eea8" prot="public" virt="virtual"><scope>ClassSFML</scope><name>setPathConfig</name></member>
+      <member refid="class_class_s_f_m_l_1a42df0bacc5fa82cfc451722332304b50" prot="public" virt="virtual"><scope>ClassSFML</scope><name>setScore</name></member>
+      <member refid="class_class_s_f_m_l_1a4b1d53348c79ca38489f9f0f1f62653c" prot="public" virt="virtual"><scope>ClassSFML</scope><name>translateKey</name></member>
+      <member refid="class_class_s_f_m_l_1a5eb248810461ef35802776bda0156c7d" prot="public" virt="non-virtual"><scope>ClassSFML</scope><name>~ClassSFML</name></member>
+      <member refid="class_i_graphic_1aca238e622e55e4c3a61e1c7344902271" prot="public" virt="virtual"><scope>ClassSFML</scope><name>~IGraphic</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

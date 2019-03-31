@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Arcade Program</title>
+    <detaileddescription>
+<para>Our architecture have been fully represented in a Draw.io : <ulink url="https://www.draw.io/?state=%7B%22ids%22:%5B%221Zq1VpeW_EqprgKpBIExYpuWdQAxUMRU4%22%5D,%22action%22:%22open%22,%22userId%22:%22107942588257674115967%22%7D#G1Zq1VpeW_EqprgKpBIExYpuWdQAxUMRU4">https://www.draw.io/?state=%7B%22ids%22:%5B%221Zq1VpeW_EqprgKpBIExYpuWdQAxUMRU4%22%5D,%22action%22:%22open%22,%22userId%22:%22107942588257674115967%22%7D#G1Zq1VpeW_EqprgKpBIExYpuWdQAxUMRU4</ulink> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

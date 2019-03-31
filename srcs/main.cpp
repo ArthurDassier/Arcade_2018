@@ -13,7 +13,7 @@
  * \date 31 march 2019
  *
  * \mainpage Arcade Program
- * \content You can navigate throught this doc
+ * \content Our architecture have been fully represented in a Draw.io : https://www.draw.io/?state=%7B%22ids%22:%5B%221Zq1VpeW_EqprgKpBIExYpuWdQAxUMRU4%22%5D,%22action%22:%22open%22,%22userId%22:%22107942588257674115967%22%7D#G1Zq1VpeW_EqprgKpBIExYpuWdQAxUMRU4
  */
 
 #include <thread>

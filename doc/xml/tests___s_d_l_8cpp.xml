@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="tests___s_d_l_8cpp" kind="file" language="C++">
+    <compoundname>tests_SDL.cpp</compoundname>
+    <includes local="no">criterion/criterion.h</includes>
+    <includes local="no">criterion/redirect.h</includes>
+    <includes refid="_class_s_d_l_8hpp" local="yes">ClassSDL.hpp</includes>
+    <incdepgraph>
+      <node id="303">
+        <label>../srcs/ParsingConfig.hpp</label>
+      </node>
+      <node id="301">
+        <label>functional</label>
+      </node>
+      <node id="294">
+        <label>criterion/redirect.h</label>
+      </node>
+      <node id="292">
+        <label>tests/tests_SDL.cpp</label>
+        <link refid="tests___s_d_l_8cpp"/>
+        <childnode refid="293" relation="include">
+        </childnode>
+        <childnode refid="294" relation="include">
+        </childnode>
+        <childnode refid="295" relation="include">
+        </childnode>
+      </node>
+      <node id="300">
+        <label>fstream</label>
+      </node>
+      <node id="293">
+        <label>criterion/criterion.h</label>
+      </node>
+      <node id="296">
+        <label>SDL2/SDL.h</label>
+      </node>
+      <node id="299">
+        <label>vector</label>
+      </node>
+      <node id="302">
+        <label>iostream</label>
+      </node>
+      <node id="297">
+        <label>IGraphic.hpp</label>
+        <link refid="_i_graphic_8hpp"/>
+        <childnode refid="298" relation="include">
+        </childnode>
+        <childnode refid="299" relation="include">
+        </childnode>
+        <childnode refid="300" relation="include">
+        </childnode>
+        <childnode refid="301" relation="include">
+        </childnode>
+        <childnode refid="302" relation="include">
+        </childnode>
+      </node>
+      <node id="295">
+        <label>ClassSDL.hpp</label>
+        <link refid="_class_s_d_l_8hpp"/>
+        <childnode refid="296" relation="include">
+        </childnode>
+        <childnode refid="297" relation="include">
+        </childnode>
+        <childnode refid="303" relation="include">
+        </childnode>
+      </node>
+      <node id="298">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="tests___s_d_l_8cpp_1ad5b9bba9140e5eae747b366b153fb8e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test</definition>
+        <argsstring>(tests_SDL, test_getIsNewKeyIsTrue)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>tests_SDL</type>
+        </param>
+        <param>
+          <type>test_getIsNewKeyIsTrue</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/tests_SDL.cpp" line="12" column="1" bodyfile="tests/tests_SDL.cpp" bodystart="12" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="tests___s_d_l_8cpp_1a20e7defef2d07d9c4ce9f47ac11f8930" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test</definition>
+        <argsstring>(tests_SDL, test_getIsNewKeyIsFalse)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>tests_SDL</type>
+        </param>
+        <param>
+          <type>test_getIsNewKeyIsFalse</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/tests_SDL.cpp" line="20" column="1" bodyfile="tests/tests_SDL.cpp" bodystart="20" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="tests___s_d_l_8cpp_1afc1cb96a572db426ecc7142466351994" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test</definition>
+        <argsstring>(tests_SDL, test_getIsNewMapIsTrue)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>tests_SDL</type>
+        </param>
+        <param>
+          <type>test_getIsNewMapIsTrue</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/tests_SDL.cpp" line="28" column="1" bodyfile="tests/tests_SDL.cpp" bodystart="28" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="tests___s_d_l_8cpp_1a1ec6e1bc941ffc6fb51d1646533c6ea3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test</definition>
+        <argsstring>(tests_SDL, test_getIsNewMapIsFalse)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>tests_SDL</type>
+        </param>
+        <param>
+          <type>test_getIsNewMapIsFalse</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/tests_SDL.cpp" line="36" column="1" bodyfile="tests/tests_SDL.cpp" bodystart="36" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="tests___s_d_l_8cpp_1aa7b84740abf5173441e7acc6245d97c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test</definition>
+        <argsstring>(tests_SDL, test_getLastKeyIsTrue)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>tests_SDL</type>
+        </param>
+        <param>
+          <type>test_getLastKeyIsTrue</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/tests_SDL.cpp" line="43" column="1" bodyfile="tests/tests_SDL.cpp" bodystart="43" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="tests___s_d_l_8cpp_1a13a33878c7661cd7bb59d9d53c70d9e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test</definition>
+        <argsstring>(tests_SDL, test_getLastKeyIsFalse)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>tests_SDL</type>
+        </param>
+        <param>
+          <type>test_getLastKeyIsFalse</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/tests_SDL.cpp" line="51" column="1" bodyfile="tests/tests_SDL.cpp" bodystart="51" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2019</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>tests_sdl.cpp</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>tests_sdl</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;criterion/criterion.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;criterion/redirect.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_class_s_d_l_8hpp" kindref="compound">ClassSDL.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="tests___s_d_l_8cpp_1ad5b9bba9140e5eae747b366b153fb8e4" refkind="member"><highlight class="normal"><ref refid="tests___s_d_l_8cpp_1ad5b9bba9140e5eae747b366b153fb8e4" kindref="member">Test</ref>(tests_SDL,<sp/>test_getIsNewKeyIsTrue)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_class_s_d_l" kindref="compound">ClassSDL</ref><sp/>test;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_d_l_1a609cd1b245abb3b30962dc09aa7802c0" kindref="member">setIsNewKey</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_d_l_1ab25f9468d56aa225994484ec6e14dab7" kindref="member">getIsNewKey</ref>(),<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="tests___s_d_l_8cpp_1a20e7defef2d07d9c4ce9f47ac11f8930" refkind="member"><highlight class="normal"><ref refid="tests___s_d_l_8cpp_1ad5b9bba9140e5eae747b366b153fb8e4" kindref="member">Test</ref>(tests_SDL,<sp/>test_getIsNewKeyIsFalse)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_class_s_d_l" kindref="compound">ClassSDL</ref><sp/>test;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_d_l_1a609cd1b245abb3b30962dc09aa7802c0" kindref="member">setIsNewKey</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_d_l_1ab25f9468d56aa225994484ec6e14dab7" kindref="member">getIsNewKey</ref>(),<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="tests___s_d_l_8cpp_1afc1cb96a572db426ecc7142466351994" refkind="member"><highlight class="normal"><ref refid="tests___s_d_l_8cpp_1ad5b9bba9140e5eae747b366b153fb8e4" kindref="member">Test</ref>(tests_SDL,<sp/>test_getIsNewMapIsTrue)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_class_s_d_l" kindref="compound">ClassSDL</ref><sp/>test;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_d_l_1a3f07f3aeaf6e80d6e13cf4bfd0ed194b" kindref="member">setIsNewMap</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_d_l_1aaec40afee3905c9de7e1317db6226a7b" kindref="member">getIsNewMap</ref>(),<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="tests___s_d_l_8cpp_1a1ec6e1bc941ffc6fb51d1646533c6ea3" refkind="member"><highlight class="normal"><ref refid="tests___s_d_l_8cpp_1ad5b9bba9140e5eae747b366b153fb8e4" kindref="member">Test</ref>(tests_SDL,<sp/>test_getIsNewMapIsFalse)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_class_s_d_l" kindref="compound">ClassSDL</ref><sp/>test;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_d_l_1a3f07f3aeaf6e80d6e13cf4bfd0ed194b" kindref="member">setIsNewMap</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_d_l_1aaec40afee3905c9de7e1317db6226a7b" kindref="member">getIsNewMap</ref>(),<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43" refid="tests___s_d_l_8cpp_1aa7b84740abf5173441e7acc6245d97c2" refkind="member"><highlight class="normal"><ref refid="tests___s_d_l_8cpp_1ad5b9bba9140e5eae747b366b153fb8e4" kindref="member">Test</ref>(tests_SDL,<sp/>test_getLastKeyIsTrue)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_class_s_d_l" kindref="compound">ClassSDL</ref><sp/>test;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_d_l_1a2b14b2085d76430344f74227e33be9fb" kindref="member">setLastKey</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_d_l_1a776e24b732c1118ca38f715c5371e785" kindref="member">getLastKey</ref>(),<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="tests___s_d_l_8cpp_1a13a33878c7661cd7bb59d9d53c70d9e5" refkind="member"><highlight class="normal"><ref refid="tests___s_d_l_8cpp_1ad5b9bba9140e5eae747b366b153fb8e4" kindref="member">Test</ref>(tests_SDL,<sp/>test_getLastKeyIsFalse)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_class_s_d_l" kindref="compound">ClassSDL</ref><sp/>test;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="class_class_s_d_l_1a2b14b2085d76430344f74227e33be9fb" kindref="member">setLastKey</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>cr_assert_eq(test.<ref refid="class_class_s_d_l_1a776e24b732c1118ca38f715c5371e785" kindref="member">getLastKey</ref>(),<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tests/tests_SDL.cpp"/>
+  </compounddef>
+</doxygen>

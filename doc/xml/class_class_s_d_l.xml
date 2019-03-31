@@ -1,0 +1,613 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_class_s_d_l" kind="class" language="C++" prot="public">
+    <compoundname>ClassSDL</compoundname>
+    <basecompoundref refid="class_i_graphic" prot="public" virt="non-virtual">IGraphic</basecompoundref>
+    <includes refid="_class_s_d_l_8hpp" local="no">ClassSDL.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_class_s_d_l_1a4dd1a1b373fb8b84f59796eceae3f8b0" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; SDL_Window, decltype(&amp;SDL_DestroyWindow)&gt;</type>
+        <definition>std::unique_ptr&lt;SDL_Window, decltype(&amp;SDL_DestroyWindow)&gt; ClassSDL::_wind</definition>
+        <argsstring></argsstring>
+        <name>_wind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="68" column="1" bodyfile="lib/SDL/ClassSDL.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_d_l_1a0b543ac2200c28c1adb35a1820115fb8" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; SDL_Renderer, decltype(&amp;SDL_DestroyRenderer)&gt;</type>
+        <definition>std::unique_ptr&lt;SDL_Renderer, decltype(&amp;SDL_DestroyRenderer)&gt; ClassSDL::_ren</definition>
+        <argsstring></argsstring>
+        <name>_ren</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="69" column="1" bodyfile="lib/SDL/ClassSDL.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_d_l_1a5cbca4e611206ed2c080be264ef7cf31" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; std::vector&lt; std::vector&lt; std::pair&lt; char, std::unique_ptr&lt; SDL_Texture, decltype(&amp;SDL_DestroyTexture)&gt; &gt; &gt; &gt; &gt;</type>
+        <definition>std::unique_ptr&lt;std::vector&lt;std::vector&lt;std::pair&lt;char, std::unique_ptr&lt;SDL_Texture, decltype(&amp;SDL_DestroyTexture)&gt; &gt; &gt; &gt; &gt; ClassSDL::_map</definition>
+        <argsstring></argsstring>
+        <name>_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="70" column="1" bodyfile="lib/SDL/ClassSDL.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_d_l_1a32f2a25a88f618637f3db82068ad8cfb" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; SDL_Rect, std::shared_ptr&lt; SDL_Surface &gt; &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;SDL_Rect, std::shared_ptr&lt;SDL_Surface&gt; &gt; &gt; ClassSDL::_textures</definition>
+        <argsstring></argsstring>
+        <name>_textures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="71" column="1" bodyfile="lib/SDL/ClassSDL.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_d_l_1a2de28b8a609c049d632f769c8e7518d4" prot="private" static="no" mutable="no">
+        <type><ref refid="class_parsing_config" kindref="compound">ParsingConfig</ref></type>
+        <definition>ParsingConfig ClassSDL::_parsing</definition>
+        <argsstring></argsstring>
+        <name>_parsing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="72" column="1" bodyfile="lib/SDL/ClassSDL.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_d_l_1ac787128e61374d9b4bdf23f17ca02559" prot="private" static="no" mutable="no">
+        <type>SDL_Event</type>
+        <definition>SDL_Event ClassSDL::_e</definition>
+        <argsstring></argsstring>
+        <name>_e</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="73" column="1" bodyfile="lib/SDL/ClassSDL.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_d_l_1acde4b317e12b111a896de7c3ee103738" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ClassSDL::_pathConfig</definition>
+        <argsstring></argsstring>
+        <name>_pathConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="75" column="1" bodyfile="lib/SDL/ClassSDL.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_d_l_1af54cdb3eb7770b4a113202f328b31d5f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClassSDL::_isNewPathConfig</definition>
+        <argsstring></argsstring>
+        <name>_isNewPathConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="76" column="1" bodyfile="lib/SDL/ClassSDL.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_d_l_1adc139424b2f0f5bdd47c6fff95ce8b87" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClassSDL::_isNewMap</definition>
+        <argsstring></argsstring>
+        <name>_isNewMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="77" column="1" bodyfile="lib/SDL/ClassSDL.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_d_l_1acc1d3bddc22667717864ebc0f83c9e60" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClassSDL::_isNewKey</definition>
+        <argsstring></argsstring>
+        <name>_isNewKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="78" column="1" bodyfile="lib/SDL/ClassSDL.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_d_l_1aad20371f21271445ce4aa69837331080" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t ClassSDL::_score</definition>
+        <argsstring></argsstring>
+        <name>_score</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="79" column="1" bodyfile="lib/SDL/ClassSDL.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_class_s_d_l_1a11b85b18717a9bc16599180979042301" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ClassSDL::_key</definition>
+        <argsstring></argsstring>
+        <name>_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="80" column="1" bodyfile="lib/SDL/ClassSDL.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_class_s_d_l_1a1d2bc3c0b566af34b105d2e05b76d85c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClassSDL::ClassSDL</definition>
+        <argsstring>()</argsstring>
+        <name>ClassSDL</name>
+        <briefdescription>
+<para>Create the SDL window, set the getters at false and check for errors. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="35" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="17" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_d_l_1abe9bf97fa167822381a7ff37f593973a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClassSDL::~ClassSDL</definition>
+        <argsstring>()</argsstring>
+        <name>~ClassSDL</name>
+        <briefdescription>
+<para>SDL Class destructor, just quit the SDL. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="36" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_d_l_1ac38011a48a29f5948c31ac53c409c4bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ClassSDL::runGraph</definition>
+        <argsstring>()</argsstring>
+        <name>runGraph</name>
+        <reimplements refid="class_i_graphic_1a7baecac5b5b85b538622c47f12b39cd9">runGraph</reimplements>
+        <briefdescription>
+<para>Handle the events of the SDL. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="39" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="89" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_d_l_1a91b9a455ff5dd21e2db022aaa911985d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassSDL::setMap</definition>
+        <argsstring>(std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt; map)</argsstring>
+        <name>setMap</name>
+        <reimplements refid="class_i_graphic_1a6e3191fe2663c34608ff8a2b2549c398">setMap</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;</type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+<para>Change the char in our _map of textures corresponding to the map. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>map </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="40" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="175" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_d_l_1a9260df31ca73a59edce7688c4664f440" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassSDL::translateKey</definition>
+        <argsstring>()</argsstring>
+        <name>translateKey</name>
+        <reimplements refid="class_i_graphic_1a05d1ed2e0bcc2ddef923f4ab1df38ef1">translateKey</reimplements>
+        <briefdescription>
+<para>Translate the SDL event key to the keycode that the core will understand. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="41" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="195" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_d_l_1a3f07f3aeaf6e80d6e13cf4bfd0ed194b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassSDL::setIsNewMap</definition>
+        <argsstring>(bool)</argsstring>
+        <name>setIsNewMap</name>
+        <reimplements refid="class_i_graphic_1a6037174816d5cab7c115eb1a69bbb0ff">setIsNewMap</reimplements>
+        <param>
+          <type>bool</type>
+          <defname>NewMap</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="44" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="205" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_d_l_1aaec40afee3905c9de7e1317db6226a7b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ClassSDL::getIsNewMap</definition>
+        <argsstring>(void) const</argsstring>
+        <name>getIsNewMap</name>
+        <reimplements refid="class_i_graphic_1ae10de43a122b5e1f35a3d2d55cf08e59">getIsNewMap</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="45" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="210" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_d_l_1a609cd1b245abb3b30962dc09aa7802c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassSDL::setIsNewKey</definition>
+        <argsstring>(bool)</argsstring>
+        <name>setIsNewKey</name>
+        <reimplements refid="class_i_graphic_1a8be0cc1ebd85fc184a9890f5ad372a1e">setIsNewKey</reimplements>
+        <param>
+          <type>bool</type>
+          <defname>NewKey</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="47" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="215" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_d_l_1ab25f9468d56aa225994484ec6e14dab7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ClassSDL::getIsNewKey</definition>
+        <argsstring>(void) const</argsstring>
+        <name>getIsNewKey</name>
+        <reimplements refid="class_i_graphic_1a923ea671c162a94978c0f361084dd1a5">getIsNewKey</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="48" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="220" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_d_l_1a2b14b2085d76430344f74227e33be9fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassSDL::setLastKey</definition>
+        <argsstring>(int)</argsstring>
+        <name>setLastKey</name>
+        <reimplements refid="class_i_graphic_1ac3f35a4649c75449f270e3f3f9c12034">setLastKey</reimplements>
+        <param>
+          <type>int</type>
+          <defname>key</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="50" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="225" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_d_l_1a776e24b732c1118ca38f715c5371e785" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int ClassSDL::getLastKey</definition>
+        <argsstring>(void) const</argsstring>
+        <name>getLastKey</name>
+        <reimplements refid="class_i_graphic_1a50b9159724eb7f07b597ebc65041e545">getLastKey</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="51" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="230" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_d_l_1a4edcb6ae345daf64f3022d6b16ff255d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassSDL::setScore</definition>
+        <argsstring>(size_t)</argsstring>
+        <name>setScore</name>
+        <reimplements refid="class_i_graphic_1a2380c2fa5c0d95b6d8b7267bf0c82142">setScore</reimplements>
+        <param>
+          <type>size_t</type>
+          <defname>score</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="53" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="235" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_d_l_1a24c2230a4a7c75e9d6124d2d106ab2b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t ClassSDL::getScore</definition>
+        <argsstring>() const</argsstring>
+        <name>getScore</name>
+        <reimplements refid="class_i_graphic_1a4ab82acdbf8c33174612d42a375a7c77">getScore</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="54" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="240" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_d_l_1a0dfdb37558b6dadebeada6e91dacb9f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClassSDL::setMapTexture</definition>
+        <argsstring>()</argsstring>
+        <name>setMapTexture</name>
+        <briefdescription>
+<para>Construct our map of textures. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="56" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="124" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_d_l_1a8ec9795eb836f73cd7254406f2510625" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClassSDL::displayGame</definition>
+        <argsstring>()</argsstring>
+        <name>displayGame</name>
+        <briefdescription>
+<para>Print the _map of textures into the SDL window. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="57" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="58" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_d_l_1aab8adf1c3fb7b5b2d9a6cfb183fc9c6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassSDL::setPathConfig</definition>
+        <argsstring>(std::string) noexcept</argsstring>
+        <name>setPathConfig</name>
+        <reimplements refid="class_i_graphic_1a68eb38735e805083420a000fffd973f7">setPathConfig</reimplements>
+        <param>
+          <type>std::string</type>
+          <defname>path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="59" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="245" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_d_l_1aceda62b43788f26e34c7d37ed1fd9459" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string ClassSDL::getPathConfig</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>getPathConfig</name>
+        <reimplements refid="class_i_graphic_1aa3d891972e5633a3163ed82e16ff9c98">getPathConfig</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="60" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="250" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_d_l_1a83e018aac96b358b8c68be6821f9bacf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassSDL::setIsNewPathConfig</definition>
+        <argsstring>(bool) noexcept</argsstring>
+        <name>setIsNewPathConfig</name>
+        <reimplements refid="class_i_graphic_1ad8a1f76efc7b6c1e8b1387653dc9cb72">setIsNewPathConfig</reimplements>
+        <param>
+          <type>bool</type>
+          <defname>isNewPath</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="62" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="255" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_d_l_1a0f8788a8dfd703a7c80d54399ec745ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ClassSDL::getIsNewPathConfig</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>getIsNewPathConfig</name>
+        <reimplements refid="class_i_graphic_1abde51d0606da0a538435c8dc4f66a5d2">getIsNewPathConfig</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="63" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="260" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="class_class_s_d_l_1a5b4b518f4934b41fd57630c3006d9d03" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClassSDL::buildMap</definition>
+        <argsstring>(std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;)</argsstring>
+        <name>buildMap</name>
+        <reimplements refid="class_i_graphic_1ad6ff7f8cf232daec6f9d5a4a468eba2c">buildMap</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;</type>
+          <defname>map</defname>
+        </param>
+        <briefdescription>
+<para>Initiate our _map of textures by settings SDL_Textures pointers to nullptr. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>map = nullptr </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SDL/ClassSDL.hpp" line="65" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="154" bodyend="166"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class representing <ref refid="class_class_s_d_l" kindref="compound">ClassSDL</ref> logic. </para>    </briefdescription>
+    <detaileddescription>
+<para>This class contains the fonctions that handle the SDL </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="13">
+        <label>IGraphic</label>
+        <link refid="class_i_graphic"/>
+      </node>
+      <node id="12">
+        <label>ClassSDL</label>
+        <link refid="class_class_s_d_l"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15">
+        <label>IGraphic</label>
+        <link refid="class_i_graphic"/>
+      </node>
+      <node id="14">
+        <label>ClassSDL</label>
+        <link refid="class_class_s_d_l"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="lib/SDL/ClassSDL.hpp" line="33" column="1" bodyfile="lib/SDL/ClassSDL.hpp" bodystart="32" bodyend="81"/>
+    <listofallmembers>
+      <member refid="class_class_s_d_l_1ac787128e61374d9b4bdf23f17ca02559" prot="private" virt="non-virtual"><scope>ClassSDL</scope><name>_e</name></member>
+      <member refid="class_class_s_d_l_1acc1d3bddc22667717864ebc0f83c9e60" prot="private" virt="non-virtual"><scope>ClassSDL</scope><name>_isNewKey</name></member>
+      <member refid="class_class_s_d_l_1adc139424b2f0f5bdd47c6fff95ce8b87" prot="private" virt="non-virtual"><scope>ClassSDL</scope><name>_isNewMap</name></member>
+      <member refid="class_class_s_d_l_1af54cdb3eb7770b4a113202f328b31d5f" prot="private" virt="non-virtual"><scope>ClassSDL</scope><name>_isNewPathConfig</name></member>
+      <member refid="class_class_s_d_l_1a11b85b18717a9bc16599180979042301" prot="private" virt="non-virtual"><scope>ClassSDL</scope><name>_key</name></member>
+      <member refid="class_class_s_d_l_1a5cbca4e611206ed2c080be264ef7cf31" prot="private" virt="non-virtual"><scope>ClassSDL</scope><name>_map</name></member>
+      <member refid="class_class_s_d_l_1a2de28b8a609c049d632f769c8e7518d4" prot="private" virt="non-virtual"><scope>ClassSDL</scope><name>_parsing</name></member>
+      <member refid="class_class_s_d_l_1acde4b317e12b111a896de7c3ee103738" prot="private" virt="non-virtual"><scope>ClassSDL</scope><name>_pathConfig</name></member>
+      <member refid="class_class_s_d_l_1a0b543ac2200c28c1adb35a1820115fb8" prot="private" virt="non-virtual"><scope>ClassSDL</scope><name>_ren</name></member>
+      <member refid="class_class_s_d_l_1aad20371f21271445ce4aa69837331080" prot="private" virt="non-virtual"><scope>ClassSDL</scope><name>_score</name></member>
+      <member refid="class_class_s_d_l_1a32f2a25a88f618637f3db82068ad8cfb" prot="private" virt="non-virtual"><scope>ClassSDL</scope><name>_textures</name></member>
+      <member refid="class_class_s_d_l_1a4dd1a1b373fb8b84f59796eceae3f8b0" prot="private" virt="non-virtual"><scope>ClassSDL</scope><name>_wind</name></member>
+      <member refid="class_class_s_d_l_1a5b4b518f4934b41fd57630c3006d9d03" prot="public" virt="virtual"><scope>ClassSDL</scope><name>buildMap</name></member>
+      <member refid="class_class_s_d_l_1a1d2bc3c0b566af34b105d2e05b76d85c" prot="public" virt="non-virtual"><scope>ClassSDL</scope><name>ClassSDL</name></member>
+      <member refid="class_class_s_d_l_1a8ec9795eb836f73cd7254406f2510625" prot="public" virt="non-virtual"><scope>ClassSDL</scope><name>displayGame</name></member>
+      <member refid="class_class_s_d_l_1ab25f9468d56aa225994484ec6e14dab7" prot="public" virt="virtual"><scope>ClassSDL</scope><name>getIsNewKey</name></member>
+      <member refid="class_class_s_d_l_1aaec40afee3905c9de7e1317db6226a7b" prot="public" virt="virtual"><scope>ClassSDL</scope><name>getIsNewMap</name></member>
+      <member refid="class_class_s_d_l_1a0f8788a8dfd703a7c80d54399ec745ca" prot="public" virt="virtual"><scope>ClassSDL</scope><name>getIsNewPathConfig</name></member>
+      <member refid="class_class_s_d_l_1a776e24b732c1118ca38f715c5371e785" prot="public" virt="virtual"><scope>ClassSDL</scope><name>getLastKey</name></member>
+      <member refid="class_class_s_d_l_1aceda62b43788f26e34c7d37ed1fd9459" prot="public" virt="virtual"><scope>ClassSDL</scope><name>getPathConfig</name></member>
+      <member refid="class_class_s_d_l_1a24c2230a4a7c75e9d6124d2d106ab2b3" prot="public" virt="virtual"><scope>ClassSDL</scope><name>getScore</name></member>
+      <member refid="class_class_s_d_l_1ac38011a48a29f5948c31ac53c409c4bc" prot="public" virt="virtual"><scope>ClassSDL</scope><name>runGraph</name></member>
+      <member refid="class_class_s_d_l_1a609cd1b245abb3b30962dc09aa7802c0" prot="public" virt="virtual"><scope>ClassSDL</scope><name>setIsNewKey</name></member>
+      <member refid="class_class_s_d_l_1a3f07f3aeaf6e80d6e13cf4bfd0ed194b" prot="public" virt="virtual"><scope>ClassSDL</scope><name>setIsNewMap</name></member>
+      <member refid="class_class_s_d_l_1a83e018aac96b358b8c68be6821f9bacf" prot="public" virt="virtual"><scope>ClassSDL</scope><name>setIsNewPathConfig</name></member>
+      <member refid="class_class_s_d_l_1a2b14b2085d76430344f74227e33be9fb" prot="public" virt="virtual"><scope>ClassSDL</scope><name>setLastKey</name></member>
+      <member refid="class_class_s_d_l_1a91b9a455ff5dd21e2db022aaa911985d" prot="public" virt="virtual"><scope>ClassSDL</scope><name>setMap</name></member>
+      <member refid="class_class_s_d_l_1a0dfdb37558b6dadebeada6e91dacb9f3" prot="public" virt="non-virtual"><scope>ClassSDL</scope><name>setMapTexture</name></member>
+      <member refid="class_class_s_d_l_1aab8adf1c3fb7b5b2d9a6cfb183fc9c6a" prot="public" virt="virtual"><scope>ClassSDL</scope><name>setPathConfig</name></member>
+      <member refid="class_class_s_d_l_1a4edcb6ae345daf64f3022d6b16ff255d" prot="public" virt="virtual"><scope>ClassSDL</scope><name>setScore</name></member>
+      <member refid="class_class_s_d_l_1a9260df31ca73a59edce7688c4664f440" prot="public" virt="virtual"><scope>ClassSDL</scope><name>translateKey</name></member>
+      <member refid="class_class_s_d_l_1abe9bf97fa167822381a7ff37f593973a" prot="public" virt="non-virtual"><scope>ClassSDL</scope><name>~ClassSDL</name></member>
+      <member refid="class_i_graphic_1aca238e622e55e4c3a61e1c7344902271" prot="public" virt="virtual"><scope>ClassSDL</scope><name>~IGraphic</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

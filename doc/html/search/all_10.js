@@ -5,6 +5,5 @@ var searchData=
   ['tests_5fncurses_2ecpp',['tests_NCURSES.cpp',['../tests___n_c_u_r_s_e_s_8cpp.html',1,'']]],
   ['tests_5fsdl_2ecpp',['tests_SDL.cpp',['../tests___s_d_l_8cpp.html',1,'']]],
   ['tests_5fsfml_2ecpp',['tests_SFML.cpp',['../tests___s_f_m_l_8cpp.html',1,'']]],
-  ['translate_5ffor_5fmenu',['translate_for_menu',['../class_class_ncurses.html#a89efae320aef3015074b3ed00573385a',1,'ClassNcurses']]],
   ['translatekey',['translateKey',['../class_i_graphic.html#a05d1ed2e0bcc2ddef923f4ab1df38ef1',1,'IGraphic::translateKey()'],['../class_class_ncurses.html#a3ffbcd0c1f464454a70d8f99ee8e7afe',1,'ClassNcurses::translateKey()'],['../class_class_s_d_l.html#a9260df31ca73a59edce7688c4664f440',1,'ClassSDL::translateKey()'],['../class_class_s_f_m_l.html#a4b1d53348c79ca38489f9f0f1f62653c',1,'ClassSFML::translateKey()']]]
 ];

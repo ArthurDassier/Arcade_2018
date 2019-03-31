@@ -83,10 +83,20 @@ class ClassSFML : public IGraphic
         int _key;
 };
 
+/*!
+ * \struct KeySFML
+ * \brief This Structure contains Keys input translation
+ */
+
 struct KeySFML {
     int code_lib;
     int code_core;
 };
+
+/*!
+ * \struct KeySFML
+ * \brief This Structure contains Keys input translation
+ */
 
 static struct KeySFML KeySFML[] = {
     {0, 0},

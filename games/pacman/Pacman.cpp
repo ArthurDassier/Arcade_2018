@@ -7,6 +7,13 @@
 
 #include "Pacman.hpp"
 
+/*!
+ * \fn Pacman::Pacman()
+ * \brief Create the Pacman game
+ *
+ * \param void
+ */
+
 Pacman::Pacman():
     _pathConfig("./games/pacman/config/sprites.config"),
     _pathMap("./games/pacman/config/map.config"),
@@ -19,20 +26,31 @@ Pacman::Pacman():
     _map = std::make_shared<std::vector<std::string>>();
     for (size_t i = 0; i < 4; i++)
         _clock[i] = clock();
-    _pacman = new Entity(PLAYER);
+    _pacman = std::make_shared<Entity>(PLAYER);
     _pacman->setSpeed(0.1);
-    auto ghost = new Entity(ENEMY);
+    std::shared_ptr<Entity> ghost = std::make_shared<Entity>(ENEMY);
     ghost->setSpeed(5);
     _ghosts.push_back(ghost);
 }
 
+/*!
+ * \fn Pacman::~Pacman()
+ * \brief Pacman Class destructor
+ *
+ * \param void
+ */
+
 Pacman::~Pacman()
 {
-    delete _pacman;
-    for (auto it = _ghosts.begin(); it != _ghosts.end(); ++it)
-        delete *it;
     _lock_create_map = true;
 }
+
+/*!
+ * \fn Pacman::runGame()
+ * \brief Set the clock of the game and handle the logic
+ *
+ * \param void
+ */
 
 bool Pacman::runGame()
 {
@@ -75,6 +93,13 @@ bool Pacman::runGame()
     setIsNewKey(_pacman->getIsNewKey());
     return (true);
 }
+
+/*!
+ * \fn Pacman::readMap()
+ * \brief Read the map
+ *
+ * \param void
+ */
 
 void Pacman::readMap()
 {

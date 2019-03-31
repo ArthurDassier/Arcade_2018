@@ -1,0 +1,699 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_core" kind="class" language="C++" prot="public">
+    <compoundname>Core</compoundname>
+    <includes refid="_core_8hpp" local="no">Core.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_core_1a5eef2edc50b05b09db191a125d23a30d" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Core::_libName</definition>
+        <argsstring></argsstring>
+        <name>_libName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="69" column="1" bodyfile="srcs/Core.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1a29d1177e65d9f2f882f1bd2b1b7e4a36" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Core::_gameName</definition>
+        <argsstring></argsstring>
+        <name>_gameName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="70" column="1" bodyfile="srcs/Core.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1a6e0830664ab20715b15d036a4dac8e31" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Core::_pathConfig</definition>
+        <argsstring></argsstring>
+        <name>_pathConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="72" column="1" bodyfile="srcs/Core.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1a1a0020d5614d79080162adc5d7255abb" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; std::vector&lt; std::string &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;std::vector&lt;std::string&gt; &gt; Core::_mapMenu</definition>
+        <argsstring></argsstring>
+        <name>_mapMenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="74" column="1" bodyfile="srcs/Core.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1ace2a381af301becd65407a6db02a128e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_parsing_config" kindref="compound">ParsingConfig</ref></type>
+        <definition>ParsingConfig Core::_parsing</definition>
+        <argsstring></argsstring>
+        <name>_parsing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="76" column="1" bodyfile="srcs/Core.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1ad8de54100089a0243a4d6b007e325f57" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_d_l_loader" kindref="compound">DLLoader</ref>&lt; <ref refid="class_i_graphic" kindref="compound">IGraphic</ref> * &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;DLLoader&lt;IGraphic *&gt; &gt; Core::_instance</definition>
+        <argsstring></argsstring>
+        <name>_instance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="80" column="1" bodyfile="srcs/Core.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1a17bb3291a02e2fcaa81c3b7eeaa1b742" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_i_graphic" kindref="compound">IGraphic</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;IGraphic&gt; Core::_libModule</definition>
+        <argsstring></argsstring>
+        <name>_libModule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="81" column="1" bodyfile="srcs/Core.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1a73e31f082a8764a2e54c612115704a4c" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_d_l_loader" kindref="compound">DLLoader</ref>&lt; <ref refid="class_i_game" kindref="compound">IGame</ref> * &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;DLLoader&lt;IGame *&gt; &gt; Core::_instance_game</definition>
+        <argsstring></argsstring>
+        <name>_instance_game</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="82" column="1" bodyfile="srcs/Core.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1a82d50e0c650c3875eeb3aabef0c91526" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_i_game" kindref="compound">IGame</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;IGame&gt; Core::_gameModule</definition>
+        <argsstring></argsstring>
+        <name>_gameModule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="83" column="1" bodyfile="srcs/Core.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1a6771b4d487c17a67a3734e2af2e1d398" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; std::vector&lt; std::string &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;std::vector&lt;std::string&gt; &gt; Core::_map</definition>
+        <argsstring></argsstring>
+        <name>_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="85" column="1" bodyfile="srcs/Core.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1a44eb2172aff0e3ff48cff7e0b85d41c4" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; Core::_graphLibs</definition>
+        <argsstring></argsstring>
+        <name>_graphLibs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="87" column="1" bodyfile="srcs/Core.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1afa8936f0ed1358351327a3dc61c1dcfd" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="class_i_graphic" kindref="compound">IGraphic</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;IGraphic&gt; Core::_wpGraph</definition>
+        <argsstring></argsstring>
+        <name>_wpGraph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="88" column="1" bodyfile="srcs/Core.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1a17676e825090c948e38ae80643419df2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Core::_isMenu</definition>
+        <argsstring></argsstring>
+        <name>_isMenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="90" column="1" bodyfile="srcs/Core.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1ae9ab2a0218ac81055641c0ac4f4230e8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Core::_isNewKey</definition>
+        <argsstring></argsstring>
+        <name>_isNewKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="91" column="1" bodyfile="srcs/Core.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1aa538001b3ded22ab3bf109483484aac5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Core::_key</definition>
+        <argsstring></argsstring>
+        <name>_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="92" column="1" bodyfile="srcs/Core.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1a2299823c2c57465e58cd9c5b247702d1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Core::_menuLib</definition>
+        <argsstring></argsstring>
+        <name>_menuLib</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="93" column="1" bodyfile="srcs/Core.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1a7472f086cc46c92872b6288819c95c56" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Core::_haveGameLoad</definition>
+        <argsstring></argsstring>
+        <name>_haveGameLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="94" column="1" bodyfile="srcs/Core.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1a52dba3576edc40e9fea21ea17a9bbec4" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; Core::_pathLib</definition>
+        <argsstring></argsstring>
+        <name>_pathLib</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="96" column="1" bodyfile="srcs/Core.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1aaff38ee92d323c959d4ea6aa1a2004a4" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; Core::_pathGames</definition>
+        <argsstring></argsstring>
+        <name>_pathGames</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="97" column="1" bodyfile="srcs/Core.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1aa7fa8691014a7b13e98978fd9429208e" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Core::_numPathLib</definition>
+        <argsstring></argsstring>
+        <name>_numPathLib</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="98" column="1" bodyfile="srcs/Core.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_core_1ae20266c97d453ee06728ba6fcec38420" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Core::Core</definition>
+        <argsstring>(std::string)</argsstring>
+        <name>Core</name>
+        <param>
+          <type>std::string</type>
+          <defname>libName</defname>
+        </param>
+        <briefdescription>
+<para>Construct the core, load the library given as argument. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>representing the libname </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="35" column="1" bodyfile="srcs/Core.cpp" bodystart="18" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a776f8c46504b14183883c6273f93eaed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Core::~Core</definition>
+        <argsstring>()</argsstring>
+        <name>~Core</name>
+        <briefdescription>
+<para>Destroy the core by reseting the shared pointers. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="36" column="1" bodyfile="srcs/Core.cpp" bodystart="45" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a7122ece94253bfb44077946ae3ff618e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::loadNewGame</definition>
+        <argsstring>(std::string)</argsstring>
+        <name>loadNewGame</name>
+        <param>
+          <type>std::string</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+<para>Load the game given in parameter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>representing the game&apos;s name </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="39" column="1" bodyfile="srcs/Core.cpp" bodystart="77" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1ab927cae46f3c2b6c7621077431039b12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::loadNewLib</definition>
+        <argsstring>(std::string)</argsstring>
+        <name>loadNewLib</name>
+        <param>
+          <type>std::string</type>
+          <defname>lib</defname>
+        </param>
+        <briefdescription>
+<para>Load the lib by reseting _libmodule pointers to the new lib, acts like the class constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>representing the lib&apos;s name </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="40" column="1" bodyfile="srcs/Core.cpp" bodystart="117" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1ad0b576055f0135d384e76a9a1e74a96f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::handleGame</definition>
+        <argsstring>(void)</argsstring>
+        <name>handleGame</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Actualize the map in the lib module in order to print it for the user. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="42" column="1" bodyfile="srcs/Core.cpp" bodystart="149" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a3e3c90450845c25afb6854f8a4a2ee28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::handleMenu</definition>
+        <argsstring>(void)</argsstring>
+        <name>handleMenu</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a1084c28e7ee26459e981002a4274b0d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::startCore</definition>
+        <argsstring>(void)</argsstring>
+        <name>startCore</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Infinite loop that handle everything the program needs. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="45" column="1" bodyfile="srcs/Core.cpp" bodystart="168" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a3446c73ebfd578665f4a64d16c90ad36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::setIsNewKey</definition>
+        <argsstring>(bool)</argsstring>
+        <name>setIsNewKey</name>
+        <param>
+          <type>bool</type>
+          <defname>isNewKey</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="47" column="1" bodyfile="srcs/Core.cpp" bodystart="207" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1ac3c24a7a509e199d0b70896cb93171da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Core::getIsNewKey</definition>
+        <argsstring>(void) const</argsstring>
+        <name>getIsNewKey</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="48" column="1" bodyfile="srcs/Core.cpp" bodystart="212" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a4ead291d8f47a0697e29331581c06619" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::setHaveGameLoad</definition>
+        <argsstring>(bool)</argsstring>
+        <name>setHaveGameLoad</name>
+        <param>
+          <type>bool</type>
+          <defname>haveGameLoad</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="50" column="1" bodyfile="srcs/Core.cpp" bodystart="217" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a1b73ef0d41c64a612d9f0e745fef20f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Core::getHaveGameLoad</definition>
+        <argsstring>(void) const</argsstring>
+        <name>getHaveGameLoad</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="51" column="1" bodyfile="srcs/Core.cpp" bodystart="222" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a15d432deabf263fa01ed532cc2789ee7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::setKey</definition>
+        <argsstring>(int)</argsstring>
+        <name>setKey</name>
+        <param>
+          <type>int</type>
+          <defname>key</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="53" column="1" bodyfile="srcs/Core.cpp" bodystart="227" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a24e2ac35e41ec57bbcb8be92a42e4bb9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Core::getKey</definition>
+        <argsstring>(void) const</argsstring>
+        <name>getKey</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="54" column="1" bodyfile="srcs/Core.cpp" bodystart="232" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a667e34a3ad5288fc11db6d21b462a265" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::mapMenu</definition>
+        <argsstring>()</argsstring>
+        <name>mapMenu</name>
+        <briefdescription>
+<para>Open the map file representing the menu. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="56" column="1" bodyfile="srcs/Core.cpp" bodystart="58" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a28268e9e72483b95d77ef2298dcf5fb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::loadMenu</definition>
+        <argsstring>()</argsstring>
+        <name>loadMenu</name>
+        <briefdescription>
+<para>Load the menu by reseting the map representing the menu in the graphical libraries. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="58" column="1" bodyfile="srcs/Core.cpp" bodystart="97" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a5562dd977aa0e9550df8a9ecbe5d14bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::setMap</definition>
+        <argsstring>(std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;)</argsstring>
+        <name>setMap</name>
+        <param>
+          <type>std::shared_ptr&lt; std::vector&lt; std::string &gt;&gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a433556da94f75cfd81bc60ff89c8e675" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; std::vector&lt; std::string &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;std::vector&lt;std::string&gt; &gt; Core::getMap</definition>
+        <argsstring>(void) const</argsstring>
+        <name>getMap</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1a8867a8f6ab8ceade2100272d95c831c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Core::getNextLib</definition>
+        <argsstring>(enum Commands)</argsstring>
+        <name>getNextLib</name>
+        <param>
+          <type>enum</type>
+          <declname>Commands</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1ae5130cd2bc55547f61c58b25ce66e10e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core::setNumPathLib</definition>
+        <argsstring>(size_t num) noexcept</argsstring>
+        <name>setNumPathLib</name>
+        <param>
+          <type>size_t</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1aaa6b0ea369d06224688be02231e6c8db" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Core::getNumPathLib</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>getNumPathLib</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="srcs/Core.hpp" line="66" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class representing the core. </para>    </briefdescription>
+    <detaileddescription>
+<para>This class handle of the logic of the program, it loads the libraires and the games it can switch from libraries and games at any moments </para>    </detaileddescription>
+    <location file="srcs/Core.hpp" line="33" column="1" bodyfile="srcs/Core.hpp" bodystart="33" bodyend="99"/>
+    <listofallmembers>
+      <member refid="class_core_1a82d50e0c650c3875eeb3aabef0c91526" prot="private" virt="non-virtual"><scope>Core</scope><name>_gameModule</name></member>
+      <member refid="class_core_1a29d1177e65d9f2f882f1bd2b1b7e4a36" prot="private" virt="non-virtual"><scope>Core</scope><name>_gameName</name></member>
+      <member refid="class_core_1a44eb2172aff0e3ff48cff7e0b85d41c4" prot="private" virt="non-virtual"><scope>Core</scope><name>_graphLibs</name></member>
+      <member refid="class_core_1a7472f086cc46c92872b6288819c95c56" prot="private" virt="non-virtual"><scope>Core</scope><name>_haveGameLoad</name></member>
+      <member refid="class_core_1ad8de54100089a0243a4d6b007e325f57" prot="private" virt="non-virtual"><scope>Core</scope><name>_instance</name></member>
+      <member refid="class_core_1a73e31f082a8764a2e54c612115704a4c" prot="private" virt="non-virtual"><scope>Core</scope><name>_instance_game</name></member>
+      <member refid="class_core_1a17676e825090c948e38ae80643419df2" prot="private" virt="non-virtual"><scope>Core</scope><name>_isMenu</name></member>
+      <member refid="class_core_1ae9ab2a0218ac81055641c0ac4f4230e8" prot="private" virt="non-virtual"><scope>Core</scope><name>_isNewKey</name></member>
+      <member refid="class_core_1aa538001b3ded22ab3bf109483484aac5" prot="private" virt="non-virtual"><scope>Core</scope><name>_key</name></member>
+      <member refid="class_core_1a17bb3291a02e2fcaa81c3b7eeaa1b742" prot="private" virt="non-virtual"><scope>Core</scope><name>_libModule</name></member>
+      <member refid="class_core_1a5eef2edc50b05b09db191a125d23a30d" prot="private" virt="non-virtual"><scope>Core</scope><name>_libName</name></member>
+      <member refid="class_core_1a6771b4d487c17a67a3734e2af2e1d398" prot="private" virt="non-virtual"><scope>Core</scope><name>_map</name></member>
+      <member refid="class_core_1a1a0020d5614d79080162adc5d7255abb" prot="private" virt="non-virtual"><scope>Core</scope><name>_mapMenu</name></member>
+      <member refid="class_core_1a2299823c2c57465e58cd9c5b247702d1" prot="private" virt="non-virtual"><scope>Core</scope><name>_menuLib</name></member>
+      <member refid="class_core_1aa7fa8691014a7b13e98978fd9429208e" prot="private" virt="non-virtual"><scope>Core</scope><name>_numPathLib</name></member>
+      <member refid="class_core_1ace2a381af301becd65407a6db02a128e" prot="private" virt="non-virtual"><scope>Core</scope><name>_parsing</name></member>
+      <member refid="class_core_1a6e0830664ab20715b15d036a4dac8e31" prot="private" virt="non-virtual"><scope>Core</scope><name>_pathConfig</name></member>
+      <member refid="class_core_1aaff38ee92d323c959d4ea6aa1a2004a4" prot="private" virt="non-virtual"><scope>Core</scope><name>_pathGames</name></member>
+      <member refid="class_core_1a52dba3576edc40e9fea21ea17a9bbec4" prot="private" virt="non-virtual"><scope>Core</scope><name>_pathLib</name></member>
+      <member refid="class_core_1afa8936f0ed1358351327a3dc61c1dcfd" prot="private" virt="non-virtual"><scope>Core</scope><name>_wpGraph</name></member>
+      <member refid="class_core_1ae20266c97d453ee06728ba6fcec38420" prot="public" virt="non-virtual"><scope>Core</scope><name>Core</name></member>
+      <member refid="class_core_1a1b73ef0d41c64a612d9f0e745fef20f8" prot="public" virt="non-virtual"><scope>Core</scope><name>getHaveGameLoad</name></member>
+      <member refid="class_core_1ac3c24a7a509e199d0b70896cb93171da" prot="public" virt="non-virtual"><scope>Core</scope><name>getIsNewKey</name></member>
+      <member refid="class_core_1a24e2ac35e41ec57bbcb8be92a42e4bb9" prot="public" virt="non-virtual"><scope>Core</scope><name>getKey</name></member>
+      <member refid="class_core_1a433556da94f75cfd81bc60ff89c8e675" prot="public" virt="non-virtual"><scope>Core</scope><name>getMap</name></member>
+      <member refid="class_core_1a8867a8f6ab8ceade2100272d95c831c4" prot="public" virt="non-virtual"><scope>Core</scope><name>getNextLib</name></member>
+      <member refid="class_core_1aaa6b0ea369d06224688be02231e6c8db" prot="public" virt="non-virtual"><scope>Core</scope><name>getNumPathLib</name></member>
+      <member refid="class_core_1ad0b576055f0135d384e76a9a1e74a96f" prot="public" virt="non-virtual"><scope>Core</scope><name>handleGame</name></member>
+      <member refid="class_core_1a3e3c90450845c25afb6854f8a4a2ee28" prot="public" virt="non-virtual"><scope>Core</scope><name>handleMenu</name></member>
+      <member refid="class_core_1a28268e9e72483b95d77ef2298dcf5fb6" prot="public" virt="non-virtual"><scope>Core</scope><name>loadMenu</name></member>
+      <member refid="class_core_1a7122ece94253bfb44077946ae3ff618e" prot="public" virt="non-virtual"><scope>Core</scope><name>loadNewGame</name></member>
+      <member refid="class_core_1ab927cae46f3c2b6c7621077431039b12" prot="public" virt="non-virtual"><scope>Core</scope><name>loadNewLib</name></member>
+      <member refid="class_core_1a667e34a3ad5288fc11db6d21b462a265" prot="public" virt="non-virtual"><scope>Core</scope><name>mapMenu</name></member>
+      <member refid="class_core_1a4ead291d8f47a0697e29331581c06619" prot="public" virt="non-virtual"><scope>Core</scope><name>setHaveGameLoad</name></member>
+      <member refid="class_core_1a3446c73ebfd578665f4a64d16c90ad36" prot="public" virt="non-virtual"><scope>Core</scope><name>setIsNewKey</name></member>
+      <member refid="class_core_1a15d432deabf263fa01ed532cc2789ee7" prot="public" virt="non-virtual"><scope>Core</scope><name>setKey</name></member>
+      <member refid="class_core_1a5562dd977aa0e9550df8a9ecbe5d14bc" prot="public" virt="non-virtual"><scope>Core</scope><name>setMap</name></member>
+      <member refid="class_core_1ae5130cd2bc55547f61c58b25ce66e10e" prot="public" virt="non-virtual"><scope>Core</scope><name>setNumPathLib</name></member>
+      <member refid="class_core_1a1084c28e7ee26459e981002a4274b0d3" prot="public" virt="non-virtual"><scope>Core</scope><name>startCore</name></member>
+      <member refid="class_core_1a776f8c46504b14183883c6273f93eaed" prot="public" virt="non-virtual"><scope>Core</scope><name>~Core</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

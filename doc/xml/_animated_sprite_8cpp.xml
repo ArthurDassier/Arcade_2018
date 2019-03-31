@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_animated_sprite_8cpp" kind="file" language="C++">
+    <compoundname>AnimatedSprite.cpp</compoundname>
+    <includes refid="_animated_sprite_8hpp" local="yes">AnimatedSprite.hpp</includes>
+    <incdepgraph>
+      <node id="135">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="127">
+        <label>lib/SFML/AnimatedSprite.cpp</label>
+        <link refid="_animated_sprite_8cpp"/>
+        <childnode refid="128" relation="include">
+        </childnode>
+      </node>
+      <node id="132">
+        <label>SFML/Graphics/Transformable.hpp</label>
+      </node>
+      <node id="128">
+        <label>AnimatedSprite.hpp</label>
+        <link refid="_animated_sprite_8hpp"/>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+      </node>
+      <node id="133">
+        <label>SFML/System/Vector2.hpp</label>
+      </node>
+      <node id="131">
+        <label>SFML/Graphics/Drawable.hpp</label>
+      </node>
+      <node id="134">
+        <label>Animation.hpp</label>
+        <link refid="_animation_8hpp"/>
+        <childnode refid="135" relation="include">
+        </childnode>
+      </node>
+      <node id="129">
+        <label>SFML/Graphics/RenderTarget.hpp</label>
+      </node>
+      <node id="130">
+        <label>SFML/System/Time.hpp</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2019</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>AnimatedSprite.cpp</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>AnimatedSprite</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_animated_sprite_8hpp" kindref="compound">AnimatedSprite.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_animated_sprite_1a097ab8444824e7085d71a1f7144e7763" refkind="member"><highlight class="normal"><ref refid="class_animated_sprite_1a097ab8444824e7085d71a1f7144e7763" kindref="member">AnimatedSprite::AnimatedSprite</ref>(sf::Time<sp/>frameTime,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>paused,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>looped)<sp/>:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>m_animation(NULL),<sp/>m_frameTime(frameTime),<sp/>m_currentFrame(0),<sp/>m_isPaused(paused),<sp/>m_isLooped(looped),<sp/>m_texture(NULL)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_animated_sprite_1ab1afc57d90d57a0c4bc4f5b090f2dacf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_animated_sprite_1ab1afc57d90d57a0c4bc4f5b090f2dacf" kindref="member">AnimatedSprite::setAnimation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_animation" kindref="compound">Animation</ref>&amp;<sp/>animation)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>m_animation<sp/>=<sp/>&amp;animation;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>m_texture<sp/>=<sp/>m_animation-&gt;<ref refid="class_animation_1abf4f00f8b1657829583d7d92e71b93d1" kindref="member">getSpriteSheet</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>m_currentFrame<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_animated_sprite_1a0b3e38fffdc1d29f46fa08df9ef2a747" kindref="member">setFrame</ref>(m_currentFrame);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_animated_sprite_1af598fab5c3599ccc5ed1e2d4fefa68cc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_animated_sprite_1af598fab5c3599ccc5ed1e2d4fefa68cc" kindref="member">AnimatedSprite::setFrameTime</ref>(sf::Time<sp/>time)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>m_frameTime<sp/>=<sp/>time;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_animated_sprite_1a203b968f1cb374cca5dbc89716174020" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_animated_sprite_1a203b968f1cb374cca5dbc89716174020" kindref="member">AnimatedSprite::play</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>m_isPaused<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_animated_sprite_1a9ea345649a4e012d096bc04aafe1ecb0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_animated_sprite_1a203b968f1cb374cca5dbc89716174020" kindref="member">AnimatedSprite::play</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_animation" kindref="compound">Animation</ref>&amp;<sp/>animation)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_animated_sprite_1a03bacdbaf638cb6f7987e342980206c2" kindref="member">getAnimation</ref>()<sp/>!=<sp/>&amp;animation)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_animated_sprite_1ab1afc57d90d57a0c4bc4f5b090f2dacf" kindref="member">setAnimation</ref>(animation);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_animated_sprite_1a203b968f1cb374cca5dbc89716174020" kindref="member">play</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_animated_sprite_1a48384db59427423b5c1d98f6ee94fe45" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_animated_sprite_1a48384db59427423b5c1d98f6ee94fe45" kindref="member">AnimatedSprite::pause</ref>()</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>m_isPaused<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="class_animated_sprite_1af9734f4346d3d2370322b2dcaeef133c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_animated_sprite_1af9734f4346d3d2370322b2dcaeef133c" kindref="member">AnimatedSprite::stop</ref>()</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>m_isPaused<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>m_currentFrame<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_animated_sprite_1a0b3e38fffdc1d29f46fa08df9ef2a747" kindref="member">setFrame</ref>(m_currentFrame);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_animated_sprite_1a855a5a48ea2e1c51c7c9304857dd2f8c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_animated_sprite_1a855a5a48ea2e1c51c7c9304857dd2f8c" kindref="member">AnimatedSprite::setLooped</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>looped)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>m_isLooped<sp/>=<sp/>looped;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="class_animated_sprite_1a1a96a0f6570efddd2eb26f89bc5b6f50" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_animated_sprite_1a1a96a0f6570efddd2eb26f89bc5b6f50" kindref="member">AnimatedSprite::setColor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sf::Color&amp;<sp/>color)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>the<sp/>vertices&apos;<sp/>color</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>m_vertices[0].color<sp/>=<sp/>color;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>m_vertices[1].color<sp/>=<sp/>color;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>m_vertices[2].color<sp/>=<sp/>color;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>m_vertices[3].color<sp/>=<sp/>color;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="class_animated_sprite_1a03bacdbaf638cb6f7987e342980206c2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_animation" kindref="compound">Animation</ref>*<sp/><ref refid="class_animated_sprite_1a03bacdbaf638cb6f7987e342980206c2" kindref="member">AnimatedSprite::getAnimation</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="68"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_animation;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="class_animated_sprite_1ac4c88435c8698f452629c5cd78bfb3c9" refkind="member"><highlight class="normal">sf::FloatRect<sp/><ref refid="class_animated_sprite_1ac4c88435c8698f452629c5cd78bfb3c9" kindref="member">AnimatedSprite::getLocalBounds</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="73"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::IntRect<sp/>rect<sp/>=<sp/>m_animation-&gt;<ref refid="class_animation_1aaf7943420f26f46b744f49837bb65f51" kindref="member">getFrame</ref>(m_currentFrame);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>width<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::abs(rect.width));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>height<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::abs(rect.height));</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sf::FloatRect(0.f,<sp/>0.f,<sp/>width,<sp/>height);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="class_animated_sprite_1a86dca0906c53b3e630aaeac2f0085a0e" refkind="member"><highlight class="normal">sf::FloatRect<sp/><ref refid="class_animated_sprite_1a86dca0906c53b3e630aaeac2f0085a0e" kindref="member">AnimatedSprite::getGlobalBounds</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="83"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>getTransform().transformRect(<ref refid="class_animated_sprite_1ac4c88435c8698f452629c5cd78bfb3c9" kindref="member">getLocalBounds</ref>());</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="class_animated_sprite_1aaf2c2fb0e1487e689af4a6bbeb7e3e85" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_animated_sprite_1aaf2c2fb0e1487e689af4a6bbeb7e3e85" kindref="member">AnimatedSprite::isLooped</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="88"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_isLooped;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="class_animated_sprite_1a55f450add05d45e5369a6ad24f9e438f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_animated_sprite_1a55f450add05d45e5369a6ad24f9e438f" kindref="member">AnimatedSprite::isPlaying</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="93"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!m_isPaused;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="class_animated_sprite_1a5291f8e24fe2c6e4284bc7ff9499ef77" refkind="member"><highlight class="normal">sf::Time<sp/><ref refid="class_animated_sprite_1a5291f8e24fe2c6e4284bc7ff9499ef77" kindref="member">AnimatedSprite::getFrameTime</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="98"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_frameTime;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="class_animated_sprite_1a0b3e38fffdc1d29f46fa08df9ef2a747" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_animated_sprite_1a0b3e38fffdc1d29f46fa08df9ef2a747" kindref="member">AnimatedSprite::setFrame</ref>(std::size_t<sp/>newFrame,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>resetTime)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_animation)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//calculate<sp/>new<sp/>vertex<sp/>positions<sp/>and<sp/>texture<sp/>coordiantes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sf::IntRect<sp/>rect<sp/>=<sp/>m_animation-&gt;<ref refid="class_animation_1aaf7943420f26f46b744f49837bb65f51" kindref="member">getFrame</ref>(newFrame);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_vertices[0].position<sp/>=<sp/>sf::Vector2f(0.f,<sp/>0.f);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_vertices[1].position<sp/>=<sp/>sf::Vector2f(0.f,<sp/>static_cast&lt;float&gt;(rect.height));</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_vertices[2].position<sp/>=<sp/>sf::Vector2f(static_cast&lt;float&gt;(rect.width),<sp/>static_cast&lt;float&gt;(rect.height));</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_vertices[3].position<sp/>=<sp/>sf::Vector2f(static_cast&lt;float&gt;(rect.width),<sp/>0.f);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>left<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(rect.left)<sp/>+<sp/>0.0001f;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>right<sp/>=<sp/>left<sp/>+<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(rect.width);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>top<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(rect.top);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>bottom<sp/>=<sp/>top<sp/>+<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(rect.height);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_vertices[0].texCoords<sp/>=<sp/>sf::Vector2f(left,<sp/>top);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_vertices[1].texCoords<sp/>=<sp/>sf::Vector2f(left,<sp/>bottom);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_vertices[2].texCoords<sp/>=<sp/>sf::Vector2f(right,<sp/>bottom);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_vertices[3].texCoords<sp/>=<sp/>sf::Vector2f(right,<sp/>top);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(resetTime)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_currentTime<sp/>=<sp/>sf::Time::Zero;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="class_animated_sprite_1a17a41ff812631a9d8947d272933d6696" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_animated_sprite_1a17a41ff812631a9d8947d272933d6696" kindref="member">AnimatedSprite::update</ref>(sf::Time<sp/>deltaTime)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>not<sp/>paused<sp/>and<sp/>we<sp/>have<sp/>a<sp/>valid<sp/>animation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!m_isPaused<sp/>&amp;&amp;<sp/>m_animation)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>delta<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_currentTime<sp/>+=<sp/>deltaTime;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>current<sp/>time<sp/>is<sp/>bigger<sp/>then<sp/>the<sp/>frame<sp/>time<sp/>advance<sp/>one<sp/>frame</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_currentTime<sp/>&gt;=<sp/>m_frameTime)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reset<sp/>time,<sp/>but<sp/>keep<sp/>the<sp/>remainder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_currentTime<sp/>=<sp/>sf::microseconds(m_currentTime.asMicroseconds()<sp/>%<sp/>m_frameTime.asMicroseconds());</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>next<sp/>Frame<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_currentFrame<sp/>+<sp/>1<sp/>&lt;<sp/>m_animation-&gt;<ref refid="class_animation_1ac6854dc96e9fc8ffd97feba43547c869" kindref="member">getSize</ref>())</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_currentFrame++;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>animation<sp/>has<sp/>ended</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_currentFrame<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>reset<sp/>to<sp/>start</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!m_isLooped)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_isPaused<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>current<sp/>frame,<sp/>not<sp/>reseting<sp/>the<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_animated_sprite_1a0b3e38fffdc1d29f46fa08df9ef2a747" kindref="member">setFrame</ref>(m_currentFrame,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>AnimatedSprite::draw(sf::RenderTarget&amp;<sp/>target,<sp/>sf::RenderStates<sp/>states)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="154"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_animation<sp/>&amp;&amp;<sp/>m_texture)<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>states.transform<sp/>*=<sp/>getTransform();</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>states.texture<sp/>=<sp/>m_texture;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target.draw(m_vertices,<sp/>4,<sp/>sf::Quads,<sp/>states);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="lib/SFML/AnimatedSprite.cpp"/>
+  </compounddef>
+</doxygen>

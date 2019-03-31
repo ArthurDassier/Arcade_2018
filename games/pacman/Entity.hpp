@@ -37,6 +37,12 @@ typedef struct s_pos {
     size_t  y;
 }   t_pos;
 
+/*! \class Entity
+* \brief Class representing Entity logic
+*
+*  This class contains the fonctions that handle the Entity
+*/
+
 class Entity
 {
 	public:

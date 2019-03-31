@@ -1,0 +1,474 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_animated_sprite" kind="class" language="C++" prot="public">
+    <compoundname>AnimatedSprite</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Drawable</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Transformable</basecompoundref>
+    <includes refid="_animated_sprite_8hpp" local="no">AnimatedSprite.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_animated_sprite_1afd9382a05230debb398d514a071dde7f" prot="private" static="no" mutable="no">
+        <type>const <ref refid="class_animation" kindref="compound">Animation</ref> *</type>
+        <definition>const Animation* AnimatedSprite::m_animation</definition>
+        <argsstring></argsstring>
+        <name>m_animation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="41" column="1" bodyfile="lib/SFML/AnimatedSprite.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_animated_sprite_1afce08b67e38c971bd1b5ad7f6a554c6d" prot="private" static="no" mutable="no">
+        <type>sf::Time</type>
+        <definition>sf::Time AnimatedSprite::m_frameTime</definition>
+        <argsstring></argsstring>
+        <name>m_frameTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="42" column="1" bodyfile="lib/SFML/AnimatedSprite.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_animated_sprite_1ab87ffbc20845fe5a385aa54bcd5474e1" prot="private" static="no" mutable="no">
+        <type>sf::Time</type>
+        <definition>sf::Time AnimatedSprite::m_currentTime</definition>
+        <argsstring></argsstring>
+        <name>m_currentTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="43" column="1" bodyfile="lib/SFML/AnimatedSprite.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_animated_sprite_1ab8b8a4ffdfb805d1398df75c75a6968c" prot="private" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t AnimatedSprite::m_currentFrame</definition>
+        <argsstring></argsstring>
+        <name>m_currentFrame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="44" column="1" bodyfile="lib/SFML/AnimatedSprite.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_animated_sprite_1a5254968002ee38358d213d0635bc850c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AnimatedSprite::m_isPaused</definition>
+        <argsstring></argsstring>
+        <name>m_isPaused</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="45" column="1" bodyfile="lib/SFML/AnimatedSprite.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_animated_sprite_1a4f9785ba745693bfcb8c184fe106e03a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AnimatedSprite::m_isLooped</definition>
+        <argsstring></argsstring>
+        <name>m_isLooped</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="46" column="1" bodyfile="lib/SFML/AnimatedSprite.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_animated_sprite_1a817156ebd0f7867a89352a6e94717af5" prot="private" static="no" mutable="no">
+        <type>const sf::Texture *</type>
+        <definition>const sf::Texture* AnimatedSprite::m_texture</definition>
+        <argsstring></argsstring>
+        <name>m_texture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="47" column="1" bodyfile="lib/SFML/AnimatedSprite.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_animated_sprite_1a27a110055fb89389a0e3d523ebd49738" prot="private" static="no" mutable="no">
+        <type>sf::Vertex</type>
+        <definition>sf::Vertex AnimatedSprite::m_vertices[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>m_vertices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="48" column="1" bodyfile="lib/SFML/AnimatedSprite.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_animated_sprite_1a097ab8444824e7085d71a1f7144e7763" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AnimatedSprite::AnimatedSprite</definition>
+        <argsstring>(sf::Time frameTime=sf::seconds(0.2f), bool paused=false, bool looped=true)</argsstring>
+        <name>AnimatedSprite</name>
+        <param>
+          <type>sf::Time</type>
+          <declname>frameTime</declname>
+          <defval>sf::seconds(0.2f)</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>paused</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>looped</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="21" column="1" bodyfile="lib/SFML/AnimatedSprite.cpp" bodystart="10" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animated_sprite_1a17a41ff812631a9d8947d272933d6696" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnimatedSprite::update</definition>
+        <argsstring>(sf::Time deltaTime)</argsstring>
+        <name>update</name>
+        <param>
+          <type>sf::Time</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="23" column="1" bodyfile="lib/SFML/AnimatedSprite.cpp" bodystart="127" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animated_sprite_1ab1afc57d90d57a0c4bc4f5b090f2dacf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnimatedSprite::setAnimation</definition>
+        <argsstring>(const Animation &amp;animation)</argsstring>
+        <name>setAnimation</name>
+        <param>
+          <type>const <ref refid="class_animation" kindref="compound">Animation</ref> &amp;</type>
+          <declname>animation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="24" column="1" bodyfile="lib/SFML/AnimatedSprite.cpp" bodystart="16" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animated_sprite_1af598fab5c3599ccc5ed1e2d4fefa68cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnimatedSprite::setFrameTime</definition>
+        <argsstring>(sf::Time time)</argsstring>
+        <name>setFrameTime</name>
+        <param>
+          <type>sf::Time</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="25" column="1" bodyfile="lib/SFML/AnimatedSprite.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animated_sprite_1a203b968f1cb374cca5dbc89716174020" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnimatedSprite::play</definition>
+        <argsstring>()</argsstring>
+        <name>play</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="26" column="1" bodyfile="lib/SFML/AnimatedSprite.cpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animated_sprite_1a9ea345649a4e012d096bc04aafe1ecb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnimatedSprite::play</definition>
+        <argsstring>(const Animation &amp;animation)</argsstring>
+        <name>play</name>
+        <param>
+          <type>const <ref refid="class_animation" kindref="compound">Animation</ref> &amp;</type>
+          <declname>animation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="27" column="1" bodyfile="lib/SFML/AnimatedSprite.cpp" bodystart="34" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animated_sprite_1a48384db59427423b5c1d98f6ee94fe45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnimatedSprite::pause</definition>
+        <argsstring>()</argsstring>
+        <name>pause</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="28" column="1" bodyfile="lib/SFML/AnimatedSprite.cpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animated_sprite_1af9734f4346d3d2370322b2dcaeef133c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnimatedSprite::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="29" column="1" bodyfile="lib/SFML/AnimatedSprite.cpp" bodystart="46" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animated_sprite_1a855a5a48ea2e1c51c7c9304857dd2f8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnimatedSprite::setLooped</definition>
+        <argsstring>(bool looped)</argsstring>
+        <name>setLooped</name>
+        <param>
+          <type>bool</type>
+          <declname>looped</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="30" column="1" bodyfile="lib/SFML/AnimatedSprite.cpp" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animated_sprite_1a1a96a0f6570efddd2eb26f89bc5b6f50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnimatedSprite::setColor</definition>
+        <argsstring>(const sf::Color &amp;color)</argsstring>
+        <name>setColor</name>
+        <param>
+          <type>const sf::Color &amp;</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="31" column="1" bodyfile="lib/SFML/AnimatedSprite.cpp" bodystart="58" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animated_sprite_1a03bacdbaf638cb6f7987e342980206c2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="class_animation" kindref="compound">Animation</ref> *</type>
+        <definition>const Animation * AnimatedSprite::getAnimation</definition>
+        <argsstring>() const</argsstring>
+        <name>getAnimation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="32" column="1" bodyfile="lib/SFML/AnimatedSprite.cpp" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animated_sprite_1ac4c88435c8698f452629c5cd78bfb3c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>sf::FloatRect</type>
+        <definition>sf::FloatRect AnimatedSprite::getLocalBounds</definition>
+        <argsstring>() const</argsstring>
+        <name>getLocalBounds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="33" column="1" bodyfile="lib/SFML/AnimatedSprite.cpp" bodystart="72" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animated_sprite_1a86dca0906c53b3e630aaeac2f0085a0e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>sf::FloatRect</type>
+        <definition>sf::FloatRect AnimatedSprite::getGlobalBounds</definition>
+        <argsstring>() const</argsstring>
+        <name>getGlobalBounds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="34" column="1" bodyfile="lib/SFML/AnimatedSprite.cpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animated_sprite_1aaf2c2fb0e1487e689af4a6bbeb7e3e85" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AnimatedSprite::isLooped</definition>
+        <argsstring>() const</argsstring>
+        <name>isLooped</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="35" column="1" bodyfile="lib/SFML/AnimatedSprite.cpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animated_sprite_1a55f450add05d45e5369a6ad24f9e438f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AnimatedSprite::isPlaying</definition>
+        <argsstring>() const</argsstring>
+        <name>isPlaying</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="36" column="1" bodyfile="lib/SFML/AnimatedSprite.cpp" bodystart="92" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animated_sprite_1a5291f8e24fe2c6e4284bc7ff9499ef77" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>sf::Time</type>
+        <definition>sf::Time AnimatedSprite::getFrameTime</definition>
+        <argsstring>() const</argsstring>
+        <name>getFrameTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="37" column="1" bodyfile="lib/SFML/AnimatedSprite.cpp" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animated_sprite_1a0b3e38fffdc1d29f46fa08df9ef2a747" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnimatedSprite::setFrame</definition>
+        <argsstring>(std::size_t newFrame, bool resetTime=true)</argsstring>
+        <name>setFrame</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>newFrame</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>resetTime</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="38" column="1" bodyfile="lib/SFML/AnimatedSprite.cpp" bodystart="102" bodyend="125"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_animated_sprite_1a7564b36acb807662e09a87e5eb45e59a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AnimatedSprite::draw</definition>
+        <argsstring>(sf::RenderTarget &amp;target, sf::RenderStates states) const</argsstring>
+        <name>draw</name>
+        <param>
+          <type>sf::RenderTarget &amp;</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>sf::RenderStates</type>
+          <declname>states</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/SFML/AnimatedSprite.hpp" line="49" column="1" bodyfile="lib/SFML/AnimatedSprite.cpp" bodystart="153" bodyend="160"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>sf::Drawable</label>
+      </node>
+      <node id="0">
+        <label>AnimatedSprite</label>
+        <link refid="class_animated_sprite"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>sf::Transformable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>sf::Drawable</label>
+      </node>
+      <node id="3">
+        <label>AnimatedSprite</label>
+        <link refid="class_animated_sprite"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>sf::Transformable</label>
+      </node>
+    </collaborationgraph>
+    <location file="lib/SFML/AnimatedSprite.hpp" line="19" column="1" bodyfile="lib/SFML/AnimatedSprite.hpp" bodystart="18" bodyend="50"/>
+    <listofallmembers>
+      <member refid="class_animated_sprite_1a097ab8444824e7085d71a1f7144e7763" prot="public" virt="non-virtual"><scope>AnimatedSprite</scope><name>AnimatedSprite</name></member>
+      <member refid="class_animated_sprite_1a7564b36acb807662e09a87e5eb45e59a" prot="private" virt="virtual"><scope>AnimatedSprite</scope><name>draw</name></member>
+      <member refid="class_animated_sprite_1a03bacdbaf638cb6f7987e342980206c2" prot="public" virt="non-virtual"><scope>AnimatedSprite</scope><name>getAnimation</name></member>
+      <member refid="class_animated_sprite_1a5291f8e24fe2c6e4284bc7ff9499ef77" prot="public" virt="non-virtual"><scope>AnimatedSprite</scope><name>getFrameTime</name></member>
+      <member refid="class_animated_sprite_1a86dca0906c53b3e630aaeac2f0085a0e" prot="public" virt="non-virtual"><scope>AnimatedSprite</scope><name>getGlobalBounds</name></member>
+      <member refid="class_animated_sprite_1ac4c88435c8698f452629c5cd78bfb3c9" prot="public" virt="non-virtual"><scope>AnimatedSprite</scope><name>getLocalBounds</name></member>
+      <member refid="class_animated_sprite_1aaf2c2fb0e1487e689af4a6bbeb7e3e85" prot="public" virt="non-virtual"><scope>AnimatedSprite</scope><name>isLooped</name></member>
+      <member refid="class_animated_sprite_1a55f450add05d45e5369a6ad24f9e438f" prot="public" virt="non-virtual"><scope>AnimatedSprite</scope><name>isPlaying</name></member>
+      <member refid="class_animated_sprite_1afd9382a05230debb398d514a071dde7f" prot="private" virt="non-virtual"><scope>AnimatedSprite</scope><name>m_animation</name></member>
+      <member refid="class_animated_sprite_1ab8b8a4ffdfb805d1398df75c75a6968c" prot="private" virt="non-virtual"><scope>AnimatedSprite</scope><name>m_currentFrame</name></member>
+      <member refid="class_animated_sprite_1ab87ffbc20845fe5a385aa54bcd5474e1" prot="private" virt="non-virtual"><scope>AnimatedSprite</scope><name>m_currentTime</name></member>
+      <member refid="class_animated_sprite_1afce08b67e38c971bd1b5ad7f6a554c6d" prot="private" virt="non-virtual"><scope>AnimatedSprite</scope><name>m_frameTime</name></member>
+      <member refid="class_animated_sprite_1a4f9785ba745693bfcb8c184fe106e03a" prot="private" virt="non-virtual"><scope>AnimatedSprite</scope><name>m_isLooped</name></member>
+      <member refid="class_animated_sprite_1a5254968002ee38358d213d0635bc850c" prot="private" virt="non-virtual"><scope>AnimatedSprite</scope><name>m_isPaused</name></member>
+      <member refid="class_animated_sprite_1a817156ebd0f7867a89352a6e94717af5" prot="private" virt="non-virtual"><scope>AnimatedSprite</scope><name>m_texture</name></member>
+      <member refid="class_animated_sprite_1a27a110055fb89389a0e3d523ebd49738" prot="private" virt="non-virtual"><scope>AnimatedSprite</scope><name>m_vertices</name></member>
+      <member refid="class_animated_sprite_1a48384db59427423b5c1d98f6ee94fe45" prot="public" virt="non-virtual"><scope>AnimatedSprite</scope><name>pause</name></member>
+      <member refid="class_animated_sprite_1a203b968f1cb374cca5dbc89716174020" prot="public" virt="non-virtual"><scope>AnimatedSprite</scope><name>play</name></member>
+      <member refid="class_animated_sprite_1a9ea345649a4e012d096bc04aafe1ecb0" prot="public" virt="non-virtual"><scope>AnimatedSprite</scope><name>play</name></member>
+      <member refid="class_animated_sprite_1ab1afc57d90d57a0c4bc4f5b090f2dacf" prot="public" virt="non-virtual"><scope>AnimatedSprite</scope><name>setAnimation</name></member>
+      <member refid="class_animated_sprite_1a1a96a0f6570efddd2eb26f89bc5b6f50" prot="public" virt="non-virtual"><scope>AnimatedSprite</scope><name>setColor</name></member>
+      <member refid="class_animated_sprite_1a0b3e38fffdc1d29f46fa08df9ef2a747" prot="public" virt="non-virtual"><scope>AnimatedSprite</scope><name>setFrame</name></member>
+      <member refid="class_animated_sprite_1af598fab5c3599ccc5ed1e2d4fefa68cc" prot="public" virt="non-virtual"><scope>AnimatedSprite</scope><name>setFrameTime</name></member>
+      <member refid="class_animated_sprite_1a855a5a48ea2e1c51c7c9304857dd2f8c" prot="public" virt="non-virtual"><scope>AnimatedSprite</scope><name>setLooped</name></member>
+      <member refid="class_animated_sprite_1af9734f4346d3d2370322b2dcaeef133c" prot="public" virt="non-virtual"><scope>AnimatedSprite</scope><name>stop</name></member>
+      <member refid="class_animated_sprite_1a17a41ff812631a9d8947d272933d6696" prot="public" virt="non-virtual"><scope>AnimatedSprite</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
