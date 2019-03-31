@@ -38,9 +38,9 @@ ClassNcurses::ClassNcurses() :
     cbreak();
     keypad(stdscr, true);
     start_color();
-    wborder(_window.get(), '|', '|', '-', '-', '+', '+', '+', '+');
-    displayMenu();
-    displayLetters();
+    //wborder(_window.get(), '|', '|', '-', '-', '+', '+', '+', '+');
+    //displayMenu();
+    //displayLetters();
 }
 
 /*!
@@ -293,14 +293,14 @@ bool ClassNcurses::runGraph()
         _parsing.readFile();
         setMapTexture();
     }
-    if (getEvent())
-        return (true);
     if (_isNewMap) {
         clear();
-        displayGame();
         wborder(_window.get(), '|', '|', '-', '-', '+', '+', '+', '+');
+        displayGame();
         _isNewMap = false;
     }
+    if (getEvent())
+        return (true);
     timeout(100);
     refresh();
     return (false);
