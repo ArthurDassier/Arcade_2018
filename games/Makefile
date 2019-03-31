@@ -11,14 +11,16 @@ CXXFLAGS		=	-std=c++17 -g3
 
 LDFLAGS			=	-shared -fPIC
 
-INCLUDE			=	-I.
+CFLAGS			=	-I.
 
 PACMAN			=	lib_arcade_pacman.so
 
 PACMAN_DIR		=	pacman/
 
-PACMAN_FILES	=	ClassPacman.cpp
+PACMAN_FILES	=	Entity.cpp	\
+					Pacman.cpp
 
+# PACMAN_SRCS		=	$(PACMAN_FILES:.cpp=.o)
 PACMAN_SRCS		=	$(addprefix $(PACMAN_DIR), $(PACMAN_FILES))
 
 NIBBLER			=	lib_arcade_nibbler.so
@@ -31,8 +33,8 @@ NIBBLER_SRCS	=	$(addprefix $(NIBBLER_DIR), $(NIBBLER_FILES))
 
 all:			$(PACMAN)
 
-$(PACMAN):
-				$(CXX) $(CXXFLAGS) $(LDFLAGS) $(PACMAN_SRCS) -o $(PACMAN) $(INCLUDE)
+$(PACMAN):		#$(PACMAN_SRCS)
+				$(CXX) $(CXXFLAGS) $(LDFLAGS) $(CFLAGS) $(PACMAN_SRCS) -o $(PACMAN)
 
 clean:
 				# $(RM) $(_OBJS)

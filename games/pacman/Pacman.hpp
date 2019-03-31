@@ -1,26 +1,20 @@
 /*
 ** EPITECH PROJECT, 2019
-** ClassPacman.hpp
+** Pacman.hpp
 ** File description:
-** ClassPacman
+** Pacman
 */
 
 #pragma once
 
-#include "ClassEntity.hpp"
+#include "Entity.hpp"
 #include "IGame.hpp"
 
-/*! \class ClassPacman
-* \brief Class representing ClassPacman logic
-*
-*  This class contains the fonctions that will make our Pacman game
-*/
-
-class ClassPacman : public IGame
+class Pacman : public IGame
 {
     public:
-        ClassPacman();
-        ~ClassPacman();
+        Pacman();
+        ~Pacman();
 
         bool runGame();
         void setMap(std::shared_ptr<std::vector<std::string>>);
@@ -53,16 +47,17 @@ class ClassPacman : public IGame
 
         void checkNextCase(char);
 
-        std::string getPathConfig() const noexcept;
-        std::string getPathMap() const noexcept;
+        const std::string getPathConfig() const noexcept;
+        const std::string getPathMap() const noexcept;
 
     private:
-        std::string _pathConfig;
-        std::string _pathMap;
+        std::string _pathConfig = "./games/pacman/config/sprites.config";
+        std::string _pathMap = "./games/pacman/config/map.config";
         bool _isNewMap;
         std::shared_ptr<std::vector<std::string>> _map;
+        std::map<size_t, std::map<size_t, char>> _tmp;
         Move _lastMove;
-        clock_t _clock;
+        clock_t _clock[4];
         time_t _start;
         int _key;
         bool _isNewKey;
@@ -70,4 +65,8 @@ class ClassPacman : public IGame
         bool _canMove;
         bool _bonus;
         bool _lock_create_map;
+        // std::unique_ptr<Entity> _pacman;
+        Entity *_pacman;
+        // std::vector<std::unique_ptr<Entity>> _ghosts;
+        std::vector<Entity *> _ghosts;
 };

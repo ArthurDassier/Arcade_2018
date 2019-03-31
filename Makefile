@@ -44,30 +44,27 @@ $(CORE):
 				$(MAKE) -C $(CORE_DIR)
 
 $(GAMES):
-				# $(info ************  BUILDING GAMES ************)
-				cd $(GAMES_DIR)
-				make
-				# $(MAKE)	-C $(GAMES_DIR)
+				$(info ************  BUILDING GAMES ************)
+				$(MAKE)	-C $(GAMES_DIR)
 
 $(GRAPHICALS):	
 				$(info ************  BUILDING GRAPHICALS ************)
 				$(MAKE) -C $(LIB_DIR)
-				$(MAKE) -C $(GAMES_DIR)
 
 clean:
-				$(MAKE) -C $(CORE_DIR) clean
-				$(MAKE) -C $(GAMES_DIR) clean
-				$(MAKE) -C $(LIB_DIR) clean
-				$(MAKE) -C $(TESTS_DIR) clean
+				$(MAKE) clean -C $(CORE_DIR)
+				$(MAKE) clean -C $(GAMES_DIR)
+				$(MAKE) clean -C $(LIB_DIR)
+				$(MAKE) clean -C $(TESTS_DIR)
 
 fclean:			
-				$(MAKE) -C $(CORE_DIR) fclean
-				$(MAKE) -C $(GAMES_DIR) fclean
-				$(MAKE) -C $(LIB_DIR) fclean
-				$(MAKE) -C $(TESTS_DIR) fclean
+				$(MAKE) fclean -C $(CORE_DIR)
+				$(MAKE) fclean -C $(GAMES_DIR)
+				$(MAKE) fclean -C $(LIB_DIR)
+				$(MAKE) fclean -C $(TESTS_DIR)
 				$(RM) $(CORE)
 				$(RM) $(TEST_SFML) $(TEST_SDL) $(TEST_NCURSES)
 
 re:			fclean all
 
-.PHONY:		all clean fclean re
+.PHONY:		all clean fclean re core graphicals games

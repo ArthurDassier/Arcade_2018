@@ -16,60 +16,11 @@ ClassSFML::ClassSFML():
     _wind = std::make_unique<sf::RenderWindow>();
     _wind->create(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Arcade");
     _wind->setPosition(SCREEN_POS);
-    _wind->setFramerateLimit(FRAMERATE);
 }
 
 ClassSFML::~ClassSFML()
 {
     _wind->close();
-}
-
-void ClassSFML::setMapTexture()
-{
-    auto parsingResult = _parsing.getResult();
-    size_t i = 0;
-    float x = 0;
-    float y = 0;
-
-    _textures.clear();
-    for (auto it = parsingResult.begin(); it != parsingResult.end(); ++it) {
-        sf::Vector2i size = {it->sizeX, it->sizeY};
-        _textures.push_back(std::make_pair(size, std::shared_ptr<sf::Texture> (new sf::Texture)));
-        _textures[i].second->loadFromFile(it->path, sf::IntRect(0, 0, size.x, size.y));
-        _textures[i].second->setSmooth(true);
-        ++i;
-    }
-    for (auto it_y = _map->begin(); it_y != _map->end(); ++it_y) {
-        x = 0;
-        for (auto it_x = it_y->begin(); it_x != it_y->end(); ++it_x) {
-            switch (it_x->first) {
-                case WALL:
-                    it_x->second.setTexture(*_textures.begin()->second);
-                    it_x->second.setPosition({x, y});
-                    break;
-                case POINT:
-                    it_x->second.setTexture(*_textures.at(1).second);
-                    it_x->second.setPosition({x, y});
-                    break;
-                case PLAYER:
-                    it_x->second.setTexture(*_textures.at(2).second);
-                    it_x->second.setPosition({x, y});
-                    break;
-                case ENEMY:
-                    it_x->second.setTexture(*_textures.at(3).second);
-                    it_x->second.setPosition({x, y});
-                    break;
-                case BONUS:
-                    it_x->second.setTexture(*_textures.at(4).second);
-                    it_x->second.setPosition({x, y});
-                    break;
-                default:
-                    break;
-            }
-            x += _textures.begin()->first.x;
-        }
-        y += _textures.begin()->first.y;
-    }
 }
 
 void ClassSFML::displayGame()
@@ -107,16 +58,46 @@ bool ClassSFML::runGraph()
         setMapTexture();
     }
     if (!_wind->isOpen())
-        return (false);
-    _wind->clear();
+        return (true);
     if (getEvent())
-        return (false);
-    displayGame();
+        return (true);
+    if (getIsNewMap()) {
+        setMapTexture();
+        _wind->clear();
+        displayGame();
+        setIsNewMap(false);
+    }
     _wind->display();
-    return (true);
+    return (false);
 }
 
-void ClassSFML::setMap(std::shared_ptr<std::vector<std::string>> map)
+void ClassSFML::setMapTexture()
+{
+    auto parsingResult = _parsing.getResult();
+    float x = 0;
+    float y = 0;
+
+    _textures.clear();
+    for (auto it = parsingResult.begin(); it != parsingResult.end(); ++it) {
+        sf::Vector2i size = {it->sizeX, it->sizeY};
+        std::shared_ptr<sf::Texture> tmp (new sf::Texture);
+        tmp->loadFromFile(it->path, sf::IntRect(0, 0, size.x, size.y));
+        _textures.push_back(std::make_pair(size, tmp));
+    }
+    for (auto it_y = _map->begin(); it_y != _map->end(); ++it_y) {
+        x = 0;
+        for (auto it_x = it_y->begin(); it_x != it_y->end(); ++it_x) {
+            if (it_x->first != NOTHING) {
+                it_x->second.setTexture(*_textures.at(it_x->first - 48).second.get());
+                it_x->second.setPosition({x, y});
+            }
+            x += _textures.at(it_x->first - 48).second->getSize().x;
+        }
+        y += _textures.begin()->second->getSize().y;
+    }
+}
+
+void ClassSFML::buildMap(std::shared_ptr<std::vector<std::string>> map = nullptr)
 {
     _map = std::make_unique<std::vector<std::vector<std::pair<char, sf::Sprite>>>>();
     for (auto it = map->begin(); it != map->end(); ++it) {
@@ -126,6 +107,19 @@ void ClassSFML::setMap(std::shared_ptr<std::vector<std::string>> map)
             tmp.push_back(std::make_pair(*it_str, sprite));
         }
         _map->push_back(tmp);
+    }
+}
+
+void ClassSFML::setMap(std::shared_ptr<std::vector<std::string>> map)
+{
+    auto it_my_map_y = _map->begin();
+
+    if (!map)
+        return;
+    for (auto it_y = map->begin(); it_y != map->end(); ++it_y, ++it_my_map_y) {
+        auto it_my_map_x = it_my_map_y->begin();
+        for (auto it_x = it_y->begin(); it_x != it_y->end(); ++it_x, ++it_my_map_x)
+            it_my_map_x->first = *it_x;
     }
 }
 

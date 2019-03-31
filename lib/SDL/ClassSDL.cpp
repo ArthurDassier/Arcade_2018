@@ -105,11 +105,11 @@ bool ClassSDL::runGraph()
             setIsNewKey(true);
         }
     }
-    if (_isNewMap) {
+    if (getIsNewMap()) {
         setMapTexture();
         SDL_RenderClear(_ren.get());
         displayGame();
-        _isNewMap = false;
+        setIsNewMap(false);
     }
     return (false);
 }

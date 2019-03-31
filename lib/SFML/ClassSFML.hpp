@@ -13,7 +13,6 @@
 #include "../srcs/ParsingConfig.hpp"
 
 #define SCREEN_POS {675, 225}
-#define FRAMERATE 15
 
 enum Graphics {
     NOTHING = '0',
@@ -65,27 +64,15 @@ class ClassSFML : public IGraphic
         bool getEvent();
         void setMapTexture(void);
         void displayGame(void);
+
+        void buildMap(std::shared_ptr<std::vector<std::string>>);
+
     private:
         std::unique_ptr<sf::RenderWindow> _wind;
         std::unique_ptr<std::vector<std::vector<std::pair<char, sf::Sprite>>>> _map;
-        // std::unique_ptr<std::vector<std::vector<std::pair<char, std::pair<Animation, AnimatedSprite>>>>> _map;
-        Animation* _currentAnimation;
-        sf::Clock _frameClock;
-        // static sf::Time _frameTime;
-        Animation _MoveDownAnimation;
-        Animation _MoveLeftAnimation;
-        Animation _MoveRightAnimation;
-        Animation _MoveUpAnimation;
-        Animation _Wall;
-        AnimatedSprite _animatedSprite;
 
-        sf::Texture _wall_texture;
-        sf::Texture _point_texture;
-        sf::Texture _bonus_texture;
-        sf::Texture _player_texture;
         sf::Event _event;
         ParsingConfig _parsing;
-        // std::vector<std::pair<std::shared_ptr<sf::Texture>>, sf::Vector2i>> _textures;
         std::vector<std::pair<sf::Vector2i, std::shared_ptr<sf::Texture>>> _textures;
 
         std::string _pathConfig;

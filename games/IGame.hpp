@@ -35,17 +35,8 @@ class IGame {
         virtual void setScore(size_t score) = 0;
         virtual size_t getScore(void) const = 0;
 
-        virtual std::string getPathConfig() const noexcept = 0;
-        virtual std::string getPathMap() const noexcept = 0;
-
-        enum Graphics {
-            NOTHING = '0',
-            WALL = '1',
-            POINT = '2',
-            PLAYER = '3',
-            ENEMY = '4',
-            BONUS = '5'
-        };
+        virtual const std::string getPathConfig() const noexcept = 0;
+        virtual const std::string getPathMap() const noexcept = 0;
 };
 
 #endif /* !IGAME_HPP_ */
