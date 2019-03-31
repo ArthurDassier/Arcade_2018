@@ -78,6 +78,7 @@ class ClassNcurses : public IGraphic
         WINDOW *_window_menu_sdl;
         WINDOW *_window_menu_sfml;
         WINDOW *_window_menu_ncurses;
+        WINDOW *_window_pacman;
         size_t _posi_menu;
         int _c;
         bool _isNewMap;

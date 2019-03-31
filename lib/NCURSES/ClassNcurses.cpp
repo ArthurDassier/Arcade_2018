@@ -27,6 +27,7 @@ ClassNcurses::ClassNcurses() :
     _window_menu_sdl = subwin(stdscr, 3, 11, (LINES / 4) + 3 , (COLS / 2) - 30);
     _window_menu_sfml = subwin(stdscr, 3, 11, (LINES / 4) + 9, (COLS / 2) - 30);
     _window_menu_ncurses = subwin(stdscr, 3, 11, (LINES / 4) + 15, (COLS / 2) - 30);
+    _window_pacman = subwin(stdscr, 3, 11, (LINES / 4) + 9, (COLS / 2) + 10);
     curs_set(false);
     noecho();
     cbreak();
@@ -55,6 +56,9 @@ void ClassNcurses::displayMenu()
     std::ifstream sdl("./lib/lib_arcade_sdl2.so");
     std::ifstream sfml("./lib/lib_arcade_sfml.so");
 
+    init_pair(1, COLOR_CYAN, COLOR_BLACK);
+    attron(COLOR_PAIR(1));
+    attron(A_DIM);
     if (sdl.good()) {
         //if (_posi_menu == 0)
         box(_window_menu_sdl, ACS_VLINE, ACS_HLINE);
@@ -66,12 +70,22 @@ void ClassNcurses::displayMenu()
         //if (_posi_menu == 1)
         box(_window_menu_sfml, ACS_VLINE, ACS_HLINE);
         mvwprintw(_window_menu_sfml, 1, 3, "SFML");
+        move((LINES / 4) + 10, (COLS / 2) - 18);
+        printw("Press Key : k");
     }
     if (ncurses.good()) {
         //if (_posi_menu == 2)
         box(_window_menu_ncurses, ACS_VLINE, ACS_HLINE);
         mvwprintw(_window_menu_ncurses, 1, 2, "NCURSES");
+        move((LINES / 4) + 16, (COLS / 2) - 18);
+        printw("Press Key : j");
     }
+    box(_window_pacman, ACS_VLINE, ACS_HLINE);
+    mvwprintw(_window_pacman, 1, 2, "PACMAN");
+    move((LINES / 4) + 10, (COLS / 2) + 22);
+    printw("Press Key : ENTER");
+    attroff(A_DIM);
+    attroff(COLOR_PAIR(1));
 }
 
 void ClassNcurses::displayLetters()
