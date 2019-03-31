@@ -56,6 +56,7 @@ bool Pacman::runGame()
         setMove((Move)getLastKey());
         _pacman->move(getMove(), _map);
         _clock[0] = clock();
+        setIsNewMap(true);
     }
     if (static_cast<double>((clock() - _clock[1])) / CLOCKS_PER_SEC > _ghosts.at(0)->getSpeed()) {
         _ghosts.at(0)->move(UP, _map);
@@ -63,11 +64,12 @@ bool Pacman::runGame()
         _ghosts.at(0)->move(UP, _map);
         // std::cout << "ghost pos: " << _ghosts.at(0)->getPosition().second << std::endl;
         _clock[1] = clock();
+        setIsNewMap(true);
     }
     setScore(_pacman->getScore());
     // setIsNewMap(_pacman->getIsNewMap() || _ghosts.at(0)->getIsNewMap() ? true : false);
     // if (_pacman->getIsNewMap() || _ghosts.at(0)->getIsNewMap())
-    setIsNewMap(true);
+    // setIsNewMap(true);
     // else
     //     setIsNewMap(false);
     setIsNewKey(_pacman->getIsNewKey());

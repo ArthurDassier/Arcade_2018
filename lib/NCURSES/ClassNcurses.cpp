@@ -37,6 +37,7 @@ ClassNcurses::ClassNcurses() :
     noecho();
     cbreak();
     keypad(stdscr, true);
+    nodelay(stdscr, true);
     start_color();
     //wborder(_window.get(), '|', '|', '-', '-', '+', '+', '+', '+');
     //displayMenu();
@@ -297,12 +298,11 @@ bool ClassNcurses::runGraph()
         clear();
         wborder(_window.get(), '|', '|', '-', '-', '+', '+', '+', '+');
         displayGame();
+        refresh();
         _isNewMap = false;
     }
     if (getEvent())
         return (true);
-    timeout(100);
-    refresh();
     return (false);
 }
 void ClassNcurses::buildMap(std::shared_ptr<std::vector<std::string>> map = nullptr)
