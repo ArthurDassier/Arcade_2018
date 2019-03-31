@@ -1,0 +1,164 @@
+.TH "Entity" 3 "Sun Mar 31 2019" "Version 1.0" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Entity
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Entity\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEntity\fP (\fBPacmanObjs\fP)"
+.br
+.ti -1c
+.RI "\fB~Entity\fP ()"
+.br
+.ti -1c
+.RI "void \fBmove\fP (\fBMove\fP, std::shared_ptr< std::vector< std::string >>)"
+.br
+.ti -1c
+.RI "std::map< size_t, std::map< size_t, char > > \fBgetMap\fP () const"
+.br
+.ti -1c
+.RI "const \fBPacmanObjs\fP \fBgetEntity\fP () const noexcept"
+.br
+.ti -1c
+.RI "void \fBsetSpeed\fP (float)"
+.br
+.ti -1c
+.RI "float \fBgetSpeed\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetPosition\fP (std::pair< std::vector< std::string >::iterator, ptrdiff_t >)"
+.br
+.ti -1c
+.RI "std::pair< std::vector< std::string >::iterator, ptrdiff_t > \fBgetPosition\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetIsNewMap\fP (bool)"
+.br
+.ti -1c
+.RI "bool \fBgetIsNewMap\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetIsNewKey\fP (bool)"
+.br
+.ti -1c
+.RI "bool \fBgetIsNewKey\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetLastKey\fP (int)"
+.br
+.ti -1c
+.RI "int \fBgetLastKey\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetLastMove\fP (\fBMove\fP)"
+.br
+.ti -1c
+.RI "\fBMove\fP \fBgetLastMove\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetScore\fP (size_t)"
+.br
+.ti -1c
+.RI "size_t \fBgetScore\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetBonus\fP (bool)"
+.br
+.ti -1c
+.RI "bool \fBgetBonus\fP () const"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 40 of file Entity\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Entity::Entity (\fBPacmanObjs\fP entity = \fC\fBNOTHING\fP\fP)"
+
+.PP
+Definition at line 10 of file Entity\&.cpp\&.
+.SS "Entity::~Entity ()"
+
+.PP
+Definition at line 18 of file Entity\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Entity::getBonus () const"
+
+.SS "const \fBPacmanObjs\fP Entity::getEntity () const\fC [noexcept]\fP"
+
+.PP
+Definition at line 184 of file Entity\&.cpp\&.
+.SS "bool Entity::getIsNewKey (void) const"
+
+.PP
+Definition at line 224 of file Entity\&.cpp\&.
+.SS "bool Entity::getIsNewMap (void) const"
+
+.PP
+Definition at line 214 of file Entity\&.cpp\&.
+.SS "int Entity::getLastKey () const"
+
+.SS "\fBMove\fP Entity::getLastMove () const"
+
+.PP
+Definition at line 234 of file Entity\&.cpp\&.
+.SS "std::map<size_t, std::map<size_t, char> > Entity::getMap () const"
+
+.SS "std::pair< std::vector< std::string >::iterator, ptrdiff_t > Entity::getPosition () const"
+
+.PP
+Definition at line 204 of file Entity\&.cpp\&.
+.SS "size_t Entity::getScore (void) const"
+
+.PP
+Definition at line 244 of file Entity\&.cpp\&.
+.SS "float Entity::getSpeed () const"
+
+.PP
+Definition at line 194 of file Entity\&.cpp\&.
+.SS "void Entity::move (\fBMove\fP direction, std::shared_ptr< std::vector< std::string >> map)"
+
+.PP
+Definition at line 22 of file Entity\&.cpp\&.
+.SS "void Entity::setBonus (bool bonus)"
+
+.PP
+Definition at line 249 of file Entity\&.cpp\&.
+.SS "void Entity::setIsNewKey (bool isNewKey)"
+
+.PP
+Definition at line 219 of file Entity\&.cpp\&.
+.SS "void Entity::setIsNewMap (bool isNewMap)"
+
+.PP
+Definition at line 209 of file Entity\&.cpp\&.
+.SS "void Entity::setLastKey (int)"
+
+.SS "void Entity::setLastMove (\fBMove\fP move)"
+
+.PP
+Definition at line 229 of file Entity\&.cpp\&.
+.SS "void Entity::setPosition (std::pair< std::vector< std::string >::iterator, ptrdiff_t > pos)"
+
+.PP
+Definition at line 199 of file Entity\&.cpp\&.
+.SS "void Entity::setScore (size_t score)"
+
+.PP
+Definition at line 239 of file Entity\&.cpp\&.
+.SS "void Entity::setSpeed (float speed)"
+
+.PP
+Definition at line 189 of file Entity\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Arcade from the source code\&.

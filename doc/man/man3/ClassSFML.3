@@ -1,0 +1,211 @@
+.TH "ClassSFML" 3 "Sun Mar 31 2019" "Version 1.0" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ClassSFML \- Class representing \fBClassSFML\fP logic\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ClassSFML\&.hpp>\fP
+.PP
+Inherits \fBIGraphic\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBClassSFML\fP ()"
+.br
+.ti -1c
+.RI "\fB~ClassSFML\fP ()"
+.br
+.ti -1c
+.RI "bool \fBrunGraph\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMap\fP (std::shared_ptr< std::vector< std::string >>)"
+.br
+.ti -1c
+.RI "void \fBtranslateKey\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetIsNewMap\fP (bool)"
+.br
+.ti -1c
+.RI "bool \fBgetIsNewMap\fP (void) const"
+.br
+.ti -1c
+.RI "void \fBsetIsNewKey\fP (bool)"
+.br
+.ti -1c
+.RI "bool \fBgetIsNewKey\fP (void) const"
+.br
+.ti -1c
+.RI "void \fBsetLastKey\fP (int)"
+.br
+.ti -1c
+.RI "int \fBgetLastKey\fP (void) const"
+.br
+.ti -1c
+.RI "void \fBsetScore\fP (size_t)"
+.br
+.ti -1c
+.RI "size_t \fBgetScore\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetPathConfig\fP (std::string) noexcept"
+.br
+.ti -1c
+.RI "std::string \fBgetPathConfig\fP () const noexcept"
+.br
+.ti -1c
+.RI "void \fBsetIsNewPathConfig\fP (bool) noexcept"
+.br
+.ti -1c
+.RI "bool \fBgetIsNewPathConfig\fP () const noexcept"
+.br
+.ti -1c
+.RI "bool \fBgetEvent\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMapTexture\fP (void)"
+.br
+.ti -1c
+.RI "void \fBdisplayGame\fP (void)"
+.br
+.ti -1c
+.RI "void \fBbuildMap\fP (std::shared_ptr< std::vector< std::string >>)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class representing \fBClassSFML\fP logic\&. 
+
+This class contains the fonctions that handle the SFML 
+.PP
+Definition at line 35 of file ClassSFML\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ClassSFML::ClassSFML ()"
+
+.PP
+Definition at line 10 of file ClassSFML\&.cpp\&.
+.SS "ClassSFML::~ClassSFML ()"
+
+.PP
+Definition at line 22 of file ClassSFML\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void ClassSFML::buildMap (std::shared_ptr< std::vector< std::string >> map = \fCnullptr\fP)\fC [virtual]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 100 of file ClassSFML\&.cpp\&.
+.SS "void ClassSFML::displayGame (void)"
+
+.PP
+Definition at line 27 of file ClassSFML\&.cpp\&.
+.SS "bool ClassSFML::getEvent ()"
+
+.PP
+Definition at line 35 of file ClassSFML\&.cpp\&.
+.SS "bool ClassSFML::getIsNewKey (void) const\fC [virtual]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 152 of file ClassSFML\&.cpp\&.
+.SS "bool ClassSFML::getIsNewMap (void) const\fC [virtual]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 142 of file ClassSFML\&.cpp\&.
+.SS "bool ClassSFML::getIsNewPathConfig () const\fC [virtual]\fP, \fC [noexcept]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 192 of file ClassSFML\&.cpp\&.
+.SS "int ClassSFML::getLastKey (void) const\fC [virtual]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 162 of file ClassSFML\&.cpp\&.
+.SS "std::string ClassSFML::getPathConfig () const\fC [virtual]\fP, \fC [noexcept]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 182 of file ClassSFML\&.cpp\&.
+.SS "size_t ClassSFML::getScore (void) const\fC [virtual]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 172 of file ClassSFML\&.cpp\&.
+.SS "bool ClassSFML::runGraph ()\fC [virtual]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 50 of file ClassSFML\&.cpp\&.
+.SS "void ClassSFML::setIsNewKey (bool newKey)\fC [virtual]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 147 of file ClassSFML\&.cpp\&.
+.SS "void ClassSFML::setIsNewMap (bool newMap)\fC [virtual]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 137 of file ClassSFML\&.cpp\&.
+.SS "void ClassSFML::setIsNewPathConfig (bool isNewPath)\fC [virtual]\fP, \fC [noexcept]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 187 of file ClassSFML\&.cpp\&.
+.SS "void ClassSFML::setLastKey (int key)\fC [virtual]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 157 of file ClassSFML\&.cpp\&.
+.SS "void ClassSFML::setMap (std::shared_ptr< std::vector< std::string >> map)\fC [virtual]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 114 of file ClassSFML\&.cpp\&.
+.SS "void ClassSFML::setMapTexture (void)"
+
+.PP
+Definition at line 74 of file ClassSFML\&.cpp\&.
+.SS "void ClassSFML::setPathConfig (std::string path)\fC [virtual]\fP, \fC [noexcept]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 177 of file ClassSFML\&.cpp\&.
+.SS "void ClassSFML::setScore (size_t score)\fC [virtual]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 167 of file ClassSFML\&.cpp\&.
+.SS "void ClassSFML::translateKey ()\fC [virtual]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 127 of file ClassSFML\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Arcade from the source code\&.

@@ -7,17 +7,52 @@
 
 CP				=	cp
 
-CPP				=	g++
+CXX				=	g++
 
-CPPFLAGS		=	-std=c++11
+CXXFLAGS		=	-std=c++17
 
-LDFLAGS			=	-coverage -lcriterion
+LDFLAGS			=	-coverage -lcriterion -lSDL2 -lGL -lGLU -lncurses
 
-TEST			=	unit_tests
+INCLUDE			=	-I../lib/
 
-TEST_FILES		=	tests_SFML.cpp
+INCLUDE			+=	-I../lib/SDL
 
-TEST_OBJS		=	$(TEST_FILES:.cpp=.o)
+INCLUDE			+=	-I../lib/NCURSES
+
+INCLUDE			+=	-I../lib/SFML
+
+##### SFML #####
+FILES_SFML			=	../lib/SFML/ClassSFML.cpp
+
+FILES_SFML_OBJS		=	$(FILES_SFML:.cpp=.o)
+
+TEST_FILES_SFML		=	tests_SFML.cpp
+
+TEST_OBJS_SFML		=	$(TEST_FILES_SFML:.cpp=.o)
+
+TEST_SFML			=	unit_tests_SFML
+
+##### SDL ######
+FILES_SDL			=	../lib/SDL/ClassSDL.cpp
+
+FILES_SDL_OBJS		=	$(FILES_SDL:.cpp=.o)
+
+TEST_FILES_SDL		=	tests_SDL.cpp
+
+TEST_OBJS_SDL		=	$(TEST_FILES_SDL:.cpp=.o)
+
+TEST_SDL			=	unit_tests_SDL
+
+##### NCURSES ######
+FILES_NCURSES		=	../lib/NCURSES/ClassNcurses.cpp
+
+FILES_NCURSES_OBJS	=	$(FILES_NCURSES:.cpp=.o)
+
+TEST_FILES_NCURSES	=	tests_NCURSES.cpp
+
+TEST_OBJS_NCURSES	=	$(TEST_FILES_NCURSES:.cpp=.o)
+
+TEST_NCURSES		=	unit_tests_NCURSES
 
 ifeq ($(shell cat /etc/*-release | grep "Fedora"), )
 LIB				=	-lsfml-audio -lsfml-window -lsfml-system -lsfml-graphics
@@ -25,18 +60,19 @@ else
 LIB				=	-lsfml-graphics -lsfml-window -lsfml-system
 endif
 
-$(TEST):		$(TEST_OBJS)
-				$(CPP) $(CPPFLAGS) $(LDFLAGS) $(TEST_OBJS) $(LIB) -o $(TEST)
-				$(CP) $(TEST) ..
-				# ./$(TEST)
-
-all:			$(TEST)
+all:
+				$(CXX) $(INCLUDE) $(CXXFLAGS) $(TEST_FILES_SFML) $(FILES_SFML) $(LIB) -o $(TEST_SFML) $(LDFLAGS)
+				$(CXX) $(INCLUDE) $(CXXFLAGS) $(TEST_FILES_SDL) $(FILES_SDL) $(LIB) -o $(TEST_SDL) $(LDFLAGS)
+				$(CXX) $(INCLUDE) $(CXXFLAGS) $(TEST_FILES_NCURSES) $(FILES_NCURSES) $(LIB) -o $(TEST_NCURSES) $(LDFLAGS)
+				$(CP) $(TEST_SFML) ..
+				$(CP) $(TEST_SDL) ..
+				$(CP) $(TEST_NCURSES) ..
 
 clean:
-				$(RM) $(TEST_OBJS)
+				$(RM) *.gc*
 
 fclean:			clean
-				$(RM) $(TEST)
+				$(RM) $(TEST_SFML) $(TEST_SDL) $(TEST_NCURSES)				
 
 re:				fclean all
 

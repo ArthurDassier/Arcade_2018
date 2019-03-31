@@ -1,0 +1,284 @@
+.TH "ClassSDL" 3 "Sun Mar 31 2019" "Version 1.0" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ClassSDL \- Class representing \fBClassSDL\fP logic\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ClassSDL\&.hpp>\fP
+.PP
+Inherits \fBIGraphic\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBClassSDL\fP ()"
+.br
+.RI "Create the SDL window, set the getters at false and check for errors\&. "
+.ti -1c
+.RI "\fB~ClassSDL\fP ()"
+.br
+.RI "SDL Class destructor, just quit the SDL\&. "
+.ti -1c
+.RI "bool \fBrunGraph\fP ()"
+.br
+.RI "Handle the events of the SDL\&. "
+.ti -1c
+.RI "void \fBsetMap\fP (std::shared_ptr< std::vector< std::string >> map)"
+.br
+.RI "Change the char in our _map of textures corresponding to the map\&. "
+.ti -1c
+.RI "void \fBtranslateKey\fP ()"
+.br
+.RI "Translate the SDL event key to the keycode that the core will understand\&. "
+.ti -1c
+.RI "void \fBsetIsNewMap\fP (bool)"
+.br
+.ti -1c
+.RI "bool \fBgetIsNewMap\fP (void) const"
+.br
+.ti -1c
+.RI "void \fBsetIsNewKey\fP (bool)"
+.br
+.ti -1c
+.RI "bool \fBgetIsNewKey\fP (void) const"
+.br
+.ti -1c
+.RI "void \fBsetLastKey\fP (int)"
+.br
+.ti -1c
+.RI "int \fBgetLastKey\fP (void) const"
+.br
+.ti -1c
+.RI "void \fBsetScore\fP (size_t)"
+.br
+.ti -1c
+.RI "size_t \fBgetScore\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetMapTexture\fP ()"
+.br
+.RI "Construct our map of textures\&. "
+.ti -1c
+.RI "void \fBdisplayGame\fP ()"
+.br
+.RI "Print the _map of textures into the SDL window\&. "
+.ti -1c
+.RI "void \fBsetPathConfig\fP (std::string) noexcept"
+.br
+.ti -1c
+.RI "std::string \fBgetPathConfig\fP () const noexcept"
+.br
+.ti -1c
+.RI "void \fBsetIsNewPathConfig\fP (bool) noexcept"
+.br
+.ti -1c
+.RI "bool \fBgetIsNewPathConfig\fP () const noexcept"
+.br
+.ti -1c
+.RI "void \fBbuildMap\fP (std::shared_ptr< std::vector< std::string >>)"
+.br
+.RI "Initiate our _map of textures by settings SDL_Textures pointers to nullptr\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class representing \fBClassSDL\fP logic\&. 
+
+This class contains the fonctions that handle the SDL 
+.PP
+Definition at line 32 of file ClassSDL\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ClassSDL::ClassSDL ()"
+
+.PP
+Create the SDL window, set the getters at false and check for errors\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 17 of file ClassSDL\&.cpp\&.
+.SS "ClassSDL::~ClassSDL ()"
+
+.PP
+SDL Class destructor, just quit the SDL\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 46 of file ClassSDL\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void ClassSDL::buildMap (std::shared_ptr< std::vector< std::string >> map = \fCnullptr\fP)\fC [virtual]\fP"
+
+.PP
+Initiate our _map of textures by settings SDL_Textures pointers to nullptr\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstd::shared_ptr<std::vector<std::string>>\fP map = nullptr 
+.RE
+.PP
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 154 of file ClassSDL\&.cpp\&.
+.SS "void ClassSDL::displayGame ()"
+
+.PP
+Print the _map of textures into the SDL window\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 58 of file ClassSDL\&.cpp\&.
+.SS "bool ClassSDL::getIsNewKey (void) const\fC [virtual]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 220 of file ClassSDL\&.cpp\&.
+.SS "bool ClassSDL::getIsNewMap (void) const\fC [virtual]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 210 of file ClassSDL\&.cpp\&.
+.SS "bool ClassSDL::getIsNewPathConfig () const\fC [virtual]\fP, \fC [noexcept]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 260 of file ClassSDL\&.cpp\&.
+.SS "int ClassSDL::getLastKey (void) const\fC [virtual]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 230 of file ClassSDL\&.cpp\&.
+.SS "std::string ClassSDL::getPathConfig () const\fC [virtual]\fP, \fC [noexcept]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 250 of file ClassSDL\&.cpp\&.
+.SS "size_t ClassSDL::getScore (void) const\fC [virtual]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 240 of file ClassSDL\&.cpp\&.
+.SS "bool ClassSDL::runGraph ()\fC [virtual]\fP"
+
+.PP
+Handle the events of the SDL\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 89 of file ClassSDL\&.cpp\&.
+.SS "void ClassSDL::setIsNewKey (bool NewKey)\fC [virtual]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 215 of file ClassSDL\&.cpp\&.
+.SS "void ClassSDL::setIsNewMap (bool NewMap)\fC [virtual]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 205 of file ClassSDL\&.cpp\&.
+.SS "void ClassSDL::setIsNewPathConfig (bool isNewPath)\fC [virtual]\fP, \fC [noexcept]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 255 of file ClassSDL\&.cpp\&.
+.SS "void ClassSDL::setLastKey (int key)\fC [virtual]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 225 of file ClassSDL\&.cpp\&.
+.SS "void ClassSDL::setMap (std::shared_ptr< std::vector< std::string >> map)\fC [virtual]\fP"
+
+.PP
+Change the char in our _map of textures corresponding to the map\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstd::shared_ptr<std::vector<std::string>>\fP map 
+.RE
+.PP
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 175 of file ClassSDL\&.cpp\&.
+.SS "void ClassSDL::setMapTexture ()"
+
+.PP
+Construct our map of textures\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 124 of file ClassSDL\&.cpp\&.
+.SS "void ClassSDL::setPathConfig (std::string path)\fC [virtual]\fP, \fC [noexcept]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 245 of file ClassSDL\&.cpp\&.
+.SS "void ClassSDL::setScore (size_t score)\fC [virtual]\fP"
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 235 of file ClassSDL\&.cpp\&.
+.SS "void ClassSDL::translateKey ()\fC [virtual]\fP"
+
+.PP
+Translate the SDL event key to the keycode that the core will understand\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Implements \fBIGraphic\fP\&.
+.PP
+Definition at line 195 of file ClassSDL\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Arcade from the source code\&.

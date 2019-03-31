@@ -1,0 +1,9 @@
+digraph "lib/NCURSES" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_97aefd0d527b934f1d99a682da8fe6a9 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="lib" fontname="Helvetica", fontsize="10", URL="dir_97aefd0d527b934f1d99a682da8fe6a9.html"]
+  dir_9579eb7a80bd13f48fc74ffd86f7223b [shape=box, label="NCURSES", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_9579eb7a80bd13f48fc74ffd86f7223b.html"];
+  }
+}

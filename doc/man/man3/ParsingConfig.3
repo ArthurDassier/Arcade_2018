@@ -1,0 +1,88 @@
+.TH "ParsingConfig" 3 "Sun Mar 31 2019" "Version 1.0" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ParsingConfig \- Class representing parsing logic\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ParsingConfig\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBParsingConfig\fP ()=default"
+.br
+.ti -1c
+.RI "\fB~ParsingConfig\fP ()=default"
+.br
+.ti -1c
+.RI "void \fBsetFilename\fP (std::string name) noexcept"
+.br
+.ti -1c
+.RI "void \fBclearData\fP ()"
+.br
+.ti -1c
+.RI "std::vector< \fBDataParsingConfig\fP > \fBgetResult\fP () const noexcept"
+.br
+.ti -1c
+.RI "void \fBreadFile\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetIfStream\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::vector< \fBDataParsingConfig\fP > \fB_sprite\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class representing parsing logic\&. 
+
+This class contains the fonctions that will read into the configurations files and set the \fBDataParsingConfig\fP structure 
+.PP
+Definition at line 34 of file ParsingConfig\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ParsingConfig::ParsingConfig ()\fC [default]\fP"
+
+.SS "ParsingConfig::~ParsingConfig ()\fC [default]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ParsingConfig::clearData ()\fC [inline]\fP"
+
+.PP
+Definition at line 45 of file ParsingConfig\&.hpp\&.
+.SS "std::vector<\fBDataParsingConfig\fP> ParsingConfig::getResult () const\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Definition at line 49 of file ParsingConfig\&.hpp\&.
+.SS "void ParsingConfig::readFile ()\fC [inline]\fP"
+
+.PP
+Definition at line 53 of file ParsingConfig\&.hpp\&.
+.SS "void ParsingConfig::setFilename (std::string name)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Definition at line 40 of file ParsingConfig\&.hpp\&.
+.SS "void ParsingConfig::setIfStream ()\fC [inline]\fP"
+
+.PP
+Definition at line 78 of file ParsingConfig\&.hpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::vector<\fBDataParsingConfig\fP> ParsingConfig::_sprite"
+
+.PP
+Definition at line 84 of file ParsingConfig\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Arcade from the source code\&.

@@ -5,14 +5,15 @@
 ## Makefile
 ##
 
-all:			# $(SFML)
+GAMES_DIRS = pacman
+
+all:
+	@for i in $(GAMES_DIRS); do $(MAKE) -C $$i all || exit 1; done
 
 clean:
-				# $(RM) $(SFML_OBJS)
+	@for i in $(GAMES_DIRS); do $(MAKE) -C $$i clean || exit 1; done
 
-fclean:			clean
-				# $(RM) $(SFML)
+fclean:
+	@for i in $(GAMES_DIRS); do $(MAKE) -C $$i fclean || exit 1; done
 
-re:				fclean all
-
-.PHONY:			all clean fclean re
+.PHONY:	all clean fclean

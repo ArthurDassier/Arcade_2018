@@ -1,42 +1,55 @@
-##
-## EPITECH PROJECT, 2019
-## Makefile
-## File description:
-## Makefile
-##
+# ##
+# ## EPITECH PROJECT, 2019
+# ## Makefile
+# ## File description:
+# ## Makefile
+# ##
 
-CP				=	cp
+# MV			=	mv
 
-CPP				=	g++
+# CC			=	g++
 
-CPPFLAGS		=	-std=c++11 -g3
+# # CXX			=	g++
 
-INCLUDE			=	-I../lib
+# CXXFLAGS	=	-Wall -Wextra -std=c++17 
 
-INCLUDE			+=	-I../lib/SFML
+# CPPFLAGS	=	-I$(INCLUDE_DIR)
+# # CXXFLAGS	+=	$(INCLUDE)
 
-INCLUDE			+=	-I../lib/NCURSES
+# LDFLAGS		=	-ldl
 
-LDFLAGS			=	-shared -fPIC
+# INCLUDE_DIR	=	../includes
 
-CORE			=	arcade
+# # INCLUDES	=	../lib
 
-CORE_FILES		=	main.cpp
+# # INCLUDES	+=	../lib/SFML
 
-CORE_OBJS		=	$(CORE_FILES:.cpp=.o)
+# # INCLUDES	+=	../lib/NCURSES
 
-$(CORE):
-				$(CPP) $(INCLUDE) $(CPPFLAGS) $(CORE_FILES) -o $(CORE) -ldl
-				$(CP) $(CORE) ..
+# # INCLUDES	+= 	../games/
 
-all:			$(CORE)
+# NAME		=	arcade
 
-clean:
-				$(RM) $(CORE_OBJS)
+# SRCS		=	main.cpp			\
+# 				Core.cpp			\
+# 				# ParsingConfig.cpp
+			
+# OBJ			=	$(SRCS:.cpp=.o)
 
-fclean:			clean
-				$(RM) $(CORE)
+# $(NAME):	$(OBJ)
+# 		# $(RM) ../$(NAME)
+# 		$(CC) -o $(NAME) $(OBJ) $(LDFLAGS)
+# 		# $(CXX) $(CXXFLAGS) $(LDFLAGS) $(OBJS) -o $(NAME)
+# 		$(MV) $(NAME) ..
 
-re:				fclean all
+# all:	$(NAME)
 
-.PHONY:			all clean fclean re
+# clean:
+# 		$(RM) $(OBJ)
+
+# fclean:		clean
+# 		$(RM) $(NAME)
+
+# re:				fclean all
+
+# .PHONY:			all clean fclean re

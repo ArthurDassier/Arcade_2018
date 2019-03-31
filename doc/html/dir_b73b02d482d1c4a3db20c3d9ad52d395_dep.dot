@@ -1,0 +1,10 @@
+digraph "srcs" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  dir_b73b02d482d1c4a3db20c3d9ad52d395 [shape=box, label="srcs", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_b73b02d482d1c4a3db20c3d9ad52d395.html"];
+  dir_97aefd0d527b934f1d99a682da8fe6a9 [shape=box label="lib" fillcolor="white" style="filled" color="red" URL="dir_97aefd0d527b934f1d99a682da8fe6a9.html"];
+  dir_4b6f782e158b0b98da980a0e11a23a15 [shape=box label="games" fillcolor="white" style="filled" color="red" URL="dir_4b6f782e158b0b98da980a0e11a23a15.html"];
+  dir_b73b02d482d1c4a3db20c3d9ad52d395->dir_97aefd0d527b934f1d99a682da8fe6a9 [headlabel="4", labeldistance=1.5 headhref="dir_000006_000002.html"];
+  dir_b73b02d482d1c4a3db20c3d9ad52d395->dir_4b6f782e158b0b98da980a0e11a23a15 [headlabel="2", labeldistance=1.5 headhref="dir_000006_000000.html"];
+}

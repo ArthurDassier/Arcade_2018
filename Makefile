@@ -5,21 +5,42 @@
 ## Makefile
 ##
 
+CC				=	g++
+
+CP				=	cp
+
 CORE			=	arcade
 
 GAMES			=	games
 
 GRAPHICALS		=	graphicals
 
-TEST			=	unit_tests
+TEST_SFML		=	unit_tests_SFML
 
-CORE_DIR		=	srcs/
+TEST_SDL		=	unit_tests_SDL
+
+TEST_NCURSES	=	unit_tests_NCURSES
+
+INCLUDE_DIR		=	./includes/
+
+CORE_DIR		=	./srcs/
 
 GAMES_DIR		=	games/
 
 LIB_DIR			=	lib/
 
 TESTS_DIR		=	tests/
+
+SRCS			=	$(CORE_DIR)main.cpp	\
+					$(CORE_DIR)Core.cpp
+
+OBJ				=	$(SRCS:.cpp=.o)
+
+CXXFLAGS		=	-Wall -Wextra -std=c++17 
+
+CPPFLAGS		=	-I$(INCLUDE_DIR)
+
+LDFLAGS			=	-ldl -lstdc++fs
 
 all:			$(CORE) $(GAMES) $(GRAPHICALS)
 
@@ -31,11 +52,13 @@ graphicals:		$(GRAPHICALS)
 
 tests_run:		
 				$(MAKE) -C $(TESTS_DIR)
-				./$(TEST)
+				./$(TEST_SDL)
+				./$(TEST_NCURSES)
+				./$(TEST_SFML)
 
-$(CORE):
-				$(info ************  BUILDING CORE ************)
-				$(MAKE) -C $(CORE_DIR)
+$(CORE):	$(OBJ)
+				$(info ************  BUILDING CORE ************) 
+				$(CC) -o $(CORE) $(OBJ) $(LDFLAGS)
 
 $(GAMES):
 				$(info ************  BUILDING GAMES ************)
@@ -46,19 +69,19 @@ $(GRAPHICALS):
 				$(MAKE) -C $(LIB_DIR)
 
 clean:
-				$(MAKE) -C $(CORE_DIR) clean
-				$(MAKE) -C $(GAMES_DIR) clean
-				$(MAKE) -C $(LIB_DIR) clean
-				$(MAKE) -C $(TESTS_DIR) clean
+				$(RM) $(OBJ)
+				$(MAKE) clean -C $(GAMES_DIR)
+				$(MAKE) clean -C $(LIB_DIR)
+				$(MAKE) clean -C $(TESTS_DIR)
 
 fclean:			
-				$(MAKE) -C $(CORE_DIR) fclean
-				$(MAKE) -C $(GAMES_DIR) fclean
-				$(MAKE) -C $(LIB_DIR) fclean
-				$(MAKE) -C $(TESTS_DIR) fclean
+				$(RM) $(OBJ)
+				$(MAKE) fclean -C $(GAMES_DIR)
+				$(MAKE) fclean -C $(LIB_DIR)
+				$(MAKE) fclean -C $(TESTS_DIR)
 				$(RM) $(CORE)
-				$(RM) $(TEST)
+				$(RM) $(TEST_SFML) $(TEST_SDL) $(TEST_NCURSES)
 
 re:			fclean all
 
-.PHONY:		all clean fclean re
+.PHONY:		all clean fclean re core graphicals games

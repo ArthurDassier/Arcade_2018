@@ -1,79 +1,95 @@
-##
-## EPITECH PROJECT, 2019
-## Makefile
-## File description:
-## Makefile
-##
+# ##
+# ## EPITECH PROJECT, 2019
+# ## Makefile
+# ## File description:
+# ## Makefile
+# ##
 
-CPP				=	g++
+# CC				=	g++
 
-CPPFLAGS		=	-std=c++11 -g3
+# CXXFLAGS		=	-Wall -Wextra -std=c++17 
 
-LDFLAGS			=	-shared -fPIC
+# LDFLAGS			=	-shared -fPIC
 
-INCLUDE			=	-I.
+# CPPFLAGS		=	-I.
 
-ifeq ($(shell cat /etc/*-release | grep "Fedora"), )
-LIB_SFML		=	-lsfml-audio -lsfml-window -lsfml-system -lsfml-graphics
-else
-LIB_SFML		=	-lsfml-graphics -lsfml-window -lsfml-system
-endif
+# ifeq ($(shell cat /etc/*-release | grep "Fedora"), )
+# LIB_SFML		=	-lsfml-audio -lsfml-window -lsfml-system -lsfml-graphics
+# else
+# LIB_SFML		=	-lsfml-graphics -lsfml-window -lsfml-system
+# endif
 
-LIB_NCURSES		=	-lncurses
+# LIB_NCURSES		=	-lncurses
 
-LIB_SDL			=	-lSDL2 -lGL -lGLU
+# LIB_SDL			=	-lSDL2
 
-SFML			=	lib_arcade_sfml.so
+# SFML			=	lib_arcade_sfml.so
 
-SFML_DIR		=	SFML/
+# SFML_DIR		=	SFML/
 
-SFML_FILES		=	class_sfml.cpp
+# SFML_SRCS		=	$(SFML_DIR)ClassSFML.cpp
 
-SFML_SRCS		=	$(addprefix $(SFML_DIR), $(SFML_FILES))
+# # SFML_SRCS		=	$(addprefix $(SFML_DIR), $(SFML_FILES))
 
-SFML_OBJS		=	$(SFML_SRCS:.cpp=.o)
+# SFML_OBJ		=	$(SFML_SRCS:.cpp=.o)
 
-NCURSES			=	lib_arcade_ncurses.so
+# NCURSES			=	lib_arcade_ncurses.so
 
-NCURSES_DIR		=	NCURSES/
+# NCURSES_DIR		=	NCURSES/
 
-NCURSES_FILES	=	class_ncurses.cpp
+# NCURSES_SRCS	=	$(NCURSES_DIR)ClassNcurses.cpp
 
-NCURSES_SRCS	=	$(addprefix $(NCURSES_DIR), $(NCURSES_FILES))
+# NCURSES_OBJ		=	$(NCURSES_SRCS:.cpp=.o)
 
-NCURSES_OBJS	=	$(NCURSES_SRCS:.cpp=.o)
+# # NCURSES_SRCS	=	$(addprefix $(NCURSES_DIR), $(NCURSES_FILES))
 
-SDL			=	lib_arcade_sdl.so
+# SDL			=	lib_arcade_sdl2.so
 
-SDL_DIR		=	SDL/
+# SDL_DIR		=	SDL/
 
-SDL_FILES	=	class_sdl.cpp
+# SDL_SRCS	=	$(SDL_DIR)ClassSDL.cpp
 
-SDL_SRCS	=	$(addprefix $(SDL_DIR), $(SDL_FILES))
+# SDL_OBJ		=	$(SDL_SRCS:.cpp=.o)
 
-SDL_OBJS	=	$(SDL_SRCS:.cpp=.o)
+# # SDL_SRCS	=	$(addprefix $(SDL_DIR), $(SDL_FILES))
 
-all:			$(SFML) $(NCURSES) $(SDL)
+# all:			$(SFML) $(SDL) $(NCURSES)
 
-$(SFML):
-				$(CPP) $(CPPFLAGS) $(LDFLAGS) $(SFML_SRCS) $(LIB_SFML) -o $(SFML) $(INCLUDE)
+# $(SFML):	$(SFML_OBJ)
+# 				$(CC) -o $(SFML) $(SFML_OBJ) $(LDFLAGS) $(LIB_SFML)
+# 				# $(CXX) $(CXXFLAGS) $(LDFLAGS) $(SFML_SRCS) $(LIB_SFML) -o $(SFML) $(INCLUDE)
 
-$(NCURSES):
-				$(CPP) $(CPPFLAGS) $(LDFLAGS) $(NCURSES_SRCS) $(LIB_NCURSES) -o $(NCURSES) $(INCLUDE)
+# $(NCURSES):	$(NCURSES_OBJ)
+# 				$(CC) -o $(NCURSES) $(NCURSES_OBJ) $(LDFLAGS) $(LIB_NCURSES)
+# 				# $(CXX) $(CXXFLAGS) $(LDFLAGS) $(NCURSES_SRCS) $(LIB_NCURSES) -o $(NCURSES) $(INCLUDE)
 
-$(SDL):
-				$(CPP) $(CPPFLAGS) $(LDFLAGS) $(SDL_SRCS) $(LIB_SDL) -o $(SDL) $(INCLUDE)
+# $(SDL):		$(SDL_OBJ)
+# 				$(CC) -o $(SDL) $(SDL_OBJ) $(LDFLAGS) $(LIB_SDL)
+# 				# $(CXX) $(CXXFLAGS) $(LDFLAGS) $(SDL_SRCS) $(LIB_SDL) -o $(SDL) $(INCLUDE)
+
+# clean:
+# 				$(RM) $(SFML_OBJ)
+# 				$(RM) $(NCURSES_OBJ)
+# 				$(RM) $(SDL_OBJ)
+
+# fclean:			clean
+# 				$(RM) $(SFML)
+# 				$(RM) $(NCURSES)
+# 				$(RM) $(SDL)
+
+# re:				fclean all
+
+# .PHONY:			all clean fclean re
+
+LIBS_DIRS = NCURSES SDL SFML
+
+all:
+	@for i in $(LIBS_DIRS); do $(MAKE) -C $$i all || exit 1; done
 
 clean:
-				$(RM) $(SFML_OBJS)
-				$(RM) $(NCURSES_OBJS)
-				$(RM) $(SDL_OBJS)
+	@for i in $(LIBS_DIRS); do $(MAKE) -C $$i clean || exit 1; done
 
-fclean:			clean
-				$(RM) $(SFML)
-				$(RM) $(NCURSES)
-				$(RM) $(SDL)
+fclean:
+	@for i in $(LIBS_DIRS); do $(MAKE) -C $$i fclean || exit 1; done
 
-re:				fclean all
-
-.PHONY:			all clean fclean re
+.PHONY:	all clean fclean

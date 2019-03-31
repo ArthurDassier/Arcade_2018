@@ -1,0 +1,123 @@
+.TH "IGame" 3 "Sun Mar 31 2019" "Version 1.0" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IGame
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <IGame\&.hpp>\fP
+.PP
+Inherited by \fBPacman\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~IGame\fP ()=default"
+.br
+.ti -1c
+.RI "virtual bool \fBrunGame\fP ()=0"
+.br
+.ti -1c
+.RI "virtual std::shared_ptr< std::vector< std::string > > \fBgetMap\fP (void) const =0"
+.br
+.ti -1c
+.RI "virtual void \fBsetMap\fP (std::shared_ptr< std::vector< std::string >> map)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBgetIsNewMap\fP (void) const =0"
+.br
+.ti -1c
+.RI "virtual void \fBsetIsNewMap\fP (bool isNewMap)=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetIsNewKey\fP (bool isNewKey)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBgetIsNewKey\fP (void) const =0"
+.br
+.ti -1c
+.RI "virtual void \fBsetLastKey\fP (int key)=0"
+.br
+.ti -1c
+.RI "virtual int \fBgetLastKey\fP (void) const =0"
+.br
+.ti -1c
+.RI "virtual void \fBsetScore\fP (size_t score)=0"
+.br
+.ti -1c
+.RI "virtual size_t \fBgetScore\fP (void) const =0"
+.br
+.ti -1c
+.RI "virtual const std::string \fBgetPathConfig\fP () const noexcept=0"
+.br
+.ti -1c
+.RI "virtual const std::string \fBgetPathMap\fP () const noexcept=0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 18 of file IGame\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "virtual IGame::~IGame ()\fC [virtual]\fP, \fC [default]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual bool IGame::getIsNewKey (void) const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBPacman\fP\&.
+.SS "virtual bool IGame::getIsNewMap (void) const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBPacman\fP\&.
+.SS "virtual int IGame::getLastKey (void) const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBPacman\fP\&.
+.SS "virtual std::shared_ptr<std::vector<std::string> > IGame::getMap (void) const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBPacman\fP\&.
+.SS "virtual const std::string IGame::getPathConfig () const\fC [pure virtual]\fP, \fC [noexcept]\fP"
+
+.PP
+Implemented in \fBPacman\fP\&.
+.SS "virtual const std::string IGame::getPathMap () const\fC [pure virtual]\fP, \fC [noexcept]\fP"
+
+.PP
+Implemented in \fBPacman\fP\&.
+.SS "virtual size_t IGame::getScore (void) const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBPacman\fP\&.
+.SS "virtual bool IGame::runGame ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBPacman\fP\&.
+.SS "virtual void IGame::setIsNewKey (bool isNewKey)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBPacman\fP\&.
+.SS "virtual void IGame::setIsNewMap (bool isNewMap)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBPacman\fP\&.
+.SS "virtual void IGame::setLastKey (int key)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBPacman\fP\&.
+.SS "virtual void IGame::setMap (std::shared_ptr< std::vector< std::string >> map)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBPacman\fP\&.
+.SS "virtual void IGame::setScore (size_t score)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBPacman\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Arcade from the source code\&.
