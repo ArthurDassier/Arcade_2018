@@ -5,8 +5,6 @@
     <innerdir refid="dir_9579eb7a80bd13f48fc74ffd86f7223b">lib/NCURSES</innerdir>
     <innerdir refid="dir_2dca083983425599d4cb30e341d80cfb">lib/SDL</innerdir>
     <innerdir refid="dir_39cdeccb6ba56998cd98036bb976064f">lib/SFML</innerdir>
-    <innerfile refid="dlloader_8hpp">dlloader.hpp</innerfile>
-    <innerfile refid="_i_graphic_8hpp">IGraphic.hpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

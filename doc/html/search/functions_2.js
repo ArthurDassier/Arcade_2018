@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['canmove',['canMove',['../class_pacman.html#a5685f13b2be47a4d19c2cf984651f236',1,'Pacman']]],
-  ['checknextcase',['checkNextCase',['../class_pacman.html#a3127f3e766b7829c51606b8924f08e4e',1,'Pacman']]],
-  ['classncurses',['ClassNcurses',['../class_class_ncurses.html#a334f21e7d6fae191228601dbaa32d3f6',1,'ClassNcurses']]],
-  ['classsdl',['ClassSDL',['../class_class_s_d_l.html#a1d2bc3c0b566af34b105d2e05b76d85c',1,'ClassSDL']]],
-  ['classsfml',['ClassSFML',['../class_class_s_f_m_l.html#a9d31334eb3c24b7453fe988374fc6dfc',1,'ClassSFML']]],
-  ['cleardata',['clearData',['../class_parsing_config.html#a1f4aac7d1b61378fd7339f27408982dd',1,'ParsingConfig']]],
-  ['core',['Core',['../class_core.html#ae20266c97d453ee06728ba6fcec38420',1,'Core']]]
+  ['displaygame',['displayGame',['../class_class_ncurses.html#a3a995db689b6ea55870b4bacaf2a5bc4',1,'ClassNcurses::displayGame()'],['../class_class_s_d_l.html#a8ec9795eb836f73cd7254406f2510625',1,'ClassSDL::displayGame()'],['../class_class_s_f_m_l.html#ac7c2384bbf9f13169db316f20745f9d5',1,'ClassSFML::displayGame()']]],
+  ['displayletters',['displayLetters',['../class_class_ncurses.html#a77a0f1531a53705a81e77288b1531383',1,'ClassNcurses']]],
+  ['displaymenu',['displayMenu',['../class_class_ncurses.html#a2d1733200957118376adf08a7ac9b046',1,'ClassNcurses']]],
+  ['dlloader',['DLLoader',['../class_d_l_loader.html#a377c57f8a547e3eb4f23a4ad37276639',1,'DLLoader']]]
 ];

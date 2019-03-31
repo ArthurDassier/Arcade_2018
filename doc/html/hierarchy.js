@@ -1,12 +1,8 @@
 var hierarchy =
 [
-    [ "Animation", "class_animation.html", null ],
     [ "Core", "class_core.html", null ],
     [ "DataParsingConfig", "struct_data_parsing_config.html", null ],
     [ "DLLoader< T >", "class_d_l_loader.html", null ],
-    [ "Drawable", null, [
-      [ "AnimatedSprite", "class_animated_sprite.html", null ]
-    ] ],
     [ "Entity", "class_entity.html", null ],
     [ "ICore", "class_i_core.html", null ],
     [ "IGame", "class_i_game.html", [
@@ -21,8 +17,5 @@ var hierarchy =
     [ "KeySFML", "struct_key_s_f_m_l.html", null ],
     [ "ParsingConfig", "class_parsing_config.html", null ],
     [ "s_KeySdl", "structs___key_sdl.html", null ],
-    [ "s_pos", "structs__pos.html", null ],
-    [ "Transformable", null, [
-      [ "AnimatedSprite", "class_animated_sprite.html", null ]
-    ] ]
+    [ "s_pos", "structs__pos.html", null ]
 ];

@@ -290,7 +290,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/Core.hpp" line="35" column="1" bodyfile="srcs/Core.cpp" bodystart="18" bodyend="36"/>
+        <location file="srcs/Core.hpp" line="35" column="1" bodyfile="srcs/Core.cpp" bodystart="17" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="class_core_1a776f8c46504b14183883c6273f93eaed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -311,7 +311,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/Core.hpp" line="36" column="1" bodyfile="srcs/Core.cpp" bodystart="45" bodyend="49"/>
+        <location file="srcs/Core.hpp" line="36" column="1" bodyfile="srcs/Core.cpp" bodystart="44" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="class_core_1a7122ece94253bfb44077946ae3ff618e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -336,7 +336,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/Core.hpp" line="39" column="1" bodyfile="srcs/Core.cpp" bodystart="77" bodyend="88"/>
+        <location file="srcs/Core.hpp" line="39" column="1" bodyfile="srcs/Core.cpp" bodystart="76" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="class_core_1ab927cae46f3c2b6c7621077431039b12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -361,7 +361,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/Core.hpp" line="40" column="1" bodyfile="srcs/Core.cpp" bodystart="117" bodyend="139"/>
+        <location file="srcs/Core.hpp" line="40" column="1" bodyfile="srcs/Core.cpp" bodystart="116" bodyend="138"/>
       </memberdef>
       <memberdef kind="function" id="class_core_1ad0b576055f0135d384e76a9a1e74a96f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -385,7 +385,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/Core.hpp" line="42" column="1" bodyfile="srcs/Core.cpp" bodystart="149" bodyend="159"/>
+        <location file="srcs/Core.hpp" line="42" column="1" bodyfile="srcs/Core.cpp" bodystart="148" bodyend="158"/>
       </memberdef>
       <memberdef kind="function" id="class_core_1a3e3c90450845c25afb6854f8a4a2ee28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -425,7 +425,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/Core.hpp" line="45" column="1" bodyfile="srcs/Core.cpp" bodystart="168" bodyend="205"/>
+        <location file="srcs/Core.hpp" line="45" column="1" bodyfile="srcs/Core.cpp" bodystart="167" bodyend="204"/>
       </memberdef>
       <memberdef kind="function" id="class_core_1a3446c73ebfd578665f4a64d16c90ad36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -442,7 +442,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/Core.hpp" line="47" column="1" bodyfile="srcs/Core.cpp" bodystart="207" bodyend="210"/>
+        <location file="srcs/Core.hpp" line="47" column="1" bodyfile="srcs/Core.cpp" bodystart="206" bodyend="209"/>
       </memberdef>
       <memberdef kind="function" id="class_core_1ac3c24a7a509e199d0b70896cb93171da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -458,7 +458,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/Core.hpp" line="48" column="1" bodyfile="srcs/Core.cpp" bodystart="212" bodyend="215"/>
+        <location file="srcs/Core.hpp" line="48" column="1" bodyfile="srcs/Core.cpp" bodystart="211" bodyend="214"/>
       </memberdef>
       <memberdef kind="function" id="class_core_1a4ead291d8f47a0697e29331581c06619" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -475,7 +475,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/Core.hpp" line="50" column="1" bodyfile="srcs/Core.cpp" bodystart="217" bodyend="220"/>
+        <location file="srcs/Core.hpp" line="50" column="1" bodyfile="srcs/Core.cpp" bodystart="216" bodyend="219"/>
       </memberdef>
       <memberdef kind="function" id="class_core_1a1b73ef0d41c64a612d9f0e745fef20f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -491,7 +491,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/Core.hpp" line="51" column="1" bodyfile="srcs/Core.cpp" bodystart="222" bodyend="225"/>
+        <location file="srcs/Core.hpp" line="51" column="1" bodyfile="srcs/Core.cpp" bodystart="221" bodyend="224"/>
       </memberdef>
       <memberdef kind="function" id="class_core_1a15d432deabf263fa01ed532cc2789ee7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -508,7 +508,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/Core.hpp" line="53" column="1" bodyfile="srcs/Core.cpp" bodystart="227" bodyend="230"/>
+        <location file="srcs/Core.hpp" line="53" column="1" bodyfile="srcs/Core.cpp" bodystart="226" bodyend="229"/>
       </memberdef>
       <memberdef kind="function" id="class_core_1a24e2ac35e41ec57bbcb8be92a42e4bb9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -524,7 +524,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/Core.hpp" line="54" column="1" bodyfile="srcs/Core.cpp" bodystart="232" bodyend="235"/>
+        <location file="srcs/Core.hpp" line="54" column="1" bodyfile="srcs/Core.cpp" bodystart="231" bodyend="234"/>
       </memberdef>
       <memberdef kind="function" id="class_core_1a667e34a3ad5288fc11db6d21b462a265" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -545,7 +545,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/Core.hpp" line="56" column="1" bodyfile="srcs/Core.cpp" bodystart="58" bodyend="68"/>
+        <location file="srcs/Core.hpp" line="56" column="1" bodyfile="srcs/Core.cpp" bodystart="57" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="class_core_1a28268e9e72483b95d77ef2298dcf5fb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -566,7 +566,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/Core.hpp" line="58" column="1" bodyfile="srcs/Core.cpp" bodystart="97" bodyend="107"/>
+        <location file="srcs/Core.hpp" line="58" column="1" bodyfile="srcs/Core.cpp" bodystart="96" bodyend="106"/>
       </memberdef>
       <memberdef kind="function" id="class_core_1a5562dd977aa0e9550df8a9ecbe5d14bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>

@@ -5,8 +5,7 @@
 ** Entity
 */
 
-#ifndef ENTITY_HPP_
-    #define ENTITY_HPP_
+#pragma once
 
 #include <algorithm>
 #include <iostream>
@@ -45,9 +44,9 @@ typedef struct s_pos {
 
 class Entity
 {
-	public:
+    public:
         Entity(PacmanObjs);
-		~Entity() = default;
+        ~Entity() = default;
 
         void move(Move, std::shared_ptr<std::vector<std::string>>);
         std::map<size_t, std::map<size_t, char>> getMap() const;
@@ -97,5 +96,3 @@ class Entity
         void moveUp(std::shared_ptr<std::vector<std::string>>);
         bool checkNextCase(char);
 };
-
-#endif /* !ENTITY_HPP_ */

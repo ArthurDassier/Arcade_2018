@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/ParsingConfig.hpp" line="20" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="20" bodyend="-1"/>
+        <location file="includes/ParsingConfig.hpp" line="20" column="1" bodyfile="includes/ParsingConfig.hpp" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_data_parsing_config_1a66cca705d93395a81e42c9c5a097b9ee" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/ParsingConfig.hpp" line="21" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="21" bodyend="-1"/>
+        <location file="includes/ParsingConfig.hpp" line="21" column="1" bodyfile="includes/ParsingConfig.hpp" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_data_parsing_config_1ac230386a89c7fb0553e3fddbc385b4d8" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/ParsingConfig.hpp" line="22" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="22" bodyend="-1"/>
+        <location file="includes/ParsingConfig.hpp" line="22" column="1" bodyfile="includes/ParsingConfig.hpp" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_data_parsing_config_1a4045954414dddfd81d284a10c05169ad" prot="public" static="no" mutable="no">
         <type>std::string</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/ParsingConfig.hpp" line="23" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="23" bodyend="-1"/>
+        <location file="includes/ParsingConfig.hpp" line="23" column="1" bodyfile="includes/ParsingConfig.hpp" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_data_parsing_config_1a40020fc791f5dde8a38018317eed0cd3" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/ParsingConfig.hpp" line="24" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="24" bodyend="-1"/>
+        <location file="includes/ParsingConfig.hpp" line="24" column="1" bodyfile="includes/ParsingConfig.hpp" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_data_parsing_config_1a4588670806ea05d74332194b625953e7" prot="public" static="no" mutable="no">
         <type>std::string</type>
@@ -80,14 +80,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/ParsingConfig.hpp" line="25" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="25" bodyend="-1"/>
+        <location file="includes/ParsingConfig.hpp" line="25" column="1" bodyfile="includes/ParsingConfig.hpp" bodystart="25" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This Structure contains all the informations about our sprites, the path to the .bmp, it size in x and y, the ncurses character, the key in the eventuallity it&apos;s interactive and the name of the sprite. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="srcs/ParsingConfig.hpp" line="19" column="1" bodyfile="srcs/ParsingConfig.hpp" bodystart="19" bodyend="26"/>
+    <location file="includes/ParsingConfig.hpp" line="19" column="1" bodyfile="includes/ParsingConfig.hpp" bodystart="19" bodyend="26"/>
     <listofallmembers>
       <member refid="struct_data_parsing_config_1a4045954414dddfd81d284a10c05169ad" prot="public" virt="non-virtual"><scope>DataParsingConfig</scope><name>caractere</name></member>
       <member refid="struct_data_parsing_config_1a40020fc791f5dde8a38018317eed0cd3" prot="public" virt="non-virtual"><scope>DataParsingConfig</scope><name>launchKey</name></member>

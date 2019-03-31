@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="92" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="92" bodyend="-1"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="95" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="95" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_key_s_f_m_l_1a28b520ab3e46623e4d1491d38bd1f590" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -28,14 +28,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="93" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="93" bodyend="-1"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="96" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="96" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This Structure contains Keys input translation. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="lib/SFML/ClassSFML.hpp" line="91" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="91" bodyend="94"/>
+    <location file="lib/SFML/ClassSFML.hpp" line="94" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="94" bodyend="97"/>
     <listofallmembers>
       <member refid="struct_key_s_f_m_l_1a28b520ab3e46623e4d1491d38bd1f590" prot="public" virt="non-virtual"><scope>KeySFML</scope><name>code_core</name></member>
       <member refid="struct_key_s_f_m_l_1a774c161b3a06372aa146fe5f4ba9cd4a" prot="public" virt="non-virtual"><scope>KeySFML</scope><name>code_lib</name></member>

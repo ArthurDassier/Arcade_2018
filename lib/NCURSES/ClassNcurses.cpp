@@ -15,15 +15,15 @@
  */
 
 ClassNcurses::ClassNcurses() :
-    _key(999),
-    _isNewMap(false),
-    _isNewKey(false),
-    _isNewPathConfig(false),
     _window(nullptr, [](WINDOW *){}),
     _window_menu_sdl(nullptr, [](WINDOW *){}),
     _window_menu_sfml(nullptr, [](WINDOW *){}),
     _window_menu_ncurses(nullptr, [](WINDOW *){}),
-    _window_pacman(nullptr, [](WINDOW *){})
+    _window_pacman(nullptr, [](WINDOW *){}),
+    _isNewMap(false),
+    _isNewKey(false),
+    _key(999),
+    _isNewPathConfig(false)
 {
     initscr();
     _window.reset(subwin(stdscr, LINES / 2, COLS, LINES / 4, 0), [](WINDOW *){});
@@ -298,7 +298,7 @@ bool ClassNcurses::runGraph()
 
 void ClassNcurses::buildMap(std::shared_ptr<std::vector<std::string>> map = nullptr)
 {
-
+    static_cast<void>(map);
 }
 
 /*!
@@ -339,7 +339,7 @@ void ClassNcurses::setMap(std::shared_ptr<std::vector<std::string>> map)
 
 void ClassNcurses::translateKey()
 {
-    for (size_t i = 0; KeyNcurses[i].code_lib != 1000; ++i) {
+    for (size_t i = 0; KeyNcurses[i].code_lib != -1; ++i) {
         if (_c == KeyNcurses[i].code_lib) {
             setLastKey(KeyNcurses[i].code_core);
             setIsNewKey(true);

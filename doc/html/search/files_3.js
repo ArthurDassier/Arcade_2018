@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['entity_2ecpp',['Entity.cpp',['../_entity_8cpp.html',1,'']]],
-  ['entity_2ehpp',['Entity.hpp',['../_entity_8hpp.html',1,'']]]
+  ['icore_2ehpp',['ICore.hpp',['../_i_core_8hpp.html',1,'']]],
+  ['igame_2ehpp',['IGame.hpp',['../_i_game_8hpp.html',1,'']]],
+  ['igraphic_2ehpp',['IGraphic.hpp',['../_i_graphic_8hpp.html',1,'']]]
 ];

@@ -1,44 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
-  <compound refid="class_animated_sprite" kind="class"><name>AnimatedSprite</name>
-    <member refid="class_animated_sprite_1afd9382a05230debb398d514a071dde7f" kind="variable"><name>m_animation</name></member>
-    <member refid="class_animated_sprite_1afce08b67e38c971bd1b5ad7f6a554c6d" kind="variable"><name>m_frameTime</name></member>
-    <member refid="class_animated_sprite_1ab87ffbc20845fe5a385aa54bcd5474e1" kind="variable"><name>m_currentTime</name></member>
-    <member refid="class_animated_sprite_1ab8b8a4ffdfb805d1398df75c75a6968c" kind="variable"><name>m_currentFrame</name></member>
-    <member refid="class_animated_sprite_1a5254968002ee38358d213d0635bc850c" kind="variable"><name>m_isPaused</name></member>
-    <member refid="class_animated_sprite_1a4f9785ba745693bfcb8c184fe106e03a" kind="variable"><name>m_isLooped</name></member>
-    <member refid="class_animated_sprite_1a817156ebd0f7867a89352a6e94717af5" kind="variable"><name>m_texture</name></member>
-    <member refid="class_animated_sprite_1a27a110055fb89389a0e3d523ebd49738" kind="variable"><name>m_vertices</name></member>
-    <member refid="class_animated_sprite_1a097ab8444824e7085d71a1f7144e7763" kind="function"><name>AnimatedSprite</name></member>
-    <member refid="class_animated_sprite_1a17a41ff812631a9d8947d272933d6696" kind="function"><name>update</name></member>
-    <member refid="class_animated_sprite_1ab1afc57d90d57a0c4bc4f5b090f2dacf" kind="function"><name>setAnimation</name></member>
-    <member refid="class_animated_sprite_1af598fab5c3599ccc5ed1e2d4fefa68cc" kind="function"><name>setFrameTime</name></member>
-    <member refid="class_animated_sprite_1a203b968f1cb374cca5dbc89716174020" kind="function"><name>play</name></member>
-    <member refid="class_animated_sprite_1a9ea345649a4e012d096bc04aafe1ecb0" kind="function"><name>play</name></member>
-    <member refid="class_animated_sprite_1a48384db59427423b5c1d98f6ee94fe45" kind="function"><name>pause</name></member>
-    <member refid="class_animated_sprite_1af9734f4346d3d2370322b2dcaeef133c" kind="function"><name>stop</name></member>
-    <member refid="class_animated_sprite_1a855a5a48ea2e1c51c7c9304857dd2f8c" kind="function"><name>setLooped</name></member>
-    <member refid="class_animated_sprite_1a1a96a0f6570efddd2eb26f89bc5b6f50" kind="function"><name>setColor</name></member>
-    <member refid="class_animated_sprite_1a03bacdbaf638cb6f7987e342980206c2" kind="function"><name>getAnimation</name></member>
-    <member refid="class_animated_sprite_1ac4c88435c8698f452629c5cd78bfb3c9" kind="function"><name>getLocalBounds</name></member>
-    <member refid="class_animated_sprite_1a86dca0906c53b3e630aaeac2f0085a0e" kind="function"><name>getGlobalBounds</name></member>
-    <member refid="class_animated_sprite_1aaf2c2fb0e1487e689af4a6bbeb7e3e85" kind="function"><name>isLooped</name></member>
-    <member refid="class_animated_sprite_1a55f450add05d45e5369a6ad24f9e438f" kind="function"><name>isPlaying</name></member>
-    <member refid="class_animated_sprite_1a5291f8e24fe2c6e4284bc7ff9499ef77" kind="function"><name>getFrameTime</name></member>
-    <member refid="class_animated_sprite_1a0b3e38fffdc1d29f46fa08df9ef2a747" kind="function"><name>setFrame</name></member>
-    <member refid="class_animated_sprite_1a7564b36acb807662e09a87e5eb45e59a" kind="function"><name>draw</name></member>
-  </compound>
-  <compound refid="class_animation" kind="class"><name>Animation</name>
-    <member refid="class_animation_1a30c14ed935c467aff746e158d6182372" kind="variable"><name>_frames</name></member>
-    <member refid="class_animation_1a0cff1c6c3899d7fe659412f7a35d9d33" kind="variable"><name>_texture</name></member>
-    <member refid="class_animation_1a83f0a16cef7117f187ad596de38dd9d6" kind="function"><name>Animation</name></member>
-    <member refid="class_animation_1a401b68793d4fbf48d481c030ee4b2a16" kind="function"><name>~Animation</name></member>
-    <member refid="class_animation_1a18d8f46d264b0b5a8441c1114c486d0f" kind="function"><name>addFrame</name></member>
-    <member refid="class_animation_1a2da43578722139dfe4b4375b7fe99aba" kind="function"><name>setSpriteSheet</name></member>
-    <member refid="class_animation_1abf4f00f8b1657829583d7d92e71b93d1" kind="function"><name>getSpriteSheet</name></member>
-    <member refid="class_animation_1ac6854dc96e9fc8ffd97feba43547c869" kind="function"><name>getSize</name></member>
-    <member refid="class_animation_1aaf7943420f26f46b744f49837bb65f51" kind="function"><name>getFrame</name></member>
-  </compound>
   <compound refid="class_class_ncurses" kind="class"><name>ClassNcurses</name>
     <member refid="class_class_ncurses_1af65a2bf1f70227eb03d09acbe394597f" kind="variable"><name>_map</name></member>
     <member refid="class_class_ncurses_1ae11213809fc7e060f8605da805976d70" kind="variable"><name>_window</name></member>
@@ -214,7 +175,7 @@
     <member refid="class_entity_1a07cdd0783a27ea8964087b6efd59243f" kind="variable"><name>_isNewMap</name></member>
     <member refid="class_entity_1a366a68a55cae7395e0e0b0b2e71c1323" kind="variable"><name>_isNewKey</name></member>
     <member refid="class_entity_1aed8a9f358cd8071ac65514597a686e8e" kind="function"><name>Entity</name></member>
-    <member refid="class_entity_1adf6d3f7cb1b2ba029b6b048a395cc8ae" kind="function"><name>~Entity</name></member>
+    <member refid="class_entity_1aa6ecb9c57b29b60cc49fe44ad4088ecf" kind="function"><name>~Entity</name></member>
     <member refid="class_entity_1ae3e67f022530fdb7640a41bd9f625c05" kind="function"><name>move</name></member>
     <member refid="class_entity_1a174596f619570407af51da9a514ec779" kind="function"><name>getMap</name></member>
     <member refid="class_entity_1aeb78147bb879a3661ba336f07f641508" kind="function"><name>getEntity</name></member>
@@ -349,7 +310,9 @@
     <member refid="structs__pos_1abb0498f0ab615cbda6e0df98ce7260cf" kind="variable"><name>x</name></member>
     <member refid="structs__pos_1a06fda8103834535db7e2f702c02aab21" kind="variable"><name>y</name></member>
   </compound>
-  <compound refid="_i_game_8hpp" kind="file"><name>IGame.hpp</name>
+  <compound refid="doc_2_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
   </compound>
   <compound refid="_entity_8cpp" kind="file"><name>Entity.cpp</name>
   </compound>
@@ -375,9 +338,15 @@
   </compound>
   <compound refid="dlloader_8hpp" kind="file"><name>dlloader.hpp</name>
   </compound>
+  <compound refid="_i_core_8hpp" kind="file"><name>ICore.hpp</name>
+  </compound>
+  <compound refid="_i_game_8hpp" kind="file"><name>IGame.hpp</name>
+  </compound>
   <compound refid="_i_graphic_8hpp" kind="file"><name>IGraphic.hpp</name>
     <member refid="_i_graphic_8hpp_1a6974d08a74da681b3957b2fead2608b8" kind="define"><name>SCREEN_HEIGHT</name></member>
     <member refid="_i_graphic_8hpp_1a2cd109632a6dcccaa80b43561b1ab700" kind="define"><name>SCREEN_WIDTH</name></member>
+  </compound>
+  <compound refid="_parsing_config_8hpp" kind="file"><name>ParsingConfig.hpp</name>
   </compound>
   <compound refid="_class_ncurses_8cpp" kind="file"><name>ClassNcurses.cpp</name>
     <member refid="_class_ncurses_8cpp_1a094b00923e2802db8341bfdd8860eefe" kind="function"><name>entryPoint</name></member>
@@ -447,17 +416,6 @@
     <member refid="_class_s_f_m_l_8hpp_1a821fa6bcae46bbf01e1bdaf5a86a585da5b612cc7dd1d1f1b0603d0ef1317fd51" kind="enumvalue"><name>NCURSES</name></member>
     <member refid="_class_s_d_l_8hpp_1ab2898f6d6b12cadcf875a672ea13768d" kind="variable"><name>KeySdl</name></member>
   </compound>
-  <compound refid="_animated_sprite_8cpp" kind="file"><name>AnimatedSprite.cpp</name>
-  </compound>
-  <compound refid="_animated_sprite_8hpp" kind="file"><name>AnimatedSprite.hpp</name>
-  </compound>
-  <compound refid="_animation_8cpp" kind="file"><name>Animation.cpp</name>
-  </compound>
-  <compound refid="_animation_8hpp" kind="file"><name>Animation.hpp</name>
-  </compound>
-  <compound refid="_animation_test_8cpp" kind="file"><name>AnimationTest.cpp</name>
-    <member refid="_animation_test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
-  </compound>
   <compound refid="_class_s_f_m_l_8cpp" kind="file"><name>ClassSFML.cpp</name>
     <member refid="_class_s_f_m_l_8cpp_1a094b00923e2802db8341bfdd8860eefe" kind="function"><name>entryPoint</name></member>
   </compound>
@@ -493,8 +451,6 @@
     <member refid="_class_s_f_m_l_8hpp_1a821fa6bcae46bbf01e1bdaf5a86a585da5b612cc7dd1d1f1b0603d0ef1317fd51" kind="enumvalue"><name>NCURSES</name></member>
     <member refid="_class_s_f_m_l_8hpp_1a5a189ee5df216f804f492f38486a926c" kind="variable"><name>KeySFML</name></member>
   </compound>
-  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
-  </compound>
   <compound refid="_core_8cpp" kind="file"><name>Core.cpp</name>
   </compound>
   <compound refid="_core_8hpp" kind="file"><name>Core.hpp</name>
@@ -504,14 +460,8 @@
     <member refid="_core_8hpp_1a1939e90743463fb34c8c571ec0590430ac20184b25d6c8aad0446cafa5e6610c1" kind="enumvalue"><name>SDL</name></member>
     <member refid="_core_8hpp_1a1939e90743463fb34c8c571ec0590430a951ab68bb8f7daafb78951107080904e" kind="enumvalue"><name>ENTER</name></member>
   </compound>
-  <compound refid="_i_core_8hpp" kind="file"><name>ICore.hpp</name>
-  </compound>
   <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
     <member refid="main_8cpp_1aee7801bc627f70f446a37ec861000c35" kind="function"><name>main</name></member>
-  </compound>
-  <compound refid="_parsing_config_8cpp" kind="file"><name>ParsingConfig.cpp</name>
-  </compound>
-  <compound refid="_parsing_config_8hpp" kind="file"><name>ParsingConfig.hpp</name>
   </compound>
   <compound refid="tests___n_c_u_r_s_e_s_8cpp" kind="file"><name>tests_NCURSES.cpp</name>
     <member refid="tests___n_c_u_r_s_e_s_8cpp_1a6538e0aae031607419264299d0e81dd5" kind="function"><name>Test</name></member>
@@ -549,9 +499,13 @@
     <member refid="tests___s_f_m_l_8cpp_1af913e923e2214c9387651752d1fa1127" kind="function"><name>Test</name></member>
     <member refid="tests___s_f_m_l_8cpp_1a74f6e404b0e38af46df70ee3a2e11f37" kind="function"><name>Test</name></member>
   </compound>
+  <compound refid="md_doc__r_e_a_d_m_e" kind="page"><name>md_doc_README</name>
+  </compound>
   <compound refid="md__r_e_a_d_m_e" kind="page"><name>md_README</name>
   </compound>
   <compound refid="dir_4b6f782e158b0b98da980a0e11a23a15" kind="dir"><name>games</name>
+  </compound>
+  <compound refid="dir_09e761304027c904456130627fd4dcf5" kind="dir"><name>includes</name>
   </compound>
   <compound refid="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir"><name>lib</name>
   </compound>

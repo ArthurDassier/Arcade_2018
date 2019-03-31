@@ -17,15 +17,15 @@ Inherits \fBIGame\fP\&.
 .ti -1c
 .RI "\fBPacman\fP ()"
 .br
-.RI "Create the \fBPacman\fP game\&. "
+.RI "Create \fBPacman\fP, set the getters and intialize entities\&. "
 .ti -1c
 .RI "\fB~Pacman\fP ()"
 .br
-.RI "\fBPacman\fP Class destructor\&. "
+.RI "\fBPacman\fP Class destructor, free vector of entity\&. "
 .ti -1c
 .RI "bool \fBrunGame\fP ()"
 .br
-.RI "Set the clock of the game and handle the logic\&. "
+.RI "Handle the events of the \fBPacman\fP\&. "
 .ti -1c
 .RI "void \fBsetMap\fP (std::shared_ptr< std::vector< std::string >>)"
 .br
@@ -35,7 +35,7 @@ Inherits \fBIGame\fP\&.
 .ti -1c
 .RI "void \fBreadMap\fP (void)"
 .br
-.RI "Read the map\&. "
+.RI "Read map\&.config and set game map\&. "
 .ti -1c
 .RI "void \fBsetIsNewMap\fP (bool)"
 .br
@@ -109,7 +109,7 @@ Definition at line 19 of file Pacman\&.hpp\&.
 .SS "Pacman::Pacman ()"
 
 .PP
-Create the \fBPacman\fP game\&. 
+Create \fBPacman\fP, set the getters and intialize entities\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -118,11 +118,11 @@ Create the \fBPacman\fP game\&.
 .PP
 
 .PP
-Definition at line 17 of file Pacman\&.cpp\&.
+Definition at line 16 of file Pacman\&.cpp\&.
 .SS "Pacman::~Pacman ()"
 
 .PP
-\fBPacman\fP Class destructor\&. 
+\fBPacman\fP Class destructor, free vector of entity\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -131,7 +131,7 @@ Definition at line 17 of file Pacman\&.cpp\&.
 .PP
 
 .PP
-Definition at line 43 of file Pacman\&.cpp\&.
+Definition at line 41 of file Pacman\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "bool Pacman::canMove () const"
@@ -145,47 +145,47 @@ Definition at line 43 of file Pacman\&.cpp\&.
 .PP
 Implements \fBIGame\fP\&.
 .PP
-Definition at line 159 of file Pacman\&.cpp\&.
+Definition at line 130 of file Pacman\&.cpp\&.
 .SS "bool Pacman::getIsNewMap (void) const\fC [virtual]\fP"
 
 .PP
 Implements \fBIGame\fP\&.
 .PP
-Definition at line 149 of file Pacman\&.cpp\&.
+Definition at line 120 of file Pacman\&.cpp\&.
 .SS "int Pacman::getLastKey (void) const\fC [virtual]\fP"
 
 .PP
 Implements \fBIGame\fP\&.
 .PP
-Definition at line 169 of file Pacman\&.cpp\&.
+Definition at line 140 of file Pacman\&.cpp\&.
 .SS "std::shared_ptr< std::vector< std::string > > Pacman::getMap (void) const\fC [virtual]\fP"
 
 .PP
 Implements \fBIGame\fP\&.
 .PP
-Definition at line 139 of file Pacman\&.cpp\&.
+Definition at line 110 of file Pacman\&.cpp\&.
 .SS "\fBMove\fP Pacman::getMove () const"
 
 .PP
-Definition at line 200 of file Pacman\&.cpp\&.
+Definition at line 170 of file Pacman\&.cpp\&.
 .SS "const std::string Pacman::getPathConfig () const\fC [virtual]\fP, \fC [noexcept]\fP"
 
 .PP
 Implements \fBIGame\fP\&.
 .PP
-Definition at line 184 of file Pacman\&.cpp\&.
+Definition at line 155 of file Pacman\&.cpp\&.
 .SS "const std::string Pacman::getPathMap () const\fC [virtual]\fP, \fC [noexcept]\fP"
 
 .PP
 Implements \fBIGame\fP\&.
 .PP
-Definition at line 189 of file Pacman\&.cpp\&.
+Definition at line 160 of file Pacman\&.cpp\&.
 .SS "size_t Pacman::getScore (void) const\fC [virtual]\fP"
 
 .PP
 Implements \fBIGame\fP\&.
 .PP
-Definition at line 179 of file Pacman\&.cpp\&.
+Definition at line 150 of file Pacman\&.cpp\&.
 .SS "void Pacman::moveDown (void)"
 
 .SS "void Pacman::moveLeft (void)"
@@ -197,7 +197,7 @@ Definition at line 179 of file Pacman\&.cpp\&.
 .SS "void Pacman::readMap (void)"
 
 .PP
-Read the map\&. 
+Read map\&.config and set game map\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -206,11 +206,11 @@ Read the map\&.
 .PP
 
 .PP
-Definition at line 104 of file Pacman\&.cpp\&.
+Definition at line 92 of file Pacman\&.cpp\&.
 .SS "bool Pacman::runGame ()\fC [virtual]\fP"
 
 .PP
-Set the clock of the game and handle the logic\&. 
+Handle the events of the \fBPacman\fP\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -221,7 +221,7 @@ Set the clock of the game and handle the logic\&.
 .PP
 Implements \fBIGame\fP\&.
 .PP
-Definition at line 55 of file Pacman\&.cpp\&.
+Definition at line 52 of file Pacman\&.cpp\&.
 .SS "void Pacman::setBonus (bool)"
 
 .SS "void Pacman::setIsNewKey (bool isNewKey)\fC [virtual]\fP"
@@ -229,35 +229,35 @@ Definition at line 55 of file Pacman\&.cpp\&.
 .PP
 Implements \fBIGame\fP\&.
 .PP
-Definition at line 154 of file Pacman\&.cpp\&.
+Definition at line 125 of file Pacman\&.cpp\&.
 .SS "void Pacman::setIsNewMap (bool map)\fC [virtual]\fP"
 
 .PP
 Implements \fBIGame\fP\&.
 .PP
-Definition at line 144 of file Pacman\&.cpp\&.
+Definition at line 115 of file Pacman\&.cpp\&.
 .SS "void Pacman::setLastKey (int key)\fC [virtual]\fP"
 
 .PP
 Implements \fBIGame\fP\&.
 .PP
-Definition at line 164 of file Pacman\&.cpp\&.
+Definition at line 135 of file Pacman\&.cpp\&.
 .SS "void Pacman::setMap (std::shared_ptr< std::vector< std::string >> map)\fC [virtual]\fP"
 
 .PP
 Implements \fBIGame\fP\&.
 .PP
-Definition at line 134 of file Pacman\&.cpp\&.
+Definition at line 105 of file Pacman\&.cpp\&.
 .SS "void Pacman::setMove (\fBMove\fP lastMove)"
 
 .PP
-Definition at line 194 of file Pacman\&.cpp\&.
+Definition at line 165 of file Pacman\&.cpp\&.
 .SS "void Pacman::setScore (size_t score)\fC [virtual]\fP"
 
 .PP
 Implements \fBIGame\fP\&.
 .PP
-Definition at line 174 of file Pacman\&.cpp\&.
+Definition at line 145 of file Pacman\&.cpp\&.
 
 .SH "Author"
 .PP 

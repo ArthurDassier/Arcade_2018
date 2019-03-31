@@ -5,50 +5,107 @@
     <includes local="no">iostream</includes>
     <includes local="no">fstream</includes>
     <includes local="no">vector</includes>
+    <includedby refid="_class_ncurses_8hpp" local="yes">lib/NCURSES/ClassNcurses.hpp</includedby>
+    <includedby refid="_class_s_d_l_8hpp" local="yes">lib/SDL/ClassSDL.hpp</includedby>
+    <includedby refid="_class_s_f_m_l_8hpp" local="yes">lib/SFML/ClassSFML.hpp</includedby>
     <includedby refid="_core_8hpp" local="yes">srcs/Core.hpp</includedby>
     <incdepgraph>
-      <node id="273">
+      <node id="89">
         <label>fstream</label>
       </node>
-      <node id="271">
-        <label>srcs/ParsingConfig.hpp</label>
-        <link refid="_parsing_config_8hpp"/>
-        <childnode refid="272" relation="include">
-        </childnode>
-        <childnode refid="273" relation="include">
-        </childnode>
-        <childnode refid="274" relation="include">
-        </childnode>
-      </node>
-      <node id="274">
+      <node id="90">
         <label>vector</label>
       </node>
-      <node id="272">
+      <node id="88">
         <label>iostream</label>
+      </node>
+      <node id="87">
+        <label>includes/ParsingConfig.hpp</label>
+        <link refid="_parsing_config_8hpp"/>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="276">
+      <node id="96">
+        <label>lib/SDL/ClassSDL.cpp</label>
+        <link refid="_class_s_d_l_8cpp"/>
+      </node>
+      <node id="97">
+        <label>tests/tests_SDL.cpp</label>
+        <link refid="tests___s_d_l_8cpp"/>
+      </node>
+      <node id="101">
         <label>srcs/Core.hpp</label>
         <link refid="_core_8hpp"/>
-        <childnode refid="277" relation="include">
+        <childnode refid="102" relation="include">
         </childnode>
-        <childnode refid="278" relation="include">
+        <childnode refid="103" relation="include">
         </childnode>
       </node>
-      <node id="277">
+      <node id="93">
+        <label>lib/NCURSES/ClassNcurses.cpp</label>
+        <link refid="_class_ncurses_8cpp"/>
+      </node>
+      <node id="94">
+        <label>tests/tests_NCURSES.cpp</label>
+        <link refid="tests___n_c_u_r_s_e_s_8cpp"/>
+      </node>
+      <node id="100">
+        <label>tests/tests_SFML.cpp</label>
+        <link refid="tests___s_f_m_l_8cpp"/>
+      </node>
+      <node id="102">
         <label>srcs/Core.cpp</label>
         <link refid="_core_8cpp"/>
       </node>
-      <node id="275">
-        <label>srcs/ParsingConfig.hpp</label>
-        <link refid="_parsing_config_8hpp"/>
-        <childnode refid="276" relation="include">
+      <node id="98">
+        <label>lib/SFML/ClassSFML.hpp</label>
+        <link refid="_class_s_f_m_l_8hpp"/>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
         </childnode>
       </node>
-      <node id="278">
+      <node id="99">
+        <label>lib/SFML/ClassSFML.cpp</label>
+        <link refid="_class_s_f_m_l_8cpp"/>
+      </node>
+      <node id="103">
         <label>srcs/main.cpp</label>
         <link refid="main_8cpp"/>
+      </node>
+      <node id="95">
+        <label>lib/SDL/ClassSDL.hpp</label>
+        <link refid="_class_s_d_l_8hpp"/>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>includes/ParsingConfig.hpp</label>
+        <link refid="_parsing_config_8hpp"/>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>lib/NCURSES/ClassNcurses.hpp</label>
+        <link refid="_class_ncurses_8hpp"/>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="struct_data_parsing_config" prot="public">DataParsingConfig</innerclass>
@@ -135,6 +192,6 @@
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>_filename;</highlight></codeline>
 <codeline lineno="87"><highlight class="normal">};</highlight></codeline>
     </programlisting>
-    <location file="srcs/ParsingConfig.hpp"/>
+    <location file="includes/ParsingConfig.hpp"/>
   </compounddef>
 </doxygen>

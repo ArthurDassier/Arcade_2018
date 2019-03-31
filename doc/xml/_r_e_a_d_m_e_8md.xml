@@ -22,6 +22,17 @@
 <codeline><highlight class="normal">Our<sp/>architecture<sp/>have<sp/>been<sp/>fully<sp/>represented<sp/>in<sp/>a<sp/>Draw.io<sp/>:<sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal">https://www.draw.io/?state=%7B%22ids%22:%5B%221Zq1VpeW_EqprgKpBIExYpuWdQAxUMRU4%22%5D,%22action%22:%22open%22,%22userId%22:%22107942588257674115967%22%7D#G1Zq1VpeW_EqprgKpBIExYpuWdQAxUMRU4</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">##<sp/>How<sp/>to<sp/>play</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">In<sp/>the<sp/>Menu,<sp/>press<sp/>ENTER<sp/>to<sp/>play<sp/>the<sp/>game.<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">In<sp/>the<sp/>Game,<sp/>press<sp/>ENTER<sp/>to<sp/>return<sp/>to<sp/>the<sp/>menu.<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">ZQSD<sp/>to<sp/>move<sp/>your<sp/>character.<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">At<sp/>any<sp/>moment<sp/>:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Press<sp/>J<sp/>to<sp/>switch<sp/>to<sp/>Ncurses.<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Press<sp/>K<sp/>to<sp/>switch<sp/>to<sp/>SFML.<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Press<sp/>L<sp/>to<sp/>switch<sp/>to<sp/>SDL.<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">In<sp/>Ncurses,<sp/>press<sp/>X<sp/>to<sp/>quit<sp/>the<sp/>program.</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">#<sp/>How<sp/>to<sp/>implement<sp/>a<sp/>new<sp/>graphic<sp/>library</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>Configuration<sp/>files</highlight></codeline>
@@ -42,7 +53,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">The<sp/>second<sp/>one<sp/>must<sp/>represent<sp/>the<sp/>&apos;map&apos;<sp/>that<sp/>your<sp/>lib<sp/>will<sp/>print,<sp/>with<sp/>code<sp/>representing<sp/>which<sp/>part<sp/>of<sp/>the<sp/>configuration<sp/>file<sp/>it<sp/>have<sp/>to<sp/>use.</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">####<sp/>Map<sp/>example</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Map<sp/>example</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">1111111111111111111<sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal">1222222221222222221<sp/><sp/></highlight></codeline>
@@ -66,13 +77,25 @@
 <codeline><highlight class="normal">1222222222222222221<sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal">1111111111111111111<sp/><sp/></highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">###<sp/>Functions<sp/>to<sp/>implement</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Functions<sp/>to<sp/>implement</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">You<sp/>must<sp/>implement<sp/>a<sp/>runGraph<sp/>fonction<sp/>that<sp/>will<sp/>return<sp/>return<sp/>true<sp/>if<sp/>you<sp/>want<sp/>to<sp/>exit<sp/>the<sp/>program,<sp/>otherwise<sp/>return<sp/>false.</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">bool<sp/>YourClassName::runGraph();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">You<sp/>must<sp/>implement<sp/>a<sp/>translateKey<sp/>fonction<sp/>translating<sp/>the<sp/>key<sp/>returned<sp/>by<sp/>the<sp/>events<sp/>of<sp/>your<sp/>lib<sp/>to<sp/>a<sp/>key<sp/>that<sp/>will<sp/>be<sp/>understood<sp/>by<sp/>the<sp/>core</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">####<sp/>Here<sp/>is<sp/>the<sp/>translation</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>YourClassName::translateKey()</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Here<sp/>is<sp/>the<sp/>translation</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">{&apos;a&apos;,<sp/>0},<sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal">{&apos;b&apos;,<sp/>1},<sp/><sp/></highlight></codeline>
@@ -213,7 +236,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">###<sp/>SFML<sp/>Example</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>SFML<sp/>Example</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline></codeline>
@@ -417,6 +440,124 @@
 <codeline><highlight class="normal">}</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>How<sp/>to<sp/>implement<sp/>a<sp/>new<sp/>game<sp/>library</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Configuration<sp/>files</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">They<sp/>must<sp/>be<sp/>implemented<sp/>the<sp/>same<sp/>way<sp/>as<sp/>graphic<sp/>libraries</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Class<sp/>implementation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">In<sp/>your<sp/>class<sp/>must<sp/>be<sp/>implemented<sp/>two<sp/>private<sp/>attribute</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">std::string<sp/>_pathConfig<sp/>=<sp/>&quot;./path/to/your/file.config&quot;;</highlight></codeline>
+<codeline><highlight class="normal">std::string<sp/>_pathMap<sp/>=<sp/>&quot;./path/to/your/map.config&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Functions<sp/>to<sp/>implement</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>must<sp/>implement<sp/>a<sp/>runGame<sp/>fonction<sp/>that<sp/>will<sp/>handle<sp/>the<sp/>logic<sp/>of<sp/>your<sp/>game,<sp/>plus<sp/>the<sp/>clock</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">bool<sp/>Pacman::runGame();</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>must<sp/>implement<sp/>a<sp/>readMap<sp/>fonction<sp/>that<sp/>will<sp/>read<sp/>the<sp/>map</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>Pacman::readMap();</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>must<sp/>implement<sp/>all<sp/>these<sp/>functions<sp/>that<sp/>you<sp/>can<sp/>copy<sp/>/<sp/>paste<sp/>from<sp/>below</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>YourClassName::setMap(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;<sp/>map)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_map<sp/>=<sp/>map;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;<sp/>YourClassName::getMap(void)<sp/>const</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(_map);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>YourClassName::setIsNewMap(bool<sp/>map)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewMap<sp/>=<sp/>map;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">bool<sp/>YourClassName::getIsNewMap(void)<sp/>const</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(_isNewMap);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>YourClassName::setIsNewKey(bool<sp/>isNewKey)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewKey<sp/>=<sp/>isNewKey;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">bool<sp/>YourClassName::getIsNewKey(void)<sp/>const</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(_isNewKey);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>YourClassName::setLastKey(int<sp/>key)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_key<sp/>=<sp/>key;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>YourClassName::getLastKey(void)<sp/>const</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(_key);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>YourClassName::setScore(size_t<sp/>score)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_score<sp/>=<sp/>score;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">size_t<sp/>YourClassName::getScore()<sp/>const</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(_score);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">const<sp/>std::string<sp/>YourClassName::getPathConfig()<sp/>const<sp/>noexcept</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(_pathConfig);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">const<sp/>std::string<sp/>YourClassName::getPathMap()<sp/>const<sp/>noexcept</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(_pathMap);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>YourClassName::setMove(Move<sp/>lastMove)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>_lastMove<sp/>=<sp/>lastMove;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Move<sp/>YourClassName::getMove()<sp/>const</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>(_lastMove);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">extern<sp/>&quot;C&quot;</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IGame<sp/>*entryPoint(void)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>YourClassName<sp/>*instance<sp/>=<sp/>new<sp/>YourClassName();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>(instance);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Have<sp/>fun<sp/>!</highlight></codeline>
     </programlisting>
     <location file="README.md"/>
   </compounddef>

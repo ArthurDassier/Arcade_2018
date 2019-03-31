@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/IGraphic.hpp" line="21" column="1"/>
+        <location file="includes/IGraphic.hpp" line="21" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_graphic_1a7baecac5b5b85b538622c47f12b39cd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/IGraphic.hpp" line="24" column="1"/>
+        <location file="includes/IGraphic.hpp" line="24" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_graphic_1a6e3191fe2663c34608ff8a2b2549c398" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/IGraphic.hpp" line="25" column="1"/>
+        <location file="includes/IGraphic.hpp" line="25" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_graphic_1a05d1ed2e0bcc2ddef923f4ab1df38ef1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/IGraphic.hpp" line="26" column="1"/>
+        <location file="includes/IGraphic.hpp" line="26" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_graphic_1a6037174816d5cab7c115eb1a69bbb0ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/IGraphic.hpp" line="28" column="1"/>
+        <location file="includes/IGraphic.hpp" line="28" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_graphic_1ae10de43a122b5e1f35a3d2d55cf08e59" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -107,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/IGraphic.hpp" line="29" column="1"/>
+        <location file="includes/IGraphic.hpp" line="29" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_graphic_1a8be0cc1ebd85fc184a9890f5ad372a1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/IGraphic.hpp" line="31" column="1"/>
+        <location file="includes/IGraphic.hpp" line="31" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_graphic_1a923ea671c162a94978c0f361084dd1a5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/IGraphic.hpp" line="32" column="1"/>
+        <location file="includes/IGraphic.hpp" line="32" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_graphic_1ac3f35a4649c75449f270e3f3f9c12034" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -164,7 +164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/IGraphic.hpp" line="34" column="1"/>
+        <location file="includes/IGraphic.hpp" line="34" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_graphic_1a50b9159724eb7f07b597ebc65041e545" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/IGraphic.hpp" line="35" column="1"/>
+        <location file="includes/IGraphic.hpp" line="35" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_graphic_1a2380c2fa5c0d95b6d8b7267bf0c82142" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -202,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/IGraphic.hpp" line="37" column="1"/>
+        <location file="includes/IGraphic.hpp" line="37" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_graphic_1a4ab82acdbf8c33174612d42a375a7c77" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>size_t</type>
@@ -218,7 +218,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/IGraphic.hpp" line="38" column="1"/>
+        <location file="includes/IGraphic.hpp" line="38" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_graphic_1a68eb38735e805083420a000fffd973f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -237,7 +237,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/IGraphic.hpp" line="40" column="1"/>
+        <location file="includes/IGraphic.hpp" line="40" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_graphic_1aa3d891972e5633a3163ed82e16ff9c98" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>std::string</type>
@@ -253,7 +253,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/IGraphic.hpp" line="41" column="1"/>
+        <location file="includes/IGraphic.hpp" line="41" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_graphic_1ad8a1f76efc7b6c1e8b1387653dc9cb72" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -272,7 +272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/IGraphic.hpp" line="43" column="1"/>
+        <location file="includes/IGraphic.hpp" line="43" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_graphic_1abde51d0606da0a538435c8dc4f66a5d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -288,7 +288,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/IGraphic.hpp" line="44" column="1"/>
+        <location file="includes/IGraphic.hpp" line="44" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_graphic_1ad6ff7f8cf232daec6f9d5a4a468eba2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -308,7 +308,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/IGraphic.hpp" line="46" column="1"/>
+        <location file="includes/IGraphic.hpp" line="46" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -316,30 +316,30 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="34">
+      <node id="26">
         <label>ClassNcurses</label>
         <link refid="class_class_ncurses"/>
-        <childnode refid="33" relation="public-inheritance">
+        <childnode refid="25" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="33">
+      <node id="25">
         <label>IGraphic</label>
         <link refid="class_i_graphic"/>
       </node>
-      <node id="35">
+      <node id="27">
         <label>ClassSDL</label>
         <link refid="class_class_s_d_l"/>
-        <childnode refid="33" relation="public-inheritance">
+        <childnode refid="25" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="36">
+      <node id="28">
         <label>ClassSFML</label>
         <link refid="class_class_s_f_m_l"/>
-        <childnode refid="33" relation="public-inheritance">
+        <childnode refid="25" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="lib/IGraphic.hpp" line="19" column="1" bodyfile="lib/IGraphic.hpp" bodystart="19" bodyend="47"/>
+    <location file="includes/IGraphic.hpp" line="19" column="1" bodyfile="includes/IGraphic.hpp" bodystart="19" bodyend="47"/>
     <listofallmembers>
       <member refid="class_i_graphic_1ad6ff7f8cf232daec6f9d5a4a468eba2c" prot="public" virt="pure-virtual"><scope>IGraphic</scope><name>buildMap</name></member>
       <member refid="class_i_graphic_1a923ea671c162a94978c0f361084dd1a5" prot="public" virt="pure-virtual"><scope>IGraphic</scope><name>getIsNewKey</name></member>

@@ -6,65 +6,72 @@
     <includes local="no">criterion/redirect.h</includes>
     <includes refid="_class_ncurses_8hpp" local="yes">ClassNcurses.hpp</includes>
     <incdepgraph>
-      <node id="290">
-        <label>../srcs/ParsingConfig.hpp</label>
-      </node>
-      <node id="288">
+      <node id="234">
         <label>functional</label>
       </node>
-      <node id="281">
+      <node id="227">
         <label>criterion/redirect.h</label>
       </node>
-      <node id="279">
+      <node id="225">
         <label>tests/tests_NCURSES.cpp</label>
         <link refid="tests___n_c_u_r_s_e_s_8cpp"/>
-        <childnode refid="280" relation="include">
+        <childnode refid="226" relation="include">
         </childnode>
-        <childnode refid="281" relation="include">
+        <childnode refid="227" relation="include">
         </childnode>
-        <childnode refid="282" relation="include">
+        <childnode refid="228" relation="include">
         </childnode>
       </node>
-      <node id="287">
-        <label>fstream</label>
-      </node>
-      <node id="280">
-        <label>criterion/criterion.h</label>
-      </node>
-      <node id="286">
-        <label>vector</label>
-      </node>
-      <node id="289">
-        <label>iostream</label>
-      </node>
-      <node id="283">
-        <label>ncurses.h</label>
-      </node>
-      <node id="284">
+      <node id="230">
         <label>IGraphic.hpp</label>
         <link refid="_i_graphic_8hpp"/>
-        <childnode refid="285" relation="include">
+        <childnode refid="231" relation="include">
         </childnode>
-        <childnode refid="286" relation="include">
+        <childnode refid="232" relation="include">
         </childnode>
-        <childnode refid="287" relation="include">
+        <childnode refid="233" relation="include">
         </childnode>
-        <childnode refid="288" relation="include">
+        <childnode refid="234" relation="include">
         </childnode>
-        <childnode refid="289" relation="include">
+        <childnode refid="235" relation="include">
         </childnode>
       </node>
-      <node id="285">
+      <node id="233">
+        <label>fstream</label>
+      </node>
+      <node id="226">
+        <label>criterion/criterion.h</label>
+      </node>
+      <node id="232">
+        <label>vector</label>
+      </node>
+      <node id="235">
+        <label>iostream</label>
+      </node>
+      <node id="229">
+        <label>ncurses.h</label>
+      </node>
+      <node id="236">
+        <label>ParsingConfig.hpp</label>
+        <link refid="_parsing_config_8hpp"/>
+        <childnode refid="235" relation="include">
+        </childnode>
+        <childnode refid="233" relation="include">
+        </childnode>
+        <childnode refid="232" relation="include">
+        </childnode>
+      </node>
+      <node id="231">
         <label>memory</label>
       </node>
-      <node id="282">
+      <node id="228">
         <label>ClassNcurses.hpp</label>
         <link refid="_class_ncurses_8hpp"/>
-        <childnode refid="283" relation="include">
+        <childnode refid="229" relation="include">
         </childnode>
-        <childnode refid="284" relation="include">
+        <childnode refid="230" relation="include">
         </childnode>
-        <childnode refid="290" relation="include">
+        <childnode refid="236" relation="include">
         </childnode>
       </node>
     </incdepgraph>

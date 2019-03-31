@@ -251,7 +251,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SDL/ClassSDL.hpp" line="40" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="175" bodyend="186"/>
+        <location file="lib/SDL/ClassSDL.hpp" line="40" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="173" bodyend="184"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_d_l_1a9260df31ca73a59edce7688c4664f440" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -273,7 +273,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SDL/ClassSDL.hpp" line="41" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="195" bodyend="203"/>
+        <location file="lib/SDL/ClassSDL.hpp" line="41" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="193" bodyend="201"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_d_l_1a3f07f3aeaf6e80d6e13cf4bfd0ed194b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -291,7 +291,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SDL/ClassSDL.hpp" line="44" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="205" bodyend="208"/>
+        <location file="lib/SDL/ClassSDL.hpp" line="44" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="203" bodyend="206"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_d_l_1aaec40afee3905c9de7e1317db6226a7b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -308,7 +308,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SDL/ClassSDL.hpp" line="45" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="210" bodyend="213"/>
+        <location file="lib/SDL/ClassSDL.hpp" line="45" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="208" bodyend="211"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_d_l_1a609cd1b245abb3b30962dc09aa7802c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -326,7 +326,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SDL/ClassSDL.hpp" line="47" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="215" bodyend="218"/>
+        <location file="lib/SDL/ClassSDL.hpp" line="47" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="213" bodyend="216"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_d_l_1ab25f9468d56aa225994484ec6e14dab7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -343,7 +343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SDL/ClassSDL.hpp" line="48" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="220" bodyend="223"/>
+        <location file="lib/SDL/ClassSDL.hpp" line="48" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="218" bodyend="221"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_d_l_1a2b14b2085d76430344f74227e33be9fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -361,7 +361,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SDL/ClassSDL.hpp" line="50" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="225" bodyend="228"/>
+        <location file="lib/SDL/ClassSDL.hpp" line="50" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="223" bodyend="226"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_d_l_1a776e24b732c1118ca38f715c5371e785" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -378,7 +378,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SDL/ClassSDL.hpp" line="51" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="230" bodyend="233"/>
+        <location file="lib/SDL/ClassSDL.hpp" line="51" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="228" bodyend="231"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_d_l_1a4edcb6ae345daf64f3022d6b16ff255d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -396,7 +396,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SDL/ClassSDL.hpp" line="53" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="235" bodyend="238"/>
+        <location file="lib/SDL/ClassSDL.hpp" line="53" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="233" bodyend="236"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_d_l_1a24c2230a4a7c75e9d6124d2d106ab2b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
@@ -410,7 +410,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SDL/ClassSDL.hpp" line="54" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="240" bodyend="243"/>
+        <location file="lib/SDL/ClassSDL.hpp" line="54" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="238" bodyend="241"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_d_l_1a0dfdb37558b6dadebeada6e91dacb9f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -431,7 +431,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SDL/ClassSDL.hpp" line="56" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="124" bodyend="145"/>
+        <location file="lib/SDL/ClassSDL.hpp" line="56" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="124" bodyend="143"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_d_l_1a8ec9795eb836f73cd7254406f2510625" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -470,7 +470,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SDL/ClassSDL.hpp" line="59" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="245" bodyend="248"/>
+        <location file="lib/SDL/ClassSDL.hpp" line="59" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="243" bodyend="246"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_d_l_1aceda62b43788f26e34c7d37ed1fd9459" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>std::string</type>
@@ -484,7 +484,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SDL/ClassSDL.hpp" line="60" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="250" bodyend="253"/>
+        <location file="lib/SDL/ClassSDL.hpp" line="60" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="248" bodyend="251"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_d_l_1a83e018aac96b358b8c68be6821f9bacf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -502,7 +502,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SDL/ClassSDL.hpp" line="62" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="255" bodyend="258"/>
+        <location file="lib/SDL/ClassSDL.hpp" line="62" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="253" bodyend="256"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_d_l_1a0f8788a8dfd703a7c80d54399ec745ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -516,7 +516,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SDL/ClassSDL.hpp" line="63" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="260" bodyend="263"/>
+        <location file="lib/SDL/ClassSDL.hpp" line="63" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="258" bodyend="261"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_d_l_1a5b4b518f4934b41fd57630c3006d9d03" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -542,7 +542,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SDL/ClassSDL.hpp" line="65" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="154" bodyend="166"/>
+        <location file="lib/SDL/ClassSDL.hpp" line="65" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="152" bodyend="164"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -550,26 +550,26 @@
     <detaileddescription>
 <para>This class contains the fonctions that handle the SDL </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="13">
+      <node id="5">
         <label>IGraphic</label>
         <link refid="class_i_graphic"/>
       </node>
-      <node id="12">
+      <node id="4">
         <label>ClassSDL</label>
         <link refid="class_class_s_d_l"/>
-        <childnode refid="13" relation="public-inheritance">
+        <childnode refid="5" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="15">
+      <node id="7">
         <label>IGraphic</label>
         <link refid="class_i_graphic"/>
       </node>
-      <node id="14">
+      <node id="6">
         <label>ClassSDL</label>
         <link refid="class_class_s_d_l"/>
-        <childnode refid="15" relation="public-inheritance">
+        <childnode refid="7" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

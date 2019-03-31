@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['handlegame',['handleGame',['../class_core.html#ad0b576055f0135d384e76a9a1e74a96f',1,'Core']]],
-  ['handlemenu',['handleMenu',['../class_core.html#a3e3c90450845c25afb6854f8a4a2ee28',1,'Core']]]
+  ['loadmenu',['loadMenu',['../class_core.html#a28268e9e72483b95d77ef2298dcf5fb6',1,'Core']]],
+  ['loadnewgame',['loadNewGame',['../class_core.html#a7122ece94253bfb44077946ae3ff618e',1,'Core']]],
+  ['loadnewlib',['loadNewLib',['../class_core.html#ab927cae46f3c2b6c7621077431039b12',1,'Core']]]
 ];

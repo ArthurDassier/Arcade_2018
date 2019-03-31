@@ -4,55 +4,62 @@
     <compoundname>ClassNcurses.cpp</compoundname>
     <includes refid="_class_ncurses_8hpp" local="yes">ClassNcurses.hpp</includes>
     <incdepgraph>
-      <node id="90">
-        <label>../srcs/ParsingConfig.hpp</label>
-      </node>
-      <node id="88">
+      <node id="111">
         <label>functional</label>
       </node>
-      <node id="81">
+      <node id="104">
         <label>lib/NCURSES/ClassNcurses.cpp</label>
         <link refid="_class_ncurses_8cpp"/>
-        <childnode refid="82" relation="include">
+        <childnode refid="105" relation="include">
         </childnode>
       </node>
-      <node id="87">
-        <label>fstream</label>
-      </node>
-      <node id="86">
-        <label>vector</label>
-      </node>
-      <node id="89">
-        <label>iostream</label>
-      </node>
-      <node id="83">
-        <label>ncurses.h</label>
-      </node>
-      <node id="84">
+      <node id="107">
         <label>IGraphic.hpp</label>
         <link refid="_i_graphic_8hpp"/>
-        <childnode refid="85" relation="include">
+        <childnode refid="108" relation="include">
         </childnode>
-        <childnode refid="86" relation="include">
+        <childnode refid="109" relation="include">
         </childnode>
-        <childnode refid="87" relation="include">
+        <childnode refid="110" relation="include">
         </childnode>
-        <childnode refid="88" relation="include">
+        <childnode refid="111" relation="include">
         </childnode>
-        <childnode refid="89" relation="include">
+        <childnode refid="112" relation="include">
         </childnode>
       </node>
-      <node id="85">
+      <node id="110">
+        <label>fstream</label>
+      </node>
+      <node id="109">
+        <label>vector</label>
+      </node>
+      <node id="112">
+        <label>iostream</label>
+      </node>
+      <node id="106">
+        <label>ncurses.h</label>
+      </node>
+      <node id="113">
+        <label>ParsingConfig.hpp</label>
+        <link refid="_parsing_config_8hpp"/>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+      </node>
+      <node id="108">
         <label>memory</label>
       </node>
-      <node id="82">
+      <node id="105">
         <label>ClassNcurses.hpp</label>
         <link refid="_class_ncurses_8hpp"/>
-        <childnode refid="83" relation="include">
+        <childnode refid="106" relation="include">
         </childnode>
-        <childnode refid="84" relation="include">
+        <childnode refid="107" relation="include">
         </childnode>
-        <childnode refid="90" relation="include">
+        <childnode refid="113" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -89,15 +96,15 @@
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_class_ncurses_8hpp" kindref="compound">ClassNcurses.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="17" refid="class_class_ncurses_1a334f21e7d6fae191228601dbaa32d3f6" refkind="member"><highlight class="normal"><ref refid="class_class_ncurses_1a334f21e7d6fae191228601dbaa32d3f6" kindref="member">ClassNcurses::ClassNcurses</ref>()<sp/>:</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>_key(999),</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewMap(false),</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewKey(false),</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewPathConfig(false),</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>_window(nullptr,<sp/>[](WINDOW<sp/>*){}),</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>_window_menu_sdl(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>[](WINDOW<sp/>*){}),</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>_window_menu_sfml(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>[](WINDOW<sp/>*){}),</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>_window_menu_ncurses(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>[](WINDOW<sp/>*){}),</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>_window_pacman(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>[](WINDOW<sp/>*){})</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>_window(nullptr,<sp/>[](WINDOW<sp/>*){}),</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>_window_menu_sdl(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>[](WINDOW<sp/>*){}),</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>_window_menu_sfml(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>[](WINDOW<sp/>*){}),</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>_window_menu_ncurses(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>[](WINDOW<sp/>*){}),</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>_window_pacman(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>[](WINDOW<sp/>*){}),</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewMap(</highlight><highlight class="keyword">false</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewKey(</highlight><highlight class="keyword">false</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>_key(999),</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewPathConfig(</highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="27"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>initscr();</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>_window.reset(subwin(stdscr,<sp/>LINES<sp/>/<sp/>2,<sp/>COLS,<sp/>LINES<sp/>/<sp/>4,<sp/>0),<sp/>[](WINDOW<sp/>*){});</highlight></codeline>
@@ -323,7 +330,7 @@
 <codeline lineno="291"><highlight class="normal"></highlight></codeline>
 <codeline lineno="299" refid="class_class_ncurses_1ab5e8c02788b76706a77b12de03f75f6d" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_ncurses_1ab5e8c02788b76706a77b12de03f75f6d" kindref="member">ClassNcurses::buildMap</ref>(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;<sp/>map<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="300"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(map);</highlight></codeline>
 <codeline lineno="302"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="303"><highlight class="normal"></highlight></codeline>
 <codeline lineno="311" refid="class_class_ncurses_1a71d6e2ca109814227bf0cefa72b75bf3" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_ncurses_1a71d6e2ca109814227bf0cefa72b75bf3" kindref="member">ClassNcurses::setMapTexture</ref>()</highlight></codeline>
@@ -343,7 +350,7 @@
 <codeline lineno="332"><highlight class="normal"></highlight></codeline>
 <codeline lineno="340" refid="class_class_ncurses_1a3ffbcd0c1f464454a70d8f99ee8e7afe" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_ncurses_1a3ffbcd0c1f464454a70d8f99ee8e7afe" kindref="member">ClassNcurses::translateKey</ref>()</highlight></codeline>
 <codeline lineno="341"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/><ref refid="struct_key_ncurses" kindref="compound">KeyNcurses</ref>[i].<ref refid="struct_key_ncurses_1ab818277fab5d6652898116804aadd8d9" kindref="member">code_lib</ref><sp/>!=<sp/>1000;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/><ref refid="struct_key_ncurses" kindref="compound">KeyNcurses</ref>[i].<ref refid="struct_key_ncurses_1ab818277fab5d6652898116804aadd8d9" kindref="member">code_lib</ref><sp/>!=<sp/>-1;<sp/>++i)<sp/>{</highlight></codeline>
 <codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_c<sp/>==<sp/><ref refid="struct_key_ncurses" kindref="compound">KeyNcurses</ref>[i].code_lib)<sp/>{</highlight></codeline>
 <codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_class_ncurses_1abf219cf4107d65ca0ebd27746bdf2f08" kindref="member">setLastKey</ref>(<ref refid="struct_key_ncurses" kindref="compound">KeyNcurses</ref>[i].code_core);</highlight></codeline>
 <codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_class_ncurses_1a29f52a5e975ed67051043a09df8761b8" kindref="member">setIsNewKey</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>

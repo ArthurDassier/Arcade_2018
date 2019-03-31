@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="games/IGame.hpp" line="20" column="1"/>
+        <location file="includes/IGame.hpp" line="19" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_game_1a1bc3c6caaf66b62692f86e64227c3dbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="games/IGame.hpp" line="22" column="1"/>
+        <location file="includes/IGame.hpp" line="21" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_game_1aed19c19107a3ae7cda42a4aa93c6d88a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>std::shared_ptr&lt; std::vector&lt; std::string &gt; &gt;</type>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="games/IGame.hpp" line="23" column="1"/>
+        <location file="includes/IGame.hpp" line="22" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_game_1a77f638e00a935757489b72a9b6cd76cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="games/IGame.hpp" line="24" column="1"/>
+        <location file="includes/IGame.hpp" line="23" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_game_1a3fd351624a3995e7ac9217f78b145776" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="games/IGame.hpp" line="26" column="1"/>
+        <location file="includes/IGame.hpp" line="25" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_game_1a350a8546b27ad147e2924f07b5f9e62f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="games/IGame.hpp" line="27" column="1"/>
+        <location file="includes/IGame.hpp" line="26" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_game_1a3ed5252b3f1a852082ec812f6cba75fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -118,7 +118,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="games/IGame.hpp" line="29" column="1"/>
+        <location file="includes/IGame.hpp" line="28" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_game_1a6aab1a0cab3a49ab2b64a10c64c142ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -135,7 +135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="games/IGame.hpp" line="30" column="1"/>
+        <location file="includes/IGame.hpp" line="29" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_game_1aca867f57cec68759c6da26a3a80ef961" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -153,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="games/IGame.hpp" line="32" column="1"/>
+        <location file="includes/IGame.hpp" line="31" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_game_1a0d5eaacd905629f020013f620ed8becd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -170,7 +170,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="games/IGame.hpp" line="33" column="1"/>
+        <location file="includes/IGame.hpp" line="32" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_game_1a5a5359d4ad01653b25d5a703bede16f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -188,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="games/IGame.hpp" line="35" column="1"/>
+        <location file="includes/IGame.hpp" line="34" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_game_1aedff9507276384fb437596fcd8c5d9f3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>size_t</type>
@@ -205,7 +205,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="games/IGame.hpp" line="36" column="1"/>
+        <location file="includes/IGame.hpp" line="35" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_game_1a21b9d7003aa2cec51448afef66b00789" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>const std::string</type>
@@ -219,7 +219,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="games/IGame.hpp" line="38" column="1"/>
+        <location file="includes/IGame.hpp" line="37" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_i_game_1aabcc0d0dae71c42469433ffeebf9e9f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>const std::string</type>
@@ -233,7 +233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="games/IGame.hpp" line="39" column="1"/>
+        <location file="includes/IGame.hpp" line="38" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -241,18 +241,18 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="30">
+      <node id="22">
         <label>IGame</label>
         <link refid="class_i_game"/>
       </node>
-      <node id="31">
+      <node id="23">
         <label>Pacman</label>
         <link refid="class_pacman"/>
-        <childnode refid="30" relation="public-inheritance">
+        <childnode refid="22" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="games/IGame.hpp" line="18" column="1" bodyfile="games/IGame.hpp" bodystart="18" bodyend="40"/>
+    <location file="includes/IGame.hpp" line="17" column="1" bodyfile="includes/IGame.hpp" bodystart="17" bodyend="39"/>
     <listofallmembers>
       <member refid="class_i_game_1a6aab1a0cab3a49ab2b64a10c64c142ac" prot="public" virt="pure-virtual"><scope>IGame</scope><name>getIsNewKey</name></member>
       <member refid="class_i_game_1a3fd351624a3995e7ac9217f78b145776" prot="public" virt="pure-virtual"><scope>IGame</scope><name>getIsNewMap</name></member>

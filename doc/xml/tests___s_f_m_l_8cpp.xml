@@ -6,104 +6,72 @@
     <includes local="no">criterion/redirect.h</includes>
     <includes refid="_class_s_f_m_l_8hpp" local="yes">ClassSFML.hpp</includes>
     <incdepgraph>
-      <node id="323">
-        <label>../srcs/ParsingConfig.hpp</label>
-      </node>
-      <node id="309">
+      <node id="255">
         <label>SFML/Graphics.hpp</label>
       </node>
-      <node id="321">
+      <node id="260">
         <label>functional</label>
       </node>
-      <node id="307">
+      <node id="253">
         <label>criterion/redirect.h</label>
       </node>
-      <node id="314">
-        <label>SFML/Graphics/Transformable.hpp</label>
-      </node>
-      <node id="310">
-        <label>AnimatedSprite.hpp</label>
-        <link refid="_animated_sprite_8hpp"/>
-        <childnode refid="311" relation="include">
-        </childnode>
-        <childnode refid="312" relation="include">
-        </childnode>
-        <childnode refid="313" relation="include">
-        </childnode>
-        <childnode refid="314" relation="include">
-        </childnode>
-        <childnode refid="315" relation="include">
-        </childnode>
-        <childnode refid="316" relation="include">
-        </childnode>
-      </node>
-      <node id="315">
-        <label>SFML/System/Vector2.hpp</label>
-      </node>
-      <node id="320">
-        <label>fstream</label>
-      </node>
-      <node id="313">
-        <label>SFML/Graphics/Drawable.hpp</label>
-      </node>
-      <node id="305">
-        <label>tests/tests_SFML.cpp</label>
-        <link refid="tests___s_f_m_l_8cpp"/>
-        <childnode refid="306" relation="include">
-        </childnode>
-        <childnode refid="307" relation="include">
-        </childnode>
-        <childnode refid="308" relation="include">
-        </childnode>
-      </node>
-      <node id="306">
-        <label>criterion/criterion.h</label>
-      </node>
-      <node id="308">
-        <label>ClassSFML.hpp</label>
-        <link refid="_class_s_f_m_l_8hpp"/>
-        <childnode refid="309" relation="include">
-        </childnode>
-        <childnode refid="310" relation="include">
-        </childnode>
-        <childnode refid="317" relation="include">
-        </childnode>
-        <childnode refid="323" relation="include">
-        </childnode>
-      </node>
-      <node id="319">
-        <label>vector</label>
-      </node>
-      <node id="316">
-        <label>Animation.hpp</label>
-        <link refid="_animation_8hpp"/>
-        <childnode refid="309" relation="include">
-        </childnode>
-      </node>
-      <node id="311">
-        <label>SFML/Graphics/RenderTarget.hpp</label>
-      </node>
-      <node id="322">
-        <label>iostream</label>
-      </node>
-      <node id="317">
+      <node id="256">
         <label>IGraphic.hpp</label>
         <link refid="_i_graphic_8hpp"/>
-        <childnode refid="318" relation="include">
+        <childnode refid="257" relation="include">
         </childnode>
-        <childnode refid="319" relation="include">
+        <childnode refid="258" relation="include">
         </childnode>
-        <childnode refid="320" relation="include">
+        <childnode refid="259" relation="include">
         </childnode>
-        <childnode refid="321" relation="include">
+        <childnode refid="260" relation="include">
         </childnode>
-        <childnode refid="322" relation="include">
+        <childnode refid="261" relation="include">
         </childnode>
       </node>
-      <node id="312">
-        <label>SFML/System/Time.hpp</label>
+      <node id="259">
+        <label>fstream</label>
       </node>
-      <node id="318">
+      <node id="251">
+        <label>tests/tests_SFML.cpp</label>
+        <link refid="tests___s_f_m_l_8cpp"/>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+      </node>
+      <node id="252">
+        <label>criterion/criterion.h</label>
+      </node>
+      <node id="254">
+        <label>ClassSFML.hpp</label>
+        <link refid="_class_s_f_m_l_8hpp"/>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+        <childnode refid="262" relation="include">
+        </childnode>
+      </node>
+      <node id="258">
+        <label>vector</label>
+      </node>
+      <node id="261">
+        <label>iostream</label>
+      </node>
+      <node id="262">
+        <label>ParsingConfig.hpp</label>
+        <link refid="_parsing_config_8hpp"/>
+        <childnode refid="261" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+      </node>
+      <node id="257">
         <label>memory</label>
       </node>
     </incdepgraph>

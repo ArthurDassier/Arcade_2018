@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['main',['main',['../_animation_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;AnimationTest.cpp'],['../main_8cpp.html#aee7801bc627f70f446a37ec861000c35',1,'main(int ac, char **av, char **env):&#160;main.cpp']]],
-  ['mapmenu',['mapMenu',['../class_core.html#a667e34a3ad5288fc11db6d21b462a265',1,'Core']]],
-  ['move',['move',['../class_entity.html#ae3e67f022530fdb7640a41bd9f625c05',1,'Entity']]],
-  ['movedown',['moveDown',['../class_pacman.html#a0a64f9f3c861923080299797a9c1f695',1,'Pacman']]],
-  ['moveleft',['moveLeft',['../class_pacman.html#a560b34fd0d107127133b63b2125a9664',1,'Pacman']]],
-  ['moveright',['moveRight',['../class_pacman.html#afe2c202bf893edeeecdd1876d1274196',1,'Pacman']]],
-  ['moveup',['moveUp',['../class_pacman.html#af87001266c5808eb8f47e03b74c4022c',1,'Pacman']]]
+  ['readfile',['readFile',['../class_parsing_config.html#a33e51177fef58d737983a45af84bcd9f',1,'ParsingConfig']]],
+  ['readmap',['readMap',['../class_pacman.html#acf9fff61dc94c5b28ea90b29d1fc9d6a',1,'Pacman']]],
+  ['rungame',['runGame',['../class_pacman.html#abc01d8c1e91d1dea3f6181e35ba7879b',1,'Pacman::runGame()'],['../class_i_game.html#a1bc3c6caaf66b62692f86e64227c3dbf',1,'IGame::runGame()']]],
+  ['rungraph',['runGraph',['../class_i_graphic.html#a7baecac5b5b85b538622c47f12b39cd9',1,'IGraphic::runGraph()'],['../class_class_ncurses.html#aac4288eb28653abcda975fcb5e56f5d7',1,'ClassNcurses::runGraph()'],['../class_class_s_d_l.html#ac38011a48a29f5948c31ac53c409c4bc',1,'ClassSDL::runGraph()'],['../class_class_s_f_m_l.html#a64c5a966c0dcf53ecc3b3aaabafd7eb9',1,'ClassSFML::runGraph()']]]
 ];

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="71" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="71" bodyend="-1"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="70" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="70" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_class_s_f_m_l_1a196bce77ccac2ecd325ccd4a33523dc4" prot="private" static="no" mutable="no">
         <type>std::unique_ptr&lt; std::vector&lt; std::vector&lt; std::pair&lt; char, sf::Sprite &gt; &gt; &gt; &gt;</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="72" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="72" bodyend="-1"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="71" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="71" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_class_s_f_m_l_1a620e48895955f7ad1889b228644bdf8e" prot="private" static="no" mutable="no">
         <type>sf::Event</type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="74" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="74" bodyend="-1"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="73" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="73" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_class_s_f_m_l_1a2c30ab27302b9f35deaf2bb2316bc621" prot="private" static="no" mutable="no">
         <type><ref refid="class_parsing_config" kindref="compound">ParsingConfig</ref></type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="75" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="75" bodyend="-1"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="74" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="74" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_class_s_f_m_l_1aca23ea15c0347a3e84aebca244ce02c1" prot="private" static="no" mutable="no">
         <type>std::vector&lt; std::pair&lt; sf::Vector2i, std::shared_ptr&lt; sf::Texture &gt; &gt; &gt;</type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="76" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="76" bodyend="-1"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="75" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="75" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_class_s_f_m_l_1ae036664483911ede24307f9ff505984f" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="78" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="78" bodyend="-1"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="77" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="77" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_class_s_f_m_l_1adc5e51b0c18c15f01a0d62aab888754d" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -94,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="79" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="79" bodyend="-1"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="78" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="78" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_class_s_f_m_l_1aae651b7033cf466bcd7485d20e70da6a" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -107,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="80" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="80" bodyend="-1"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="79" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="79" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_class_s_f_m_l_1ae17c198e8ea1549b5256111ca7e3f11b" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -120,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="81" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="81" bodyend="-1"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="80" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="80" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_class_s_f_m_l_1a5d1402a5522c13ec0a7fe89079595b83" prot="private" static="no" mutable="no">
         <type>size_t</type>
@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="82" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="82" bodyend="-1"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="81" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="81" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_class_s_f_m_l_1a30b4ae3df376e6b68b08c9f536e998f5" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="83" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="83" bodyend="-1"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="82" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="82" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -156,12 +156,20 @@
         <argsstring>()</argsstring>
         <name>ClassSFML</name>
         <briefdescription>
-        </briefdescription>
+<para>Create the SFML window, set the getters at false and check for errors. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="38" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="10" bodyend="20"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="37" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="17" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_f_m_l_1a5eb248810461ef35802776bda0156c7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -169,12 +177,20 @@
         <argsstring>()</argsstring>
         <name>~ClassSFML</name>
         <briefdescription>
-        </briefdescription>
+<para>SFML Class destructor, just quit the SFML. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="39" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="22" bodyend="25"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="38" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="36" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_f_m_l_1a64c5a966c0dcf53ecc3b3aaabafd7eb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -183,12 +199,20 @@
         <name>runGraph</name>
         <reimplements refid="class_i_graphic_1a7baecac5b5b85b538622c47f12b39cd9">runGraph</reimplements>
         <briefdescription>
-        </briefdescription>
+<para>Handle the events of the SFML. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="42" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="50" bodyend="72"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="41" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="86" bodyend="108"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_f_m_l_1a9b143e495bdd43f42993cf5b0d492926" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -201,12 +225,20 @@
           <defname>map</defname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Change the char in our _map of textures corresponding to the map. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>map </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="43" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="114" bodyend="125"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="42" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="171" bodyend="182"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_f_m_l_1a4b1d53348c79ca38489f9f0f1f62653c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -215,12 +247,20 @@
         <name>translateKey</name>
         <reimplements refid="class_i_graphic_1a05d1ed2e0bcc2ddef923f4ab1df38ef1">translateKey</reimplements>
         <briefdescription>
-        </briefdescription>
+<para>Translate the SFML event key to the keycode that the core will understand. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="44" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="127" bodyend="136"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="43" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="191" bodyend="200"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_f_m_l_1aeadd6368ac5b5d185a09cd1e7c1f9dcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -238,7 +278,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="46" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="138" bodyend="141"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="45" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="202" bodyend="205"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_f_m_l_1ab74066896f56b41f0d644c31048bf764" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -255,7 +295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="47" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="143" bodyend="146"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="46" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="207" bodyend="210"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_f_m_l_1afa4dc363da11512994f5964f53792990" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -273,7 +313,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="49" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="148" bodyend="151"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="48" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="212" bodyend="215"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_f_m_l_1a0858bffedeb0ccd39ee911c08ede455d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -290,7 +330,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="50" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="153" bodyend="156"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="49" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="217" bodyend="220"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_f_m_l_1aeb353a7928b673ceb10f12c4d5710305" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -308,7 +348,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="52" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="158" bodyend="161"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="51" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="222" bodyend="225"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_f_m_l_1a7ebdd83fe2ab4c1feb3788f27a3a1b6e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -325,7 +365,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="53" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="163" bodyend="166"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="52" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="227" bodyend="230"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_f_m_l_1a42df0bacc5fa82cfc451722332304b50" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -343,7 +383,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="55" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="168" bodyend="171"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="54" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="232" bodyend="235"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_f_m_l_1a525c4cf493dfd9d68ea2bba3bd15b7e7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
@@ -357,7 +397,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="56" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="173" bodyend="176"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="55" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="237" bodyend="240"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_f_m_l_1ac37b544f6179f33994e9fa189e15eea8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -375,7 +415,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="58" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="178" bodyend="181"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="57" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="242" bodyend="245"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_f_m_l_1aa83937866ca263758733952543eb8282" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>std::string</type>
@@ -389,7 +429,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="59" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="183" bodyend="186"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="58" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="247" bodyend="250"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_f_m_l_1ab47a3c8fb83d5db1640105bd6771c3da" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -407,7 +447,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="61" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="188" bodyend="191"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="60" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="252" bodyend="255"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_f_m_l_1a9f308ab330e1a85913cd17c8ef901d71" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -421,7 +461,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="62" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="193" bodyend="196"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="61" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="257" bodyend="260"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_f_m_l_1a172e6a454b5a35db05a5a8b3f0e7c939" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -429,12 +469,20 @@
         <argsstring>()</argsstring>
         <name>getEvent</name>
         <briefdescription>
-        </briefdescription>
+<para>Get event of the SFML window. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="64" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="35" bodyend="48"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="63" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="64" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_f_m_l_1abaed7464c895762705a6803857f3ba60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -445,12 +493,20 @@
           <type>void</type>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Construct our map of textures. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="65" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="74" bodyend="98"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="64" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="117" bodyend="141"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_f_m_l_1ac7c2384bbf9f13169db316f20745f9d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -461,12 +517,20 @@
           <type>void</type>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Print the _map of textures into the SFML window. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="66" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="27" bodyend="33"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="65" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="48" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="class_class_s_f_m_l_1a1770ece2b45a9b9b7e6c153076b2daa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -479,12 +543,20 @@
           <defname>map</defname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Initiate our _map of textures by settings SFML_Textures pointers to nullptr. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>map = nullptr </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SFML/ClassSFML.hpp" line="68" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="100" bodyend="112"/>
+        <location file="lib/SFML/ClassSFML.hpp" line="67" column="1" bodyfile="lib/SFML/ClassSFML.cpp" bodystart="150" bodyend="162"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -492,30 +564,30 @@
     <detaileddescription>
 <para>This class contains the fonctions that handle the SFML </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="17">
+      <node id="9">
         <label>IGraphic</label>
         <link refid="class_i_graphic"/>
       </node>
-      <node id="16">
+      <node id="8">
         <label>ClassSFML</label>
         <link refid="class_class_s_f_m_l"/>
-        <childnode refid="17" relation="public-inheritance">
+        <childnode refid="9" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="19">
+      <node id="11">
         <label>IGraphic</label>
         <link refid="class_i_graphic"/>
       </node>
-      <node id="18">
+      <node id="10">
         <label>ClassSFML</label>
         <link refid="class_class_s_f_m_l"/>
-        <childnode refid="19" relation="public-inheritance">
+        <childnode refid="11" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="lib/SFML/ClassSFML.hpp" line="36" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="35" bodyend="84"/>
+    <location file="lib/SFML/ClassSFML.hpp" line="35" column="1" bodyfile="lib/SFML/ClassSFML.hpp" bodystart="34" bodyend="83"/>
     <listofallmembers>
       <member refid="class_class_s_f_m_l_1a620e48895955f7ad1889b228644bdf8e" prot="private" virt="non-virtual"><scope>ClassSFML</scope><name>_event</name></member>
       <member refid="class_class_s_f_m_l_1ae17c198e8ea1549b5256111ca7e3f11b" prot="private" virt="non-virtual"><scope>ClassSFML</scope><name>_isNewKey</name></member>

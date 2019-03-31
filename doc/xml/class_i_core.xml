@@ -15,14 +15,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="srcs/ICore.hpp" line="12" column="1"/>
+        <location file="includes/ICore.hpp" line="12" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="srcs/ICore.hpp" line="10" column="1" bodyfile="srcs/ICore.hpp" bodystart="10" bodyend="16"/>
+    <location file="includes/ICore.hpp" line="10" column="1" bodyfile="includes/ICore.hpp" bodystart="10" bodyend="16"/>
     <listofallmembers>
       <member refid="class_i_core_1ae6843234576cb6ab293673c9b2b8383a" prot="public" virt="virtual"><scope>ICore</scope><name>~ICore</name></member>
     </listofallmembers>

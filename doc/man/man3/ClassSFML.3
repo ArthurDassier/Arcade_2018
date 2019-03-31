@@ -17,18 +17,23 @@ Inherits \fBIGraphic\fP\&.
 .ti -1c
 .RI "\fBClassSFML\fP ()"
 .br
+.RI "Create the SFML window, set the getters at false and check for errors\&. "
 .ti -1c
 .RI "\fB~ClassSFML\fP ()"
 .br
+.RI "SFML Class destructor, just quit the SFML\&. "
 .ti -1c
 .RI "bool \fBrunGraph\fP ()"
 .br
+.RI "Handle the events of the SFML\&. "
 .ti -1c
 .RI "void \fBsetMap\fP (std::shared_ptr< std::vector< std::string >>)"
 .br
+.RI "Change the char in our _map of textures corresponding to the map\&. "
 .ti -1c
 .RI "void \fBtranslateKey\fP ()"
 .br
+.RI "Translate the SFML event key to the keycode that the core will understand\&. "
 .ti -1c
 .RI "void \fBsetIsNewMap\fP (bool)"
 .br
@@ -68,15 +73,19 @@ Inherits \fBIGraphic\fP\&.
 .ti -1c
 .RI "bool \fBgetEvent\fP ()"
 .br
+.RI "Get event of the SFML window\&. "
 .ti -1c
 .RI "void \fBsetMapTexture\fP (void)"
 .br
+.RI "Construct our map of textures\&. "
 .ti -1c
 .RI "void \fBdisplayGame\fP (void)"
 .br
+.RI "Print the _map of textures into the SFML window\&. "
 .ti -1c
 .RI "void \fBbuildMap\fP (std::shared_ptr< std::vector< std::string >>)"
 .br
+.RI "Initiate our _map of textures by settings SFML_Textures pointers to nullptr\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -84,127 +93,208 @@ Class representing \fBClassSFML\fP logic\&.
 
 This class contains the fonctions that handle the SFML 
 .PP
-Definition at line 35 of file ClassSFML\&.hpp\&.
+Definition at line 34 of file ClassSFML\&.hpp\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "ClassSFML::ClassSFML ()"
 
 .PP
-Definition at line 10 of file ClassSFML\&.cpp\&.
+Create the SFML window, set the getters at false and check for errors\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 17 of file ClassSFML\&.cpp\&.
 .SS "ClassSFML::~ClassSFML ()"
 
 .PP
-Definition at line 22 of file ClassSFML\&.cpp\&.
+SFML Class destructor, just quit the SFML\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 36 of file ClassSFML\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void ClassSFML::buildMap (std::shared_ptr< std::vector< std::string >> map = \fCnullptr\fP)\fC [virtual]\fP"
 
 .PP
+Initiate our _map of textures by settings SFML_Textures pointers to nullptr\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstd::shared_ptr<std::vector<std::string>>\fP map = nullptr 
+.RE
+.PP
+
+.PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 100 of file ClassSFML\&.cpp\&.
+Definition at line 150 of file ClassSFML\&.cpp\&.
 .SS "void ClassSFML::displayGame (void)"
 
 .PP
-Definition at line 27 of file ClassSFML\&.cpp\&.
+Print the _map of textures into the SFML window\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 48 of file ClassSFML\&.cpp\&.
 .SS "bool ClassSFML::getEvent ()"
 
 .PP
-Definition at line 35 of file ClassSFML\&.cpp\&.
+Get event of the SFML window\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 64 of file ClassSFML\&.cpp\&.
 .SS "bool ClassSFML::getIsNewKey (void) const\fC [virtual]\fP"
 
 .PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 153 of file ClassSFML\&.cpp\&.
+Definition at line 217 of file ClassSFML\&.cpp\&.
 .SS "bool ClassSFML::getIsNewMap (void) const\fC [virtual]\fP"
 
 .PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 143 of file ClassSFML\&.cpp\&.
+Definition at line 207 of file ClassSFML\&.cpp\&.
 .SS "bool ClassSFML::getIsNewPathConfig () const\fC [virtual]\fP, \fC [noexcept]\fP"
 
 .PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 193 of file ClassSFML\&.cpp\&.
+Definition at line 257 of file ClassSFML\&.cpp\&.
 .SS "int ClassSFML::getLastKey (void) const\fC [virtual]\fP"
 
 .PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 163 of file ClassSFML\&.cpp\&.
+Definition at line 227 of file ClassSFML\&.cpp\&.
 .SS "std::string ClassSFML::getPathConfig () const\fC [virtual]\fP, \fC [noexcept]\fP"
 
 .PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 183 of file ClassSFML\&.cpp\&.
+Definition at line 247 of file ClassSFML\&.cpp\&.
 .SS "size_t ClassSFML::getScore (void) const\fC [virtual]\fP"
 
 .PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 173 of file ClassSFML\&.cpp\&.
+Definition at line 237 of file ClassSFML\&.cpp\&.
 .SS "bool ClassSFML::runGraph ()\fC [virtual]\fP"
+
+.PP
+Handle the events of the SFML\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
 
 .PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 50 of file ClassSFML\&.cpp\&.
+Definition at line 86 of file ClassSFML\&.cpp\&.
 .SS "void ClassSFML::setIsNewKey (bool newKey)\fC [virtual]\fP"
 
 .PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 148 of file ClassSFML\&.cpp\&.
+Definition at line 212 of file ClassSFML\&.cpp\&.
 .SS "void ClassSFML::setIsNewMap (bool newMap)\fC [virtual]\fP"
 
 .PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 138 of file ClassSFML\&.cpp\&.
+Definition at line 202 of file ClassSFML\&.cpp\&.
 .SS "void ClassSFML::setIsNewPathConfig (bool isNewPath)\fC [virtual]\fP, \fC [noexcept]\fP"
 
 .PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 188 of file ClassSFML\&.cpp\&.
+Definition at line 252 of file ClassSFML\&.cpp\&.
 .SS "void ClassSFML::setLastKey (int key)\fC [virtual]\fP"
 
 .PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 158 of file ClassSFML\&.cpp\&.
+Definition at line 222 of file ClassSFML\&.cpp\&.
 .SS "void ClassSFML::setMap (std::shared_ptr< std::vector< std::string >> map)\fC [virtual]\fP"
+
+.PP
+Change the char in our _map of textures corresponding to the map\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstd::shared_ptr<std::vector<std::string>>\fP map 
+.RE
+.PP
 
 .PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 114 of file ClassSFML\&.cpp\&.
+Definition at line 171 of file ClassSFML\&.cpp\&.
 .SS "void ClassSFML::setMapTexture (void)"
 
 .PP
-Definition at line 74 of file ClassSFML\&.cpp\&.
+Construct our map of textures\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+
+.PP
+Definition at line 117 of file ClassSFML\&.cpp\&.
 .SS "void ClassSFML::setPathConfig (std::string path)\fC [virtual]\fP, \fC [noexcept]\fP"
 
 .PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 178 of file ClassSFML\&.cpp\&.
+Definition at line 242 of file ClassSFML\&.cpp\&.
 .SS "void ClassSFML::setScore (size_t score)\fC [virtual]\fP"
 
 .PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 168 of file ClassSFML\&.cpp\&.
+Definition at line 232 of file ClassSFML\&.cpp\&.
 .SS "void ClassSFML::translateKey ()\fC [virtual]\fP"
+
+.PP
+Translate the SFML event key to the keycode that the core will understand\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
 
 .PP
 Implements \fBIGraphic\fP\&.
 .PP
-Definition at line 127 of file ClassSFML\&.cpp\&.
+Definition at line 191 of file ClassSFML\&.cpp\&.
 
 .SH "Author"
 .PP 

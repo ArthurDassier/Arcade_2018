@@ -4,55 +4,62 @@
     <compoundname>ClassSDL.cpp</compoundname>
     <includes refid="_class_s_d_l_8hpp" local="yes">ClassSDL.hpp</includes>
     <incdepgraph>
-      <node id="113">
-        <label>../srcs/ParsingConfig.hpp</label>
-      </node>
-      <node id="111">
+      <node id="134">
         <label>functional</label>
       </node>
-      <node id="104">
+      <node id="127">
         <label>lib/SDL/ClassSDL.cpp</label>
         <link refid="_class_s_d_l_8cpp"/>
-        <childnode refid="105" relation="include">
+        <childnode refid="128" relation="include">
         </childnode>
       </node>
-      <node id="110">
-        <label>fstream</label>
-      </node>
-      <node id="106">
-        <label>SDL2/SDL.h</label>
-      </node>
-      <node id="109">
-        <label>vector</label>
-      </node>
-      <node id="112">
-        <label>iostream</label>
-      </node>
-      <node id="107">
+      <node id="130">
         <label>IGraphic.hpp</label>
         <link refid="_i_graphic_8hpp"/>
-        <childnode refid="108" relation="include">
+        <childnode refid="131" relation="include">
         </childnode>
-        <childnode refid="109" relation="include">
+        <childnode refid="132" relation="include">
         </childnode>
-        <childnode refid="110" relation="include">
+        <childnode refid="133" relation="include">
         </childnode>
-        <childnode refid="111" relation="include">
+        <childnode refid="134" relation="include">
         </childnode>
-        <childnode refid="112" relation="include">
+        <childnode refid="135" relation="include">
         </childnode>
       </node>
-      <node id="105">
+      <node id="133">
+        <label>fstream</label>
+      </node>
+      <node id="129">
+        <label>SDL2/SDL.h</label>
+      </node>
+      <node id="132">
+        <label>vector</label>
+      </node>
+      <node id="135">
+        <label>iostream</label>
+      </node>
+      <node id="128">
         <label>ClassSDL.hpp</label>
         <link refid="_class_s_d_l_8hpp"/>
-        <childnode refid="106" relation="include">
+        <childnode refid="129" relation="include">
         </childnode>
-        <childnode refid="107" relation="include">
+        <childnode refid="130" relation="include">
         </childnode>
-        <childnode refid="113" relation="include">
+        <childnode refid="136" relation="include">
         </childnode>
       </node>
-      <node id="108">
+      <node id="136">
+        <label>ParsingConfig.hpp</label>
+        <link refid="_parsing_config_8hpp"/>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+      </node>
+      <node id="131">
         <label>memory</label>
       </node>
     </incdepgraph>
@@ -71,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/SDL/ClassSDL.cpp" line="267" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="267" bodyend="271"/>
+        <location file="lib/SDL/ClassSDL.cpp" line="265" column="1" bodyfile="lib/SDL/ClassSDL.cpp" bodystart="265" bodyend="269"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -170,131 +177,129 @@
 <codeline lineno="124" refid="class_class_s_d_l_1a0dfdb37558b6dadebeada6e91dacb9f3" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a0dfdb37558b6dadebeada6e91dacb9f3" kindref="member">ClassSDL::setMapTexture</ref>()</highlight></codeline>
 <codeline lineno="125"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>parsingResult<sp/>=<sp/>_parsing.<ref refid="class_parsing_config_1a5c8ec078b6559d591e4b0b9db489696d" kindref="member">getResult</ref>();</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"></highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>_textures.clear();</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>parsingResult.begin();<sp/>it<sp/>!=<sp/>parsingResult.end();<sp/>++it)<sp/>{</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Rect<sp/>size<sp/>=<sp/>{it-&gt;sizeX,<sp/>it-&gt;sizeY,<sp/>0,<sp/>0};</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;SDL_Surface&gt;<sp/>tmp<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp.reset(SDL_LoadBMP(it-&gt;path.c_str()),<sp/>SDL_FreeSurface);</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_textures.push_back(std::make_pair(size,<sp/>tmp));</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it_y<sp/>=<sp/>_map-&gt;begin();<sp/>it_y<sp/>!=<sp/>_map-&gt;end();<sp/>++it_y)<sp/>{</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it_x<sp/>=<sp/>it_y-&gt;begin();<sp/>it_x<sp/>!=<sp/>it_y-&gt;end();<sp/>++it_x)<sp/>{</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it_x-&gt;first<sp/>==<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it_x-&gt;second.reset(SDL_CreateTextureFromSurface(_ren.get(),</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_textures.at(it_x-&gt;first<sp/>-<sp/>48).second.get()));</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"></highlight></codeline>
-<codeline lineno="154" refid="class_class_s_d_l_1a5b4b518f4934b41fd57630c3006d9d03" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a5b4b518f4934b41fd57630c3006d9d03" kindref="member">ClassSDL::buildMap</ref>(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;<sp/>map<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="155"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>_map<sp/>=<sp/>std::make_unique&lt;std::vector&lt;std::vector&lt;std::pair&lt;char,<sp/>std::unique_ptr&lt;SDL_Texture,<sp/>decltype(&amp;SDL_DestroyTexture)&gt;&gt;&gt;&gt;&gt;();</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"></highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it_y<sp/>=<sp/>map-&gt;begin();<sp/>it_y<sp/>!=<sp/>map-&gt;end();<sp/>++it_y)<sp/>{</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::pair&lt;char,<sp/>std::unique_ptr&lt;SDL_Texture,<sp/>decltype(&amp;SDL_DestroyTexture)&gt;&gt;&gt;<sp/>tmp;</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it_x<sp/>=<sp/>it_y-&gt;begin();<sp/>it_x<sp/>!=<sp/>it_y-&gt;end();<sp/>++it_x)<sp/>{</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_ptr&lt;SDL_Texture,<sp/>decltype(&amp;SDL_DestroyTexture)&gt;<sp/>texture<sp/>=<sp/>{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>SDL_DestroyTexture};</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp.push_back(std::make_pair(*it_x,<sp/>std::move(texture)));</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_map-&gt;emplace_back(std::move(tmp));</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"></highlight></codeline>
-<codeline lineno="175" refid="class_class_s_d_l_1a91b9a455ff5dd21e2db022aaa911985d" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a91b9a455ff5dd21e2db022aaa911985d" kindref="member">ClassSDL::setMap</ref>(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;<sp/>map)</highlight></codeline>
-<codeline lineno="176"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!map<sp/>||<sp/>!_map)</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it_my_map_y<sp/>=<sp/>_map-&gt;begin();</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"></highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it_y<sp/>=<sp/>map-&gt;begin();<sp/>it_y<sp/>!=<sp/>map-&gt;end();<sp/>++it_y,<sp/>++it_my_map_y)<sp/>{</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it_my_map_x<sp/>=<sp/>it_my_map_y-&gt;begin();</highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it_x<sp/>=<sp/>it_y-&gt;begin();<sp/>it_x<sp/>!=<sp/>it_y-&gt;end();<sp/>++it_x,<sp/>++it_my_map_x)</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it_my_map_x-&gt;first<sp/>=<sp/>*it_x;</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="186"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="187"><highlight class="normal"></highlight></codeline>
-<codeline lineno="195" refid="class_class_s_d_l_1a9260df31ca73a59edce7688c4664f440" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a9260df31ca73a59edce7688c4664f440" kindref="member">ClassSDL::translateKey</ref>()</highlight></codeline>
-<codeline lineno="196"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>KeySdl[i].code_lib<sp/>!=<sp/>-1;<sp/>++i)<sp/>{</highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_e.key.keysym.sym<sp/>==<sp/>KeySdl[i].code_lib)<sp/>{</highlight></codeline>
-<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_class_s_d_l_1a2b14b2085d76430344f74227e33be9fb" kindref="member">setLastKey</ref>(KeySdl[i].<ref refid="struct_key_ncurses_1a50d6816b1fe18cc3223c79016d3504c9" kindref="member">code_core</ref>);</highlight></codeline>
-<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="203"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="204"><highlight class="normal"></highlight></codeline>
-<codeline lineno="205" refid="class_class_s_d_l_1a3f07f3aeaf6e80d6e13cf4bfd0ed194b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a3f07f3aeaf6e80d6e13cf4bfd0ed194b" kindref="member">ClassSDL::setIsNewMap</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>NewMap)</highlight></codeline>
-<codeline lineno="206"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewMap<sp/>=<sp/>NewMap;</highlight></codeline>
-<codeline lineno="208"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="209"><highlight class="normal"></highlight></codeline>
-<codeline lineno="210" refid="class_class_s_d_l_1aaec40afee3905c9de7e1317db6226a7b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1aaec40afee3905c9de7e1317db6226a7b" kindref="member">ClassSDL::getIsNewMap</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="211"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(_isNewMap);</highlight></codeline>
-<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="214"><highlight class="normal"></highlight></codeline>
-<codeline lineno="215" refid="class_class_s_d_l_1a609cd1b245abb3b30962dc09aa7802c0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a609cd1b245abb3b30962dc09aa7802c0" kindref="member">ClassSDL::setIsNewKey</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>NewKey)</highlight></codeline>
-<codeline lineno="216"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewKey<sp/>=<sp/>NewKey;</highlight></codeline>
-<codeline lineno="218"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="219"><highlight class="normal"></highlight></codeline>
-<codeline lineno="220" refid="class_class_s_d_l_1ab25f9468d56aa225994484ec6e14dab7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1ab25f9468d56aa225994484ec6e14dab7" kindref="member">ClassSDL::getIsNewKey</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="221"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(_isNewKey);</highlight></codeline>
-<codeline lineno="223"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="224"><highlight class="normal"></highlight></codeline>
-<codeline lineno="225" refid="class_class_s_d_l_1a2b14b2085d76430344f74227e33be9fb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a2b14b2085d76430344f74227e33be9fb" kindref="member">ClassSDL::setLastKey</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key)</highlight></codeline>
-<codeline lineno="226"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>_key<sp/>=<sp/>key;</highlight></codeline>
-<codeline lineno="228"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="229"><highlight class="normal"></highlight></codeline>
-<codeline lineno="230" refid="class_class_s_d_l_1a776e24b732c1118ca38f715c5371e785" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a776e24b732c1118ca38f715c5371e785" kindref="member">ClassSDL::getLastKey</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="231"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(_key);</highlight></codeline>
-<codeline lineno="233"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="234"><highlight class="normal"></highlight></codeline>
-<codeline lineno="235" refid="class_class_s_d_l_1a4edcb6ae345daf64f3022d6b16ff255d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a4edcb6ae345daf64f3022d6b16ff255d" kindref="member">ClassSDL::setScore</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>score)</highlight></codeline>
-<codeline lineno="236"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>_score<sp/>=<sp/>score;</highlight></codeline>
-<codeline lineno="238"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="239"><highlight class="normal"></highlight></codeline>
-<codeline lineno="240" refid="class_class_s_d_l_1a24c2230a4a7c75e9d6124d2d106ab2b3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a24c2230a4a7c75e9d6124d2d106ab2b3" kindref="member">ClassSDL::getScore</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="241"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(_score);</highlight></codeline>
-<codeline lineno="243"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="244"><highlight class="normal"></highlight></codeline>
-<codeline lineno="245" refid="class_class_s_d_l_1aab8adf1c3fb7b5b2d9a6cfb183fc9c6a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1aab8adf1c3fb7b5b2d9a6cfb183fc9c6a" kindref="member">ClassSDL::setPathConfig</ref>(std::string<sp/>path)<sp/>noexcept</highlight></codeline>
-<codeline lineno="246"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>_pathConfig<sp/>=<sp/>path;</highlight></codeline>
-<codeline lineno="248"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="249"><highlight class="normal"></highlight></codeline>
-<codeline lineno="250" refid="class_class_s_d_l_1aceda62b43788f26e34c7d37ed1fd9459" refkind="member"><highlight class="normal">std::string<sp/><ref refid="class_class_s_d_l_1aceda62b43788f26e34c7d37ed1fd9459" kindref="member">ClassSDL::getPathConfig</ref>()<sp/>const<sp/>noexcept</highlight></codeline>
-<codeline lineno="251"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(_pathConfig);</highlight></codeline>
-<codeline lineno="253"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="254"><highlight class="normal"></highlight></codeline>
-<codeline lineno="255" refid="class_class_s_d_l_1a83e018aac96b358b8c68be6821f9bacf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a83e018aac96b358b8c68be6821f9bacf" kindref="member">ClassSDL::setIsNewPathConfig</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isNewPath)<sp/>noexcept</highlight></codeline>
-<codeline lineno="256"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewPathConfig<sp/>=<sp/>isNewPath;</highlight></codeline>
-<codeline lineno="258"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="259"><highlight class="normal"></highlight></codeline>
-<codeline lineno="260" refid="class_class_s_d_l_1a0f8788a8dfd703a7c80d54399ec745ca" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a0f8788a8dfd703a7c80d54399ec745ca" kindref="member">ClassSDL::getIsNewPathConfig</ref>()<sp/>const<sp/>noexcept</highlight></codeline>
-<codeline lineno="261"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(_isNewPathConfig);</highlight></codeline>
-<codeline lineno="263"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="264"><highlight class="normal"></highlight></codeline>
-<codeline lineno="265"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="266"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="267" refid="_class_s_d_l_8cpp_1a094b00923e2802db8341bfdd8860eefe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_i_graphic" kindref="compound">IGraphic</ref><sp/>*<ref refid="_class_s_d_l_8cpp_1a094b00923e2802db8341bfdd8860eefe" kindref="member">entryPoint</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_class_s_d_l" kindref="compound">ClassSDL</ref><sp/>*instance<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a1d2bc3c0b566af34b105d2e05b76d85c" kindref="member">ClassSDL</ref>();</highlight></codeline>
-<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(instance);</highlight></codeline>
-<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="272"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>_textures.clear();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>parsingResult.begin();<sp/>it<sp/>!=<sp/>parsingResult.end();<sp/>++it)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Rect<sp/>size<sp/>=<sp/>{it-&gt;sizeX,<sp/>it-&gt;sizeY,<sp/>0,<sp/>0};</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;SDL_Surface&gt;<sp/>tmp<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp.reset(SDL_LoadBMP(it-&gt;path.c_str()),<sp/>SDL_FreeSurface);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_textures.push_back(std::make_pair(size,<sp/>tmp));</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it_y<sp/>=<sp/>_map-&gt;begin();<sp/>it_y<sp/>!=<sp/>_map-&gt;end();<sp/>++it_y)<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it_x<sp/>=<sp/>it_y-&gt;begin();<sp/>it_x<sp/>!=<sp/>it_y-&gt;end();<sp/>++it_x)<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it_x-&gt;first<sp/>==<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it_x-&gt;second.reset(SDL_CreateTextureFromSurface(_ren.get(),</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_textures.at(it_x-&gt;first<sp/>-<sp/>48).second.get()));</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="class_class_s_d_l_1a5b4b518f4934b41fd57630c3006d9d03" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a5b4b518f4934b41fd57630c3006d9d03" kindref="member">ClassSDL::buildMap</ref>(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;<sp/>map<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>_map<sp/>=<sp/>std::make_unique&lt;std::vector&lt;std::vector&lt;std::pair&lt;char,<sp/>std::unique_ptr&lt;SDL_Texture,<sp/>decltype(&amp;SDL_DestroyTexture)&gt;&gt;&gt;&gt;&gt;();</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it_y<sp/>=<sp/>map-&gt;begin();<sp/>it_y<sp/>!=<sp/>map-&gt;end();<sp/>++it_y)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::pair&lt;char,<sp/>std::unique_ptr&lt;SDL_Texture,<sp/>decltype(&amp;SDL_DestroyTexture)&gt;&gt;&gt;<sp/>tmp;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it_x<sp/>=<sp/>it_y-&gt;begin();<sp/>it_x<sp/>!=<sp/>it_y-&gt;end();<sp/>++it_x)<sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_ptr&lt;SDL_Texture,<sp/>decltype(&amp;SDL_DestroyTexture)&gt;<sp/>texture<sp/>=<sp/>{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>SDL_DestroyTexture};</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp.push_back(std::make_pair(*it_x,<sp/>std::move(texture)));</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_map-&gt;emplace_back(std::move(tmp));</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="class_class_s_d_l_1a91b9a455ff5dd21e2db022aaa911985d" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a91b9a455ff5dd21e2db022aaa911985d" kindref="member">ClassSDL::setMap</ref>(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;<sp/>map)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!map<sp/>||<sp/>!_map)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it_my_map_y<sp/>=<sp/>_map-&gt;begin();</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it_y<sp/>=<sp/>map-&gt;begin();<sp/>it_y<sp/>!=<sp/>map-&gt;end();<sp/>++it_y,<sp/>++it_my_map_y)<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it_my_map_x<sp/>=<sp/>it_my_map_y-&gt;begin();</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it_x<sp/>=<sp/>it_y-&gt;begin();<sp/>it_x<sp/>!=<sp/>it_y-&gt;end();<sp/>++it_x,<sp/>++it_my_map_x)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it_my_map_x-&gt;first<sp/>=<sp/>*it_x;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="class_class_s_d_l_1a9260df31ca73a59edce7688c4664f440" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a9260df31ca73a59edce7688c4664f440" kindref="member">ClassSDL::translateKey</ref>()</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>KeySdl[i].code_lib<sp/>!=<sp/>-1;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_e.key.keysym.sym<sp/>==<sp/>KeySdl[i].code_lib)<sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_class_s_d_l_1a2b14b2085d76430344f74227e33be9fb" kindref="member">setLastKey</ref>(KeySdl[i].<ref refid="struct_key_ncurses_1a50d6816b1fe18cc3223c79016d3504c9" kindref="member">code_core</ref>);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="class_class_s_d_l_1a3f07f3aeaf6e80d6e13cf4bfd0ed194b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a3f07f3aeaf6e80d6e13cf4bfd0ed194b" kindref="member">ClassSDL::setIsNewMap</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>NewMap)</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewMap<sp/>=<sp/>NewMap;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208" refid="class_class_s_d_l_1aaec40afee3905c9de7e1317db6226a7b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1aaec40afee3905c9de7e1317db6226a7b" kindref="member">ClassSDL::getIsNewMap</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="209"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(_isNewMap);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213" refid="class_class_s_d_l_1a609cd1b245abb3b30962dc09aa7802c0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a609cd1b245abb3b30962dc09aa7802c0" kindref="member">ClassSDL::setIsNewKey</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>NewKey)</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewKey<sp/>=<sp/>NewKey;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="class_class_s_d_l_1ab25f9468d56aa225994484ec6e14dab7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1ab25f9468d56aa225994484ec6e14dab7" kindref="member">ClassSDL::getIsNewKey</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="219"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(_isNewKey);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223" refid="class_class_s_d_l_1a2b14b2085d76430344f74227e33be9fb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a2b14b2085d76430344f74227e33be9fb" kindref="member">ClassSDL::setLastKey</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key)</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>_key<sp/>=<sp/>key;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="class_class_s_d_l_1a776e24b732c1118ca38f715c5371e785" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a776e24b732c1118ca38f715c5371e785" kindref="member">ClassSDL::getLastKey</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="229"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(_key);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233" refid="class_class_s_d_l_1a4edcb6ae345daf64f3022d6b16ff255d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a4edcb6ae345daf64f3022d6b16ff255d" kindref="member">ClassSDL::setScore</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>score)</highlight></codeline>
+<codeline lineno="234"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>_score<sp/>=<sp/>score;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="class_class_s_d_l_1a24c2230a4a7c75e9d6124d2d106ab2b3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a24c2230a4a7c75e9d6124d2d106ab2b3" kindref="member">ClassSDL::getScore</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="239"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(_score);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243" refid="class_class_s_d_l_1aab8adf1c3fb7b5b2d9a6cfb183fc9c6a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1aab8adf1c3fb7b5b2d9a6cfb183fc9c6a" kindref="member">ClassSDL::setPathConfig</ref>(std::string<sp/>path)<sp/>noexcept</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>_pathConfig<sp/>=<sp/>path;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248" refid="class_class_s_d_l_1aceda62b43788f26e34c7d37ed1fd9459" refkind="member"><highlight class="normal">std::string<sp/><ref refid="class_class_s_d_l_1aceda62b43788f26e34c7d37ed1fd9459" kindref="member">ClassSDL::getPathConfig</ref>()<sp/>const<sp/>noexcept</highlight></codeline>
+<codeline lineno="249"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(_pathConfig);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253" refid="class_class_s_d_l_1a83e018aac96b358b8c68be6821f9bacf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a83e018aac96b358b8c68be6821f9bacf" kindref="member">ClassSDL::setIsNewPathConfig</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isNewPath)<sp/>noexcept</highlight></codeline>
+<codeline lineno="254"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>_isNewPathConfig<sp/>=<sp/>isNewPath;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258" refid="class_class_s_d_l_1a0f8788a8dfd703a7c80d54399ec745ca" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a0f8788a8dfd703a7c80d54399ec745ca" kindref="member">ClassSDL::getIsNewPathConfig</ref>()<sp/>const<sp/>noexcept</highlight></codeline>
+<codeline lineno="259"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(_isNewPathConfig);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="265" refid="_class_s_d_l_8cpp_1a094b00923e2802db8341bfdd8860eefe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_i_graphic" kindref="compound">IGraphic</ref><sp/>*<ref refid="_class_s_d_l_8cpp_1a094b00923e2802db8341bfdd8860eefe" kindref="member">entryPoint</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_class_s_d_l" kindref="compound">ClassSDL</ref><sp/>*instance<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_class_s_d_l_1a1d2bc3c0b566af34b105d2e05b76d85c" kindref="member">ClassSDL</ref>();</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(instance);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="lib/SDL/ClassSDL.cpp"/>
   </compounddef>

@@ -2,13 +2,14 @@ var NAVTREE =
 [
   [ "OOP_arcade_2018", "index.html", [
     [ "Arcade Program", "index.html", null ],
+    [ "Arcade", "md_doc__r_e_a_d_m_e.html", null ],
     [ "Arcade", "md__r_e_a_d_m_e.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", "functions_dup" ],
+        [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
@@ -29,8 +30,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_animated_sprite_8cpp.html",
-"class_core.html#a15d432deabf263fa01ed532cc2789ee7"
+"_class_ncurses_8cpp.html",
+"class_entity.html#ab1fac477232fe5436b90bf432d5ba64d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

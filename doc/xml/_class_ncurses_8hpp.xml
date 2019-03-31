@@ -4,71 +4,78 @@
     <compoundname>ClassNcurses.hpp</compoundname>
     <includes local="no">ncurses.h</includes>
     <includes refid="_i_graphic_8hpp" local="yes">IGraphic.hpp</includes>
-    <includes local="yes">../srcs/ParsingConfig.hpp</includes>
+    <includes refid="_parsing_config_8hpp" local="yes">ParsingConfig.hpp</includes>
     <includedby refid="_class_ncurses_8cpp" local="yes">lib/NCURSES/ClassNcurses.cpp</includedby>
     <includedby refid="tests___n_c_u_r_s_e_s_8cpp" local="yes">tests/tests_NCURSES.cpp</includedby>
     <incdepgraph>
-      <node id="100">
-        <label>../srcs/ParsingConfig.hpp</label>
-      </node>
-      <node id="98">
+      <node id="121">
         <label>functional</label>
       </node>
-      <node id="97">
-        <label>fstream</label>
-      </node>
-      <node id="96">
-        <label>vector</label>
-      </node>
-      <node id="99">
-        <label>iostream</label>
-      </node>
-      <node id="93">
-        <label>ncurses.h</label>
-      </node>
-      <node id="94">
+      <node id="117">
         <label>IGraphic.hpp</label>
         <link refid="_i_graphic_8hpp"/>
-        <childnode refid="95" relation="include">
+        <childnode refid="118" relation="include">
         </childnode>
-        <childnode refid="96" relation="include">
+        <childnode refid="119" relation="include">
         </childnode>
-        <childnode refid="97" relation="include">
+        <childnode refid="120" relation="include">
         </childnode>
-        <childnode refid="98" relation="include">
+        <childnode refid="121" relation="include">
         </childnode>
-        <childnode refid="99" relation="include">
+        <childnode refid="122" relation="include">
         </childnode>
       </node>
-      <node id="95">
+      <node id="120">
+        <label>fstream</label>
+      </node>
+      <node id="119">
+        <label>vector</label>
+      </node>
+      <node id="122">
+        <label>iostream</label>
+      </node>
+      <node id="116">
+        <label>ncurses.h</label>
+      </node>
+      <node id="123">
+        <label>ParsingConfig.hpp</label>
+        <link refid="_parsing_config_8hpp"/>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+      </node>
+      <node id="118">
         <label>memory</label>
       </node>
-      <node id="92">
+      <node id="115">
         <label>lib/NCURSES/ClassNcurses.hpp</label>
         <link refid="_class_ncurses_8hpp"/>
-        <childnode refid="93" relation="include">
+        <childnode refid="116" relation="include">
         </childnode>
-        <childnode refid="94" relation="include">
+        <childnode refid="117" relation="include">
         </childnode>
-        <childnode refid="100" relation="include">
+        <childnode refid="123" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="102">
+      <node id="125">
         <label>lib/NCURSES/ClassNcurses.cpp</label>
         <link refid="_class_ncurses_8cpp"/>
       </node>
-      <node id="103">
+      <node id="126">
         <label>tests/tests_NCURSES.cpp</label>
         <link refid="tests___n_c_u_r_s_e_s_8cpp"/>
       </node>
-      <node id="101">
+      <node id="124">
         <label>lib/NCURSES/ClassNcurses.hpp</label>
         <link refid="_class_ncurses_8hpp"/>
-        <childnode refid="102" relation="include">
+        <childnode refid="125" relation="include">
         </childnode>
-        <childnode refid="103" relation="include">
+        <childnode refid="126" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -333,7 +340,7 @@
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ncurses.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_i_graphic_8hpp" kindref="compound">IGraphic.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../srcs/ParsingConfig.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_parsing_config_8hpp" kindref="compound">ParsingConfig.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="14" refid="_class_ncurses_8hpp_1a821fa6bcae46bbf01e1bdaf5a86a585d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_class_ncurses_8hpp_1a821fa6bcae46bbf01e1bdaf5a86a585d" kindref="member">Graphics</ref><sp/>{</highlight></codeline>
 <codeline lineno="15" refid="_class_ncurses_8hpp_1a821fa6bcae46bbf01e1bdaf5a86a585dacfe24a7b308a82835c8a9a9a89bc4ca2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_class_ncurses_8hpp_1a821fa6bcae46bbf01e1bdaf5a86a585dacfe24a7b308a82835c8a9a9a89bc4ca2" kindref="member">NOTHING</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal">,</highlight></codeline>
@@ -454,7 +461,7 @@
 <codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>{32,<sp/>41},<sp/><sp/></highlight><highlight class="comment">//<sp/>Space</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>{263,<sp/>42},<sp/></highlight><highlight class="comment">//<sp/>BackSpace</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>{9,<sp/>43},<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Tab</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>{1000,<sp/>1000}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>{-1,<sp/>-1}</highlight></codeline>
 <codeline lineno="150"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="151"><highlight class="normal"></highlight></codeline>
     </programlisting>

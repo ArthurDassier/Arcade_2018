@@ -146,6 +146,6 @@ static struct KeyNcurses KeyNcurses[] = {
     {32, 41},  // Space
     {263, 42}, // BackSpace
     {9, 43},   // Tab
-    {1000, 1000}
+    {-1, -1}
 };
 

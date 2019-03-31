@@ -79,7 +79,6 @@ bool Pacman::runGame()
         setIsNewMap(true);
     }
     setScore(_pacman->getScore());
-    setIsNewMap(true);
     setIsNewKey(_pacman->getIsNewKey());
     return (true);
 }

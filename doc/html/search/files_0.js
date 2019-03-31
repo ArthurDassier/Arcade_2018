@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['animatedsprite_2ecpp',['AnimatedSprite.cpp',['../_animated_sprite_8cpp.html',1,'']]],
-  ['animatedsprite_2ehpp',['AnimatedSprite.hpp',['../_animated_sprite_8hpp.html',1,'']]],
-  ['animation_2ecpp',['Animation.cpp',['../_animation_8cpp.html',1,'']]],
-  ['animation_2ehpp',['Animation.hpp',['../_animation_8hpp.html',1,'']]],
-  ['animationtest_2ecpp',['AnimationTest.cpp',['../_animation_test_8cpp.html',1,'']]]
+  ['classncurses_2ecpp',['ClassNcurses.cpp',['../_class_ncurses_8cpp.html',1,'']]],
+  ['classncurses_2ehpp',['ClassNcurses.hpp',['../_class_ncurses_8hpp.html',1,'']]],
+  ['classsdl_2ecpp',['ClassSDL.cpp',['../_class_s_d_l_8cpp.html',1,'']]],
+  ['classsdl_2ehpp',['ClassSDL.hpp',['../_class_s_d_l_8hpp.html',1,'']]],
+  ['classsfml_2ecpp',['ClassSFML.cpp',['../_class_s_f_m_l_8cpp.html',1,'']]],
+  ['classsfml_2ehpp',['ClassSFML.hpp',['../_class_s_f_m_l_8hpp.html',1,'']]],
+  ['core_2ecpp',['Core.cpp',['../_core_8cpp.html',1,'']]],
+  ['core_2ehpp',['Core.hpp',['../_core_8hpp.html',1,'']]]
 ];

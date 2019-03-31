@@ -15,12 +15,14 @@ Entity \- Class representing \fBEntity\fP logic\&.
 .ti -1c
 .RI "\fBEntity\fP (\fBPacmanObjs\fP)"
 .br
+.RI "Create an entity and initialize position of it\&. "
 .ti -1c
-.RI "\fB~Entity\fP ()"
+.RI "\fB~Entity\fP ()=default"
 .br
 .ti -1c
 .RI "void \fBmove\fP (\fBMove\fP, std::shared_ptr< std::vector< std::string >>)"
 .br
+.RI "Check direction given as parameter and run the matching function\&. "
 .ti -1c
 .RI "std::map< size_t, std::map< size_t, char > > \fBgetMap\fP () const"
 .br
@@ -82,17 +84,24 @@ Class representing \fBEntity\fP logic\&.
 
 This class contains the fonctions that handle the \fBEntity\fP 
 .PP
-Definition at line 46 of file Entity\&.hpp\&.
+Definition at line 45 of file Entity\&.hpp\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Entity::Entity (\fBPacmanObjs\fP entity = \fC\fBNOTHING\fP\fP)"
 
 .PP
-Definition at line 10 of file Entity\&.cpp\&.
-.SS "Entity::~Entity ()"
+Create an entity and initialize position of it\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIPacmanObjs\fP entity = NOTHING 
+.RE
+.PP
 
 .PP
-Definition at line 18 of file Entity\&.cpp\&.
+Definition at line 17 of file Entity\&.cpp\&.
+.SS "Entity::~Entity ()\fC [default]\fP"
+
 .SH "Member Function Documentation"
 .PP 
 .SS "bool Entity::getBonus () const"
@@ -100,69 +109,78 @@ Definition at line 18 of file Entity\&.cpp\&.
 .SS "const \fBPacmanObjs\fP Entity::getEntity () const\fC [noexcept]\fP"
 
 .PP
-Definition at line 184 of file Entity\&.cpp\&.
-.SS "bool Entity::getIsNewKey (void) const"
+Definition at line 229 of file Entity\&.cpp\&.
+.SS "bool Entity::getIsNewKey () const"
 
 .PP
-Definition at line 224 of file Entity\&.cpp\&.
-.SS "bool Entity::getIsNewMap (void) const"
+Definition at line 269 of file Entity\&.cpp\&.
+.SS "bool Entity::getIsNewMap () const"
 
 .PP
-Definition at line 214 of file Entity\&.cpp\&.
+Definition at line 259 of file Entity\&.cpp\&.
 .SS "int Entity::getLastKey () const"
 
 .SS "\fBMove\fP Entity::getLastMove () const"
 
 .PP
-Definition at line 234 of file Entity\&.cpp\&.
+Definition at line 279 of file Entity\&.cpp\&.
 .SS "std::map<size_t, std::map<size_t, char> > Entity::getMap () const"
 
 .SS "std::pair< std::vector< std::string >::iterator, ptrdiff_t > Entity::getPosition () const"
 
 .PP
-Definition at line 204 of file Entity\&.cpp\&.
-.SS "size_t Entity::getScore (void) const"
+Definition at line 249 of file Entity\&.cpp\&.
+.SS "size_t Entity::getScore () const"
 
 .PP
-Definition at line 244 of file Entity\&.cpp\&.
+Definition at line 289 of file Entity\&.cpp\&.
 .SS "float Entity::getSpeed () const"
 
 .PP
-Definition at line 194 of file Entity\&.cpp\&.
+Definition at line 239 of file Entity\&.cpp\&.
 .SS "void Entity::move (\fBMove\fP direction, std::shared_ptr< std::vector< std::string >> map)"
 
 .PP
-Definition at line 22 of file Entity\&.cpp\&.
+Check direction given as parameter and run the matching function\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIMove\fP direction, std::shared_ptr<std::vector<std::string>> map 
+.RE
+.PP
+
+.PP
+Definition at line 32 of file Entity\&.cpp\&.
 .SS "void Entity::setBonus (bool bonus)"
 
 .PP
-Definition at line 249 of file Entity\&.cpp\&.
+Definition at line 294 of file Entity\&.cpp\&.
 .SS "void Entity::setIsNewKey (bool isNewKey)"
 
 .PP
-Definition at line 219 of file Entity\&.cpp\&.
+Definition at line 264 of file Entity\&.cpp\&.
 .SS "void Entity::setIsNewMap (bool isNewMap)"
 
 .PP
-Definition at line 209 of file Entity\&.cpp\&.
+Definition at line 254 of file Entity\&.cpp\&.
 .SS "void Entity::setLastKey (int)"
 
 .SS "void Entity::setLastMove (\fBMove\fP move)"
 
 .PP
-Definition at line 229 of file Entity\&.cpp\&.
+Definition at line 274 of file Entity\&.cpp\&.
 .SS "void Entity::setPosition (std::pair< std::vector< std::string >::iterator, ptrdiff_t > pos)"
 
 .PP
-Definition at line 199 of file Entity\&.cpp\&.
+Definition at line 244 of file Entity\&.cpp\&.
 .SS "void Entity::setScore (size_t score)"
 
 .PP
-Definition at line 239 of file Entity\&.cpp\&.
+Definition at line 284 of file Entity\&.cpp\&.
 .SS "void Entity::setSpeed (float speed)"
 
 .PP
-Definition at line 189 of file Entity\&.cpp\&.
+Definition at line 234 of file Entity\&.cpp\&.
 
 .SH "Author"
 .PP 

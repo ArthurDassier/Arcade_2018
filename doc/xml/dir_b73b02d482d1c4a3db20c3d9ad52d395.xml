@@ -4,10 +4,7 @@
     <compoundname>srcs</compoundname>
     <innerfile refid="_core_8cpp">Core.cpp</innerfile>
     <innerfile refid="_core_8hpp">Core.hpp</innerfile>
-    <innerfile refid="_i_core_8hpp">ICore.hpp</innerfile>
     <innerfile refid="main_8cpp">main.cpp</innerfile>
-    <innerfile refid="_parsing_config_8cpp">ParsingConfig.cpp</innerfile>
-    <innerfile refid="_parsing_config_8hpp">ParsingConfig.hpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

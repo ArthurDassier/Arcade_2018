@@ -5,8 +5,7 @@
 ** IGame
 */
 
-#ifndef IGAME_HPP_
-    #define IGAME_HPP_
+#pragma once
 
 #include <algorithm>
 #include <iostream>
@@ -39,4 +38,3 @@ class IGame {
         virtual const std::string getPathMap() const noexcept = 0;
 };
 
-#endif /* !IGAME_HPP_ */

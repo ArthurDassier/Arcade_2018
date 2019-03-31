@@ -2,11 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="dir_39cdeccb6ba56998cd98036bb976064f" kind="dir">
     <compoundname>lib/SFML</compoundname>
-    <innerfile refid="_animated_sprite_8cpp">AnimatedSprite.cpp</innerfile>
-    <innerfile refid="_animated_sprite_8hpp">AnimatedSprite.hpp</innerfile>
-    <innerfile refid="_animation_8cpp">Animation.cpp</innerfile>
-    <innerfile refid="_animation_8hpp">Animation.hpp</innerfile>
-    <innerfile refid="_animation_test_8cpp">AnimationTest.cpp</innerfile>
     <innerfile refid="_class_s_f_m_l_8cpp">ClassSFML.cpp</innerfile>
     <innerfile refid="_class_s_f_m_l_8hpp">ClassSFML.hpp</innerfile>
     <briefdescription>

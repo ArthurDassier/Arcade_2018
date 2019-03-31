@@ -1,7 +1,7 @@
 var class_entity =
 [
     [ "Entity", "class_entity.html#aed8a9f358cd8071ac65514597a686e8e", null ],
-    [ "~Entity", "class_entity.html#adf6d3f7cb1b2ba029b6b048a395cc8ae", null ],
+    [ "~Entity", "class_entity.html#aa6ecb9c57b29b60cc49fe44ad4088ecf", null ],
     [ "getBonus", "class_entity.html#a420fa54213e0debc86956197ffffa45e", null ],
     [ "getEntity", "class_entity.html#aeb78147bb879a3661ba336f07f641508", null ],
     [ "getIsNewKey", "class_entity.html#a02009ce889fc4040dadd70fbf0b36ad8", null ],

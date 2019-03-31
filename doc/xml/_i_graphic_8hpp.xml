@@ -13,113 +13,113 @@
     <includedby refid="_core_8hpp" local="yes">srcs/Core.hpp</includedby>
     <includedby refid="main_8cpp" local="yes">srcs/main.cpp</includedby>
     <incdepgraph>
-      <node id="66">
+      <node id="72">
         <label>functional</label>
       </node>
-      <node id="65">
+      <node id="68">
+        <label>includes/IGraphic.hpp</label>
+        <link refid="_i_graphic_8hpp"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
         <label>fstream</label>
       </node>
-      <node id="64">
+      <node id="70">
         <label>vector</label>
       </node>
-      <node id="67">
+      <node id="73">
         <label>iostream</label>
       </node>
-      <node id="62">
-        <label>lib/IGraphic.hpp</label>
-        <link refid="_i_graphic_8hpp"/>
-        <childnode refid="63" relation="include">
-        </childnode>
-        <childnode refid="64" relation="include">
-        </childnode>
-        <childnode refid="65" relation="include">
-        </childnode>
-        <childnode refid="66" relation="include">
-        </childnode>
-        <childnode refid="67" relation="include">
-        </childnode>
-      </node>
-      <node id="63">
+      <node id="69">
         <label>memory</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="73">
+      <node id="79">
         <label>lib/SDL/ClassSDL.cpp</label>
         <link refid="_class_s_d_l_8cpp"/>
       </node>
-      <node id="74">
+      <node id="80">
         <label>tests/tests_SDL.cpp</label>
         <link refid="tests___s_d_l_8cpp"/>
       </node>
-      <node id="78">
+      <node id="84">
         <label>srcs/Core.hpp</label>
         <link refid="_core_8hpp"/>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>lib/NCURSES/ClassNcurses.cpp</label>
+        <link refid="_class_ncurses_8cpp"/>
+      </node>
+      <node id="77">
+        <label>tests/tests_NCURSES.cpp</label>
+        <link refid="tests___n_c_u_r_s_e_s_8cpp"/>
+      </node>
+      <node id="74">
+        <label>includes/IGraphic.hpp</label>
+        <link refid="_i_graphic_8hpp"/>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+      </node>
+      <node id="83">
+        <label>tests/tests_SFML.cpp</label>
+        <link refid="tests___s_f_m_l_8cpp"/>
+      </node>
+      <node id="85">
+        <label>srcs/Core.cpp</label>
+        <link refid="_core_8cpp"/>
+      </node>
+      <node id="81">
+        <label>lib/SFML/ClassSFML.hpp</label>
+        <link refid="_class_s_f_m_l_8hpp"/>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>lib/SFML/ClassSFML.cpp</label>
+        <link refid="_class_s_f_m_l_8cpp"/>
+      </node>
+      <node id="86">
+        <label>srcs/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="78">
+        <label>lib/SDL/ClassSDL.hpp</label>
+        <link refid="_class_s_d_l_8hpp"/>
         <childnode refid="79" relation="include">
         </childnode>
         <childnode refid="80" relation="include">
         </childnode>
       </node>
-      <node id="70">
-        <label>lib/NCURSES/ClassNcurses.cpp</label>
-        <link refid="_class_ncurses_8cpp"/>
-      </node>
-      <node id="71">
-        <label>tests/tests_NCURSES.cpp</label>
-        <link refid="tests___n_c_u_r_s_e_s_8cpp"/>
-      </node>
-      <node id="77">
-        <label>tests/tests_SFML.cpp</label>
-        <link refid="tests___s_f_m_l_8cpp"/>
-      </node>
-      <node id="79">
-        <label>srcs/Core.cpp</label>
-        <link refid="_core_8cpp"/>
-      </node>
       <node id="75">
-        <label>lib/SFML/ClassSFML.hpp</label>
-        <link refid="_class_s_f_m_l_8hpp"/>
+        <label>lib/NCURSES/ClassNcurses.hpp</label>
+        <link refid="_class_ncurses_8hpp"/>
         <childnode refid="76" relation="include">
         </childnode>
         <childnode refid="77" relation="include">
-        </childnode>
-      </node>
-      <node id="76">
-        <label>lib/SFML/ClassSFML.cpp</label>
-        <link refid="_class_s_f_m_l_8cpp"/>
-      </node>
-      <node id="80">
-        <label>srcs/main.cpp</label>
-        <link refid="main_8cpp"/>
-      </node>
-      <node id="68">
-        <label>lib/IGraphic.hpp</label>
-        <link refid="_i_graphic_8hpp"/>
-        <childnode refid="69" relation="include">
-        </childnode>
-        <childnode refid="72" relation="include">
-        </childnode>
-        <childnode refid="75" relation="include">
-        </childnode>
-        <childnode refid="78" relation="include">
-        </childnode>
-        <childnode refid="80" relation="include">
-        </childnode>
-      </node>
-      <node id="72">
-        <label>lib/SDL/ClassSDL.hpp</label>
-        <link refid="_class_s_d_l_8hpp"/>
-        <childnode refid="73" relation="include">
-        </childnode>
-        <childnode refid="74" relation="include">
-        </childnode>
-      </node>
-      <node id="69">
-        <label>lib/NCURSES/ClassNcurses.hpp</label>
-        <link refid="_class_ncurses_8hpp"/>
-        <childnode refid="70" relation="include">
-        </childnode>
-        <childnode refid="71" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -134,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/IGraphic.hpp" line="16" column="9" bodyfile="lib/IGraphic.hpp" bodystart="16" bodyend="-1"/>
+        <location file="includes/IGraphic.hpp" line="16" column="9" bodyfile="includes/IGraphic.hpp" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="_i_graphic_8hpp_1a2cd109632a6dcccaa80b43561b1ab700" prot="public" static="no">
         <name>SCREEN_WIDTH</name>
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/IGraphic.hpp" line="17" column="9" bodyfile="lib/IGraphic.hpp" bodystart="17" bodyend="-1"/>
+        <location file="includes/IGraphic.hpp" line="17" column="9" bodyfile="includes/IGraphic.hpp" bodystart="17" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -202,6 +202,6 @@
 <codeline lineno="47"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="lib/IGraphic.hpp"/>
+    <location file="includes/IGraphic.hpp"/>
   </compounddef>
 </doxygen>

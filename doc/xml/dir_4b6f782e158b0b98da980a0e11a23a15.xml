@@ -3,7 +3,6 @@
   <compounddef id="dir_4b6f782e158b0b98da980a0e11a23a15" kind="dir">
     <compoundname>games</compoundname>
     <innerdir refid="dir_2b6c8e7fa44737621b455968085f1645">games/pacman</innerdir>
-    <innerfile refid="_i_game_8hpp">IGame.hpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

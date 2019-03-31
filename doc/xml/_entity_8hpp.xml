@@ -10,56 +10,56 @@
     <includedby refid="_entity_8cpp" local="yes">games/pacman/Entity.cpp</includedby>
     <includedby refid="_pacman_8hpp" local="yes">games/pacman/Pacman.hpp</includedby>
     <incdepgraph>
-      <node id="24">
+      <node id="15">
         <label>map</label>
       </node>
-      <node id="26">
+      <node id="17">
         <label>vector</label>
       </node>
-      <node id="21">
+      <node id="12">
         <label>games/pacman/Entity.hpp</label>
         <link refid="_entity_8hpp"/>
-        <childnode refid="22" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="25" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="26" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="23">
+      <node id="14">
         <label>iostream</label>
       </node>
-      <node id="22">
+      <node id="13">
         <label>algorithm</label>
       </node>
-      <node id="25">
+      <node id="16">
         <label>memory</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="28">
+      <node id="19">
         <label>games/pacman/Entity.cpp</label>
         <link refid="_entity_8cpp"/>
       </node>
-      <node id="29">
+      <node id="20">
         <label>games/pacman/Pacman.hpp</label>
         <link refid="_pacman_8hpp"/>
-        <childnode refid="30" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
       </node>
-      <node id="27">
+      <node id="18">
         <label>games/pacman/Entity.hpp</label>
         <link refid="_entity_8hpp"/>
-        <childnode refid="28" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
       </node>
-      <node id="30">
+      <node id="21">
         <label>games/pacman/Pacman.cpp</label>
         <link refid="_pacman_8cpp"/>
       </node>
@@ -107,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="games/pacman/Entity.hpp" line="18" column="1" bodyfile="games/pacman/Entity.hpp" bodystart="17" bodyend="23"/>
+        <location file="games/pacman/Entity.hpp" line="17" column="1" bodyfile="games/pacman/Entity.hpp" bodystart="16" bodyend="22"/>
       </memberdef>
       <memberdef kind="enum" id="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473" prot="public" static="no">
         <name>PacmanObjs</name>
@@ -165,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="games/pacman/Entity.hpp" line="26" column="1" bodyfile="games/pacman/Entity.hpp" bodystart="25" bodyend="33"/>
+        <location file="games/pacman/Entity.hpp" line="25" column="1" bodyfile="games/pacman/Entity.hpp" bodystart="24" bodyend="32"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -180,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="games/pacman/Entity.hpp" line="38" column="1"/>
+        <location file="games/pacman/Entity.hpp" line="37" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -195,99 +195,91 @@
 <codeline lineno="5"><highlight class="comment">**<sp/>Entity</highlight></codeline>
 <codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ENTITY_HPP_</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ENTITY_HPP_</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17" refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388" kindref="member">Move</ref></highlight></codeline>
-<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="19" refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388aec8379af7490bb9eaaf579cf17876f38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388aec8379af7490bb9eaaf579cf17876f38" kindref="member">RIGHT</ref><sp/>=<sp/>3,</highlight></codeline>
-<codeline lineno="20" refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388adb45120aafd37a973140edee24708065" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388adb45120aafd37a973140edee24708065" kindref="member">LEFT</ref><sp/>=<sp/>16,</highlight></codeline>
-<codeline lineno="21" refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388a9b0b4a95b99523966e0e34ffdadac9da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388a9b0b4a95b99523966e0e34ffdadac9da" kindref="member">DOWN</ref><sp/>=<sp/>18,</highlight></codeline>
-<codeline lineno="22" refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388aba595d8bca8bc5e67c37c0a9d89becfa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388aba595d8bca8bc5e67c37c0a9d89becfa" kindref="member">UP</ref><sp/>=<sp/>25</highlight></codeline>
-<codeline lineno="23"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25" refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473" kindref="member">PacmanObjs</ref></highlight></codeline>
-<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="27" refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473acfe24a7b308a82835c8a9a9a89bc4ca2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473acfe24a7b308a82835c8a9a9a89bc4ca2" kindref="member">NOTHING</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="28" refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473afca2faad41310c7e71ec303ef789c53a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473afca2faad41310c7e71ec303ef789c53a" kindref="member">WALL</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;1&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="29" refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473a15108ccafa3232b9067f889b6156f565" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473a15108ccafa3232b9067f889b6156f565" kindref="member">POINT</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;2&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="30" refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473ade5dc3e0dbd007d995ed3e37bde5ce7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473ade5dc3e0dbd007d995ed3e37bde5ce7e" kindref="member">PLAYER</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;3&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="31" refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473a5ce368bdfc444a87fef6c208b4101571" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473a5ce368bdfc444a87fef6c208b4101571" kindref="member">ENEMY</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;4&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="32" refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473a1867908cfbd59d506f09c46311c5664d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473a1867908cfbd59d506f09c46311c5664d" kindref="member">BONUS</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;5&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="33"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35" refid="structs__pos" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structs__pos" kindref="compound">s_pos</ref><sp/>{</highlight></codeline>
-<codeline lineno="36" refid="structs__pos_1abb0498f0ab615cbda6e0df98ce7260cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><ref refid="structs__pos_1abb0498f0ab615cbda6e0df98ce7260cf" kindref="member">x</ref>;</highlight></codeline>
-<codeline lineno="37" refid="structs__pos_1a06fda8103834535db7e2f702c02aab21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><ref refid="structs__pos_1a06fda8103834535db7e2f702c02aab21" kindref="member">y</ref>;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal">}<sp/><sp/><sp/><ref refid="_entity_8hpp_1af2532d5af49219b095ee2b94c708acd7" kindref="member">t_pos</ref>;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46" refid="class_entity" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_entity" kindref="compound">Entity</ref></highlight></codeline>
-<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_entity" kindref="compound">Entity</ref>(<ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473" kindref="member">PacmanObjs</ref>);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>~<ref refid="class_entity" kindref="compound">Entity</ref>();</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>move(<ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388" kindref="member">Move</ref>,<sp/>std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;);</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>move(Move,<sp/>std::map&lt;size_t,<sp/>std::map&lt;size_t,<sp/>char&gt;&gt;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;size_t,<sp/>std::map&lt;size_t,<sp/>char&gt;&gt;<sp/>getMap()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388" kindref="member">Move</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18" refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388aec8379af7490bb9eaaf579cf17876f38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388aec8379af7490bb9eaaf579cf17876f38" kindref="member">RIGHT</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="19" refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388adb45120aafd37a973140edee24708065" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388adb45120aafd37a973140edee24708065" kindref="member">LEFT</ref><sp/>=<sp/>16,</highlight></codeline>
+<codeline lineno="20" refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388a9b0b4a95b99523966e0e34ffdadac9da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388a9b0b4a95b99523966e0e34ffdadac9da" kindref="member">DOWN</ref><sp/>=<sp/>18,</highlight></codeline>
+<codeline lineno="21" refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388aba595d8bca8bc5e67c37c0a9d89becfa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388aba595d8bca8bc5e67c37c0a9d89becfa" kindref="member">UP</ref><sp/>=<sp/>25</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473" kindref="member">PacmanObjs</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26" refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473acfe24a7b308a82835c8a9a9a89bc4ca2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473acfe24a7b308a82835c8a9a9a89bc4ca2" kindref="member">NOTHING</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="27" refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473afca2faad41310c7e71ec303ef789c53a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473afca2faad41310c7e71ec303ef789c53a" kindref="member">WALL</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;1&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="28" refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473a15108ccafa3232b9067f889b6156f565" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473a15108ccafa3232b9067f889b6156f565" kindref="member">POINT</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;2&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="29" refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473ade5dc3e0dbd007d995ed3e37bde5ce7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473ade5dc3e0dbd007d995ed3e37bde5ce7e" kindref="member">PLAYER</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;3&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="30" refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473a5ce368bdfc444a87fef6c208b4101571" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473a5ce368bdfc444a87fef6c208b4101571" kindref="member">ENEMY</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;4&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="31" refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473a1867908cfbd59d506f09c46311c5664d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473a1867908cfbd59d506f09c46311c5664d" kindref="member">BONUS</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;5&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="structs__pos" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structs__pos" kindref="compound">s_pos</ref><sp/>{</highlight></codeline>
+<codeline lineno="35" refid="structs__pos_1abb0498f0ab615cbda6e0df98ce7260cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><ref refid="structs__pos_1abb0498f0ab615cbda6e0df98ce7260cf" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="36" refid="structs__pos_1a06fda8103834535db7e2f702c02aab21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><ref refid="structs__pos_1a06fda8103834535db7e2f702c02aab21" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}<sp/><sp/><sp/><ref refid="_entity_8hpp_1af2532d5af49219b095ee2b94c708acd7" kindref="member">t_pos</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="class_entity" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_entity" kindref="compound">Entity</ref></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_entity" kindref="compound">Entity</ref>(<ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473" kindref="member">PacmanObjs</ref>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>~<ref refid="class_entity" kindref="compound">Entity</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>move(<ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388" kindref="member">Move</ref>,<sp/>std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;size_t,<sp/>std::map&lt;size_t,<sp/>char&gt;&gt;<sp/>getMap()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473" kindref="member">PacmanObjs</ref><sp/>getEntity()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept;</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473" kindref="member">PacmanObjs</ref><sp/>getEntity()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setSpeed(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>getSpeed()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setPosition(std::pair&lt;std::vector&lt;std::string&gt;::iterator,<sp/>ptrdiff_t&gt;);</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::pair&lt;std::vector&lt;std::string&gt;::iterator,<sp/>ptrdiff_t&gt;<sp/>getPosition()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setIsNewMap(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>getIsNewMap()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setIsNewKey(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>getIsNewKey()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setLastKey(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getLastKey()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setLastMove(<ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388" kindref="member">Move</ref>);</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388" kindref="member">Move</ref><sp/>getLastMove()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setScore(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>getScore()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setBonus(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>getBonus()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473" kindref="member">PacmanObjs</ref><sp/>_entity;</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;size_t,<sp/>std::map&lt;size_t,<sp/>char&gt;&gt;<sp/>_map;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::pair&lt;std::vector&lt;std::string&gt;::iterator,<sp/>ptrdiff_t&gt;<sp/>_pos;</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time_t<sp/>_start;</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>_score;</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>_speed;</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_bonus;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388" kindref="member">Move</ref><sp/>_move;</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_isNewMap;</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_isNewKey;</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>moveDown(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;);</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>moveDown(std::map&lt;size_t,<sp/>std::map&lt;size_t,<sp/>char&gt;&gt;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>moveLeft(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;);</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>moveLeft(std::map&lt;size_t,<sp/>std::map&lt;size_t,<sp/>char&gt;&gt;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>moveRight(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;);</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>moveRight(std::map&lt;size_t,<sp/>std::map&lt;size_t,<sp/>char&gt;&gt;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>moveUp(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;);</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>moveUp(std::map&lt;size_t,<sp/>std::map&lt;size_t,<sp/>char&gt;&gt;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>checkNextCase(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="104"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!ENTITY_HPP_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setSpeed(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>getSpeed()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setPosition(std::pair&lt;std::vector&lt;std::string&gt;::iterator,<sp/>ptrdiff_t&gt;);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::pair&lt;std::vector&lt;std::string&gt;::iterator,<sp/>ptrdiff_t&gt;<sp/>getPosition()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setIsNewMap(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>getIsNewMap()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setIsNewKey(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>getIsNewKey()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setLastKey(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getLastKey()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setLastMove(<ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388" kindref="member">Move</ref>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388" kindref="member">Move</ref><sp/>getLastMove()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setScore(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>getScore()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setBonus(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>getBonus()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_entity_8hpp_1a35cb4584225a2ee3ef554a9f5fe0e473" kindref="member">PacmanObjs</ref><sp/>_entity;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;size_t,<sp/>std::map&lt;size_t,<sp/>char&gt;&gt;<sp/>_map;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::pair&lt;std::vector&lt;std::string&gt;::iterator,<sp/>ptrdiff_t&gt;<sp/>_pos;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time_t<sp/>_start;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>_score;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>_speed;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_bonus;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_entity_8hpp_1a19b869a01ca1a58f4164b4f75c2df388" kindref="member">Move</ref><sp/>_move;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_isNewMap;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_isNewKey;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>moveDown(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>moveLeft(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>moveRight(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>moveUp(std::shared_ptr&lt;std::vector&lt;std::string&gt;&gt;);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>checkNextCase(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">};</highlight></codeline>
     </programlisting>
     <location file="games/pacman/Entity.hpp"/>
   </compounddef>

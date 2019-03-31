@@ -1,7 +1,5 @@
 var annotated_dup =
 [
-    [ "AnimatedSprite", "class_animated_sprite.html", "class_animated_sprite" ],
-    [ "Animation", "class_animation.html", "class_animation" ],
     [ "ClassNcurses", "class_class_ncurses.html", "class_class_ncurses" ],
     [ "ClassSDL", "class_class_s_d_l.html", "class_class_s_d_l" ],
     [ "ClassSFML", "class_class_s_f_m_l.html", "class_class_s_f_m_l" ],
