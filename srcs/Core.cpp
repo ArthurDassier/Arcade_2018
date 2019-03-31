@@ -127,8 +127,12 @@ void Core::loadNewLib(std::string lib)
         _libModule->buildMap(_mapMenu);
         _libModule->setMap(_mapMenu);
         _libModule->setIsNewMap(true);
-    } else
+    } else {
+        _libModule->buildMap(_gameModule->getMap());
+        _libModule->setMap(_gameModule->getMap());
+        _libModule->setIsNewMap(true);
         _libModule->setPathConfig(_gameModule->getPathConfig());
+    }
 }
 
 
