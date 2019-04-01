@@ -21,6 +21,8 @@ INCLUDE			+=	-I../lib/NCURSES
 
 INCLUDE			+=	-I../lib/SFML
 
+INCLUDE			+=	-I../includes
+
 ##### SFML #####
 FILES_SFML			=	../lib/SFML/ClassSFML.cpp
 
